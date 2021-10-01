@@ -11,4 +11,4 @@
 
 [AG-Universal+.NetCore+PWA (架構參考)](https://github.com/TrilonIO/aspnetcore-angular-universal) => TrilonIO
 
-[系統架構打底](https://github.com/donnemartin/system-design-primer) => donnemartin
+[系統設計入門](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-TW.md) => donnemartin
