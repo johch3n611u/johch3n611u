@@ -1,13 +1,18 @@
 # 😝 歡迎互相交流學習
 
-<!-- 星星圖 -->
+<!-- 星星圖、語言圖 -->
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=johch3n611u&theme=highcontrast)
-<!-- 語言圖 -->
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast)
 
-#### 經驗
+### Experience
 
-#### 參考、推薦連結
+[經歷]
+
+[項目]
+
+[研究]
+
+### References
 
 [AG-Universal+.NetCore+PWA (架構參考)](https://github.com/TrilonIO/aspnetcore-angular-universal) => TrilonIO
 
