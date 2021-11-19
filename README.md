@@ -14,7 +14,7 @@
 [研究]
 
 * References
-** [AG-Universal+.NetCore+PWA (架構參考)](https://github.com/TrilonIO/aspnetcore-angular-universal) => TrilonIO
-** [系統設計入門](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-TW.md) => donnemartin
-** [美化自己的 GitHub 首頁](https://hsiangfeng.github.io/other/20210102/1186303391/) => 六角 Ray
-** [target="_blank" 不適用於github上的直接預覽](https://stackoverflow.com/questions/41915571/open-link-in-new-tab-with-github-markdown-using-target-blank)
+  * [AG-Universal+.NetCore+PWA (架構參考)](https://github.com/TrilonIO/aspnetcore-angular-universal) => TrilonIO
+  * [系統設計入門](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-TW.md) => donnemartin
+  * [美化自己的 GitHub 首頁](https://hsiangfeng.github.io/other/20210102/1186303391/) => 六角 Ray
+  * [target="_blank" 不適用於github上的直接預覽](https://stackoverflow.com/questions/41915571/open-link-in-new-tab-with-github-markdown-using-target-blank)
