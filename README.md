@@ -1,6 +1,6 @@
 # 😝 歡迎互相交流學習
 
-<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a>
+<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="點擊率" /></a>
 
 <!-- 星星圖、語言圖 -->
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=johch3n611u&theme=highcontrast)
