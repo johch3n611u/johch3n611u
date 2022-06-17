@@ -1,10 +1,14 @@
 # 😝 歡迎互相交流學習
 
-<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="點擊率" /></a>
+<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a>
+
+<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://img.shields.io/github/followers/johch3n611u?label=GitHub%20Followers&&style=plastic" alt="GitHub Followers" /></a>
 
 <!-- 星星圖、語言圖 -->
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=johch3n611u&theme=highcontrast)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast)
+
+<p align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&" alt="johch3n611u" /></p>
 
 ### Experience
 
