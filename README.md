@@ -7,6 +7,11 @@
 <p align="center">
  <img src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="johch3n611u" />
  <img src="https://img.shields.io/github/followers/johch3n611u?label=GitHub%20Followers&&style=plastic" alt="johch3n611u" />
+</p>
+
+<p align="center">
+ <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast" alt="johch3n611u" />
+ <img src="https://github-readme-stats.vercel.app/api?username=johch3n611u&theme=highcontrast" alt="johch3n611u" />
  <img src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" alt="johch3n611u" />
 </p>
 
@@ -28,5 +33,5 @@
   * [target="_blank" 不適用於github上的直接預覽](https://stackoverflow.com/questions/41915571/open-link-in-new-tab-with-github-markdown-using-target-blank)
 
 <!-- 星星圖、語言圖 -->
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=johch3n611u&theme=highcontrast)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast)
+<!-- ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=johch3n611u&theme=highcontrast)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast) -->
