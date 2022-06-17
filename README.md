@@ -1,6 +1,6 @@
 # 😝 歡迎互相交流學習
 
-<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a>
+<!-- <a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a> -->
 
 <!-- <a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://img.shields.io/github/followers/johch3n611u?label=GitHub%20Followers&&style=plastic" alt="GitHub Followers" /></a> -->
 
