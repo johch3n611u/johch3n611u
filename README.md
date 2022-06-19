@@ -3,7 +3,7 @@
 <img align="right"  src="https://github-readme-stats.vercel.app/api/pin/?username=johch3n611u&repo=pussycat&style=plastic" width="50%" >
 <img align="right"  src="https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&style=plastic" width="50%" >
 
-Yahallo，I am [xiaoban](http://blog.builtcat.top/)!
+# 😝 歡迎互相交流學習!
 
 I am currently studying at the Institute of Disaster Prevention.
 
