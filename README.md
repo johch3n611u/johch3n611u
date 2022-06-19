@@ -59,7 +59,7 @@
 
 * 💻 系統開發乙方 2Y ( 前後端系統架構開發、API串接 )
 * 🚚 電子商務甲方 1Y ( 虛實整合、AI行銷、內部系統維運 )
-* <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15"/> 輔仁大學景觀系 學士
+* <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" style="margin-right:3px"/> 輔仁大學景觀系 學士
 
 [:bar_chart:項目]
 
