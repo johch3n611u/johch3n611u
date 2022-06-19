@@ -5,8 +5,6 @@
 
 ## 😝 歡迎互相交流學習! <img src="https://img.shields.io/badge/Email-wt920116625%40live.com-brightgreen">
 
-
-
 I am currently studying at the Institute of Disaster Prevention.
 
 [:sunny:語言/工具]
@@ -33,22 +31,9 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
 
 <!--END_SECTION:waka-->
 
+<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a>
 
-
-<!-- <a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a> -->
-
-<!-- <a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://img.shields.io/github/followers/johch3n611u?label=GitHub%20Followers&&style=plastic" alt="GitHub Followers" /></a> -->
-
-
-
-### Experience
-
-[經歷]
-
-* 電子商務甲方 1Y ( 虛實整合、AI行銷、內部系統維運 )
-* 系統開發乙方 2Y ( 前後端系統架構開發、API串接 )
-
-[項目]
+<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://img.shields.io/github/followers/johch3n611u?label=GitHub%20Followers&&style=plastic" alt="GitHub Followers" /></a>
 
 [研究]
 
