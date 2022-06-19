@@ -11,6 +11,8 @@
 
 [:sunny:語言/工具]
 
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/>
+
 [:sparkles:經歷]
 
 * 電子商務甲方 1Y ( 虛實整合、AI行銷、內部系統維運 )
@@ -32,8 +34,6 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
 <img src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" />
 
 <!--END_SECTION:waka-->
-
-<a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a>
 
 [研究]
 
