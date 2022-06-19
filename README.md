@@ -5,11 +5,7 @@
 
 ## 👋 歡迎互相交流! <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red">
 
-Hustle Everyday 🤑
-
-MBTI : INTP
-
-PDP : 🦉
+Hustle Everyday 💪、MBTI：👨‍🎓 INTP、PDP：🦉 內斂精確完美、中立適應性高
 
 [:sunny:語言/工具]
 
