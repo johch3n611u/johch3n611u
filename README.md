@@ -43,7 +43,7 @@
 <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/>
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/>
 
-</p>
+</a>
  
 [:sparkles:經歷]
 
