@@ -5,7 +5,11 @@
 
 ## 👋 歡迎互相交流! <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red">
 
-I am currently studying at the Institute of Disaster Prevention.
+Hustle Everyday 🤑
+
+MBTI : INTP
+
+PDP : 🦉
 
 [:sunny:語言/工具]
 
