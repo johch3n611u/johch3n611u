@@ -25,6 +25,7 @@
 <img src="https://www.vectorlogo.zone/logos/hexoio/hexoio-icon.svg" alt="hexo" width="40" height="40"/>
 <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Oracle_Logo.svg/1200px-Oracle_Logo.svg.png" alt="oracle" width="40" height="40"/>
+<img src="https://dbeaver.com/img/dbeaver-head.png" alt="dbeaver" width="40" height="40"/>
 
 <!-- 較少碰 -->
 
@@ -39,8 +40,6 @@
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" alt="d3js" width="40" height="40"/>
 <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/>
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Oracle_Logo.svg/1200px-Oracle_Logo.svg.png" alt="oracle" width="40" height="40"/>
-<img src="https://dbeaver.com/img/dbeaver-head.png" alt="dbeaver" width="40" height="40"/>
 
 </p>
  
