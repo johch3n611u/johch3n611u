@@ -3,7 +3,7 @@
 <img align="right" src="https://github-readme-stats.vercel.app/api/pin/?username=johch3n611u&repo=moggy&color=0e75b6&style=plastic" width="50%" >
 <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
 
-## 😝 歡迎互相交流學習! <img src="https://img.shields.io/badge/Email-wt920116625%40live.com-red">
+## 👋 歡迎互相交流! <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red">
 
 I am currently studying at the Institute of Disaster Prevention.
 
