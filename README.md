@@ -1,4 +1,6 @@
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact&theme=highcontrast" width="50%">
+<a src="#">
+ <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact&theme=highcontrast" width="50%">
+</a>
 <img align="right"  src="https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast" width="50%" >
 <img align="right" src="https://github-readme-stats.vercel.app/api/pin/?username=L1uXO330B7&repo=cashflowgame&color=0e75b6&theme=highcontrast" width="50%" >
 <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
