@@ -12,18 +12,16 @@ I am currently studying at the Institute of Disaster Prevention.
 
 :sunny: I am more interested:
 
-- Javascript
-- Typescript
-- Sass
-- Canvas
+
 
 :sparkles: I have some project that I am coding on:
 
-- [web music player](http://moggy.builtcat.top/)
-- [React UI Library](http://pussycat.builtcat.top/)
-- [My blog](http://blog.builtcat.top/)
+[:sparkles:經歷]
 
-:bar_chart:Coding
+* 電子商務甲方 1Y ( 虛實整合、AI行銷、內部系統維運 )
+* 系統開發乙方 2Y ( 前後端系統架構開發、API串接 )
+
+[:bar_chart:項目]
 
 <!--START_SECTION:waka-->
 
@@ -38,59 +36,7 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
 
 <!--END_SECTION:waka-->
 
-if you want to contact me
 
-<img src="https://img.shields.io/badge/Email-wt920116625%40live.com-brightgreen">
-
-Thank you for your watch ~ :heart:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 😝 歡迎互相交流學習
 
 <!-- <a href="https://github.com/johch3n611u" target="blank"><img align="center" src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" alt="Profile Views" /></a> -->
 
