@@ -1,9 +1,15 @@
 <a href="#">
  <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact&theme=highcontrast" width="50%">
 </a>
-<img align="right"  src="https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast" width="50%" >
-<img align="right" src="https://github-readme-stats.vercel.app/api/pin/?username=L1uXO330B7&repo=cashflowgame&color=0e75b6&theme=highcontrast" width="50%" >
-<img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
+<a href="#">
+  <img align="right"  src="https://github-readme-stats.vercel.app/api/top-langs/?username=johch3n611u&layout=compact&theme=highcontrast" width="50%" >
+</a>
+<a href="https://github.com/L1uXO330B7/cashflowgame">
+   <img align="right" src="https://github-readme-stats.vercel.app/api/pin/?username=L1uXO330B7&repo=cashflowgame&color=0e75b6&theme=highcontrast" width="50%" >
+</a>
+<a href="#">
+   <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
+</a>
 
 ## 👋 歡迎互相交流! <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red">
 
@@ -13,7 +19,7 @@
 
 [:sunny:語言/工具]
 
-<a href="#">
+<p>
 
  <!-- 較長碰 -->
  
@@ -43,7 +49,7 @@
 <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/>
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/>
 
-</a>
+</p>
  
 [:sparkles:經歷]
 
