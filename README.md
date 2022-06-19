@@ -24,7 +24,7 @@
 <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
 <img src="https://www.vectorlogo.zone/logos/hexoio/hexoio-icon.svg" alt="hexo" width="40" height="40"/>
 <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/>
-<img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Oracle_Logo.svg/1200px-Oracle_Logo.svg.png" alt="oracle" width="40" height="40"/>
 
 <!-- 較少碰 -->
 
