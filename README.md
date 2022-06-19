@@ -3,18 +3,14 @@
 <img align="right" src="https://github-readme-stats.vercel.app/api/pin/?username=johch3n611u&repo=moggy&color=0e75b6&style=plastic" width="50%" >
 <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
 
-# 😝 歡迎互相交流學習!
+## 😝 歡迎互相交流學習!
 
 <img src="https://komarev.com/ghpvc/?username=johch3n611u&label=Profile%20Views&color=0e75b6&style=plastic" />
 <img src="https://img.shields.io/badge/Email-wt920116625%40live.com-brightgreen">
 
 I am currently studying at the Institute of Disaster Prevention.
 
-:sunny: I am more interested:
-
-
-
-:sparkles: I have some project that I am coding on:
+[:sunny:語言/工具]
 
 [:sparkles:經歷]
 
