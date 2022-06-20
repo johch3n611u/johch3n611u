@@ -11,7 +11,9 @@
    <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
 </a>
 
-## 👋 歡迎互相交流! <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red">
+<p> 👋 歡迎互相交流! 
+   <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red">
+</p>
 
 - 💪 Hustle Everyday
 - 👨‍🎓 MBTI：INTP
