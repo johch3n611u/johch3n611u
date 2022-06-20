@@ -1,4 +1,4 @@
-<link href="/media/examples/link-element-example.css" rel="stylesheet">
+<link href="https://raw.githubusercontent.com/johch3n611u/johch3n611u/main/README.css" rel="stylesheet">
 
 <a href="#">
  <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact&theme=highcontrast" width="50%">
