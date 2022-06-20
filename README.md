@@ -1,10 +1,4 @@
-<style>
-
-.Title {
-   color:red; 
-}
- 
-</style>
+<link href="/media/examples/link-element-example.css" rel="stylesheet">
 
 <a href="#">
  <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact&theme=highcontrast" width="50%">
