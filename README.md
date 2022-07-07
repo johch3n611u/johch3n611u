@@ -66,7 +66,7 @@
 * <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> - 輔仁大學景觀系 學士 4Y (規劃、設計、繪圖)
 * <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> - 義守大學資管系 學士 1Y (程式)
 
-[:bar_chart:項目]
+[:bar_chart:Wakatime 項目]
 
 <!--START_SECTION:waka-->
 
