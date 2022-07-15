@@ -57,6 +57,8 @@
 <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="25" height="25"/>
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/>
 
+etc...
+ 
 </p>
  
 [📑 經歷]
