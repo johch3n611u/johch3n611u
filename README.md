@@ -61,7 +61,7 @@ etc...
  
 [📑 經歷]
 
-* 系統開發乙方 2Y ( 前後端系統架構開發、API串接 )
+* 系統開發整合乙方 2Y ( 前後端系統架構開發、API串接 )
 * 電子商務甲方 1Y ( 虛實整合、AI行銷、內部系統維運 )
 * <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> - 輔仁大學景觀系 學士 4Y ( 規劃、設計、繪圖 )
 * <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> - 義守大學資管系 學士 1Y ( 程式 )
