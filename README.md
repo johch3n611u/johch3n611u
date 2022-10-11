@@ -93,6 +93,8 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
 
 ## 關鍵字縮寫全名
 
+<details><summany>aaa</summany></details>
+
 SRS:軟體需求說明 Software requirements specification
 
 eip：系統
@@ -156,6 +158,8 @@ EVT : Engineering Verification Test (工程驗證測試階段)
 DVT: Design Verification Test (設計驗證測試階段)
 
 PVT: Production Verification Test(生產驗證測試階段)
+
+---
 
 MPA : Multi Page Application
 
