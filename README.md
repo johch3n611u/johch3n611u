@@ -93,7 +93,7 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
 
 ## 關鍵字縮寫全名
 
-<details><summany>aaa</summany></details>
+<details><summany>縮寫</summany>
 
 SRS:軟體需求說明 Software requirements specification
 
@@ -212,3 +212,5 @@ Wireframe 線框圖
 Mockup 視覺槁
 
 Prototype 原型
+
+</details>
