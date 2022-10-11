@@ -90,3 +90,69 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
   * [系統設計入門](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-TW.md) => donnemartin
   * [美化自己的 GitHub 首頁](https://hsiangfeng.github.io/other/20210102/1186303391/) => 六角 Ray
   * [target="_blank" 不適用於github上的直接預覽](https://stackoverflow.com/questions/41915571/open-link-in-new-tab-with-github-markdown-using-target-blank)
+
+## 關鍵字縮寫全名
+
+SRS:軟體需求說明 Software requirements specification
+
+eip：系統
+
+ICMS：內容管理平台系統
+
+MSA：量測系統
+
+SAM：軟體資產管理
+
+PAM：帳號資產管理系統 
+
+PAMAI: 帳號資產管理系統自動化整合其他系統包含 AD Novell Notes Crtix ...
+
+PORTAL：門戶網站
+
+IDES：Internet Demonstration and Evaluation System 交互式演示与评估系统
+
+DEV：Development System，开发系统
+
+QAS：Quality Assurance System，质量保证系统
+
+UAT：User Acceptance Test 用户验收测试
+
+PRD：Production System，生产系统
+
+ERP：Enterprise resource planning
+
+POS：Point of Sale
+
+CRM：Customer Relationship Management
+
+BI：Business Intelligence
+
+eCOM：支援購物車、整合線上金流，可成立訂單，服務消費者做線上銷售的品牌官網。
+
+App：Application
+
+OMS：Order Management System
+
+CDP：Customer Data Platform
+
+DMP：Data Management Platform
+
+UTR：Unit Test Report
+
+SITR：System Integrated Test Report
+
+SDD：Software design document
+
+RAD：Rapid Application Development
+
+Technology transfer documents
+
+---
+
+POC：proof of concept 概念性驗證
+
+EVT : Engineering Verification Test (工程驗證測試階段)
+
+DVT: Design Verification Test (設計驗證測試階段)
+
+PVT: Production Verification Test(生產驗證測試階段)
