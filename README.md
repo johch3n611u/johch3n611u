@@ -156,3 +156,55 @@ EVT : Engineering Verification Test (工程驗證測試階段)
 DVT: Design Verification Test (設計驗證測試階段)
 
 PVT: Production Verification Test(生產驗證測試階段)
+
+MPA : Multi Page Application
+
+SPA : Single Page Application
+
+AMP : Accelerated Mobile Pages
+
+RWD : Responsive Web Design
+
+PWA : Progressive Web Application
+
+OPW : One Page Web
+
+SSR : Server Side Render
+
+CSR : Client Side Render
+
+CMS : Content Management System
+
+ERP : Enterprise Resource Planning
+
+SCM : Supply Chain Management
+
+CRM : Customer Relationship Management
+
+RFM : Recency Frequency Monetary
+
+HCM : Human Capital Management System
+
+PLM : Product Lifecycle Management
+
+PDM : Product Data Management
+
+BPM : Business Process Management
+
+MES : Manufacturing Execution System
+
+FMS : Facility Management System
+
+KMS : Knowledge Management System
+
+WMS : Workflow Management System
+
+OKR : Objectives and Key Results
+
+KPI : Key Performance Indicators
+
+Wireframe 線框圖
+
+Mockup 視覺槁
+
+Prototype 原型
