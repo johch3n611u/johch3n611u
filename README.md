@@ -93,7 +93,7 @@ HTML         5 mins          ░░░░░░░░░░░░░░░░░
 
 ## 關鍵字縮寫全名
 
-<details><summany>縮寫</summany>
+<details>
 
 SRS:軟體需求說明 Software requirements specification
 
