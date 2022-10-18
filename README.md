@@ -19,7 +19,7 @@
 - 👨‍🎓 MBTI：INTP
 - 🦉 PDP：內斂精確完美、中立適應性高
 
-[📑 語言 / 工具]
+[📑 常駐 (語言 / 工具) ]
 
 <p>
 
@@ -55,8 +55,6 @@
 <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="25" height="25"/>
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/>
 
-etc...
- 
 </p>
  
 [📑 經歷]
