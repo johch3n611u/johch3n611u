@@ -1,3 +1,8 @@
+# https://github.com/topics/profile-readme
+# https://github.com/abhisheknaiidu/awesome-github-profile-readme
+# https://fnsflm.xyz/2020/09/27/2021-02-17/%E6%8E%A8%E8%8D%90github%E7%8A%B6%E6%80%81%E5%8D%A1%E7%89%87/
+# https://github.com/lowlighter/metrics
+
 name: Metrics
 on:
   # Schedule daily updates
@@ -14,12 +19,13 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          filename: Images/github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
           name: Full-year calendar
-          
+
       - uses: lowlighter/metrics@latest
         with:
-          filename: img/metrics.plugin.isocalendar.fullyear.svg
+          filename: Images/metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_isocalendar: yes
@@ -28,7 +34,34 @@ jobs:
       - name: Half-year calendar
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.isocalendar.svg
+          filename: Images/metrics.plugin.isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_isocalendar: yes
+
+      - name: Full history calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.calendar.full.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
+
+      - name: Recently starred
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.stars.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 3
+
+      - name: Organization introduction
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.introduction.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: github
+          base: header
+          plugin_introduction: yes
