@@ -74,7 +74,7 @@
   * [美化自己的 GitHub 首頁](https://hsiangfeng.github.io/other/20210102/1186303391/) => 六角 Ray
   * [target="_blank" 不適用於github上的直接預覽](https://stackoverflow.com/questions/41915571/open-link-in-new-tab-with-github-markdown-using-target-blank)
 
-## 關鍵字縮寫全名
+<!-- 關鍵字縮寫全名
 
 <details>
 
@@ -197,3 +197,5 @@ Mockup 視覺槁
 Prototype 原型
 
 </details>
+
+-->
