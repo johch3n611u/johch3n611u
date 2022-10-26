@@ -123,7 +123,7 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 ---
 
-<a href="http://www.shinda.com.tw"> Shinda Tech </a> Sr. Web Developer
+<a href="http://www.shinda.com.tw"> Shinda Tech </a> , Sr. Software Developer , 2020.06 - 2022.10
  
 ---
  
