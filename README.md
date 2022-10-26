@@ -20,7 +20,7 @@
 
 <p>
 
-<strong>SKILL</strong>
+SKILL：
  
  <!-- 較長碰 -->
  
