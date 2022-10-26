@@ -23,8 +23,8 @@
 * <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> - 義守大學資訊管理系 1Y ( 程式 )
 * <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> - 輔仁大學景觀建築系 4Y ( 規劃、設計、23D 繪圖 )
 
+<details> <summary>SKILL：</summary></details>
 
-SKILL：
 <p>
  <!-- 較長碰 -->
  
