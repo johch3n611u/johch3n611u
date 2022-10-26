@@ -122,3 +122,5 @@ Explicit is better than implicit 👋 歡迎互相交流
 
 
 </details>
+
+感謝您閱讀，煩請指教與分享
