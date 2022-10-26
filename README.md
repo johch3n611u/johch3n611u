@@ -16,7 +16,7 @@ Explicit is better than implicit 🖖 歡迎互相交流
 以結果為導向，以使用者為中心，享受解決問題的成就感。<br>
 
 * 系統開發整合乙方 3+y ( 前後端系統架構開發、API串接 )
-* Angular 3+y 、 Net Core 3+y
+* Vue 1+y、Angular 3+y、Net Core 3+y、C# 4+y、VB 1+y
 * 電子商務甲方 1+y ( 網站代操開發、內部系統維運 )
 * 遠端、分流協作 14 個月內完成 6 個中大型專案
 * MBTI : INTP : 學者型 – 理性解決問題者
