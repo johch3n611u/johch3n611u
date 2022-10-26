@@ -1,4 +1,4 @@
-👋 歡迎互相交流
+<p> 👋 歡迎互相交流 <img src="https://img.shields.io/badge/Email-sjmjgd1165%40gmail.com-red"> </p>
 
 <!-- 你好，我是劉育誠，<br> -->
 
