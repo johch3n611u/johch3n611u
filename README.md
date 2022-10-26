@@ -17,11 +17,8 @@
 * <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> - 輔仁大學景觀建築系 4Y ( 規劃、設計、23D 繪圖 )
 
 
-
-<p>
-
 SKILL：
- 
+<p>
  <!-- 較長碰 -->
  
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="25" height="25"/>
