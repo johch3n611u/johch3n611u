@@ -5,7 +5,7 @@
    <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
 </a>
 
-👋 歡迎互相交流
+Explicit is better than implicit 👋 歡迎互相交流 
 
 <!-- 你好，我是劉育誠，<br> -->
 
