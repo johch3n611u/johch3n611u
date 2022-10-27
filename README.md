@@ -133,7 +133,7 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
  
 ### <a href="http://www.shinda.com.tw"> Shinda Tech </a> , Sr. Web Developer , 2020.06 - 2022.10
 
-### <a href="https://www.eclife.com.tw/"> LIANG SHING EcLife </a> , Jr. Web Developer , 2020.06 - 2022.10
+### <a href="https://www.eclife.com.tw/"> Liang Shing EcLife </a> , Jr. Web Developer , 2020.06 - 2022.10
 
 <br><br><br>
  
