@@ -60,11 +60,13 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 </p>
 
-F2E：Angular2 3+y、Vue 1+y、Chart.js
+F2E：Angular2 3+y、Vue2 1+y、PrimeNG、AG Material、Chart.js、TypeScript、jQuery etc...
 
-B2E：Net Core 3+y、C# 4+y、MS SQL 3+y、VB 1+y、Oracle 1+y
+B2E：Net Core 3+y、Net MVC API Webform、C# 4+y、MS SQL 3+y、AOP、IOC、Unit Testing、Dapper、VB 1+y、Oracle 1+y etc...
 
-Tool：
+Tool：Git、SourceTree、Quartz、Jenkins、IIS、Nginx、Redmine、Azure etc...
+
+Other：Photoshop、Illustrator、AutoCad、Sketchup、Lumion etc...
 
 <!---
 
