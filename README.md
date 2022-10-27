@@ -139,8 +139,11 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
  
 ## Education
 
-### <a href="http://www.shinda.com.tw"> 職業訓練局 </a> ,  , 2020.06 - 2022.10
+### <a href="http://www.shinda.com.tw"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , 2020.06 - 2022.10
 
+`Course-of-Mobile-Commerce-System-Design-and-Development`
+ 
+ 
 ### <a href="http://www.shinda.com.tw"> 輔仁大學景觀建築系 </a> ,  , 2020.06 - 2022.10
 
 ### <a href="http://www.shinda.com.tw"> 義守大學資訊管理系 </a> ,  , 2020.06 - 2022.10
