@@ -60,9 +60,11 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 </p>
 
-Familiar with 
+F2E：Angular2 3+y、Vue 1+y、Chart.js
 
-Angular2 3+y,Net Core 3+y,-C# 4+y,Vue 1+y,-VB 1+y,-MS SQL 3+y,Oracle 1+y   
+B2E：Net Core 3+y、C# 4+y、MS SQL 3+y、VB 1+y、Oracle 1+y
+
+Tool：
 
 <!---
 
