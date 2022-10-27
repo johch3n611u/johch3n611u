@@ -129,9 +129,19 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 
 ---
 
-## <a href="http://www.shinda.com.tw"> Shinda Tech </a> , Sr. Software Developer , 2020.06 - 2022.10
+## Experience
+ 
+### <a href="http://www.shinda.com.tw"> Shinda Tech </a> , Sr. Software Developer , 2020.06 - 2022.10
 
-## <href="https://www.eclife.com.tw/"> LIANG SHING EcLife </a> , Sr. Software Developer , 2020.06 - 2022.10
+### <href="https://www.eclife.com.tw/"> LIANG SHING EcLife </a> , Sr. Software Developer , 2020.06 - 2022.10
+
+## Education
+
+### <a href="http://www.shinda.com.tw"> Bureau of Vocational Training </a> ,  , 2020.06 - 2022.10
+
+### <a href="http://www.shinda.com.tw"> Bureau of Vocational Training </a> ,  , 2020.06 - 2022.10
+
+### <a href="http://www.shinda.com.tw"> Bureau of Vocational Training </a> ,  , 2020.06 - 2022.10
  
 ---
  
