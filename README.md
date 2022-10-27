@@ -135,6 +135,8 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 
 ### <href="https://www.eclife.com.tw/"> LIANG SHING EcLife </a> , Sr. Software Developer , 2020.06 - 2022.10
 
+<br><br><br>
+ 
 ## Education
 
 ### <a href="http://www.shinda.com.tw"> Bureau of Vocational Training </a> ,  , 2020.06 - 2022.10
