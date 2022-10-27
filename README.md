@@ -60,13 +60,9 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 </p>
 
-Familiar with
+Familiar with 
 
- -Angular2 3+y -Net Core 3+y -C# 4+y 
- 
- -Vue 1+y      -VB 1+y       -MS SQL 3+y
- 
- -Oracle 1+y   
+Angular2 3+y,Net Core 3+y,-C# 4+y,Vue 1+y,-VB 1+y,-MS SQL 3+y,Oracle 1+y   
 
 <!---
 
