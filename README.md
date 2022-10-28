@@ -143,9 +143,9 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
  
 ## Education
 
-### ✦ <a href="https://github.com/johch3n611u/johch3n611u/tree/main/Work/%E8%81%B7%E8%A8%93%E5%B1%80"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
+### ✦ <a href="https://www.taiwanjobs.gov.tw/internet/index/index.aspx"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
 
-`Course-of-Mobile-Commerce-System-Design-and-Development`
+[詳細內容請點擊觀看](https://github.com/johch3n611u/johch3n611u/tree/main/Work/%E8%81%B7%E8%A8%93%E5%B1%80)
 
 此課程為期900小時全日制訓練，主要內容為「Web資訊系統平台開發」及「行動裝置APP開發」兩大領域，<br>
 涵蓋「網站系統開發」、「資料庫設計與開發」、「行動裝置APP開發」、「系統分析與設計」，<br>
@@ -157,8 +157,10 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 ### ✦ <a href="https://www.landscape.fju.edu.tw/"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
+[詳細內容請點擊觀看]()
+ 
 * [造園施⼯⼄、丙級技術⼠] 全國技術士技能檢定 , Summer 2015
-* [[河廊組⾦獎、鐵橋組銅獎]](https://issuu.com/layout1165/docs/___compressed) ⾼屏溪左岸時代印記創意競賽 - 國際學⽣競圖 , Jan 2017
+* [[河廊組⾦獎、鐵橋組銅獎](https://issuu.com/layout1165/docs/___compressed)] ⾼屏溪左岸時代印記創意競賽 - 國際學⽣競圖 , Jan 2017
 * [班級 第⼆名] 饒⽂忠設計成績優異獎 , Summer 2016
 * [入圍] 第⼗⼀屆中華⺠國 - 全國景觀設計學⽣競圖 , Dec 2016
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
