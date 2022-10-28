@@ -143,7 +143,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
  
 ## Education
 
-### ✦ <a href="https://github.com/johch3n611u/Course-of-Mobile-Commerce-System-Design-and-Development/blob/master/README.md"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
+### ✦ <a href="https://github.com/johch3n611u/johch3n611u/tree/main/Work/%E8%81%B7%E8%A8%93%E5%B1%80"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
 
 `Course-of-Mobile-Commerce-System-Design-and-Development`
 
