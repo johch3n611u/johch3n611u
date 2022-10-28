@@ -143,6 +143,13 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 
 `Course-of-Mobile-Commerce-System-Design-and-Development`
 
+此課程為期六個月全日班，主要訓練內容為「Web資訊系統平台開發」及「行動裝置APP開發」兩大領域，<br>
+涵蓋「網站系統開發」、「資料庫設計與開發」、「行動裝置APP開發」、「系統分析與設計」，<br>
+除了開發「行動商務系統平台」所需的各項技能外，還有完整的軟體資訊系統開發過程及方法，<br>
+認識軟體產業之工作內容與生態，結訓後具備軟體開發工程師的各項技能。<br>
+ 
+* <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019 // Framework - ASP.NET - MVC 5 C# & Server-side Render - Razor & Bootstrap 4 & RWD
+
 ### <a href="http://www.shinda.com.tw"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
 * [造園施⼯⼄、丙級技術⼠] 全國技術士技能檢定 , Summer 2015
