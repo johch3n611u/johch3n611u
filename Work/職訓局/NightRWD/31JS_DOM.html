@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    <div id="myDiv">
+        <p>第一段</p>
+        <p onclick="insertNode2(event)">第二段</p>
+
+    </div>
+
+    <input id="Button1" type="button" value="Append" onclick="appendNode()" />
+    <input id="Button2" type="button" value="Insert" onclick="insertNode()" />
+    <script>
+        function appendNode() {
+            var myDiv = document.getElementById("myDiv");
+            var p = document.createElement("p");
+            var text = document.createTextNode("第四段");
+            p.appendChild(text);
+            myDiv.appendChild(p);
+
+        }
+
+
+        function insertNode() {
+            var myDiv = document.getElementById("myDiv");
+            var p = document.createElement("p");
+            var text = document.createTextNode("第四段");
+            p.appendChild(text);
+            myDiv.insertBefore(p, myDiv.children[1]);
+
+        }
+       
+        function insertNode2(objBorther) {
+            console.log(objBorther.target);
+            var myDiv = document.getElementById("myDiv");
+            var p = document.createElement("p");
+            var text = document.createTextNode("第4段");
+            p.appendChild(text);
+            myDiv.insertBefore(p, objBorther.target);
+
+        }
+    </script>
+</body>
+</html>

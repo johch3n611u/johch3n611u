@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="spinner-border">
+
+        </div>
+
+        <div class="spinner-border text-danger">
+
+        </div>
+        <div class="spinner-border text-warning">
+
+        </div>
+        <hr />
+        <div class="spinner-grow text-danger">
+
+        </div>
+        <div class="spinner-grow text-warning">
+
+        </div>
+
+        <hr />
+        <div class="d-flex align-items-center">
+            <strong>Loading....</strong>
+            <div class="spinner-grow text-danger ml-auto">
+
+            </div>
+        </div>
+
+
+        <hr />
+        <button class="btn btn-success btn-lg" id="mybtn">
+            
+            Submit
+        </button>
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+   <script>
+       $('#mybtn').click(function () {
+           $(this).addClass('disabled');
+           //$('#mybtn span')
+
+           $(this).html('<span class="spinner-border"></span>Loading....');
+           
+           setTimeout("test()", 3000);
+       });
+
+       
+       function test() {
+         
+           $('#mybtn').text('Submit');
+           $('#mybtn').removeClass('disabled');
+       }
+   </script>
+</body>
+</html>

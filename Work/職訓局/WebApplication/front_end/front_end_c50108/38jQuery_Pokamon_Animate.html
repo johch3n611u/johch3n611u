@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #main{
+            /*border:1px solid;*/
+            width:610px;
+            margin:auto;
+            position:relative;
+        }
+        #main2 h1 {
+           
+            text-align:center;
+            font-size:36pt;
+            
+        }
+        #title{
+            font-family:'Bauhaus 93';
+            font-size:28pt;
+            left:-600px;
+            opacity:0;
+        }
+        #bg{
+            top:90px;
+      
+        }
+
+        #ding {
+            top: 450px;
+            left: 100px;
+         
+            width:200px;
+        }
+        #pica {
+            top: -400px;
+            left: 250px;
+            
+            width: 300px;
+            z-index:10;
+        }
+
+        #ball {
+            top: 700px;
+            left:-300px;
+           
+            width: 50px;
+            cursor:pointer;
+        }
+        .position {
+            position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+    <audio id="bgmusic">
+        <source type="audio/mpeg" id="song" />
+    </audio>
+    <div id="main">
+        <h1 id="title">Welcome Pokemon Go Game</h1>
+        <img src="animate/ball.gif" id="ball" />
+        <img src="animate/ding.gif" id="ding" />
+        <img src="animate/pica.gif" id="pica" />
+        <img src="animate/pokemonBG.png" id="bg" />
+    </div>
+
+    <div id="main2">
+        <h1>Game Over</h1>
+    </div>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+      
+        $('#main').children().addClass('position');
+        $('#bg').hide();
+        $('#ding').hide();
+        $('#ball').hide();
+        $('#main2').hide();
+
+        var bgmusic = document.getElementById('bgmusic');
+
+        var music = new Array("PokemonGo.mp3", "PokemonGo2.mp3");
+        var i = Math.floor(Math.random() * 2);
+        console.log(i);
+        $('#song').attr('src', 'animate/' + music[i]);
+        bgmusic.load();
+        bgmusic.play();
+
+        $('#title').animate({ 'left': '30px', 'opacity': '1' }, 1000);
+        $('#bg').fadeIn(1500, function () {
+            $('#ball').show().animate({ 'left': '550px', 'top': '50px' }, 1000, function () {
+                $('#ding').fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
+                $('#pica').animate({ 'top': '390px' }, 700).animate({ 'width': '40px' }, 500).animate({ 'width': '400px' }, 500).animate({ 'width': '40px' }, 500).animate({ 'width': '400px' }, 500);
+            });
+
+        });
+        $('#ball').hover(function () {
+            $(this).animate({ 'width': '168px' }, 500).css({'z-index':'20'});
+        });
+
+        $('#ball').click(function () {
+            $(this).animate({ 'top': '700px', 'left': '-300px' }, 500, function () {
+                $('#main').fadeOut(1000);
+                $('#main2').fadeIn(2000);
+
+                $('#song').attr('src', 'animate/Reflection.mp3');
+                bgmusic.pause();
+                bgmusic.load();
+                bgmusic.play();
+
+            });
+        });
+    </script>
+
+</body>
+</html>

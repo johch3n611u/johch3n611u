@@ -1,0 +1,84 @@
+﻿@*//step 2.2 建立Index View(Empty-Without Model)*@
+@model PhotoSharing.ViewModel.PhotoComments
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-xs-3">
+        @*//step 2.3 建立討論主題列表*@
+        <h4>討論主題列表</h4>
+        @foreach (var item in Model.photos)
+        {
+            <h4>@Html.ActionLink(item.PhotoID + "." + item.Title, "Index", new { id = item.PhotoID })</h4>
+        }
+    </div>
+    <div class="col-xs-9">
+        @*//step 2.4 建立回覆列表*@
+        <h2>@ViewBag.PTitle</h2>
+        @if (Model.comments.Count == 0)
+        {
+            <h4>尚無任何回覆</h4>
+            <p>
+                @*//step 4.5 在Index View建立"回覆" ActionLink*@
+                @*//step 4.8 將"回覆" ActionLink加入mode參數(Index與Display View)*@
+                @Html.ActionLink("回覆留言", "CreateComment", new { id = ViewBag.PID, mode = 1 })
+
+            </p>
+        }
+        else
+        {
+            <p>
+                @*//step 4.5 在Index View建立"回覆" ActionLink*@
+                @*//step 4.8 將"回覆" ActionLink加入mode參數(Index與Display View)*@
+                @Html.ActionLink("回覆留言", "CreateComment", new { id = ViewBag.PID, mode = 1 }) |
+                @*//step 3.5 在Index View建立"詳細資料" ActionLink*@
+                @Html.ActionLink("詳細資料", "Display", new { id = ViewBag.PID })
+            </p>
+
+
+            <table class="table">
+                <tr>
+
+                    <th>
+                        Subject
+                    </th>
+                    <th>
+                        Body
+                    </th>
+                    <th>
+                        UserName
+                    </th>
+                </tr>
+
+                @foreach (var item in Model.comments)
+                {
+                    <tr>
+                        <td>
+                            @item.Subject
+
+                        </td>
+                        <td>
+                            @item.Body
+
+                        </td>
+                        <td>
+                            @item.UserName
+
+                        </td>
+
+                    </tr>
+
+                }
+            </table>
+        }
+    </div>
+</div>
+
+
+@*@Html.ActionLink("Edit", "Edit", new { id = item.CommentID }) |
+    @Html.ActionLink("Details", "Details", new { id = item.CommentID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = item.CommentID })*@

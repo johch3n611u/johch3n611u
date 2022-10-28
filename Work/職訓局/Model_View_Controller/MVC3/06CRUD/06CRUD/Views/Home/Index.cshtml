@@ -1,0 +1,49 @@
+﻿@model IEnumerable<_06CRUD.Models.tProduct>
+@*//00-2-5 修改Index View,英文文字為中文*@
+@{
+    ViewBag.Title = "產品列表";
+}
+
+<h2>產品列表</h2>
+
+<p>
+    @Html.ActionLink("新增商品", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fImg)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fName)
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.fPrice)
+            </td>
+            <td>
+                @*//00-2-6 修改圖片顯示處*@
+                @*@Html.DisplayFor(modelItem => item.fImg)*@
+                <img src="~/images/@item.fImg" width="120" />
+            </td>
+            <td>
+                @Html.ActionLink("修改", "Edit", new { id = item.fId }) |
+                @*@Html.ActionLink("Details", "Details", new { id=item.fId }) |*@
+                @Html.ActionLink("刪除", "Delete", new { id = item.fId }, new { onclick = "return confirm('確定刪除??')" })
+            </td>
+        </tr>
+    }
+
+</table>

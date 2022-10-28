@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<style>
+    .wrap {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .btn-list {
+        display: flex;
+        justify-content: flex-end;
+        margin: 50px 0px;
+    }
+    
+    .btn-list li {
+        width: 3%;
+    }
+    
+    .btn-list li>a {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 0;
+        text-align: center;
+        display: block;
+        transition: all 1s;
+    }
+    
+    .btn-list a:hover,
+    .btn-list a.active {
+        transform: translateY(-10px);
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="btn-list">
+            <li>
+                <a href="#" class="font-l">大</a>
+            </li>
+            <li>
+                <a href="#" class="font-m">中</a>
+            </li>
+            <li>
+                <a href="#" class="font-s">小</a>
+            </li>
+        </ul>
+        <div class="text-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia tempora libero qui eaque reprehenderit doloremque illo? Nemo veritatis voluptate, similique, ipsam illo quis ex animi inventore aperiam perferendis sint.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum quia tempora libero qui eaque reprehenderit doloremque illo? Nemo veritatis voluptate, similique, ipsam illo quis ex animi inventore aperiam perferendis sint.</p>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.font-s').addClass('active');
+        $('.font-l').click(function(event) {
+            event.preventDefault();
+            $('.font-l').addClass('active');
+            $('.font-m,.font-s').removeClass('active')
+            $('.text-content').css({
+                'font-size': '40px',
+                'background-color': 'pink'
+            });
+        });
+        $('.font-m').click(function(event) {
+            event.preventDefault();
+            $('.font-m').addClass('active');
+            $('.font-l,.font-s').removeClass('active')
+            $('.text-content').css({
+                'font-size': '32px',
+                'background-color': 'yellow'
+            });
+        });
+        $('.font-s').click(function(event) {
+            event.preventDefault();
+            $('.font-s').addClass('active');
+            $('.font-m,.font-l').removeClass('active')
+            $('.text-content').css({
+                'font-size': '16px',
+                'background-color': 'transparent'
+            });
+        });
+    });
+</script>
+
+</html>

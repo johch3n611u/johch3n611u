@@ -1,0 +1,54 @@
+{
+    "firstTask": {
+        "fileNamec": "Mxic.ITC.Portal.Service",
+        "className": "SWApplyFormService",
+        "nameSpaceName": "Mxic.ITC.Portal.Service",
+        "methodName": "Create",
+        "dllPath": "bin/Mxic.ITC.Portal.Service.dll",
+        "<Assembly> ass": "{Mxic.ITC.Portal.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null}",
+        "<Type> magicType": "{Name = 'SWApplyFormService' FullName = 'Mxic.ITC.Portal.Service.SWApplyFormService'}",
+        "<ParameterInfo> ParamInfo": "{Mxic.ITC.Portal.Model.Sign.SignData`1[Mxic.ITC.Portal.Model.Sign.SwapplyForm] Data}",
+        "<MethodInfo> magicMethod": "{Mxic.ITC.Portal.Model.Business.PageQueryResult`1[System.String] Create(Mxic.ITC.Portal.Model.Sign.SignData`1[Mxic.ITC.Portal.Model.Sign.SwapplyForm])}",
+        "ParamInfo": "{Mxic.ITC.Portal.Model.Sign.SignData`1[Mxic.ITC.Portal.Model.Sign.SwapplyForm] Data}",
+        "<object> parameter": "{\"FormType\":\"software\",\"FormData\":{\"StartDate\":\"2020-06-30T16:00:00.000Z\",\"EndDate\":\"2020-09-30T16:00:00.000Z\",\"project\":\"YY_HA01\",\"ApplyType\":1,\"Description\":\"0703\",\"SoftwareForm\":[{\"Name\":\"Acute TravelBus\",\"SoftwareId\":\"F000005\",\"Peplo\":\"高先生(課3)\",\"Type\":\"免費\",\"Vendor\":\"Acute\",\"Dept\":\"MR000\",\"Price\":null,\"AdminName\":\"李先生(部3)\",\"AsseetChrildId\":\"0000\",\"ISVMType\":\"0\",\"Version\":\"1\",\"Count\":\"1\",\"AsseetId\":\"200000025742\",\"Id\":1,\"Admin\":\"00011\",\"CompanyCode\":\"22\",\"PCName\":\"P5\",\"Pleace\":\"Location2\"}]},\"SignButtonKey\":\"SignButton.Draft.Send\",\"Sign\":{\"ApplicanterEmpNO\":\"99999\",\"ApplicanterName\":\"Administrator\",\"FormType\":\"software\",\"FlowID\":0,\"RelatedMain\":\"配置子單\",\"SignFromID\":0,\"RequiredDate\":\"2020-07-14T16:00:00.000Z\",\"RequiredDesc\":\"0703\",\"FormStatus\":\"SignOff\",\"ServiceCode\":\"YY_HA01\"}}",
+        "InvokeObj": "{Mxic.ITC.Portal.Model.Sign.SignData<Mxic.ITC.Portal.Model.Sign.SwapplyForm>}",
+        "langCode": "zh-TW",
+        "context": "{System.ComponentModel.DataAnnotations.ValidationContext}",
+        "results": "Count = 0",
+        "isValid": "true",
+        "sb": {},
+        "base.ExecuteAsync(controllerContext, cancellationToken)": "controllerContext:{System.Web.Http.Controllers.HttpControllerContext},cancellationToken:{IsCancellationRequested = false}"
+    },
+    "secondTask": {
+        "callback???": "public override Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)",
+        "fileNamec": "Mxic.ITC.Portal.Service",
+        "className": "MemberShipService",
+        "nameSpaceName": "Mxic.ITC.Portal.Service",
+        "methodName": "GetAllMeunItems",
+        "dllPath": "bin/Mxic.ITC.Portal.Service.dll",
+        "ServerComponentBase": "BaseService.cs",
+        "FakeHrMasterService()": "config.CreateMapper()",
+        "": "",
+        "BaseService": "SWApplyFormService",
+        "Mxic.ITC.Portal.Model.Extensions": "UtcDateTimeConverterExtensions",
+        "SWApplyFormService : BaseService": "public PageQueryResult<string> Create(SignData<SwapplyForm> Data)",
+        "var result": "Repository.Create(Data, UserInfo.Account, HrMasterService, BPMService, new Model.Signer{CaseOfficerCosign = signer,CaseOfficerCosignBack = signerBack,});",
+        "Task.Run(()": "=>{var batchService = new BatchService();batchService.FlowNotification();});"
+    },
+    "backtoController": {
+        "public override Task<HttpResponseMessage> ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)": "controllerContext:{System.Web.Http.Controllers.HttpControllerContext};cancellationToken:IsCancellationRequested = false;",
+        "fileNamec": "Mxic.ITC.Portal.Service",
+        "className": "SWApplyFormService",
+        "nameSpaceName": "Mxic.ITC.Portal.Service",
+        "methodName": "GetServiceList",
+        "dllPath": "bin/Mxic.ITC.Portal.Service.dll",
+        "ParamInfo": "null",
+        "<MethodInfo> magicMethod": "{System.Collections.Generic.List`1[Mxic.Framework.Membership.MenuItem] GetAllMeunItems()}"
+    },
+    "callbackTaskAgain...": {
+        "SWApplyFormService : BaseService": "public PageQueryResult<ServiceQuery> GetServiceList(PageQuery<int> query)",
+        "return": "objSF.GetServiceListD(query, 0, UserInfo.Account, IsPortalAdm(UserInfo.Account), HrMasterService);",
+        "SWApplyFormRepository : RepositoryBase, ISignRepository<SwapplyForm>": "do some Repository things",
+        "backtoController": "return base.ExecuteAsync(controllerContext, cancellationToken);"
+    }
+}

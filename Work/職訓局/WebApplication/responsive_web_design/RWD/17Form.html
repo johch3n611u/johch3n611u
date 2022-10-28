@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <form>
+        <div class="container">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" type="email" class="form-control" placeholder="Enter email..." required />
+                <small class="form-text text-muted">忘記帳號</small>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input id="pwd" type="password" class="form-control" placeholder="Password" required />
+            </div>
+            <div class="form-group form-check">
+                <input id="remember" type="checkbox" class="form-check-input" />
+                <label for="remember">記住我</label>
+            </div>
+            <input id="Submit1" type="submit" value="submit" class="btn btn-secondary" />
+
+        </div>
+    </form>
+
+    <hr />
+
+    <form>
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" class="form-control" placeholder="Enter email..." required />
+                    <small class="form-text text-muted">忘記帳號</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="pwd">Password:</label>
+                    <input id="pwd" type="password" class="form-control" placeholder="Password" required />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="Address">Address:</label>
+                <input id="Address" type="text" class="form-control" placeholder="Address" required />
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="City">City:</label>
+                    <input id="City" type="text" class="form-control" placeholder="City" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="State">State:</label>
+                    <select id="State" class="form-control">
+                        <option>Choose...</option>
+                        <option>111</option>
+                        <option>222</option>
+                    </select>
+                </div>
+                <div class="form-group  col-md-2">
+                    <label for="abc">abc:</label>
+                    <input id="abc" type="text" class="form-control" placeholder="abc" />
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input id="Agree" type="checkbox" class="form-check-input" />
+                <label for="Agree">Agree</label>
+            </div>
+
+            <input id="Submit1" type="submit" value="submit" class="btn btn-secondary" />
+
+        </div>
+    </form>
+
+    <hr />
+
+    <form>
+        <div class="container">
+            <div class="form-group row">
+                <label for="email" class="col-sm-3">Email:</label>
+                <div class="col-sm-9">
+                    <input id="email" type="email" class="form-control" placeholder="Enter email..." required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pwd" class="col-sm-3 col-form-label col-form-label-lg">Password:</label>
+                <div class="col-sm-9">
+                    <input id="pwd" type="password" class="form-control form-control-lg" placeholder="Password" required />
+                </div>
+            </div>
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-3">性別</legend>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <input id="male" type="radio" name="gender" />
+                            <label for="male">男</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="female" type="radio" name="gender" />
+                            <label for="female">女</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-group form-check">
+                <input id="remember" type="checkbox" class="form-check-input" />
+                <label for="remember">記住我</label>
+            </div>
+            <input id="Submit1" type="submit" value="submit" class="btn btn-secondary" />
+
+        </div>
+    </form>
+
+</body>
+</html>

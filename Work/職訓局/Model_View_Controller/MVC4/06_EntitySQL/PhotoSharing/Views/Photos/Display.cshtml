@@ -1,0 +1,29 @@
+﻿@model PhotoSharing.Models.Photo
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<fieldset>
+    <legend>
+        「@Model.Title」
+    </legend>
+    <img src="@Url.Action("GetImage","Photos",new { id=Model.PhotoID})" class="img-responsive img-thumbnail" />
+    <p>
+        @Html.DisplayFor(model => model.Description)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.UserName)
+        @Html.DisplayFor(model => model.UserName)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.CreatedDate)
+        @Html.DisplayFor(model => model.CreatedDate)
+    </p>
+
+
+</fieldset>
+<p>
+    @Html.ActionLink("刪除", "Delete",new { id=Model.PhotoID}) | 
+    @Html.ActionLink("返回列表", "Index")
+</p>

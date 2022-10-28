@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .line{
+            border:1px solid;
+        }
+       
+        .yellow{
+            background-color:yellow;
+        }
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="list">
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+        <li>eee</li>
+    </ul>
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $('#list').addClass('line');
+        $('#list li').addClass('line');
+        $('#list>li').addClass('yellow');
+
+        $('#list>li:nth-child(2n+1)').addClass('red');
+
+        
+        //var list = document.getElementById("list");
+        //list.className = "line";
+        //for (i = 0; i < list.children.length; i++) {
+        //    list.children[i].className = "line yellow";
+        //    if (i % 2 == 0)
+        //        list.children[i].className += " red";
+        //}
+
+    </script>
+</body>
+</html>

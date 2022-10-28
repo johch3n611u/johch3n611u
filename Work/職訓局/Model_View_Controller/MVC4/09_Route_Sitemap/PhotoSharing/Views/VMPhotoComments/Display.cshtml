@@ -1,0 +1,48 @@
+﻿@*//step 3.2 建立Display View(Empty-Without Model)*@
+@model PhotoSharing.ViewModel.PhotoComments
+@{
+    ViewBag.Title = "Display";
+}
+
+@*//step 3.3 建立討論主題顯示區*@
+<div class="row well">
+    <div class="col-xs-12">
+        <h2>@Model.photos[0].Title</h2>
+        <p>@Model.photos[0].Description</p>
+        <p>建立人:@Model.photos[0].UserName</p>
+        <p>建立日期:@Model.photos[0].CreatedDate</p>
+        @*//step 4.6 在Display View建立"回覆" ActionLink*@
+        <p class="text-right">
+            @Html.ActionLink("回覆", "CreateComment", new { id = ViewBag.PID, mode = 2 })
+        </p>
+
+    </div>
+</div>
+<hr />
+@*//step 3.4 建立回覆列表顯示區*@
+<div class="row">
+    <div class="col-lg-offset-2 col-xs-8">
+        @if (Model.comments.Count == 0)
+        {
+            <h4>尚無任何回覆</h4>
+
+        }
+        else
+        {
+            foreach (var item in Model.comments)
+            {
+                <div class="row table-bordered">
+                    <div class="col-xs-12">
+                        <h3>@item.Subject</h3>
+                        <p>@item.Body</p>
+                        <p class="text-right">建立人:@item.UserName</p>
+
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+    </div>
+</div>
+@*//step 3.6 在Display View建立"回討論主題列表" ActionLink*@
+@Html.ActionLink("回留言列表", "Index", new { id = ViewBag.PID })

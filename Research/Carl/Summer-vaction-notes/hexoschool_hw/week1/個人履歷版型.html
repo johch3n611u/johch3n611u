@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=   , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: SF Pro Text, 蘋方-繁, sans-serif;
+    }
+    /* 聯絡資料外的容器 */
+    
+    .container {
+        width: 1200px;
+        margin: auto;
+    }
+    /* 姓名 */
+    
+    h1 {
+        line-height: 95px;
+        font-size: 80px;
+        padding: 24px 0;
+        border-bottom: 2px solid #000000;
+        margin-top: 16px;
+        margin-bottom: 48px;
+    }
+    /* 大頭貼 */
+    
+    .headshot {
+        margin-bottom: 48px;
+    }
+    /* 個人資料，學歷，工作經驗與底線 */
+    
+    h2 {
+        display: flex;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 48px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #000000;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    
+    .smbox span {
+        color: #A00404;
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 16px;
+    }
+    
+    span {
+        display: inline-block;
+        color: #A00404;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    /* 個人資料，學歷，工作經驗中的文字說明 */
+    
+    p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    ul {
+        margin-bottom: 72px;
+    }
+    
+    li {
+        margin-bottom: 24px;
+    }
+    /* 技能板 */
+    
+    .skillboard {
+        background-color: #415165;
+        padding-top: 24px;
+        padding-bottom: 52px;
+        margin-bottom: 72px;
+    }
+    /* 技能與聯絡方式 */
+    
+    h3 {
+        width: 996px;
+        color: #FFFFFF;
+        font-size: 32px;
+        line-height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        text-align: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    
+    h3 span {
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    /* 技能板中的技能說明 */
+    
+    .skillboard ul {
+        width: 200px;
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: 36px;
+        padding-left: 24px;
+        border-left: 1px solid #96A9C4;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+    }
+    
+    .skillboard li {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .hexschool {
+        padding-left: 24px;
+        border-left: 1px solid #96A9C4;
+        margin-left: 24px;
+    }
+    /* 各項工作經驗 */
+    
+    h4 {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    .hexschool li {
+        margin-bottom: 32px;
+    }
+    
+    .hexschool img {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    /* 六角學院經驗說明 */
+    
+    pre {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    /* 聯絡資料說明 */
+    
+    .footer {
+        background-color: #415165;
+        padding-top: 24px;
+        margin-top: 76px;
+    }
+    
+    .footer h3 {
+        width: 1200px;
+    }
+    
+    .footer ul {
+        margin-bottom: 0px;
+    }
+    
+    .footer li {
+        font-family: 'Noto Sans TC', sans-serif;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: 36px;
+        margin-top: 16px;
+        margin-bottom: 0px;
+    }
+    
+    .footer a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    
+    .footer img {
+        margin-top: 4px;
+        margin-bottom: 40px;
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+</style>
+
+<body>
+    <div class=container>
+        <!--姓名與底線 -->
+        <h1>Joanne<br>Chen</h1>
+        <!-- 大頭貼 -->
+        <img class="headshot" src="https://hexschool.github.io/webLayoutTraining1st/week1/photo.png" alt="個人照片">
+        <!-- 個人資料與底線 -->
+        <div class="smbox">
+            <h2>個人資料
+                <span>PROFILE</span>
+            </h2>
+        </div>
+        <!-- 兩個無序列表包住自介 -->
+        <ul>
+            <li>
+                <p>陳久安 Joanne Chen<br>1997-<br>應屆畢業生／接案設計師／UI 設計實習生
+                    <p>
+            </li>
+            <li>
+                <p>UI 設計修行中／立志當斜槓青年<br>獨立接案，內容涵蓋：<br>品牌規劃、視覺設計、編輯設計、標準字、物件及印刷品設計等。</p>
+            </li>
+        </ul>
+        <!-- 學歷與底線 -->
+        <div class="smbox">
+            <h2>學歷
+                <span>EDUCATION</span>
+            </h2>
+        </div>
+        <!-- 兩個無序列表包住學歷資料 -->
+        <ul>
+            <li>
+                <p>國立六角師範大學 視覺設計學系 學士學位 | 2016－2020</p>
+            </li>
+            <li>
+                <p>國立六腳高級中學 美術班 | 2013－2016</p>
+            </li>
+        </ul>
+        <!-- 技能說明板 -->
+        <div class="skillboard">
+            <h3>技能 <span> SKILLS</span></h3>
+            <ul>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe XD</li>
+                <li>Adobe Indesign</li>
+                <li>C4D</li>
+                <li>Adobe Premiere</li>
+                <li>語言：中文、英文</li>
+            </ul>
+        </div>
+        <!-- 工作經驗欄位 -->
+        <div class="smbox">
+            <h2>工作經驗
+                <span>WORK EXPERIENCE</span>
+            </h2>
+        </div>
+        <ul class="hexschool">
+            <li>
+                <h4>六角學院 視覺設計實習生 | 2019/07－2020/06</h4>
+                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/Group%201.svg" alt="六角學院icon.">
+                <pre>在六角學院長達一年的實習中，前期藉由公司課程掌握 HTML, CSS,
+Adobe XD，設計給學員使用的名片設計教材，並參與六角週年活動，設
+計各式周邊商品及活動網路宣傳圖。後期進入 UI 設計範疇，設計六角共
+筆部落格 - W3HexSchool、六角發案服務網介面設計、供給學員的教
+案- RWD官方網站設計，並設計各式網頁活動宣傳圖。</pre>
+            </li>
+            <li>
+                <h4>獨立接案 Hao Jun 酒標設計 | 2019</h4>
+            </li>
+            <li>
+                <h4>獨立接案 Exulans 酒標設計 | 2019</h4>
+            </li>
+            <li>
+                <h4>獨立接案 桃園平鎮市民健走活動提案 | 2019</h4>
+            </li>
+            <li>
+                <h4>Simtree 興趣咖啡 工讀生 | 2018－2019</h4>
+                <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week1/simtree.png?raw=true" alt="simtree.icon">
+                <pre>擔任外場及吧台服務生，學習咖啡相關知識。</pre>
+            </li>
+        </ul>
+    </div>
+    <!-- 聯絡資料 -->
+    <div class="footer">
+        <h3>聯絡方式&nbsp;&nbsp;<span>CONTACT METHOD</span></h3>
+        <ul>
+            <li>Mail：xxxd@hexschool.com</li>
+            <li>Phone：0910123456</li>
+            <li><a href="https://www.google.com.tw/maps/place/%E9%AB%98%E9%9B%84%E5%B8%82/@22.6126812,120.3074812,12.44z/data=!4m8!1m2!2m1!1z5YWt6KeS5a246Zmi!3m4!1s0x346e43517a7a741b:0x4826a24a54732a37!8m2!3d22.6272815!4d120.3014517?hl=zh-TW" target="_blank">Kaohsiung, Taiwan</a></li>
+            <li>作品連結：<a href="https://www.cakeresume.com/s1064007" target="_blank">https://www.behance.net/xxxdddddd</a></li>
+            <li>
+                <a href="https://www.facebook.com/L1uXO330B7" target="_blank"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/facebook.svg" alt="fb.icon"></a>
+                <a href="https://www.instagram.com/l1u9b0330/?hl=zh-tw" target="_blank"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/instagram-alt.svg" alt="ig.icon"></a>
+                <a href="https://line.me/R/ti/p/~carl321123" target="_blank"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/line.svg" alt="line.icon"></a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

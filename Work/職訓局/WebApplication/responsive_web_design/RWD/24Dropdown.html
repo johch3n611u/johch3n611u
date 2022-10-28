@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <!--基本型-->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="ddMenu1">
+                Menu
+
+            </button>
+            <div class="dropdown-menu" aria-labelledby="ddMenu1">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item disabled">Another action</a>
+                <a href="#" class="dropdown-item">Something else here</a>
+                <a href="#" class="dropdown-item active">Separated link</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+
+            </div>
+        </div>
+        <hr />
+        <!--群組按鈕-->
+        <div class="btn-group">
+            <button class="btn btn-danger" data-toggle="dropdown" id="ddMenu2">
+                Menu
+            </button>
+            <button class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" id="ddMenu2"></button>
+            <div class="dropdown-menu" aria-labelledby="ddMenu2">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+                <a href="#" class="dropdown-item">Something else here</a>
+                <a href="#" class="dropdown-item">Separated link</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+
+            </div>
+        </div>
+
+
+        <hr />
+        <br />
+        <br /><br /><br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <!--選單往上出現-->
+        <div class="btn-group dropup">
+            <button class="btn btn-danger" data-toggle="dropdown" id="ddMenu3">
+                Menu
+            </button>
+            <button class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" id="ddMenu3" aria-haspopup="true"></button>
+            <div class="dropdown-menu" aria-labelledby="ddMenu3">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+                <a href="#" class="dropdown-item">Something else here</a>
+                <a href="#" class="dropdown-item">Separated link</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+
+            </div>
+        </div>
+        <hr />
+        <!--選單往左側出現-->
+        <div class="btn-group dropleft">
+            <button class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" id="ddMenu4"></button>
+            <button class="btn btn-danger" data-toggle="dropdown" id="ddMenu4">
+                Menu
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="ddMenu4">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+                <a href="#" class="dropdown-item">Something else here</a>
+                <a href="#" class="dropdown-item">Separated link</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+
+            </div>
+        </div>
+        <hr />
+        <!--Responsive選單的對齊-->
+        <div class="dropdown" style="border:1px solid">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" data-display="static">
+                如果大螢幕的時候選單往右靠，一般大小螢幕時用預設方式對齊
+
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg-right">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item disabled">Another action</a>
+                <a href="#" class="dropdown-item">Something else here</a>
+                <a href="#" class="dropdown-item active">Separated link</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+
+            </div>
+        </div>
+
+        <hr />
+        <!--純文字-->
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Text
+
+            </button>
+            <div class="dropdown-menu p-4 text-danger" style="max-width:250px">
+                <p>
+                    asdfdasfdasfasdfdasfdas
+                </p>
+                <p class="mb-0">
+                    444444444
+                </p>
+            </div>
+        </div>
+
+        <hr />
+
+        <!--與Form合併使用-->
+        <div class="dropdown">
+            <button class="btn btn-primary" data-toggle="dropdown">
+                登入系統
+
+            </button>
+            <div class="dropdown-menu">
+                <form class="px-4 py-3">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" class="form-control" placeholder="Enter email..." required />
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input id="pwd" type="password" class="form-control" placeholder="Password" required />
+                    </div>
+                    <div class="form-group form-check">
+                        <input id="remember" type="checkbox" class="form-check-input" />
+                        <label for="remember">記住我</label>
+                    </div>
+                    <input id="Submit1" type="submit" value="Sign in" class="btn btn-secondary" />
+                </form>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">註冊會員</a>
+                <a href="#" class="dropdown-item">忘記密碼</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />  <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <hr />
+        <!--與Button合併使用-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-info">Item 1</button>
+            <button type="button" class="btn btn-info">Item 2</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Item 3</button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Action</a>
+                    <a href="#" class="dropdown-item">Another action</a>
+                    <a href="#" class="dropdown-item">Something else here</a>
+                    <a href="#" class="dropdown-item">Separated link</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">Action</a>
+                    <a href="#" class="dropdown-item">Another action</a>
+
+                </div>
+            </div>
+            <button type="button" class="btn btn-info">Item 4</button>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />  <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <!--<script src="Scripts/popper.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="Scripts/bootstrap.min.js"></script>-->
+
+
+    <!--<script src="Scripts/bootstrap.bundle.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>-->
+    <!--<script src="Scripts/popper.js"></script>-->
+    <!--<script src="Scripts/bootstrap.min.js"></script>-->
+
+
+
+
+</body>
+</html>

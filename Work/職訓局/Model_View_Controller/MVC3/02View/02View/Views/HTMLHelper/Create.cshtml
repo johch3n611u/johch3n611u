@@ -1,0 +1,40 @@
+﻿@*//03-6-9 撰寫HTMLHelper/Create View 內容*@
+
+@model _02View.Models.Member
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@*<form action="" method="post">*@
+@using (Html.BeginForm())
+{
+    <p>
+        @*<input id="Text1" type="text" class="form-control" />*@
+        帳號:@Html.TextBoxFor(model => model.UserId, new { @class = "form-control" })
+    </p>
+    <p>
+        密碼:@Html.TextBoxFor(model => model.Pwd, new { @class = "form-control" })
+    </p>
+    <p>
+        姓名:@Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </p>
+    <p>
+        信箱:@Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    </p>
+    <p>
+        生日:@Html.TextBoxFor(model => model.Birthday, new { @class = "form-control" })
+    </p>
+    <p>
+        <input id="Submit1" type="submit" value="註冊" class="btn btn-default" />
+    </p>
+
+    <p>
+        @Html.Raw(ViewBag.Msg)
+    </p>
+
+}
+
+@*</form>*@
+

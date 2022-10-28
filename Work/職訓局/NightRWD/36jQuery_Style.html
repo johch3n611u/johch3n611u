@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #btn span {
+            border:1px solid;
+            cursor: pointer;
+        }
+        #pink {
+            background-color: pink;
+            
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #green {
+            background-color: green;
+        }
+        #yellow{
+            background-color:yellow;
+        }
+        #container {
+            width: 90%;
+            margin: auto;
+        }
+        #tb1 {
+           width:100%;
+           margin-top:50px;
+            border-spacing: 0;
+        }
+            #tb1>thead>tr{
+                border-bottom:3px solid black;
+                height:30px;
+                background-color:black;
+                color:white;
+            }
+
+            /*#tb1>tbody>tr:nth-child(2n+1) {
+                border-bottom: 1px solid black;
+                background-color: #808080;
+                color: white;
+            }*/
+
+        
+
+        .pink {
+                background-color: pink;
+            }
+        .blue {
+            background-color:lightblue;
+        }
+        .green {
+            background-color: #b5ff9c;
+        }
+        .yellow {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div id="btn">
+            <span id="pink">　</span>
+            <span id="blue">　</span>
+            <span id="green">　</span>
+            <span id="yellow">　</span>
+     
+        </div>
+        <table id="tb1">
+            <thead><tr><td>站名</td><td>車次</td><td>車種</td><td>山/海線</td><td>行車方向</td><td>到站時間</td><td>發車時間</td><td>誤點時間</td></tr></thead>
+            <tbody>
+                <tr><th>基隆</th><th>2234</th><th>區間車</th><th>山線</th><th>順行</th><th>21:38:00</th><th>21:40:00</th><th>準點</th></tr>
+                <tr><th>八堵</th><th>633</th><th>莒光(無身障座位)</th><th>不經山海線</th><th>逆行</th><th>21:04:00</th><th>21:06:00</th><th><span style="color:red">誤點3分鐘</span></th></tr>
+                <tr><th>八堵</th><th>252</th><th>自強(普悠瑪)</th><th>不經山海線</th><th>順行</th><th>21:06:00</th><th>21:08:00</th><th>準點</th></tr>
+                <tr><th>八堵</th><th>2234</th><th>區間車</th><th>山線</th><th>順行</th><th>21:29:00</th><th>21:30:00</th><th>準點</th></tr>
+                <tr><th>七堵</th><th>2234</th><th>區間車</th><th>山線</th><th>順行</th><th>21:23:00</th><th>21:25:00</th><th>準點</th></tr>
+                <tr><th>七堵</th><th>554</th><th>莒光(有身障座位)</th><th>海線</th><th>順行</th><th>21:35:00</th><th>21:43:00</th><th><span style="color:red">誤點3分鐘</span></th></tr>
+                <tr><th>七堵</th><th>288</th><th>自強(普悠瑪)</th><th>山線</th><th>順行</th><th>21:38:00</th><th>21:40:00</th><th>準點</th></tr>
+                <tr><th>五堵</th><th>2234</th><th>區間車</th><th>山線</th><th>順行</th><th>21:14:00</th><th>21:14:00</th><th>準點</th></tr>
+                <tr><th>五堵</th><th>1262</th><th>區間車</th><th>不經山海線</th><th>順行</th><th>21:37:00</th><th>21:37:00</th><th>準點</th></tr>
+                <tr><th>汐止</th><th>633</th><th>莒光(無身障座位)</th><th>不經山海線</th><th>逆行</th><th>21:18:00</th><th>21:24:00</th><th><span style="color:red">誤點3分鐘</span></th></tr>
+                <tr><th>汐止</th><th>554</th><th>莒光(有身障座位)</th><th>海線</th><th>順行</th><th>21:23:00</th><th>21:25:00</th><th><span style="color:red">誤點3分鐘</span></th></tr>
+                <tr><th>汐止</th><th>1262</th><th>區間車</th><th>不經山海線</th><th>順行</th><th>21:29:00</th><th>21:35:00</th><th>準點</th></tr>
+                <tr><th>汐止</th><th>142</th><th>自強(推拉式自強號且無自行車車廂)</th><th>山線</th><th>順行</th><th>21:31:00</th><th>21:32:00</th><th>準點</th></tr>
+                <tr><th>南港</th><th>4225</th><th>區間車</th><th>不經山海線</th><th>逆行</th><th>21:20:00</th><th>21:20:00</th><th>準點</th></tr>
+                <tr><th>南港</th><th>1262</th><th>區間車</th><th>不經山海線</th><th>順行</th><th>21:21:00</th><th>21:21:00</th><th>準點</th></tr>
+                <tr><th>松山</th><th>554</th><th>莒光(有身障座位)</th><th>海線</th><th>順行</th><th>21:12:00</th><th>21:14:00</th><th><span style="color:red">誤點3分鐘</span></th></tr>
+                <tr><th>松山</th><th>441</th><th>自強(太魯閣)</th><th>不經山海線</th><th>逆行</th><th>21:12:00</th><th>21:13:00</th><th><span style="color:red">誤點3分鐘</span></th></tr>
+                <tr><th>松山</th><th>1271</th><th>區間車</th><th>不經山海線</th><th>逆行</th><th>21:19:00</th><th>21:20:00</th><th>準點</th></tr>
+                <tr><th>松山</th><th>142</th><th>自強(推拉式自強號且無自行車車廂)</th><th>山線</th><th>順行</th><th>21:21:00</th><th>21:22:00</th><th>準點</th></tr>
+                <tr><th>松山</th><th>4225</th><th>區間車</th><th>不經山海線</th><th>逆行</th><th>21:24:00</th><th>21:25:00</th><th>準點</th></tr>
+                <tr><th>松山</th><th>288</th><th>自強(普悠瑪)</th><th>山線</th><th>順行</th><th>21:26:00</th><th>21:27:00</th><th>準點</th></tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        //$('#pink').click(function () {
+        //    //$('#tb1').css({ 'background-color': 'pink' });
+        //    $('#tb1').removeClass().addClass('pink');
+        //});
+        //$('#blue').click(function () {
+        //    //$('#tb1').css({ 'background-color': 'blue' });
+        //    $('#tb1').removeClass().addClass('blue');
+
+        //});
+
+        $('#btn span').click(function (evt) {
+            var id = evt.target.id;
+            //console.log(id);
+            $('#tb1>tbody>tr:nth-child(2n+1)').removeClass().addClass(id);
+
+        });
+
+
+    </script>
+</body>
+</html>

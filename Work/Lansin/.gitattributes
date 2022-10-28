@@ -1,0 +1,8 @@
+*.rb linguist-language=c#
+*.js linguist-language=c#
+*.css linguist-language=c#
+*.html linguist-language=c#
+*.vb linguist-language=c#
+*.aspx.vb linguist-language=c#
+*.aspx linguist-language=c#
+*.ashx linguist-language=c#

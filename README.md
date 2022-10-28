@@ -5,7 +5,7 @@
    <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
 </a>
 
-Explicit is better than implicit 🖖 歡迎互相交流 
+Explicit is better than implicit 🖖 歡迎互相交流
 
 <!-- 你好，我是劉育誠，<br> -->
 
@@ -27,7 +27,7 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 <p>
  <!-- 較長碰 -->
- 
+
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="25" height="25"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="25" height="25"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1051px-Adobe_Photoshop_CC_icon.svg.png" alt="photoshop" width="25" height="25"/>
@@ -49,7 +49,7 @@ Explicit is better than implicit 🖖 歡迎互相交流
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="25" height="25"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="25" height="25"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="25" height="25"/>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="25" height="25"/> 
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="25" height="25"/>
 <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="25" height="25"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="25" height="25"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" alt="ionic" width="25" height="25"/>
@@ -125,31 +125,30 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 
 --->
 
-<details> 
+<details>
 
 ---
 
 ## Experience
- 
+
 ### <a href="http://www.shinda.com.tw"> Shinda Tech </a> , Sr. Web Developer , 2020.06 - 2022.10
 
 ### <a href="https://www.eclife.com.tw/"> Liang Shing EcLife </a> , Jr. Web Developer , 2020.06 - 2022.10
 
 <br><br><br>
- 
+
 ## Education
 
 ### <a href="http://www.shinda.com.tw"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , 2020.06 - 2022.10
 
 `Course-of-Mobile-Commerce-System-Design-and-Development`
- 
- 
+
 ### <a href="http://www.shinda.com.tw"> 輔仁大學景觀建築系 </a> ,  , 2020.06 - 2022.10
 
 ### <a href="http://www.shinda.com.tw"> 義守大學資訊管理系 </a> ,  , 2020.06 - 2022.10
- 
+
 ---
- 
+
 </details>
 
-感謝您閱讀 🏄 如有建議煩請指教與分享 
+感謝您閱讀 🏄 如有建議煩請指教與分享

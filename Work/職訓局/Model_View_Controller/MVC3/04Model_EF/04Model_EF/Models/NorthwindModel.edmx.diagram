@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="497d3d6831ff42039564b8a238d53ffc" Name="Diagram1">
+        <EntityTypeShape EntityType="NorthwindModel.sysdiagrams" Width="1.5" PointX="11.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.供應商" Width="1.5" PointX="1.375" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.客戶" Width="1.5" PointX="2.375" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.訂貨主檔" Width="1.5" PointX="5.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.訂貨明細" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.員工" Width="1.5" PointX="0.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.產品資料" Width="1.5" PointX="6.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.產品類別" Width="1.5" PointX="9.625" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.貨運公司" Width="1.5" PointX="3.375" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="NorthwindModel.FK_產品資料_供應商" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_訂貨主檔_客戶" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_訂貨主檔_員工" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_訂貨主檔_貨運公司" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_訂貨明細_訂貨主檔" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_訂貨明細_產品資料" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_產品資料_產品類別" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

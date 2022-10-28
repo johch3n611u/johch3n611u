@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "5f38e8fb-3c80-4d1c-8f79-c97958555ed4",
+		"name": "YahooAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://tw.supplier.yahoo.com/api/spa/v1/signIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "Supplier_478",
+						"type": "text"
+					},
+					{
+						"key": "api-keyversion",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "api-timestamp",
+						"value": "1577063633",
+						"type": "text"
+					},
+					{
+						"key": "api-signature",
+						"value": "c255b95ff37c0fb89e59c87d82a7e679c86bfa534010bcac4f0f7adcb4c486ae5c03e6026d6287eeecde9d0aeed9d10bba23e6466eccfbc8d243e2040fffdc31",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Ej+Gc3beGBIupv9gW6dZNFAQVM+oubRZqkbFTwnByL8=",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tw.supplier.yahoo.com/api/spa/v1/signIn",
+					"protocol": "https",
+					"host": [
+						"tw",
+						"supplier",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"api",
+						"spa",
+						"v1",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://tw.supplier.yahoo.com/api/spa/v1/token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tw.supplier.yahoo.com/api/spa/v1/token",
+					"protocol": "https",
+					"host": [
+						"tw",
+						"supplier",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"api",
+						"spa",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://tw.supplier.yahoo.com/api/spa/v1/proposals",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-YahooWSSID-Authorization",
+						"value": "u7XuwYJQwN__gaPmERyF2A--~A",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "tw.supplier.yahoo.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"applicant\": \"測試\",\n    \"product\": {\n        \"attributeDisplayMode\": \"table\",\n        \"attributes\": [\n            {\n                \"name\": \"機種\",\n                \"values\": [\n                    \"噴墨印表機\"\n                ]\n            },\n            {\n                \"name\": \"產品功能\",\n                \"values\": [\n                    \"光碟封面列印\"\n                ]\n            },\n            {\n                \"name\": \"列印顏色\",\n                \"values\": [\n                    \"黑色\"\n                ]\n            },\n            {\n                \"name\": \"可列印紙張尺寸\",\n                \"values\": [\n                    \"Monarch\"\n                ]\n            },\n            {\n                \"name\": \"PC傳真\",\n                \"values\": [\n                    \"可PC傳真發送與接收\"\n                ]\n            },\n            {\n                \"name\": \"保固時間\",\n                \"values\": [\n                    \"3個月\"\n                ]\n            },\n            {\n                \"name\": \"列印方式\",\n                \"values\": [\n                    \"撞擊式點矩陣\"\n                ]\n            },\n            {\n                \"name\": \"列印寬度(文字間距10CPI)\",\n                \"values\": [\n                    \"80行\"\n                ]\n            },\n            {\n                \"name\": \"列印速度\",\n                \"values\": [\n                    \"301-550CPS\"\n                ]\n            },\n            {\n                \"name\": \"連接埠\",\n                \"values\": [\n                    \"平行列印埠\"\n                ]\n            },\n            {\n                \"name\": \"複印份數\",\n                \"values\": [\n                    \"1+4 copy\"\n                ]\n            },\n            {\n                \"name\": \"條碼字型\",\n                \"values\": [\n                    \"POSTNET\"\n                ]\n            },\n            {\n                \"name\": \"操作面板語言\",\n                \"values\": [\n                    \"中文面板\"\n                ]\n            },\n            {\n                \"name\": \"進紙方向\",\n                \"values\": [\n                    \"前方進紙\"\n                ]\n            },\n            {\n                \"name\": \"列印速度：黑白/彩色（ ppm ISO (A4))\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"列印解析度(dpi)\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"每月列印量\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"墨水(碳粉)型號\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"進紙槽容量\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"輸入介面\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"額定電壓(vac)\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"額定頻率(Hz)\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"耗電量(列印模式）\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"尺寸(長x寬x高)(mm)\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"重量(kg)\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"適用作業系統\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"色帶型號\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"主機尺寸\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"主機重量\",\n                \"values\": [\n                    \"測試\"\n                ]\n            },\n            {\n                \"name\": \"紙張最厚厚度\",\n                \"values\": [\n                    \"測試\"\n                ]\n            }\n        ],\n        \"catItemId\": \"catItem60611\",\n        \"contentRating\": \"G\",\n        \"cost\": \"15373.00\",\n        \"models\": [\n            {\n                \"items\": [\n                    {\n                        \"stock\": \"\",\n                        \"spec\": {\n                            \"name\": \"型號\",\n                            \"values\": [\n                                \"測試\"\n                            ]\n                        },\n                        \"displayName\": \"測試\"\n                    }\n                ],\n                \"images\": [\n                    {\n                        \"url\": \"https://s.yimg.com/mm/Files/f79551da32b29a65b5f930f5e6b5e71a1cd0e747_1000x1000.png\",\n                        \"order\": 1\n                    },\n                    {\n                        \"url\": \"https://s.yimg.com/mm/Files/f79551da32b29a65b5f930f5e6b5e71a1cd0e747_1000x1000.png\",\n                        \"order\": 2\n                    }\n                ],\n                \"spec\": {\n                    \"name\": \"品牌\",\n                    \"values\": [\n                        \"Brother兄弟\"\n                    ]\n                },\n                \"displayName\": \"測試\"\n            }\n        ],\n        \"msrp\": \"18990.00\",\n        \"name\": \"HP Color LaserJet Pro MFP\",\n        \"shipType\": {\n            \"id\": 1\n        },\n        \"shortDescription\": [\n            \"測試\",\n            \"測試\"\n        ],\n        \"struDataAttrClusterId\": \"000002941679\",\n        \"copy\": \"<div>\\t<img border=\\\"0\\\" src=\\\"https://s.yimg.com/mm/Files/e23643b9758f8c3051273cdb8a7a5d87c59bf4a1_772x2412.jpg\\\" title=\\\"\\\" />雙面列印/掃瞄/影印/傳真/有線網路/無線網路</div><div>\\t&nbsp;</div>\",\n        \"specs\": [\n            {\n                \"level\": 1,\n                \"name\": \"品牌\"\n            },\n            {\n                \"level\": 2,\n                \"name\": \"型號\"\n            }\n        ]\n    },\n    \"reviewStatus\": \"draft\",\n    \"subStationId\": \"sub52\",\n    \"type\": \"newListing\",\n    \"listing\": {\n        \"catItemId\": \"catItem60611\",\n        \"deliveryType\": \"normal\",\n        \"price\": \"18990.00\",\n        \"seoUrl\": \"HPColorLaserJetProMFP\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tw.supplier.yahoo.com/api/spa/v1/proposals",
+					"protocol": "https",
+					"host": [
+						"tw",
+						"supplier",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"api",
+						"spa",
+						"v1",
+						"proposals"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

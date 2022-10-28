@@ -1,0 +1,452 @@
+<div class="ui-fluid">
+    <div class="ui-g paddingin">
+        <div class="ui-g-12">
+            <h3 class="align signFormName">
+                <!-- signFormName -->
+                {{ "ServiceSetting.ServiceSettingTitle" | translate }}
+            </h3>
+        </div>
+        <div class="ui-g-6 ui-md-3">
+            <button pButton type="button" icon="fa fa-plus" label="{{ 'ServiceSetting.add' | translate }} "
+                (click)="showDialogToAdd()"></button>
+        </div>
+        <div class="ui-g-12 ui-md-12">
+            <p-table #table [columns]="cols" [value]="dataLists" selectionMode="single" [(selection)]="selectedVipUser"
+                [paginator]="true" [rows]="15" [scrollable]="true" [resizableColumns]="true">
+                <ng-template pTemplate="colgroup" let-columns>
+                    <colgroup>
+                        <col *ngFor="let col of columns" style="width:100px">
+                    </colgroup>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <ng-container *ngFor="let col of columns; let i = index">
+                            <th *ngIf="i >= 0" style="width: 100px;" [pSortableColumn]=" col.field" pResizableColumn>
+                                {{ col.header }}
+                                <p-sortIcon [field]=" col.field"></p-sortIcon>
+                            </th>
+                        </ng-container>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ServiceCode', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ServiceProject', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ServiceProjectEn', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ServiceSubProject', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ServiceSubProjectEn', 'contains')">
+                        </th>
+                        <th>
+                            <p-multiSelect appendTo="body" [options]="serviceClassList" defaultLabel="All"
+                                (onChange)="table.filter($event.value, 'ServiceClass', 'in')"></p-multiSelect>
+                        </th>
+                        <th>
+                            <p-multiSelect appendTo="body" [options]="serviceSubClassList" defaultLabel="All"
+                                (onChange)="table.filter($event.value, 'ServiceSubClass', 'in')"></p-multiSelect>
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'HqFlowCode', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'OverseasFlowCode', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'RiskLevel', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'LevelCode', 'contains')">
+                        </th>
+                        <th>
+                            <p-multiSelect appendTo="body" [options]="IsUseStandardItem" defaultLabel="All"
+                                (onChange)="table.filter($event.value, 'IsUseStandardForm', 'in')"></p-multiSelect>
+                        </th>
+                        <th>
+
+                            <p-multiSelect appendTo="body" [options]="ComplexApplicationItem" defaultLabel="All"
+                                (onChange)="table.filter($event.value, 'ComplexApplicationOptions', 'in')">
+                            </p-multiSelect>
+
+                        </th>
+                        <th>
+                            <p-multiSelect appendTo="body" [options]="LeavingControlsItem" defaultLabel="All"
+                                (onChange)="table.filter($event.value, 'LeavingControls', 'in')"></p-multiSelect>
+                        </th>
+                        <th>
+                            <p-multiSelect appendTo="body" [options]="StatusItem" defaultLabel="All"
+                                (onChange)="table.filter($event.value, 'Status', 'in')"></p-multiSelect>
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'Organizer', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'BackupOrganizer', 'contains')">
+                        <!-- <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'InfoSecurityDescription', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'InfoSecurityDescriptionEn', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ApplicationDescription', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ApplicationDescriptionEn', 'contains')">
+                        </th> -->
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ModifyEmpno', 'contains')">
+                        </th>
+                        <th>
+                            <input pInputText type="text"
+                                (input)="table.filter($event.target.value, 'ModifyDate', 'contains')">
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr class='breakall'>
+                        <td class=" btnicon">
+                            <button pButton type="button" icon="fa fa-edit" class="icon"
+                                (click)="showDialogToAdd(rowData)"></button>
+                        </td>
+                        <!-- [pSelectableRow]="rowData" -->
+                        <td>{{ rowData.ServiceCode }}</td>
+                        <td>{{ rowData.ServiceProject }}</td>
+                        <td>{{ rowData.ServiceProjectEn }}</td>
+                        <td>{{ rowData.ServiceSubProject }}</td>
+                        <td>{{ rowData.ServiceSubProjectEn }}</td>
+                        <td>{{ classNameMap(rowData.ServiceClass, 0) }}</td>
+                        <td>
+                            {{
+                                classNameMap(
+                                    rowData.ServiceClass,
+                                    rowData.ServiceSubClass
+                                )
+                            }}
+                        </td>
+                        <td>{{ rowData.HqFlowCode }}</td>
+                        <td>{{ rowData.OverseasFlowCode }}</td>
+                        <td>{{ rowData.RiskLevel }}</td>
+                        <td>{{ rowData.LevelCode }}</td>
+                        <td>{{ rowData.IsUseStandardForm > 0 ? "Y" : "N" }}</td>
+                        <td>
+                            {{
+                                rowData.ComplexApplicationOptions > 0
+                                    ? "Y"
+                                    : "N"
+                            }}
+                        </td>
+                        <td>{{ rowData.LeavingControl > 0 ? "Y" : "N" }}</td>
+                        <td>{{ rowData.Status > 0 ? "Y" : "N" }}</td>
+                        <td>{{ rowData.Organizer }}</td>
+                        <td>{{ rowData.BackupOrganizer }}</td>
+                        <!-- <td>{{ rowData.InfoSecurityDescription }}</td>
+                        <td>{{ rowData.InfoSecurityDescriptionEn }}</td>
+                        <td>{{ rowData.ApplicationDescription }}</td>
+                        <td>{{ rowData.ApplicationDescriptionEn }}</td> -->
+                        <td>{{ rowData.ModifyEmpno }}</td>
+                        <td>{{ rowData.ModifyDate | date: "yyyy-MM-dd" }}</td>
+                    </tr>
+                </ng-template>
+                <!-- <ng-template pTemplate="summary" let-rowData>
+            <div style="text-align:left">
+
+            </div>
+        </ng-template>-->
+            </p-table>
+        </div>
+    </div>
+</div>
+<p-dialog header="{{ 'ServiceSetting.ServiceSettingTitle' | translate }}" [(visible)]="displayDialog" [modal]="true"
+    [draggable]="false" width="800" appendTo="body">
+    <div class="ui-fluid">
+        <div class="ui-g paddingin">
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.ServiceCode" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+
+                <input disabled id="inputServiceCode" [(ngModel)]="input.ServiceCode" type="text" pInputText />
+            </div>
+            <div class="ui-g-6 ui-md-3 ">
+                <div class="ui-inputgroup  required">
+                    <span>{{ "ServiceSetting.ServiceClass" | translate }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownServiceClass" (onChange)="onServiceClassChange($event)"
+                    [options]="serviceClassList" [(ngModel)]="input.ServiceClass"
+                    placeholder="{{'ServiceSetting.SelectServiceClass'| translate}}"></p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span for="input">{{
+                        "ServiceSetting.ServiceSubClass" | translate
+                    }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownServiceSubClass" [options]="serviceSubClassList"
+                    [(ngModel)]="input.ServiceSubClass" placeholder="{{'ServiceSetting.ServiceSubClass'| translate}}">
+                </p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{
+                        "ServiceSetting.ServiceProject" | translate
+                    }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <input id="inputServiceProject" required [(ngModel)]="input.ServiceProject" type="text" pInputText />
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{
+                        "ServiceSetting.ServiceProjectEn" | translate
+                    }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <input id="inputServiceProjectEn" required [(ngModel)]="input.ServiceProjectEn" type="text"
+                    pInputText />
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.ServiceSubProject" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <input id="inputServiceSubProject" [(ngModel)]="input.ServiceSubProject" type="text" pInputText />
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.ServiceSubProjectEn" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <input id="inputServiceSubProjectEn" [(ngModel)]="input.ServiceSubProjectEn" type="text" pInputText />
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.RiskLevel" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <input id="inputServiceSubProjectEn" [(ngModel)]="input.RiskLevel" type="text" pInputText />
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.LevelCode" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownLevelCode" [(ngModel)]="input.LevelCode" [options]="levelCodeList">
+                </p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{
+                        "ServiceSetting.IsUseStandardForm" | translate
+                    }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownIsUseStandardForm" [options]="[
+                        { label: 'Y', value: 1 },
+                        { label: 'N', value: 0 }
+                    ]" [(ngModel)]="input.IsUseStandardForm"></p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.ComplexApplicationOptions" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownComplexApplicationOptions" [options]="[
+                        { label: 'Y', value: 1 },
+                        { label: 'N', value: 0 }
+                    ]" [(ngModel)]="input.ComplexApplicationOptions">
+                </p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.LeavingControls" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownLeavingControls" [options]="[
+                        { label: 'Y', value: 1 },
+                        { label: 'N', value: 0 }
+                    ]" [(ngModel)]="input.LeavingControls"></p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{ "ServiceSetting.Organizer" | translate }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup ">
+                    <input pInputText type="text" readonly="true" (click)="emp_showDialog(input.OrganizerEmpno, 1)"
+                        [(ngModel)]="input.Organizer" name="applicant" placeholder="{{
+                            'ServiceSetting.SelectOrganizer'
+                                | translate
+                        }}" required />
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{
+                        "ServiceSetting.BackupOrganizer" | translate
+                    }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup ">
+                    <input pInputText type="text" readonly="true"
+                        (click)="emp_showDialog(input.BackupOrganizerEmpno, 2)" [(ngModel)]="input.BackupOrganizer"
+                        name="applicant1" placeholder="{{
+                            'ServiceSetting.SelectBackOrganizer'
+                                | translate
+                        }}" required />
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{ "ServiceSetting.HqFlowCode" | translate }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownHqFlowCode" [options]="signDataList" [(ngModel)]="input.HqFlowCode">
+                </p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <div class="ui-inputgroup  required">
+                    <span>{{
+                        "ServiceSetting.OverseasFlowCode" | translate
+                    }}</span>
+                </div>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownOverseasFlowCode" [options]="signDataList" [(ngModel)]="input.OverseasFlowCode">
+                </p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <label for="input">{{
+                    "ServiceSetting.Status" | translate
+                }}</label>
+            </div>
+            <div class="ui-g-6 ui-md-3">
+                <p-dropdown id="dropdownStatus" [options]="[
+                        { label: 'Y', value: 1 },
+                        { label: 'N', value: 0 }
+                    ]" [(ngModel)]="input.Status"></p-dropdown>
+            </div>
+            <div class="ui-g-12 paddingin">
+                <div class="ui-g-6 ui-md-3">
+                    <label for="input">{{
+                        "ServiceSetting.InfoSecurityDescription" | translate
+                    }}</label>
+                </div>
+                <div class="ui-g-6 ui-md-9">
+                    <textarea pInputTextarea required [(ngModel)]="input.InfoSecurityDescription" placeholder="{{
+                        'ServiceSetting.InfoSecurityDescription'
+                            | translate
+                    }}"></textarea>
+                </div>
+            </div>
+            <div class="ui-g-12 paddingin">
+                <div class="ui-g-6 ui-md-3">
+                    <label for="input">{{
+                    "ServiceSetting.InfoSecurityDescriptionEn" | translate
+                }}</label>
+                </div>
+                <div class="ui-g-6 ui-md-9">
+                    <textarea pInputTextarea required [(ngModel)]="input.InfoSecurityDescriptionEn" placeholder="{{
+                        'ServiceSetting.InfoSecurityDescriptionEn'
+                            | translate
+                    }}"></textarea>
+                </div>
+            </div>
+            <div class="ui-g-12 paddingin">
+                <div class="ui-g-6 ui-md-3">
+                    <label for="input">{{
+                    "ServiceSetting.ApplicationDescription" | translate
+                }}</label>
+                </div>
+                <div class="ui-g-6 ui-md-9">
+                    <textarea pInputTextarea required [(ngModel)]="input.ApplicationDescription" placeholder="{{
+                        'ServiceSetting.ApplicationDescription'
+                            | translate
+                    }}"></textarea>
+                </div>
+            </div>
+            <div class="ui-g-12 paddingin">
+                <div class="ui-g-6 ui-md-3">
+                    <label for="input">{{
+                    "ServiceSetting.ApplicationDescriptionEn" | translate
+                }}</label>
+                </div>
+                <div class="ui-g-6 ui-md-9">
+
+                    <textarea pInputTextarea required [(ngModel)]="input.ApplicationDescriptionEn" placeholder="{{
+                        'ServiceSetting.ApplicationDescriptionEn'
+                            | translate
+                    }}"></textarea>
+                </div>
+            </div>
+
+            <div class="ui-g-12  required">
+                <div class="ui-g-12 ui-md-12 paddingin">
+                    <div class="ui-lg-offset-4 ui-g-offset-3 ui-g-3 ui-lg-2">
+                        <button pButton type="submit" icon="fa-check fa" label="{{ 'Button.confirm' | translate }}"
+                            (click)="Submit_OK()"></button>
+                    </div>
+                    <div class=" ui-g-3 ui-lg-2">
+                        <button pButton type="submit" icon="fa-times fa" label="{{ 'Button.cancel' | translate }}"
+                            (click)="colseDialog()" class="ui-button-secondary"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- </div>
+                <button type="button" pButton label="{{ 'Button.confirm' | translate }}" icon="fa-check fa"
+                    (click)="Submit_OK()"></button>
+                 (click)="Role_OK()" style="margin-left: 50px"></button>
+            </div>
+            <div class=" ui-lg-2 ui-g-3 ">
+                <button type="button" pButton label="{{ 'Button.cancel' | translate }}" icon="fa-times fa"
+                    (click)="emp_ColseDialog()"></button>
+                 (click)="Role_Cancel()" style="margin-left: 50px"></button>
+            </div> -->
+        </div>
+    </div>
+</p-dialog>
+
+<app-employee-selector-standard [(visible)]="emp_display" (OKEvent)="emp_Add($event)"
+    (CancelEvent)="emp_ColseDialog($event)" [(CanMultiple)]="CanMultiple">
+</app-employee-selector-standard>

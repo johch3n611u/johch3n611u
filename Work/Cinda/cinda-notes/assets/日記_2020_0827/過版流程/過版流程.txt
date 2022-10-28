@@ -1,0 +1,50 @@
+## 過版流程
+
+1. 搬程式 ( 檔名為今天時間 )
+    * 後端資料夾直接搬
+    * 前端 build:dev 後，確定 node_module 有無新增(有就搬，沒有就略過)
+2. 7zip壓縮會比較小 ( 前後端程式 )
+3. FTP路徑 ( 搬過去後，通知Zachary ) 路徑 ftp1.mxic.com.tw / 使用者名稱 ftpSystexSW / 密碼 oK7D1z6q
+4. 丟第五台 ( 有開發環境 )
+5. 進第五台 ( 佈開發環境 )
+    * ( 後端 ) .vs 設定檔先刪除再開專案
+    * ( 後端 ) 設定 API 為起始專案
+    * ( 後端 ) D: / SIT / 專案 config 複製到專案內覆蓋，有改就加
+    * ( 後端 ) EF MxModel.edmx 用 XML 開啟
+      * 搜尋1. 空白Schema 轉換為 空白
+      * 搜尋2. Schema 轉換為 Schema=""
+      * 搜尋3. "TEST." 轉換為 空白
+    * ( 後端 ) API發行 -> 資料夾 ( 進階 -> 移除目的地檔案 )
+    * ( 後端 build ) 路徑為 bin / Release / Publish
+    * ( 前端 ) ( 如果沒有 ) 剪下上一個版本的 node_module
+    * ( 前端 ) cmd npm start
+    * ( 前端 build ) 路徑為 dist/全部
+    * ( 前端 build ) 的設定檔案為 D: / SIT / web.config
+6. 佈版位置 ( 跳板在跳板 ) 帳號密碼 ( Excel 內 第一組 00**5*83 )
+7. D: wwwroot / mxitc_coding
+8. 新建資料夾 ( 目錄要同之前版本，方便 IIS 實體路徑設定 )
+9. 9006 Port
+10. 人員帳號密碼在 Excel 內
+
+
+
+===========================================
+
+進入(需下載 Citrix Receiver)
+https://mxwi01.mxic.com.tw/vpn/index.html
+
+PUBSYSTEX01
+089085
+172.17.84.21
+
+PUBSYSTEX02
+089086
+172.17.84.22
+
+PUBSYSTEX03 08908700
+
+PUBSYSTEX04 089088
+PUBSYSTEX05 089089
+PUBSYSTEX06 089090
+
+===========================================

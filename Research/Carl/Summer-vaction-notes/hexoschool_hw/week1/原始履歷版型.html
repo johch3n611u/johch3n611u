@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。 */
+        
+        .resume {
+            width: 100%;
+            /* height: 3043px; */
+            background: #ffffff 0% 0% no-repeat padding-box;
+            opacity: 1;
+            margin: auto;
+        }
+        
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .fullname {
+            font-family: sans-serif;
+            margin-top: 12px;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            text-align: left;
+            /* font: Regular 80px/95px SF Pro Text; */
+            font-size: 80px;
+            color: #000000;
+            opacity: 1;
+            border-bottom: 2px solid black
+        }
+        
+        .headshot {
+            margin-top: 34px;
+        }
+        
+        .profile {
+            margin-top: 32px;
+            font-size: 32px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 2px solid black
+        }
+        
+        .profile span {
+            margin: 6px;
+            font-size: 24px;
+            color: #A00404;
+        }
+        
+        .inf1 {
+            margin-top: 24px;
+        }
+        
+        .inf1 li {
+            margin-top: 12px;
+            font-size: 24px;
+        }
+        
+        .inf2 {
+            margin-top: 24px;
+        }
+        
+        .inf2 li {
+            font-size: 24px;
+            margin-top: 12px;
+        }
+        
+        .degree {
+            margin-top: 60px;
+            font-size: 32px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 1px solid black
+        }
+        
+        .degree span {
+            margin-left: 6px;
+            font-size: 24px;
+            color: #A00404;
+        }
+        
+        .school li {
+            font-size: 24px;
+            margin-top: 24px;
+        }
+        
+        .skills {
+            margin-top: 70px;
+            width: 1200px;
+            height: 496px;
+            box-sizing: border-box;
+            background-color: #415165;
+        }
+        
+        .skills h3 {
+            font-family: sans-serif;
+            font-weight: bolder;
+            color: #ffffff;
+            padding-top: 24px;
+            padding-bottom: 16px;
+            font-size: 32px;
+            text-align: center;
+            margin: auto;
+            width: 996px;
+            border-bottom: 1px solid #ffffff;
+        }
+        
+        .skills span {
+            margin-left: 6px;
+            font-size: 24px;
+        }
+        
+        .skilltree {
+            margin-left: 492px;
+            border-left: 1px solid #96A9C4;
+            padding-left: 24px;
+        }
+        
+        .skilltree li {
+            color: #ffffff;
+            text-align: left;
+            font-family: sans-serif;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        
+        .workexp {
+            padding: 12px;
+            font-weight: bolder;
+            border-bottom: 1px solid black;
+            font-size: 32px;
+            margin-top: 60px;
+        }
+        
+        .workexp span {
+            margin-left: 6px;
+            font-family: sans-serif;
+            font-size: 24px;
+            color: #A00404;
+        }
+        
+        .worklist {
+            margin-top: 16px;
+            margin-left: 16px;
+            border-left: 1px solid #96A9C4;
+        }
+        
+        .worklist img {
+            margin: 10px;
+        }
+        
+        .worklist li {
+            font-size: 24px;
+            font-weight: bolder;
+            width: 642px;
+            margin-left: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .worklist p {
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        
+        .footer {
+            margin-top: 70px;
+            padding-bottom: 44px;
+            background-color: #415165;
+        }
+        
+        .contact {
+            font-weight: bolder;
+            font-size: 32px;
+            padding-top: 24px;
+            padding-bottom: 10px;
+            text-align: center;
+            margin: auto;
+            color: #FFFFFF;
+            width: 1200px;
+            border-bottom: 1px solid #FFFFFF;
+        }
+        
+        .contact span {
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        
+        .method li {
+            font-size: 24px;
+            margin-top: 16px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .method img {
+            margin-top: 20px;
+            margin-left: 16px;
+        }
+        
+        .method a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume">
+        <div class="container">
+            <div class="fullname">
+                <h1>Joanne<br>Chen</h1>
+            </div>
+            <div class="headshot"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week1/photo.png?raw=true" alt="headshot"></div>
+            <div class="profile">
+                <h2>個人資料&nbsp;<span>PROFILE</span></h2>
+            </div>
+            <div class="inf1">
+                <ul>
+                    <li>陳久安&nbsp;Joanne&nbsp;Chen</li>
+                    <li>1997-</li>
+                    <li>應屆畢業生&nbsp;/&nbsp;接案設計師&nbsp;/&nbsp;UI&nbsp;設計實習生</li>
+                </ul>
+            </div>
+            <div class="inf2">
+                <ul>
+                    <li>UI&nbsp;設計修行中&nbsp;/&nbsp;立志當斜槓青年</li>
+                    <li>獨立接案，內容涵蓋&nbsp;:</li>
+                    <li>品牌規劃、視覺設計、編輯設計、標準字、物件及印刷品設計等。</li>
+                </ul>
+
+            </div>
+            <div class="degree">
+                <h2>學歷&nbsp;<span>EDUCATION</span></h2>
+            </div>
+            <div class="school">
+                <ul>
+                    <li>國立六角師範大學&nbsp;視覺設計學系&nbsp;學士學位│2016&nbsp;⎯&nbsp;2020</li>
+                    <li>國立六腳高級中學&nbsp;美術班│2013&nbsp;⎯&nbsp;2016</li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3>技能&nbsp;<span>SKILLS</span></h3>
+                <div class="skilltree">
+                    <ul>
+                        <li>Adobe&nbsp;Photoshop</li>
+                        <li>Adobe&nbsp;Illustratio</li>
+                        <li>Adobe&nbsp;XD</li>
+                        <li>Adobe&nbsp;Ibdesign</li>
+                        <li>Adobe&nbsp;Indesign</li>
+                        <li>C4D</li>
+                        <li>Adobe&nbsp;Premiere</li>
+                        <li>語言&nbsp;:&nbsp;中文、英文</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="workexp">
+                <h2>工作經驗&nbsp;<span>WORK&nbsp;EXPERIENCE</span></h2>
+            </div>
+            <div class="worklist">
+                <ul>
+                    <li>六角學院 視覺設計實習生│2019/07&nbsp;⎯&nbsp;2020/06<br>
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/Group%201.svg" alt="六角學院.icon"><br>
+                        <p>在六角學院長達一年的實習中，前期藉由公司課程掌握 HTML, CSS, Adobe XD，設計給學員使用的名片設計教材，並參與六角週年活動，設計各式周邊商品及活動網路宣傳圖。後期進入 UI 設計範疇，設計六角共筆部落格 - W3HexSchool、六角發案服務網介面設計、供給學員的教案- RWD官方網站設計，並設計各式網頁活動宣傳圖。</p>
+                    </li>
+                    <li>獨立接案&nbsp;Hao&nbsp;Jun&nbsp;酒標設計│2019</li>
+                    <li>獨立接案&nbsp;Exulans&nbsp;酒標設計│2019</li>
+                    <li>獨立接案&nbsp;桃園平鎮市民健走活動提案│2019</li>
+                    <li>Simtree&nbsp;興趣咖啡&nbsp;工讀生│2018&nbsp;⎯&nbsp;2019<br><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/week1/simtree.png?raw=true" alt="Simtree.icon"><br>
+                        <p>擔任外場及吧台服務生，學習咖啡相關知識。</p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="contact">
+                <h2>聯絡方式&nbsp;<span>CONTACT&nbsp;METHOD</span></h2>
+            </div>
+            <div class="method">
+                <ul>
+                    <li>Mail：xxxd@hexschool.com</li>
+                    <li>Phone：0910123456</li>
+                    <li>Kaohsiung, Taiwan</li>
+                    <li><a href="#">作品連結：https://www.behance.net/xxxdddddd</a></li>
+                    <li>
+                        <a href="https://www.facebook.com/L1uXO330B7" target="_blank"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/facebook.svg" alt="fb.icon "></a>
+                        <a href="https://www.instagram.com/l1u9b0330/?hl=zh-tw" target="_blank"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/instagram-alt.svg " alt="ig.icon "></a>
+                        <a href="https://line.me/R/ti/p/~carl321123" target="_blank"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/9abff06f0952894395796442b2d399e46ad98560/week1/line.svg " alt="line.icon"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+﻿.table-hover tbody tr:hover {
+    color: #006bb2;
+    background-color: #ffd800;
+    border:3px dotted red;
+}
+
+
+.breadcrumb .active {
+    background-color: #ff6a00;
+    color: white;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    
+    color: red;
+    content: ">";
+}
+
+
+.jumbotron {
+    background-image: url('images/00.jpg');
+    background-repeat:round;
+    background-color: #808080;
+}
+
+.MyFontForH {
+    font-family:微軟正黑體;
+    font-weight:900;
+    text-shadow:4px 4px 6px black;
+    color:white;
+    font-size:4em;
+}
+.MyFontForP {
+    font-family: 微軟正黑體;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px black;
+    color: white;
+   
+}
+
+.MyFont {
+    font-family: 微軟正黑體;
+    
+   
+}

@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend>聊天室</legend>
+            <input id="username" name="username" type="text" /><input id="btnConnect" type="button" value="進入聊天室" />
+            <hr />
+            <input id="message" name="message" type="text" readonly="readonly" /><input id="btnSend" type="button" value="發言" disabled="disabled" />
+            <hr />
+          
+            <input id="btnClose" type="button" value="離開聊天" />
+            <ul id="output"></ul>
+
+        </fieldset>
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $('#btnConnect').click(function () {
+            var url = "ws://localhost:64495/api/Chat?username=" + $('#username').val();
+            var ws = new WebSocket(url);
+            console.log(ws);
+
+            $('#message').removeAttr('readonly');
+            $('#btnSend').removeAttr('disabled');
+            $('#username').attr('readonly', 'readonly');
+            $('#btnConnect').attr('disabled', 'disabled');
+
+            ws.onopen = function () {
+                ws.send("已進入聊天!!");
+            }
+
+            ws.onerror = function () {
+                alert('有錯誤');
+            }
+
+            ws.onmessage = function (e) {
+                $('#output').append($('<li>').text(e.data));
+                console.log(e.data);
+            }
+
+            $('#btnSend').click(function () {
+                ws.send($('#message').val());
+
+            });
+
+            $('#btnClose').click(function () {
+                ws.close();
+                $('#username').removeAttr('readonly');
+                $('#btnConnect').removeAttr('disabled');
+                $('#message').attr('readonly', 'readonly');
+                $('#btnSend').attr('disabled', 'disabled');
+            });
+
+        });
+
+       
+    </script>
+}

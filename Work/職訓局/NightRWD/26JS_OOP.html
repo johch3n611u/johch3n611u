@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    
+    <script>
+        //Object 建構子定義
+        function nameCard(name,phone,email,addr) {
+            this.name = name;
+            this.phone = phone;
+            this.email = email;
+            this.addr = addr;
+
+        }
+
+        var Jack = new nameCard();
+        Jack.phone = "07-8210171";
+        Jack.email = "jack@wda.gov.tw";
+        Jack.name = "Jack Lee";
+        Jack.addr = "高雄市前鎮區凱旋四路105號";
+
+        document.write("Name:"+Jack.name+"<br />");
+        document.write("Phone:" + Jack.phone + "<br />");
+        document.write("Email:" + Jack.email + "<br />");
+        document.write("Addr:" + Jack.addr + "<hr>");
+        ////////////////////////////////////////////////////////
+
+        var Mary = new nameCard("Mary Lin", "08-8974582", "Mary@wda.gov.tw", "屏東縣恆春鎮墾丁路100號");
+        Mary.phone = "08-7854698";
+
+        document.write("Name:" + Mary.name + "<br />");
+        document.write("Phone:" + Mary.phone + "<br />");
+        document.write("Email:" + Mary.email + "<br />");
+        document.write("Addr:" + Mary.addr + "<hr>");
+    </script>
+</body>
+</html>

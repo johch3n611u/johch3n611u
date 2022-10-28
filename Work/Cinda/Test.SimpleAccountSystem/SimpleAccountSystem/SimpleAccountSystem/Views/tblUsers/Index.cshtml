@@ -1,0 +1,68 @@
+﻿@model IEnumerable<SimpleAccountSystem.Models.DTO.UserDetails>
+
+@{
+    ViewBag.Title = "帳號管理系統";
+}
+
+<h2>帳號管理系統</h2>
+<h4>注意事項：</h4>
+<p>
+    * 此帳號管理系統需包含(新增、修改、刪除)<br />
+    * 根據兩個欄位(姓名、權限群組)進行模糊查詢<br />
+    * 查詢出來的列表，需有會 帳號、姓名、email、權限群組(多，可用頓點分隔),狀態 欄位 <br />
+</p>
+<p>
+    @Html.ActionLink("申請帳號", "Edit")
+</p>
+
+<form action="/tblUsers/Search" method="post">
+    <label for="search">
+        查詢姓名或權限
+    </label>
+    <input id="search" name="searchString" />
+    <input type="submit" />
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cStatus)
+        </th>
+        <th>@Html.DisplayNameFor(model => model.cGroupNames)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cEmail)
+            </td>
+            <td>
+                @if (item.cStatus == 1)
+                {
+                    @:已啟用
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cGroupNames)
+            </td>
+            <td>
+                @Html.ActionLink("編輯", "Edit", new { id = item.cAccount }) |
+                @Html.ActionLink("刪除", "Delete", new { id = item.cAccount })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.Raw(@ViewBag.Message)

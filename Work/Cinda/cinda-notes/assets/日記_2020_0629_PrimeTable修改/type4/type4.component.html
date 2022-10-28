@@ -1,0 +1,131 @@
+<div class="ui-g-12">
+    <div class="ui-g-12 ui-md-5" style="width: 45%;">
+        <div style="margin-bottom: 5px;">
+            <div style="height: 28px;">
+                {{'Change.Type4Source'|translate}}
+                <input pInputText type="text" (click)='IsEanble ? dept_showDialog(): ""'
+                    style="width: 150px !important;" readonly="true" name="departmentS" [(ngModel)]="departmentS" />
+            </div>
+        </div>
+        <p-table #table [value]="items" [resizableColumns]="true"
+            [style]="{'text-align': 'center','width':'100%','margin-right':'-50px'}" [scrollable]="true" scrollHeight="300px">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:120px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox name="group_all" value="all" (onChange)="All(1)" [(ngModel)]="selectedValues_All">
+                        </p-checkbox>
+                    </th>
+                    <th>{{'Change.softwarename'|translate}}</th>
+                    <th>{{'Change.department'|translate}}</th>
+                    <th>{{'Change.Qty'|translate}}</th>
+                    <th>{{'Change.UseQty'|translate}}</th>
+                    <th>{{'Change.bookkeeper'|translate}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" value="{{ item.Id }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.SwName}}</td>
+                    <td>{{item.ReservedDepartment}}</td>
+                    <td>{{item.ReservedQuantity}}</td>
+                    <td><input pInputText [disabled]="!IsEanble" type="number" [max]="item.ReservedQuantity"
+                            name="UseQty" [(ngModel)]="item.UseQty" /></td>
+                    <td>{{item.AuthBookkeeper}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="ui-g-12 ui-md-1" style="text-align: center;padding-top: 40px;width: 10%;">
+        <p-button [disabled]="!IsEanble" label=">" (click)="addItems()"></p-button>
+        <br> <br>
+        <p-button *ngIf="IsEanble" label="<" (click)="reomveItems()"></p-button>
+    </div>
+    <div class="ui-g-12 ui-md-5" style="width: 45%;">
+        <div style="margin-bottom: 5px;">
+            <div>
+                {{'Change.Type4Target'|translate}}
+                <input pInputText type="text" style="width: 150px !important;" readonly="true"
+                    (click)='IsEanble ? emp_showDialog("0") : ""' [(ngModel)]="custodian" name="custodian" />
+            </div>
+        </div>
+
+        <p-table #table [value]="items_Selected" [resizableColumns]="true"
+            [style]="{'width':'100%','text-align': 'center'}" [scrollable]="true"
+            scrollHeight="300px">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:80px">
+                    <col style="width:120px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox name="group_all" value="all" (onChange)="All(2)"
+                            [(ngModel)]="selectedValues_RemoveAll">
+                        </p-checkbox>
+                    </th>
+                    <th>{{'Change.FormatId'|translate}}</th>
+                    <th>{{'Change.softwarename'|translate}}</th>
+                    <th>{{'Change.assetnumber'|translate}}</th>
+                    <th>{{'Change.computername'|translate}}</th>
+                    <th>{{'Change.location'|translate}}</th>
+                    <th>{{'Change.bookkeeper'|translate}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" value="{{ item.GId }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.FormatId}}</td>
+                    <td>{{item.SwName}}</td>
+                    <td>
+                        {{item.HsamMainaccessNo}}
+                        <button *ngIf="IsEanble" pButton type="button" icon="fa fa-edit" class="form-add"
+                            (click)='Asseet_showDialog(item.GId,custodianID)'></button>
+                    </td>
+                    <td>{{item.HsamComputerName}}</td>
+                    <td>{{item.HsamPleace}}</td>
+                    <td>
+                        {{item.NewAuthBookkeeper}}
+                        <button *ngIf="item.authorization == authorizationTypeEnum.ByUser && IsEanble" pButton
+                            type="button" icon="fa fa-edit" class="form-add"
+                            (click)='item.authorization == authorizationTypeEnum.ByUser && IsEanble ? emp_showDialog(item.GId) : ""'></button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+
+<app-asseet [(visible)]="asseet_display" [(EmpNo)]="assetEmpNo" (OKEvent)="Asseet_Add($event)"
+    (CancelEvent)="Asseet_ColseDialog($event)">
+</app-asseet>
+<app-employee-selector-standard [(visible)]="emp_display" (OKEvent)="emp_Add($event)"
+    (CancelEvent)="emp_ColseDialog($event)" [(CanMultiple)]="CanMultiple" [(departmentNo)]="department">
+</app-employee-selector-standard>
+
+
+<app-department-selector [(visible)]="dept_display" (OKEvent)="dept_Add($event)"
+    (CancelEvent)="dept_ColseDialog($event)" [(CanMultiple)]="CanMultiple" [(MgrNo)]="StrEmpNo">
+</app-department-selector>

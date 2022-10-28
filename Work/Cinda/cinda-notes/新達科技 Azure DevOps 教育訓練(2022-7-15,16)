@@ -1,0 +1,121 @@
+## 20220715
+
+https://hackmd.io/J3YASQSATSGPpk38qpm3jw
+
+很像敏捷接案的方式
+
+Scrum 每周內部測試、兩週交付 ( 展示 ) 成果一次 依每次回饋 敏捷調整
+
+可能做到機車，客戶覺得滿足需求就不用做到汽車
+
+可以在前幾包小 incremain 次類似暖機配合的感覺
+
+https://www.scrum.org/open-assessments/scrum-open
+
+Scrum 理念的創始人的認證機構
+
+packge scan 資安掃描 Nuget Package => whitesource bolt
+
+https://www.ithome.com.tw/news/127525
+
+github flow 感覺比 git flow 簡單 ?
+
+Azure DevOps Boards 可以關聯 Git 分支，感覺也是蠻好用的，但就要全綁在 Azure
+
+接著 Repo Pull Request ，可以讓主管去卡控 marge 可以間接 Code Review，也可自動
+
+分支越少越短越好，且要越早解決衝突越好，所以 Github flow 相較會更好
+
+Artifact => build 後的結果
+
+環境差異 Dev (開發團隊) Test (For QA) Staging (準測試機) Production (正式) 四份程式碼，
+
+可以透過 Feature toggles ? UI 權限隱藏 = = ... 
+
+喔喔，所以 DI 的功用就出現了 !!!
+
+或 app configration ? app setting = = Azure 版本的 Online Config ...
+
+因應 => 單一環境 => 微服務環境 => 容器化技術進步，瞬間容量要求成長 
+
+TBD https://www.itread01.com/hkyfeii.html
+
+= = 要做 PR => Code Review 不如做，極限編成
+
+https://zh.wikipedia.org/zh-tw/%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B
+
+重構 單元測試 CodeReview => 短期減少生產力，長期則
+
+TBD => 只有 Master 靠 CI 錯誤不布板不怕程式碼死掉
+
+CI Pipeline 產出的東西應該是高品質安全可靠的 Artifact Increment
+
+PR CI => 審核但不 trigger => marge 到 master 主線分支策略
+
+程式碼品質 => SonarCloud 靜態掃描工具，Azure 也有整合
+
+![image](https://i.imgur.com/4NFu9fA.png)
+
+https://ithelp.ithome.com.tw/articles/10214333
+
+## 20220716
+
+套件 => 安全性、版權、版本 zero-day vulnerability、過期、相依性
+
+WiteSourceBolt ( 付費 )
+  
+Mend Bolt ( 付費 )
+
+---
+
+專案相依 ( 方案內專案可能十五個以內時使用 )、dll 檔案包過去需求專案，都盡量不要用，
+
+改為依賴套件 ? 才會有版本之類的，但感覺侷限於超大專案或者真的一堆東西可以共用
+
+旺X轟有用
+
+題外話 di 主要是增加擴充性
+
+dependency hell
+
+nuget、npm、docker image etc...
+
+### semantic versioning ( 套件只能增加版號，不能更改程式 )
+
+major . minor . patch
+
+相容破壞性 . 功能調整但向下相容 . hotfix
+
+ex. log4j
+
+### azure artifacts 套件管理 ... 媽的葉配
+
+NET CORE 建置套件很簡單 => 屬性 => 建置套件 打勾 BUILD 會得到 .NUPKG
+
+https://www.nuget.org
+
+兩三個專案需要相依時就可以做成套件
+
+套件 => 資訊公司小規模化
+
+產品 => 資訊公司大規模化
+
+Azure => CICD DevOps 自動化工具 / 資源提供 Iaas Paas Saas
+
+套件庫開發利用 pipeline 做自動化 CICD
+
+---
+
+以上都在 CI 持續性整合 ( pipeline 也可 CD 但通常要靠 Release 會比較好 pipeline 做持續部屬工作 )
+
+Release CD 接著換持續部署
+
+簽核是破壞自動化的東西，跟品質無關較多是商業考量
+
+利用 release gates 自動每隔多少分鐘檢查某些條件 ex sonarcloud 程式碼品質 A 才能上板
+
+query work item => azure 整合了整個部版品質管控這一方面，可能看板上要都沒 issue 才能自動上版到 prod
+
+---
+
+藍綠部署

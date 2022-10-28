@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>h1. Bootstrap 4</h1>
+        <h2>h2. Bootstrap 4</h2>
+        <h3>h3. Bootstrap 4</h3>
+        <h4>h4. Bootstrap 4</h4>
+        <h5>h5. Bootstrap 4</h5>
+        <h6>h6. Bootstrap 4</h6>
+
+        <p class="h1">h1. Bootstrap 4</p>
+        <p class="h2">h2. Bootstrap 4</p>
+        <p class="h3">h3. Bootstrap 4</p>
+        <p class="h4">h4. Bootstrap 4</p>
+        <p class="h5">h5. Bootstrap 4</p>
+        <p class="h6">h6. Bootstrap 4</p>
+
+        <span class="h1">h1. Bootstrap 4</span>
+        <span class="h2">h2. Bootstrap 4</span>
+        <span class="h3">h3. Bootstrap 4</span>
+        <span class="h4">h4. Bootstrap 4</span>
+        <span class="h5">h5. Bootstrap 4</span>
+        <span class="h6">h6. Bootstrap 4</span>
+
+        <hr />
+        <h1>Welcome My Website<small>sub title</small></h1>
+        <h2>Welcome My Website<small>sub title</small></h2>
+        <h3>Welcome My Website<small>sub title</small></h3>
+
+        <hr />
+
+        <pre>
+          function updateData() {
+            $.ajax({
+                type: 'GET',
+                url: 'https://ptx.transportdata.tw/MOTC/v2/Rail/TRA/LiveBoard?$format=JSON',
+                format: 'json',
+                success: function (data) {
+                    //alert(data.length);
+                    var TripLine;
+                    var DelayTime;
+                    var Direction;
+                    $('#tb1').append("<thead><tr><td>站名</td><td>車次</td><td>車種</td><td>山/海線</td><td>行車方向</td><td>到站時間</td><td>發車時間</td><td>誤點時間</td></tr></thead>");
+                    $('#tb1').append("<tbody>");
+                    for (var i = 0; i < data.length; i++) {
+                            switch (data[i].TripLine) {
+                                case 0:
+                                    TripLine = "不經山海線";
+                                    break;
+                                case 1:
+                                    TripLine = "山線";
+                                    break;
+                                case 2:
+                                    TripLine = "海線";
+                                    break;
+                        }
+                        DelayTime = data[i].DelayTime == 0 ? "準點" : "<span style='color:red'>誤點" + data[i].DelayTime+"分鐘</span>"
+                        Direction = data[i].Direction == 0 ? "順行" : "逆行";
+
+
+                        $('#tb1').append("<tr><th>" + data[i].StationName.Zh_tw + "</th><th>" + data[i].TrainNo + "</th><th>" + data[i].TrainTypeName.Zh_tw + "</th><th>" + TripLine + "</th><th>" + Direction + "</th><th>" + data[i].ScheduledArrivalTime + "</th><th>" + data[i].ScheduledDepartureTime + "</th><th>" + DelayTime + "</th></tr>");
+
+                    }
+                    $('#tb1').append("</tbody>");
+
+                },
+                error: function () {
+                    alert('Error!!');
+                }
+
+            });
+            setTimeout("updateData()",1000);
+        }
+        updateData();
+        </pre>
+
+        <hr />
+
+        <code>alert('Error!!');</code>
+        <hr />
+        <span>請按下<kbd>Ctrl+F</kbd>進行文件搜尋</span>
+    </div>
+  
+   
+</body>
+</html>

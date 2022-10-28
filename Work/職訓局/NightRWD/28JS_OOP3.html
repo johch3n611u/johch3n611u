@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    
+    <script>
+        //Object 建構子定義
+        function nameCard(name,phone,email,addr) {
+            this.name = name;
+            //新增phone屬性為phoneList子類別
+            this.phone = new phoneList(phone, "N/A");
+            this.email = email;
+            this.addr = addr;
+            this.print = printCard;
+
+        }
+        //子類別
+        function phoneList(homephone,cellphone) {
+            this.homephone = homephone;
+            this.cellphone = cellphone;
+        }
+
+        function printCard() {
+            document.write("Name:" + this.name + "<br />");
+            document.write("HomePhone:" + this.phone.homephone + "<br />");
+            document.write("CellPhone:" + this.phone.cellphone + "<br />");
+            document.write("Email:" + this.email + "<br />");
+            document.write("Addr:" + this.addr + "<hr>");
+
+        }
+
+        //靜態擴充方法
+        nameCard.now = function () {
+            return new Date();
+        }
+        document.write(nameCard.now() + "<hr>");
+        //靜態擴充屬性
+        nameCard.img = "abc.jpg";
+        document.write(nameCard.img+"<hr>");
+        /////////////////////////////////////
+        var Jack = new nameCard();
+        Jack.phone.homephone = "07-8210171";
+        Jack.email = "jack@wda.gov.tw";
+        Jack.name = "Jack Lee";
+        Jack.addr = "高雄市前鎮區凱旋四路105號";
+        Jack.print();
+      
+        ////////////////////////////////////////////////////////
+
+        var Mary = new nameCard("Mary Lin", "08-8974582", "Mary@wda.gov.tw", "屏東縣恆春鎮墾丁路100號");
+        Mary.phone.cellphone = "0980854698";
+        Mary.print();
+   
+
+         ////////////////////////////////////////////////////////
+
+        var John = new nameCard("John Chen", "07-7856984", "John@wda.gov.tw", "高雄市三民區墾丁路100號");
+        John.phone.cellphone = "0933789456";
+        //動態實例擴充(Instance Extension)
+        John.type = "經理";
+        John.print();
+
+    </script>
+</body>
+</html>

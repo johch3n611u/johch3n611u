@@ -1,0 +1,30 @@
+原始 Yahoo Shopping SCM API 文件
+https://docs.google.com/document/d/1TbH6YR3SnjO7gSd4fCS1uWueLtCl_KqJ37QUE_hGwNg/edit?usp=sharing
+
+線上 Yahoo Shopping SCM API 文件
+https://drive.google.com/open?id=1-LtPORLx3x_qRt6rDWiWwlW4Cgg5Grfi
+
+精技需求提供的檔案 :
+T:\ECC\數據發展部\系統支援部\精技需求
+
+***** 新版登入 Yahoo Shopping SCM 後台，需使用Lerk電話驗證 0981262533 *****
+
+登入網址 : https://scm.monday.com.tw/ApprovalForm/Query/ApiKeyQuery.aspx
+
+帳號 : 12215548
+ 
+密碼 : ut91929539
+
+***** Yahoo Shopping SCM API KEY 提供資料 *****
+
+Token : Supplier_478
+
+KeyValue : yrsW8ukCXsEZOkKmegF7T2WrK0MTq9U2jH3DmSIod24=
+
+KeyIV : MmThDVTcmRpN5jFgzxb+nQ==
+
+SaltKey : doTzTL6Ev0ttm2OF3kxpzloGTtxky1eI
+
+Version : 1
+
+Status : Enabled

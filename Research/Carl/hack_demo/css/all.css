@@ -1,0 +1,226 @@
+header {
+    background-color: #fefae0;
+    box-shadow: black 1px 1px 5px 1px;
+}
+
+@font-face {
+    font-family: 'cwTeXFangSong';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot);
+    src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot?#iefix) format('embedded-opentype'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff2) format('woff2'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff) format('woff'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.ttf) format('truetype');
+}
+
+.first {
+    padding-bottom: 200px;
+    border-bottom: 20px solid#e9c46a;
+}
+
+.bigfont {
+    font-size: 80px;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.disable {
+    width: 30%;
+    height: 6 00px;
+    background-image: url(../img/helpme.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #e9c46a;
+    opacity: 100%;
+    writing-mode: vertical-rl;
+    position: relative;
+}
+
+.disable h2 {
+    position: absolute;
+    left: -75px;
+    font-family: 'cwTeXFangSong';
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.disable:hover {
+    transform: translateX(-150px);
+    transition: all 2s;
+    opacity: 20%;
+    box-shadow: black -10px 10px 10px 5px;
+}
+
+.go {
+    width: 15%;
+    height: 600px;
+    position: relative;
+    z-index: 999;
+    text-decoration: none;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.go h2 {
+    font-family: 'cwTeXFangSong';
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.go:hover {
+    text-decoration: none;
+    transform: translateY(-600px);
+    transition: all 5s;
+    opacity: 0%;
+}
+
+@keyframes example {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 25px;
+    }
+    50% {
+        top: 50px;
+    }
+    75% {
+        top: -50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.heart {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+    margin: 100px auto;
+    animation: size 1s infinite;
+    animation-direction: alternate;
+    box-shadow: pink 1px 1px 50px 10px;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    box-shadow: pink 1px 1px 100px 1px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: -90px;
+}
+
+.heart::after {
+    top: -90px;
+}
+
+@keyframes size {
+    0% {
+        box-shadow: none;
+        transform: scale(0.6) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+.warriors_heart {
+    color: red;
+    position: absolute;
+    top: 159px;
+    left: 95px;
+    font-family: 'cwTeXFangSong';
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.helper {
+    width: 30%;
+    height: 600px;
+    background-color: gray;
+    background-image: url(../img/warriors.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 57px;
+    writing-mode: vertical-rl;
+    position: relative;
+}
+
+.helper h2 {
+    position: absolute;
+    right: -75px;
+    font-family: 'cwTeXFangSong';
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.helper:hover {
+    transform: translateX(150px);
+    transition: all 2s;
+    opacity: 20%;
+    box-shadow: black 10px 10px 10px 5px;
+}
+
+.sustainable {
+    border-top: 20px dashed #e9c46a;
+}
+
+.s18_logo {
+    margin-top: 200px;
+    background-color: #e9c46a;
+    border-radius: 500px 100px 500px 100px;
+}
+
+.s18_logo:hover {
+    z-index: 500;
+    transition: all 1s;
+    box-shadow: black 5px 10px 10px 1px;
+}
+
+.s18 {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.s18:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.s_box {
+    padding-top: 50px;
+}
+
+.tree_box {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.tree {
+    font-weight: bolder;
+    font-size: 30px;
+    position: absolute;
+    top: 13px;
+    left: 27px;
+}
+
+.god {
+    top: 108px;
+    left: -10px;
+}
+
+.david {
+    top: -85px;
+    left: 81px;
+}

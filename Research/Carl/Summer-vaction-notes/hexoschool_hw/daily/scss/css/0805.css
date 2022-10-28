@@ -1,0 +1,27 @@
+.header {
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 13px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .header {
+    font-size: 8px;
+  }
+}
+
+.header a {
+  background: black;
+}
+
+@media (max-width: 568px) {
+  .header a {
+    background: white;
+  }
+}
+/*# sourceMappingURL=0805.css.map */

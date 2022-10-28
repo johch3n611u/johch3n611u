@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <div class="card bg-light">
+        <div class="container">
+
+            <form novalidate id="login">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" class="form-control" placeholder="Enter email..." required />
+                    <div>
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input id="pwd" type="password" class="form-control" placeholder="Password" required />
+                    <div>
+                        
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input id="remember" type="checkbox" class="form-check-input" required />
+                    <label for="remember">我同意</label>
+                    <div>
+                       
+                    </div>
+                </div>
+              
+                <input id="Button1" type="submit" value="submit" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+
+    <script>
+        var flag2 = false;
+        var flag = false;
+        var rex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        function StateChange(state,objID,text) {
+            if (state) {
+                $(objID).removeClass('is-invalid').addClass('is-valid');
+                $(objID + '~div').removeClass().text('');              
+            }
+            else {
+                $(objID).removeClass('is-valid').addClass('is-invalid');
+                $(objID + '~div').addClass('invalid-feedback').text(text);
+            }
+            flag = state;
+        }
+
+       
+
+        $('#login').submit(function () {
+            if (flag2) {
+                if ($('#email').val() == "") {
+                    StateChange(false, "#email", "Required!!");
+                }
+                else {
+                    StateChange(true, "#email", "");
+                }
+
+                if ($('#pwd').val() == "") {
+                    StateChange(false, "#pwd", "Required!!");
+                }
+                else {
+                    StateChange(true, "#pwd", "");
+                }
+                if (!$('#remember').is(':checked')) {
+                    StateChange(false, "#remember", "Please Check it!!")
+                    flag = false;
+                }
+                else {
+                    StateChange(true, "#remember", "")
+                    flag = true;
+
+                }
+            }
+            console.log(flag);
+            console.log(flag2);
+
+            if (flag && flag2 )
+                return true;
+          
+
+            return false;
+
+
+        });
+
+        $('#email').keyup(function () {
+
+            if (!rex.test($('#email').val())) {
+                StateChange(false, "#email", "Please Check Email Format!!!!");
+                flag2 = false;
+            }
+            else {
+                StateChange(true, "#email", "");
+                flag2 = true;
+            }
+        })
+        
+        
+            
+        $('#pwd').keyup(function () {
+            if ($('#pwd').val().length < 8) {
+                StateChange(false, "#pwd", ">8!!");
+                flag2 = false;
+            }
+            else {
+                StateChange(true, "#pwd", "");
+                flag2 = true;
+            }
+        })
+
+
+        //$('#Button1').click(function () {
+            
+        //});
+
+        
+
+    </script>
+</body>
+</html>

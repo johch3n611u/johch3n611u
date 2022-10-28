@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoogleSheetFilter</title>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSC476F');</script>
+<!-- End Google Tag Manager -->
+    
+</head>
+
+<body class="container" style="height:100vh;">
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSC476F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    <!-- https://pjchender.blogspot.com/2015/11/javascript.html -->
+    <!-- https://andy6804tw.github.io/2018/01/06/bootstrap-tutorial(1)/ -->
+    <div class="row justify-content-center" style="height:80vh;">
+        <!-- <img class="align-self-center" id="loading" src="/Case/GoogleSheetFilter/giphy.gif" alt="loading" style="height: auto;width: 30%;"> -->
+        <div class="align-self-center" style="margin: 0 16.5%;">
+            <label for="Password">Admin：</label>
+            <input type="password" id="Password" placeholder="Password" value="Admin">
+            <div id="myDiv"> 載入資料表中請稍後... </div>
+        </div>
+    </div>
+    <p style="text-align: center;">v4 - © 2020.11 Made by johch3n611u all rights reserved.</p>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            var urlFirst = 'https://spreadsheets.google.com/feeds/list/1u6CNgegIsg6EMMb6EoHzMLu9IAIQYoghqPbqY96xpq0/';
+            var sheetIndex = 1;
+            var urlLast = '/public/values?alt=json'
+            var htmlobj = {
+                "responseText": ""
+            };
+            var sheetName = "<select id='index'>";
+
+            while (htmlobj.responseText !== "對 grid_id 無效的查詢參數值。") {
+                var url = urlFirst + sheetIndex + urlLast;
+
+                htmlobj = $.ajax({
+                    url: url,
+                    async: false
+                });
+
+                if (htmlobj.responseText !== "對 grid_id 無效的查詢參數值。") {
+                    sheetName += "<option value='" + sheetIndex + "'>";
+                    sheetName += htmlobj.responseJSON.feed.title.$t;
+                    sheetName += "</option>";
+                }
+
+                // console.log('htmlobj', htmlobj);
+                sheetIndex++;
+            }
+
+            sheetName += "</select>";
+            // console.log('sheetName', sheetName);
+            sheetName += "<button id='CheckButton' type='button' class='btn badge badge-secondary' onclick='check()'>驗證</button>"
+            $("#myDiv").html(sheetName);
+        });
+
+        // $('#loading').attr("style", "display:none;");
+    </script>
+    <script>
+        function check(params) {
+            const InputPassword = document.getElementById("Password");
+            // console.log(InputPassword);
+            // console.log(InputPassword.value);
+            InputPassword.value = InputPassword.value.toLowerCase();
+            // console.log(InputPassword.value);
+
+            if (InputPassword.value === 'admin') {
+                // https://www.wibibi.com/info.php?tid=153
+                document.location.href = "/Case/GoogleSheetFilter/Sheet.html?name=admin&index=" + $("#index").val();
+            } else {
+                // https://www.cnblogs.com/LiuWeiLong/p/6058059.html
+                const CheckButton = document.getElementById("CheckButton");
+                CheckButton.setAttribute('style', 'background-color: red !important');
+                InputPassword.value = "";
+                // https://www.w3school.com.cn/htmldom/met_textarea_focus.asp
+                InputPassword.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>

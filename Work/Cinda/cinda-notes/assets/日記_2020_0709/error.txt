@@ -1,0 +1,81 @@
+System.AggregateException: 發生一或多項錯誤。 ---&gt;
+System.Data.Entity.Core.UpdateException: 更新實體時發生錯誤。
+如需詳細資料，請參閱內部例外狀況。 ---&gt; Oracle.ManagedDataAccess.Client.OracleException:
+ORA-00001: 違反必須為唯一的限制條件 (PAMV2.SIGN_FORM_MAIN_PK)
+
+
+ 於 OracleInternal.ServiceObjects.OracleConnectionImpl.VerifyExecution(Int32&amp; cursorId, Boolean bThrowArrayBindRelatedErrors, SqlStatementType sqlStatementType, Int32 arrayBindCount, OracleException&amp; exceptionForArrayBindDML, Boolean&amp; hasMoreRowsInDB, Boolean bFirstIterationDone)
+   於 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]&amp; scnFromExecution, OracleParameterCollection&amp; bindByPositionParamColl, Boolean&amp; bBindParamPresent, OracleException&amp; exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction&amp; oracleLogicalTransaction, Boolean isFromEF)
+   於 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   於 System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__3d`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__39.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__31.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   於 Mxic.ITC.PAM.Repository.Entities.&lt;PrivateSaveChangesAsync&gt;d__4.MoveNext() 於
+   C:\Users\rognp\Desktop\旺宏_sourcecode\MxicAppSample\Mxic.App.PAM\Mxic.ITC.PAM.Repository\Entities.cs: 行 57
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   於 System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   於 System.Threading.Tasks.Task`1.get_Result()
+   於 Mxic.ITC.PAM.Repository.Entities.SaveChanges() 於 C:\Users\rognp\Desktop\旺宏_sourcecode\MxicAppSample\Mxic.App.PAM\Mxic.ITC.PAM.Repository\Entities.cs: 行 34
+   於 Mxic.ITC.PAM.Repository.AccountFunctionDisabledRepository.Create(List`1 Datas, Decimal dSignID, Boolean bIsNew) 於 C:\Users\rognp\Desktop\旺宏_sourcecode\MxicAppSample\Mxic.App.PAM\Mxic.ITC.PAM.Repository\Repository\PAM\AccountFunctionDisabledRepository.cs: 行 132
+   於 Mxic.ITC.PAM.Repository.UnitOfWork.SignRepository`1.Create(SignData`1 Data, String filler, IHrMasterService hrMaster, IBPMService bpm, Signer signer) 於 C:\Users\rognp\Desktop\旺宏_sourcecode\MxicAppSample\Mxic.App.PAM\Mxic.ITC.PAM.Repository\UnitOfWork\SignRepository.cs: 行 487
+---&gt; (內部例外狀況 #0) System.Data.Entity.Core.UpdateException: 更新實體時發生錯誤。如需詳細資料，請參閱內部例外狀況。 ---&gt; Oracle.ManagedDataAccess.Client.OracleException: ORA-00001: 違反必須為唯一的限制條件 (PAMV2.SIGN_FORM_MAIN_PK)
+   於 OracleInternal.ServiceObjects.OracleConnectionImpl.VerifyExecution(Int32&amp; cursorId, Boolean bThrowArrayBindRelatedErrors, SqlStatementType sqlStatementType, Int32 arrayBindCount, OracleException&amp; exceptionForArrayBindDML, Boolean&amp; hasMoreRowsInDB, Boolean bFirstIterationDone)
+   於 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]&amp; scnFromExecution, OracleParameterCollection&amp; bindByPositionParamColl, Boolean&amp; bBindParamPresent, OracleException&amp; exceptionForArrayBindDML, OracleConnection connection, OracleLogicalTransaction&amp; oracleLogicalTransaction, Boolean isFromEF)
+   於 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   於 System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__3d`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__39.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__31.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   於 Mxic.ITC.PAM.Repository.Entities.&lt;PrivateSaveChangesAsync&gt;d__4.MoveNext() 於
+
+   C:\Users\rognp\Desktop\旺宏_sourcecode\MxicAppSample\Mxic.App.PAM\Mxic.ITC.PAM.Repository\Entities.cs: 行 57&lt;---

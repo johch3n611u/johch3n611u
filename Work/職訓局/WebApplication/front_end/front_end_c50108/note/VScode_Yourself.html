@@ -1,0 +1,216 @@
+﻿<!-- 書籤 -->
+<!-- https://www.w3schools.com/html/html_formatting.asp -->
+<!--  -->
+<!--  -->
+<!-- -->
+
+<!-- ★★★★★★★★★★★★★★★★★ HTML簡介Introduction ★★★★★★★★★★★★★★★★★ -->
+<!-- ★★★★★★★★★★★★★★★★★ 基本basic/元素標籤elenents/標籤屬性attributes/標題標籤headings/段落標籤paragraphs/樣式標籤styles ★★★★★★★★★★★★★★★★★ -->
+<!-- HTML (HyperText Markup Language) 超文本標記語言 由不同標籤所組成，不同標籤Tags具有各種不同屬性Attributes，而不同的屬性又具有不同的值Value，
+    文本放置於開始標籤<>與結束標籤</>中，有些標籤/屬性用法已在新HTML版本中被淘汰，遵照W3C規定之新版本方式編輯會是最好的方式。 -->
+W3C依照編輯器、基本、元素標籤、標籤屬性、標題元素標籤、段落元素標籤、樣式元素標籤、格式元素標籤、分類介紹HTML。 ★未完待補★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+<!-- 標籤特點分類 : https://hk.saowen.com/a/0780d554e0ef318596997b15a9c0cc8bc020be87a26076c73b5da46709f42082 -->
+<!DOCTYPE html>
+<!-- !DOCTYPE html 聲明此文檔版本，必須至於HTML檔案第一行，幫助瀏覽器顯示網頁，如HTML5-2014版本宣告就同上述。 -->
+<!-- emmet(Zen Coding) review !tab -->
+<html lang="en&zh-tw">
+<!-- html Default element。html {display: block;} html:focus { outline: none;}。 -->
+<!-- <html> 為HTML頁面之根標籤，容納其他所有元素標籤，定義整個文本，告訴瀏覽器這是一個html檔案。擁有 xmlns屬性可以指定xml空間屬性轉為XHTML? -->
+<!-- <lang>為全域屬性用以指定元素內容語言。 -->
+
+<head>
+    <!-- <head> 描述文檔元訊息。通常定義文本標題、字符集、樣式、腳本、鏈結、和其他元信息。 CSS Default element。head { display: none;}-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale= 1.0 ">
+    <meta name="viewport" content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no" data-reactid=".0.0.3">
+    <meta http-equiv=" X-UA-Compatible " content="ie=edge ">
+    <title>" '&lttitle&gt Default elment。title {display: none;}' "</title>
+    <!-- <title> 網頁籤標題或標籤的額外訊息，屬於全域屬性，甚至可以用 JS 製作跑馬燈動畫，用於字串時會顯示提示方塊。 -->
+    <!-- 正規標簽寫法建議為小寫，而參數需用引號指引(單雙都可，但以雙較為常見)，當屬性值需顯示雙引號或單引號時如同上述 <title> 顯示，反之亦然。  -->
+    <link rel="stylesheet " href="./style.css ">
+    <!--rel=relationship，href=hypertext reference-->
+    <style style="background-color:rgb(176, 230, 223); " type="text/css ">
+        &ltstyle&gt CSS Default element。style {
+            display: none;
+        }
+        /* <style> 用於指定元素的樣式，如顏色，字體，大小等。 */
+        /* 可使用的屬性如1.media指定優化媒體/設備。2.type指定<style>值為什麼內容，如“text / css”表示內容為CSS。 */
+    </style>
+
+</head>
+
+<body style="background-color:rgb(95, 95, 95); ">
+    <!-- <body> 包含可見的頁面主體內容，文本、超鏈結、圖像、表格、列表等... 多適用於全域屬性，並且用CSS裝飾。 -->
+    <!-- <body> CSS Default element。body { display: block; margin: 8px; } body:focus { outline: none; } -->
+
+
+    <h1 style="background-color:rgb(216, 154, 130); ">heading &lth1&gt Default element。display:block，font-size:2em，margin-top:0.67em，margin-bottom:0.67em，margin-left:0em，margin-right:0em，font-weight:bold。</h1>
+    <h2 style="background-color:rgb(230, 225, 176); ">heading &lth2&gt Default element。display:block，font-size:1.5em，margin-top:0.83em，margin-bottom:0.83em，margin-left:0em，margin-right:0em，font-weight:bold。</h2>
+    <h3 style="background-color:rgb(196, 230, 176); ">heading &lth3&gt Default element。display:block，font-size:1.17em，margin-top:1em，margin-bottom:1em，margin-left:0em，margin-right:0em，font-weight:bold。</h3>
+    <h4 style="background-color:rgb(176, 230, 223); ">heading &lth4&gt Default element。display:block，font-size:.1em，margin-top:1.33em，margin-bottom:1.33em，margin-left:0em，margin-ri，font-weight:bod。</h4>
+    <h5 style="background-color:rgb(180, 176, 230); ">heading &lth5&gt Default element。display:block，font-size:.83em，margin-top:1.67em，margin-bottom:1.67em，margin-left:0em，margin-right:0em，font-weight:bold。</h5>
+    <h6 style="background-color:rgb(230, 176, 221); ">heading &lth6&gt Default element。display:block，font-size:.67em，margin-top:2.33em，margin-bottom:2.33em，margin-left:0em，margin-right:0em，font-weight:bold。</h6>
+    <!-- 此屬性重要於瀏覽器收尋語法使用標題來收索網頁結構與內容!!! -->
+    <!-- <h1-h6> heading 用來定義不同標題，有著元屬性。em (element measurement)字體大小為裝置本身預設大小之倍數。-->
+    <!-- em 字體大小為裝置本身預設大小之倍數。margin 外距。< 與 > 為特殊字元符號，代替編碼為<=less than (&lt)、>=greater than (&gt)。-->
+
+    <p style="background-color:rgb(216, 154, 130); ">paragraph &ltp&gt Default element。display:block，margin-top:1em，margin-bottom:1em，margin-left:0，margin-right:0。</p>
+    <!-- <p> paragraph 定義一段文字。特性包含:並不會保存文本行數與空白，行數取決於瀏覽器大小。-->
+
+    <a style="background-color:rgb(230, 225, 176); ">以下為CSS &lta&gt Default element。 a:link, a:visited {color: (internal value);text-decoration: underline;cursor: auto;}a:link:active, a:visited:active {color: (internal value);}</a>
+    <!-- Default element 1.未訪問過的鏈結，屬性為底線、藍色文字。2.訪問過的鏈結，屬性為底線、紫色文字。3.滑鼠指標按壓鏈結時，屬性為底線、紅色文字。 -->
+    <!-- <a> 可用的屬性如下述連結，HTML5中不支援或歸類於CSS、JS之屬性如下:1.charset指定鏈結使用的字碼。2.coords="0,0,82,126 "鏈結座標。3.name="? "指定錨點名稱。4.rev(relationship)指定文本與現在文檔之關係。5.shape用於指定鏈結之形狀。
+        而錨點 Anchor 則被規範在JavaScript HTML DOM。 -- https://www.w3schools.com/jsref/dom_obj_anchor.asp  -->
+
+    <a href="#Anchor " style="background-color:rgb(196, 230, 176); ">#Anchor</a>
+    <!-- HTML5廢除NAME屬性，使用ID屬性進行錨點訪問，不必再多寫一行 <a> 任何有id(全域屬性)的地方都可進行訪問。 -->
+    <!-- 以下為HTML5支援之<a>屬性:1.download 點擊鏈結下載該檔案。2.href(hypertext reference) 點擊文字或圖像訪問該網頁。3.hreflang指定該訪問頁面文本之語言。4.media提供瀏覽器將針對連結，對哪些設備進行優化。5.ping當點擊時傳值於後端，用以進行追蹤。6.rel(relationship)提供瀏覽器當前文本與鏈結內容之關聯性。7.target指定訪問鏈結文本之方式。8.type指定開啟鏈結文本之檔案類型。 -->
+
+    <img style="background-color:rgb(176, 230, 223); " &ltimg&gt CSS Default element。 img { display: inline-block; }>
+    <!-- 支援以下網址內之屬性與值。https://www.w3schools.com/tags/tag_img.asp -->
+    <!-- HTML5不支援或歸類於CSS、JS之屬性如下。 -->
+    <!-- 不支援1.align指定圖像相對位置。2.border指定圖像邊界。3.hspace指定圖像左右側空白大小。4.vspace指定圖像頂部底部側空白大小。 -->
+    <!-- 可使用屬性如下:1.alt指定圖像之檔案名稱。2.crossorigin跨來源資源共用許可。3.height指定圖像長度。4.ismap將點擊圖像的座標資訊傳送至後端。5.longdesc指定一串URL詳細描述圖像。6.sizes指定圖像在不同頁面之大小。7.src(specifies resource)指定圖像的URL。8.srcset不同狀況下所使用的圖像。9.usemap使用指定之map標籤上的鏈結座標。10.width指定圖像寬度。-->
+
+    <button style="background-color:rgb(180, 176, 230); ">&ltbutton&gt</button>
+    <!-- <button> 定義了一個可點擊的按鈕，可以是圖像或文本或是純按鈕，不同的瀏覽器對<button>之純按鈕元屬性不同。 -->
+    <!-- 關於<button>之屬性與值參考:https://www.w3schools.com/tags/tag_button.asp -->
+    <!-- 可使用屬性如下:1.autofocus自動回傳焦點訊息。2.disabled禁用。3.form指定按鈕所屬之表單。4.formaction指定按鈕傳送之數據位置。5.formenctype指定傳送資料之型態。6.formmethod指定發送表單的方法。7.formnovalidate指定傳送資料時不用驗證內容格式。8.formtarget提交表單後指定顯示的方式。9.name指定按鈕的類別。10.type指定按鈕的功能。11.value指定一個初始值至按鈕上。 -->
+
+    <li style="background-color:rgb(230, 176, 221); ">&ltli&gt CSS Default element。 li { display: list-item; }</li>
+    <!-- <li> list 以下為HTML5中不支援或歸類於CSS、JS之屬性如下:1.type指定列表編號樣式，在HTML5以歸類到CSS裡面編輯。-->
+    <!-- 以下為HTML5支援屬性如下:value指定一個值從此值依序列出編號，只適用於<ol> order list 有順序之列表。-->
+
+    <ol style="background-color:rgb(216, 154, 130); ">&ltol&gt order list CSS Default element。 ol { display: block; list-style-type: decimal; margin-top: 1em; margin-bottom: 1em; margin-left: 0; margin-right: 0; padding-left: 40px; }</ol>
+    <!-- <ol> ordered list 有序名單 以下為HTML5中不支援或歸類於CSS、JS之屬性如下:1.compact指定列表行距緊湊*80%，在HTML5已改到CSS操作。-->
+    <!-- 以下為HTML5支援屬性如下:1.reversed指定列表編號為降序而不是升序。2.start指定編號序列起始值。3.type指定序列編號樣式。-->
+
+    <ul style="background-color:rgb(230, 225, 176); ">&ltul&gt unordered list CSS Default element。ul { display: block; list-style-type: disc; margin-top: 1em; margin-bottom: 1 em; margin-left: 0; margin-right: 0; padding-left: 40px; }</ul>
+    <!-- <ul> unordered list 無序名單 以下為HTML5中不支援或歸類於CSS、JS之屬性如下:1.type指定列表編號樣式，在HTML5以歸類到CSS裡面編輯。-->
+    <!-- 以下為HTML5支援屬性如下:value指定一個值從此值依序列出編號，只適用於<ol> order list 有順序之列表。-->
+
+    <br style="background-color:rgb(196, 230, 176); ">
+    <!-- <br> break rule 断行符號 沒有內容的HTML元素稱為空元素。空元素沒有結束標記，例如<br>元素（表示換行符），<br>標籤沒有任何屬性，也沒有CSS。 -->
+
+    <hr style="background-color:rgb(176, 230, 223); ">
+    <!-- <hr> horizontal rule 分隔線 用於分隔內容。<hr> CSS Default element。hr { display: block;margin-top: 0.5em;margin-bottom: 0.5em;margin-left: auto;margin-right: auto;border-style: inset;border-width: 1px;} -->
+
+    <!-- <disabled> disable 禁用屬性為boolean(電腦科學CS中邏輯資料型別)可適用的標籤如下:<button>按鈕、<fieldset>框組、<input>輸入框、<optgroup>下拉選項分組、<option>下拉選項、<select>下拉表、<textarea>文字信簽。可用js撰寫功能判別滿足某條件時解除禁用屬性。 -->
+
+    <pre style="background-color:rgb(180, 176, 230);"> &ltpre&gt preformatted CSS Default element。pre {display: block;font-family: monospace;white-space: pre;margin: 1em 0;} </pre>
+    <!-- <pre> 標籤中的文本會依照編輯器內，固定寬度字體顯示，固定特殊符號，並保留空格和換行符號。 -->
+
+    <pre style="background-color:rgb(230, 176, 221); "> tagname style="property:value;" </pre>
+    <!-- HTML5使用HTML編譯文本CSS描繪樣式JS控制功能。CSS表示方式為tagname style="property:value;" 。property為CSS屬性，value為CSS值。以下為基本語法:background-color 背景顏色、color 文字顏色、font-family 字體、font-size 文字大小、text-align 文字對齊。-->
+
+
+
+
+
+
+    <!-- ★★★★★★★★★★★★★★★★★ HTML格式元素標籤formatting。定義有特殊意涵的文本 ★★★★★★★★★★★★★★★★★ -->
+
+    <b style="background-color:rgb(196, 230, 176); ">&ltb&gt bold CSS Default element。b { font-weight: bold;}</b>
+    <!-- 注意：根據HTML5規範，當沒有其他標記更合適時，<b>標記應該用作最後的標記。
+    HTML5規範規定標題應使用<h1>至<h6>標記表示，強調文本應使用<em>標記表示，重要文本應使用<strong>標記表示，標記/突出顯示的文本應該使用<mark>標籤。 -->
+    <!-- 您還可以使用CSS“font-weight”屬性設置粗體文本。 -->
+    <strong>&ltstrong&gt CSS Default element。strong {font-weight: bold;}</strong>
+    <!-- defines strong text, with added semantic "strong" importance. -->
+
+    <i> &lti&gt italic CSS Default element。i {font-style: italic;}</i>
+    <!-- <i>斜體、<mark>標記文字、<small>小文字、<del>刪除文字、<ins>插入的文字、<sub>下標文本、<sup>上標文字-->
+    <em> &ltem&gt emphasized CSS Default element。em {font-style: italic;}</em>
+    <!-- 短語標籤 phrase tags 強調內容有某種意義。<em>強調文本、<strong>重要文本、<code>編碼文本、<samp>樣本文本、<kbd>鍵盤輸入文本、<var>變數文本 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 以下為 emmet(Zen Coding) review-->
+    <div id="Anchor ">
+        <header>
+            <nav>
+                <!-- ul*1>li*2>a*2 -->
+                <ul>
+                    <!-- alt點選一次打多行code -->
+                    <li>
+                        <a href="javascript:; ">Button</a>
+                        <a href="javascript:; ">Button</a>
+
+                    </li>
+                    <li>
+                        <a href="javascript:; ">Button</a>
+                        <a href="javascript:; ">Button</a>
+
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+﻿@*//01-2-4 撰寫Index View,讀出資料,並以Bootstrap排版*@
+@model IEnumerable<_08ShoppingCar.Models.tProduct>
+
+
+@{
+    ViewBag.Title = "產品列表";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="~/images/@item.fImg" />
+                <div class="caption">
+                    <h2>@item.fName</h2>
+                    <p>單價:@item.fPrice</p>
+                    @if (Session["Member"] == null)
+                    {
+                        <p></p>
+                    }
+                    else
+                    {
+                        @*若Session["Member"]不為null才顯示此按鈕*@
+                        <p><a href="@Url.Action("AddCar")?fPId=@item.fPId" class="btn btn-danger">加入購物車</a></p>
+
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+

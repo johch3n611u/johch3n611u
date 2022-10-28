@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #container{
+            width:90%;
+        }
+        #thing{
+            background-color:brown;
+            width:500px; height:500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="Button1" type="button" value="登入系統" />
+        <fieldset style="width:250px" id="login">
+            <legend>登入系統</legend>
+            <table>
+                <tr>
+                    <td>帳號</td>
+                    <td><input id="Text1" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>密碼</td>
+                    <td><input id="Text1" type="text" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="Button2" type="button" value="登入" />
+                    </td>
+                   
+                </tr>
+            </table>
+        </fieldset>
+        <hr />
+
+        <div id="thing">
+
+        </div>
+
+    </div>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $('#login').hide();
+
+        //$('#shownews').click(function () {
+        //    $('#news').toggle(3000);
+        //    if ($(this).text() == "顯示")
+        //        $(this).text('隱藏');
+        //    else
+        //        $(this).text('顯示');
+        //});
+
+        $('#Button1').click(function () {
+            $('#login').fadeToggle(2000);
+        });
+
+        $('#thing').click(fadeShow);
+
+        function fadeShow() {
+            var n = Math.random();
+            $('#thing').fadeTo(300, n);
+            setTimeout(fadeShow,300);
+        }
+    </script>
+</body>
+</html>

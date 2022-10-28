@@ -1,0 +1,61 @@
+﻿@model _06CRUD.Models.tProduct
+
+@{
+    ViewBag.Title = "產品編輯";
+}
+
+<h2>產品編輯</h2>
+
+@*@using (Html.BeginForm())
+{*@
+<form method="post" action="@Url.Action("Edit")" enctype="multipart/form-data">
+
+
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @*<h4>tProduct</h4>*@
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.fId)
+        @*<input id="fId" name="fId" type="hidden" value="@Model.fId" />*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.fName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fPrice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fImg, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.fImg, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fImg, "", new { @class = "text-danger" })*@
+                <input id="oldImg" name="oldImg" type="hidden" value="@Model.fImg" />
+                <img src="~/images/@Model.fImg" width="200" />
+                
+                <input id="fImg" name="fImg" type="file" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+                @ViewBag.Error
+            </div>
+        </div>
+    </div>
+    @*}*@
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

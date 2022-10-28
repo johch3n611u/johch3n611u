@@ -1,0 +1,82 @@
+<div class="ui-g-12">
+    <div class="ui-g-12">
+        <div style="height: 28px;">
+            {{'Change.Type2Source'|translate}}</div>
+        <p-table #table [columns]="cols" [value]="items" [resizableColumns]="true" [style]="{'text-align': 'center'}">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:80px">
+                    <col style="width:150px">
+                    <col style="width:100px">
+                    <col style="width:100px">
+                    <col style="width:100px">
+                    <col style="width:100px">
+                    <col style="width:100px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox [disabled]="!IsEanble" name="group_all" value="all" (onChange)="All()"
+                            [(ngModel)]="selectedValues_All">
+                        </p-checkbox>
+                    </th>
+                    <ng-container *ngFor="let col of columns; let i = index">
+                        <th *ngIf="i >= 0" style="width: 100px;" [pSortableColumn]="col.field" pResizableColumn>
+                            {{ col.header }}
+                            <p-sortIcon [field]=" col.field"></p-sortIcon>
+                        </th>
+                    </ng-container>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'FormatId', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'softwarename', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'authorization', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'assetnumber', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'computername', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'custodian', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'bookkeeper', 'contains')">
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" [disabled]="!IsEanble" (click)="SelectRowItem(item)"
+                            value="{{ item.Id }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.FormatId}}</td>
+                    <td>{{item.SwName}}</td>
+                    <td>{{item.authorizationName}}</td>
+                    <td>{{item.HsamMainaccessNo}}</td>
+                    <td>{{item.HsamComputerName}}</td>
+                    <td>{{item.custodian}}</td>
+                    <td>{{item.AuthBookkeeper}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

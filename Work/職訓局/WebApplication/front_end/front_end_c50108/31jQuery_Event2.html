@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .line {
+            border: 1px solid;
+            cursor: pointer;
+        }
+        .large {
+            font-size: 36pt;
+            
+        }
+
+        .small {
+            font-size: 10pt;
+        }
+        .larger {
+            font-size: 48pt;
+        }
+
+        .smaller {
+            font-size: 8pt;
+        }
+        .selected {
+            background-color: yellow;
+            font-weight: 900;
+            border: 3px solid;
+        }
+
+        .hide{
+            display:none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>顯示功能按鈕</h2>
+
+    <div id="switcher">
+        <span id="smaller">更小</span>
+        <span id="small">縮小</span>
+        <span id="default">標準</span>
+        <span id="large">放大</span>
+        <span id="larger">更大</span>
+    </div>
+    <p>Hello jQuery</p>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#switcher>span').addClass('line');
+        //$('#switcher').hide();
+        $('#switcher').addClass('hide');
+
+        $('#switcher').click(function (evt) {
+            if ($(evt.target).is('span')) {
+                var id = evt.target.id;
+                $('p').removeClass().addClass(id);
+                $('#switcher>span').removeClass('selected');
+                $(evt.target).addClass('selected');
+            }
+        });
+
+        //$('h2').click(function () {
+        //    $('#switcher').show();
+        //    $(this).text('隱藏功能按鈕');
+        //});
+
+        //$('h2').click(function () {
+        //    $('#switcher').toggle(1000);
+        //});
+
+        $('h2').click(function () {
+            if ($('#switcher').cl.hasClass('hide')) {
+                $('#switcher').removeClass().addClass('show');
+                $(this).text('隱藏功能按鈕');
+            }
+            else {
+                $('#switcher').removeClass().addClass('hide');
+                $(this).text('顯示功能按鈕');
+            }
+        });
+
+     
+
+    </script>
+
+</body>
+</html>

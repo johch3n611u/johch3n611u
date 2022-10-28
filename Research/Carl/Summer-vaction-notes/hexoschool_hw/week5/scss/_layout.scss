@@ -1,0 +1,273 @@
+//header start
+$primary-color:#3F5D45;
+$secondary-color:#EAF0ED;
+@mixin pad {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+
+body {
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrap {
+    max-width: 940px;
+    margin: 0 auto;
+    @include pad() {
+        max-width: 768px;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: space-between;
+    position: relative;
+    @include pad() {
+        justify-content: space-around;
+    }
+    .rwd_logo {
+        @include pad() {
+            width: 32%;
+            height: auto;
+            display: blocks;
+        }
+    }
+    .logo {
+        background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 40px;
+        @include pad() {
+            display: none;
+        }
+    }
+    .ham_menu {
+        display: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        @include pad() {
+            display: block;
+            padding: 10px;
+        }
+    }
+}
+
+h1 {
+    width: 25%;
+    @include pad() {
+        display: none;
+    }
+}
+
+.menu {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+    @include pad() {
+        line-height: 48px;
+        max-height: 0px;
+        margin-left: 0px;
+        position: absolute;
+        left: 0;
+        top: 82px;
+        width: 100%;
+        transition: all 0.8s;
+        overflow: hidden;
+        background: white;
+        flex-direction: column;
+    }
+    .rwd_none {
+        width: 100%;
+        a {
+            display: block;
+            text-decoration: none;
+            color: $primary-color;
+            transition: all 1s;
+            padding: 10px 20px 10px 20px;
+            @include pad() {
+                text-align: center;
+                padding: 0px;
+            }
+            &:hover {
+                box-shadow: 5px 5px 5px $primary-color;
+                background-color: $secondary-color;
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+.header .active {
+    max-height: 215px;
+}
+
+.shopcart {
+    display: block;
+    padding: 15px 0 10px 0;
+    &:hover {
+        border-radius: 50%;
+        transform: translateY(-10px);
+        background-color: $secondary-color;
+        box-shadow: 5px 5px 5px $primary-color;
+        transition: all 1s;
+    }
+    @include pad() {}
+}
+
+//header end
+footer {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.mailbox {
+    display: flex;
+    padding: 3% 12% 3% 12%;
+    background-color: $primary-color;
+    @include pad() {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12%;
+    }
+    .boxitem1 {
+        display: flex;
+        align-items: center;
+        @include pad() {
+            margin-bottom: 30px;
+        }
+        .sub {
+            font-size: 24px;
+            line-height: 29px;
+            display: block;
+            text-decoration: none;
+            color: $secondary-color;
+        }
+        .icon {
+            width: 10%;
+            margin-right: 20px;
+        }
+    }
+    .mail {
+        display: flex;
+        position: relative;
+        .mail_icon {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+        }
+        .yourmail {
+            width: 308px;
+            background-color: $secondary-color;
+            padding: 0 0 0 15%;
+            border: 0;
+            @include pad() {
+                width: auto;
+            }
+        }
+        .arrow {
+            background-color: #FFE180;
+            padding: 16px 20px 16px 20px;
+        }
+    }
+}
+
+.contact {
+    background-color: $secondary-color;
+    display: flex;
+    padding-bottom: 25px;
+    @include pad() {
+        flex-direction: column;
+    }
+}
+
+.footerlogo {
+    margin-left: 125px;
+    @include pad() {
+        margin-left: 53px;
+    }
+    .footericon {
+        margin-top: 39px;
+        width: 57%;
+        &:hover {
+            transform: rotateY(360deg);
+            transition: all 2s;
+        }
+    }
+    p {
+        margin-top: 115.5px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary-color;
+        @include pad() {
+            margin-top: 39px;
+        }
+    }
+    .line {
+        width: 10%;
+        margin-top: 30px;
+        margin-right: 4px;
+        &:hover {
+            transform: translateY(-15px);
+            transition: all 1s;
+        }
+    }
+    .fb {
+        width: 10%;
+        margin-top: 30px;
+        &:hover {
+            transform: translateY(-15px);
+            transition: all 1s;
+        }
+    }
+}
+
+.sloganbox {
+    margin-left: 200px;
+    @include pad() {
+        margin-left: 53px;
+    }
+    .slogan {
+        writing-mode: vertical-lr;
+        writing-mode: vertical-rl;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 5px;
+        margin: 30px 0px 0px 0px;
+        float: right;
+        font-weight: 700;
+        color: $primary-color;
+        @include pad () {
+            display: none;
+        }
+    }
+    .copyright {
+        margin-top: 300px;
+        color: $primary-color;
+        @include pad() {
+            margin-top: 30px;
+        }
+    }
+}

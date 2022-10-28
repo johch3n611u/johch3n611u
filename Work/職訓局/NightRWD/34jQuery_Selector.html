@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            color:red;
+        }
+        div p{
+            color:green;
+        }
+
+            div>p {
+                color: blue;
+            }
+
+            div+p{
+                color:yellow;
+            }
+
+            div ~ p {
+                color: pink;
+            }
+
+            .line{
+                border:1px solid;
+            }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>JavaScript</p>
+    </div>
+    <p>
+        yyyyyyy
+    </p>
+    <span>
+        jQuery
+    </span>
+    <p>
+        yyyyyyy
+    </p>
+    <span>
+        <p>
+            HTML
+        </p>
+    </span>
+
+    <div>
+        <p>CSS3</p>
+        <b><p>ASP.net</p></b>
+        <span>PHP</span>
+        <span>
+            <p>SQL Server</p>
+        </span>
+    </div>
+    <p>
+        <div>
+            qqqqqq
+        </div>
+    </p>
+    <p>
+        yyyyyyy
+    </p>
+    <hr />
+
+    <ol id="list">
+        <li>Javascript程式設計</li>
+        <li>jQuery程式設計</li>
+        <li>ASP.net程式設計</li>
+        <li>PHP程式設計</li>
+        <li>JSP程式設計</li>
+        <li>Asp3.0程式設計</li>
+        <li>Dreamweaver網頁設計</li>
+        <li><a href="tw.yahoo.com">Yahoo!奇摩</a></li>
+        <li><a href="http://www.google.com.tw">Google</a></li>
+        <li><a href="http://kpptr.wda.gov.tw">高屏澎東分署</a></li>
+    </ol>
+
+
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        //$('#list li').addClass('line');
+
+        //$('#list li:contains("SP")').addClass('line');
+        //$('#list li>a[href*="oo"]').addClass('line');
+        //$('#list li>a[href^="tw"]').addClass('line');
+        $('#list li>a[href$="tw"]').addClass('line');
+    </script>
+</body>
+</html>

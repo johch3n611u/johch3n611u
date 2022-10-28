@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            學號:<input id="sid" name="學號" type="text" /><br />
+            姓名:<input id="name" name="姓名" type="text" /><br />
+            性別:<input id="gender" name="性別" type="text" /><br />
+            電話:<input id="tel" name="電話" type="text" /><br />
+            生日:<input id="birthday" name="生日" type="text" /><br />
+
+            <input id="btnAdd" type="button" value="新增" />
+            <input id="btnUp" type="button" value="修改" />
+            <input id="btnDel" type="button" value="刪除" />
+        </form>
+        <hr />
+        <input id="id" type="text" placeholder="請輸入學號" />
+        <input id="btnGet" type="button" value="查詢" />
+        <ul id="list"></ul>
+    </div>
+
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:2824/api/Student/",
+            success: function (data) {
+                console.log(data);
+                data.forEach(function (item) {
+                    $('#list').append("<li>學號:" + item.學號 + ", 姓名:" + item.姓名 + ", 性別:" + item.性別 + ", 生日:" + item.生日 + ", 電話:" + item.電話 + "</li>");
+
+                })
+
+            }
+        });
+
+        $('#btnGet').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/api/Student/" + $('#id').val(),
+                success: function (item) {
+                    console.log(item);
+                    $('#list').empty();
+                    //data.forEach(function (item) {
+                    $('#list').append("<li>學號:" + item.學號 + ", 姓名:" + item.姓名 + ", 性別:" + item.性別 + ", 生日:" + item.生日 + ", 電話:" + item.電話 + "</li>");
+                    $('#sid').val(item.學號);
+                    $('#name').val(item.姓名);
+                    $('#tel').val(item.電話);
+                    $('#gender').val(item.性別);
+                    $('#birthday').val(item.生日);
+                    //})
+
+                }
+            });
+        });
+
+
+        $('#btnAdd').click(function () {
+            console.log($('#form1').serialize());
+            $.ajax({
+                type: "POST",
+                url: "/api/Student/",
+                data: $('#form1').serialize()
+
+            });
+
+        });
+
+        $('#btnUp').click(function () {
+            console.log($('#form1').serialize());
+
+            $.ajax({
+                type: "PUT",
+                url: "/api/Student/" + $('#sid').val(),
+                data: $('#form1').serialize()
+
+            });
+
+        });
+
+        $('#btnDel').click(function () {
+            console.log($('#form1').serialize());
+
+            $.ajax({
+                type: "DELETE",
+                url: "/api/Student/" + $('#sid').val()
+               
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>

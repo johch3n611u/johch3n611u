@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="jumbotron">
+    <h1>訊息推送</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend>訊息推送</legend>
+            主旨:<input id="subject" name="subject" type="text" /><br />
+            內容:<input id="message" name="message" type="text" /><br />
+            <input id="btnSend" type="button" value="推送" />
+
+
+        </fieldset>
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        var url = "ws://10.10.3.189/api/Notification";
+        var ws = new WebSocket(url);
+        console.log(ws);
+
+        ws.onopen = function () {
+            //ws.send("已進入聊天!!");
+            //ws.close();
+            //alert('已連線');
+        }
+
+        ws.onerror = function () {
+            alert('有錯誤');
+        }
+
+        ws.onmessage = function (e) {
+            console.log(e.data);
+            var res = e.data.split(":");
+            console.log(res);
+            var r = Math.random();
+            var notify = new Notification(res[0],{
+                body: res[1],
+                icon: '/images/wda.gif',
+                tag: r// 設定標籤
+            });
+
+            //notify.onclick = function () { // 綁定點擊事件
+            //    //e.preventDefault(); // prevent the browser from focusing the Notification's tab
+            //   // window.open('http://www.mcsdd.tw'); // 打開特定網頁
+            //    alert('test');
+            //}
+            //console.log(notify);
+
+        }
+        $('#btnSend').click(function () {
+            var msg = $('#subject').val() + ":" + $('#message').val();
+            ws.send(msg);
+
+        });
+
+
+        //var notifyConfig = {
+        //    body: '\\ ^o^ /', // 設定內容
+        //    icon: '/images/favicon.ico' // 設定 icon
+        //};
+
+        if (Notification.permission === 'default' || Notification.permission === 'undefined') {
+            Notification.requestPermission(function (permission) {
+                if (permission === 'granted') { // 使用者同意授權
+                    var notification = new Notification('Hi there!', notifyConfig); // 建立通知
+                }
+            });
+        }
+
+</script>
+}

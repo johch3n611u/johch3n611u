@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ASPnet.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="row">
+                <header class="col-md-12">
+                    header
+                </header>
+            </div>
+            <div class="row">
+                <aside class="col-md-3">
+                    aside
+                </aside>
+                <article class="col-md-9">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </article>
+            </div>
+            <div class="row">
+                <footer class="col-md-12">
+                    footer
+                </footer>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

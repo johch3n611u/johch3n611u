@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #product {
+            width: 300px;
+            cursor: pointer;
+        }
+
+            #product h2 {
+                font-family: 微軟正黑體;
+                font-weight: 900;
+                text-align: center;
+            }
+
+            #product p {
+                font-family: 微軟正黑體;
+                font-weight: 900;
+            }
+
+            #product h4 {
+                font-family: Arial;
+                font-weight: 900;
+                color: #ff2b0d;
+                text-decoration: line-through;
+            }
+
+            #product h3 {
+                font-family: Arial;
+                font-weight: 900;
+                color: #ff2b0d;
+            }
+
+            #product div:last-child {
+                font-family: Arial;
+                font-weight: 900;
+                border: 3px solid red;
+                background-color: #ff6a00;
+                color: white;
+                width: 100px;
+                text-align: center;
+            }
+
+        .hover {
+            border: 3px dotted red;
+        }
+
+        .hover2 {
+            border: 3px double green;
+        }
+
+        .down {
+            border: 10px double #0026ff;
+            background-color: #b6ff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="product">
+        <div>
+            <img src="images/may.jpg" width="100%" />
+            <h2>玉笛誰家聽落梅</h2>
+            <p>桃花島名菜。該菜品是以小牛腰子、獐腿肉、兔肉、小豬耳朵、羊羔坐臀為主要材料製作，鲜美爽口。黃蓉以此菜引誘洪七公教導郭靖「降龍十八掌」。</p>
+            <h4>原價:$9999</h4><h3>特價：$999</h3>
+        </div>
+        <div>放入餐盤</div>
+    </div>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#product').mouseenter(function () {
+            $(this).removeClass().addClass('hover');
+        });
+
+        $('#product').mouseleave(function () {
+            $(this).removeClass().addClass('hover2');
+        });
+        $('#product').mousedown(function () {
+            $(this).removeClass().addClass('down');
+        });
+
+        $('#product').mouseup(function () {
+            $('#product>div:first-child').hide(3000, function () {
+                $('#product>div:last-child').text("已放入餐盤");
+
+            });
+           
+        });
+
+    </script>
+
+</body>
+</html>

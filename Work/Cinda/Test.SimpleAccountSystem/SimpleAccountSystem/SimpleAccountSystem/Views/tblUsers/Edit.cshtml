@@ -1,0 +1,126 @@
+﻿@model SimpleAccountSystem.Models.DTO.UserDetails
+
+@{
+    ViewBag.Title = "帳號申請";
+}
+
+<h2>帳號申請</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>注意事項：</h4>
+        <p>
+            * 權限群組位值，須從資料庫來<br />
+            * 所有欄位都必填(需檢查)<br />
+            * 相同的帳號，只能註冊一次<br />
+            * 註冊完成，需提示會員新增完成<br />
+            * 新增、編輯、刪除需有確認提示視窗<br />
+        </p>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.cAccount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @if (@ViewBag.Mode == "編輯")
+                {
+                    @: <input value="@Html.DisplayFor(model => model.cAccount)" name="cAccount" class="form-control" readonly/>
+                }
+                else
+                {
+                    @Html.EditorFor(model => model.cAccount, new { htmlAttributes = new { @class = "form-control" } })
+                }
+                @Html.ValidationMessageFor(model => model.cAccount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.cEmail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.cEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <select name="cStatus" id="cStatus" class="form-control">
+                    @foreach (var item in ViewBag.StatusInfos)
+                    {
+                        <option value="@item.Value">@item.DisplayText</option>
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => model.cStatus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.cGroupNames, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+                @foreach (var item in ViewBag.GroupInfos)
+                {
+                    <input type="checkbox"
+                           id="check_@item.Value"
+                           name="cGroupNames"
+                           @item.IsChecked
+                           value="@item.Value"
+                           >
+                    <label for="check_@item.Value">
+                        @item.DisplayText
+                    </label><br>
+                }
+                @Html.ValidationMessageFor(model => model.cGroupNames, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input value="提交" class="btn btn-default btn-info" onclick="submit(SetcGroupNames());" />
+            </div>
+        </div>
+    </div>
+    <input name="Mode" value="@ViewBag.Mode" style="display:none"/>
+}
+
+@Html.Raw(@ViewBag.Message)
+
+<div>
+    @Html.ActionLink("返回首頁", "Index")
+</div>
+
+<script>
+    console.log(document.getElementsByName("cGroupNames")[2].checked);
+    document.getElementsByName("cGroupNames").forEach((item, index) => console.log(index));
+    document.getElementsByName("cGroupNames")[0].value;
+    function SetcGroupNames() {
+        var Mix = "";
+        document.getElementsByName("cGroupNames").forEach(
+            (item, index) => {
+                if (item.checked) {
+                    Mix += document.getElementsByName("cGroupNames")[index].value + ','
+                }
+            }
+        )
+        document.getElementsByName("cGroupNames")[0].value = Mix;
+        return true;
+    }
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

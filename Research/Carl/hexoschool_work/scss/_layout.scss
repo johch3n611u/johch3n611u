@@ -1,0 +1,157 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+}
+
+.container {
+    position: relative;
+    max-width: 1024px;
+}
+
+.nav {
+    position: absolute;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px 0px 40px;
+    background: rgba(102, 102, 102, 0.3);
+}
+
+.nav_logo {
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/logo.png);
+    background-repeat: no-repeat;
+    width: 185px;
+    height: 42.677px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-course {
+    position: relative;
+}
+
+.course-open {
+    position: absolute;
+    padding: 0;
+}
+
+.course-open li {
+    border-left: 1px solid #00cc99;
+    width: 180%;
+    display: none;
+}
+
+.nav-bar {
+    margin: 0;
+    li {
+        padding: 0px 10px;
+        list-style: none;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 25px 15px 25px 15px;
+        font-weight: 600;
+        border-bottom: 8px solid transparent;
+        &:hover {
+            color: #00cc99;
+            border-bottom: 8px solid #00cc99;
+            transition: all 1s;
+        }
+    }
+}
+
+.course-slide.active {
+    color: #00cc99;
+    border-bottom: 8px solid #00cc99;
+    transition: all 1s;
+}
+
+.subscription {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 25%;
+    left: 35%;
+    h3 {
+        color: white;
+    }
+    .btn-white {
+        font-size: 20px;
+        background-color: white;
+        border-radius: 5px;
+        border: transparent;
+        float: right;
+        width: 140px;
+        height: 52px;
+        color: black;
+        word-spacing: 20px;
+    }
+}
+
+.btn-cancel {
+    font-size: 20px;
+    background-color: red;
+    border-radius: 5px;
+    border: transparent;
+    float: right;
+    width: 140px;
+    height: 52px;
+    color: black;
+    word-spacing: 20px;
+}
+
+.success {
+    z-index: 20;
+    display: none;
+    padding: 10px;
+    font-size: 32px;
+    color: white;
+    position: fixed;
+    top: 25%;
+    left: 45%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-container {
+    max-width: 1024px;
+    height: 560px;
+}
+
+.swiper-slide {
+    color: white;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #00cc99;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #00cc99;
+}
+
+.top {
+    right: -5%;
+    bottom: 10%;
+    position: fixed;
+    display: block;
+    img {
+        width: 20%;
+    }
+}

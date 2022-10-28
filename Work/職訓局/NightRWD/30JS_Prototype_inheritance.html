@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    
+    <script>
+        //Prototype物件繼承
+        //base類別
+        function position(x, y, color) {
+            this.color = color;
+            this.x = x;
+            this.y = y;
+        }
+
+
+        function circle(r) {
+            this.r = r;
+            this.info = showCircleInfo;
+        }
+
+        function showCircleInfo() {
+            var result = 3.1415926 * this.r * this.r;
+            document.write("半徑:" + this.r + "<br />");
+
+            document.write("x座標:" + this.x + "<br />");
+            document.write("y座標:" + this.y + "<br />");
+            document.write("色彩:" + this.color + "<br />");
+
+            document.write("圓面積:" + result + "<hr />");
+        }
+
+        /////////////////////////////////////////////////////////////
+        //Prototype物件繼承
+        circle.prototype = new position();
+
+
+        var C1 = new circle(2);
+        C1.color = "red";
+        C1.x = 20;
+        C1.y = 123;
+        C1.info();
+     
+
+    </script>
+</body>
+</html>

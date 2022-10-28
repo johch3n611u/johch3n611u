@@ -1,0 +1,139 @@
+<!-- <p-blockUI class="pblock" [target]="pnl" style="opacity: 0;" [style]="{'opacity':'0'}"></p-blockUI> -->
+<form #f="ngForm">
+    <div class="ui-md-12">
+        <div>
+            <h3>
+                {{'InfoQuery.FormName'| translate}}
+            </h3>
+        </div>
+    </div>
+    <hr />
+    <!-- <p-panel #pnl class="pnl"> -->
+    <div class="ui-g ui-fluid">
+        <div class="ui-g paddingin">
+            <!-- <div class="ui-g-12 ui-md-12">
+                    <div class="ui-g"> -->
+            <div class="ui-g-12 ui-md-12">
+                <div class="ui-g-6 ui-md-6">
+                    <div class="ui-inputgroup">
+                        <p-radioButton name="QueryType" value="0" (click)="QueryMode()" [(ngModel)]="IntQueryType"
+                            label="{{ 'InfoQuery.QueryType0' | translate }}">
+                        </p-radioButton>
+                    </div>
+                </div>
+                <div class="ui-g-6 ui-md-6">
+                    <div class="ui-inputgroup ">
+                        <p-radioButton name="QueryType" value="1" (click)="QueryMode()" [(ngModel)]="IntQueryType"
+                            label="{{ 'InfoQuery.QueryType1' | translate }}">
+                        </p-radioButton>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui-g-12 ui-md-12">
+                <p-table #table [columns]="cols" [value]="items" [scrollable]="true" [style]="{'min-hight':'400px'}"
+                    [showCurrentPageReport]="true" currentPageReportTemplate="" [resizableColumns]="true"
+                    [paginator]="true" [rows]="15" [style]="{ overflow: 'auto' }">
+                    <ng-template pTemplate="colgroup" let-columns>
+                        <colgroup>
+                            <col style="width:160px">
+                            <col style="width:140px">
+                            <col style="width:140px">
+                            <col style="width:140px">
+                            <col style="width:140px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                        </colgroup>
+                    </ng-template>
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th pResizableColumn *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                {{col.header}}
+                                <p-sortIcon [field]="col.field"></p-sortIcon>
+                            </th>
+                        </tr>
+                        <!-- <tr>
+                            <th>{{'InfoQuery.ServiceNo'|translate}}</th>
+                            <th>{{'InfoQuery.ServiceClass'|translate}}</th>
+                            <th>{{'InfoQuery.ServiceSubClass'|translate}}</th>
+                            <th>{{'InfoQuery.ServiceProject'|translate}}</th>
+                            <th>{{'InfoQuery.FormStatus'|translate}}</th>
+                            <th>{{'InfoQuery.ApplicanterName'|translate}}</th>
+                            <th>{{'InfoQuery.ApplicanterDept'|translate}}</th>
+                            <th>{{'InfoQuery.CreateDate'|translate}}</th>
+                            <th>{{'InfoQuery.SignName'|translate}}</th>
+                        </tr> -->
+                        <tr>
+                            <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                                <input *ngSwitchCase="'ServiceNo'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')">
+                                <!-- <input *ngSwitchCase="'ServiceClass'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')"> -->
+                                <p-multiSelect *ngSwitchCase="'ServiceClass'" appendTo="body"
+                                    [options]="ServiceClassItem" defaultLabel="All"
+                                    (onChange)="table.filter($event.value, col.field, 'in')">
+                                </p-multiSelect>
+                                <p-multiSelect *ngSwitchCase="'ServiceSubClass'" appendTo="body"
+                                    [options]="ServiceSubClassItem" defaultLabel="All"
+                                    (onChange)="table.filter($event.value, col.field, 'in')">
+                                </p-multiSelect>
+                                <p-multiSelect *ngSwitchCase="'ServiceProject'" appendTo="body"
+                                    [options]="ServiceProjectItem" defaultLabel="All"
+                                    (onChange)="table.filter($event.value, col.field, 'in')">
+                                </p-multiSelect>
+                                <!-- <input *ngSwitchCase="'ServiceSubClass'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')"> -->
+                                <!-- <input *ngSwitchCase="'ServiceProject'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')"> -->
+                                <p-multiSelect *ngSwitchCase="'FormStatus'" appendTo="body" [options]="FormStatusItem"
+                                    defaultLabel="All" (onChange)="table.filter($event.value, col.field, 'in')">
+                                </p-multiSelect>
+
+                                <!-- <p-dropdown *ngSwitchCase="'FormStatus'" [options]="FormStatusItem"
+                                                    [autoWidth]="true" [style]="{'width':'100%'}"
+                                                    (onChange)="table.filter($event.value, col.field, 'equals')">
+                                                </p-dropdown> -->
+                                <input *ngSwitchCase="'ApplicanterName'" pInputText type="text" style="width: 100%;"
+                                    placeholder="" (input)="table.filter($event.target.value, col.field, 'contains')">
+                                <input *ngSwitchCase="'ApplicanterDept'" pInputText type="text" style="width: 100%;"
+                                    placeholder="" (input)="table.filter($event.target.value, col.field, 'contains')">
+                                <input *ngSwitchCase="'CreateDate'" pInputText type="text" style="width: 100%;"
+                                    placeholder="" (input)="table.filter($event.target.value, col.field, 'contains')">
+                                <input *ngSwitchCase="'SignName'" pInputText type="text" style="width: 100%;"
+                                    placeholder="" (input)="table.filter($event.target.value, col.field, 'contains')">
+                            </th>
+                        </tr>
+                    </ng-template>
+
+
+                    <ng-template pTemplate="body" let-item>
+                        <tr>
+                            <td style="cursor: pointer;">
+                                <a href="javascript:void(0);" (click)="SignDetail(item.FormType,item.ServiceNo,item.FormStatus)">
+                                    {{item.FormNo}}</a></td>
+                            <td>{{item.ServiceClass }}</td>
+                            <td>{{item.ServiceSubClass}}</td>
+                            <td>{{item.ServiceProject}}</td>
+                            <td>{{ item.FormStatus}}</td>
+                            <td>{{item.ApplicanterName}}</td>
+                            <td>{{item.ApplicanterDept}}</td>
+                            <td>{{item.CreateDate | date: "yyyy-MM-dd"}}</td>
+                            <td>{{item.SignName}}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="paginatorleft" let-state>
+                        <div style="padding: 5px 5px;">
+                            Showing {{(state.page  * state.rows) + 1}} to {{state.rows * (state.page + 1)}} of
+                            {{state.totalRecords}} entries
+                        </div>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+    <!-- </div>
+        </div> -->
+    <!-- </p-panel> -->
+</form>

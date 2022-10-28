@@ -1,0 +1,46 @@
+ -- 缺少
+
+applicant 提案人
+
+yahooshoppingscm.Product.contentRating NCC級別
+
+yahooshoppingscm.Product.shortDescription [說明1,說明2]簡短說明 最多五條 每條 Max 15
+
+驗證過後的圖片與影片的url
+
+yahooshoppingscm.Product.models.displayName 自定義標題
+
+ -- 正常
+
+listing.price = ec.list.spicalprice
+
+listing.seoUrl = ec.list.productname Max 45
+
+product.cost = ec.list.cost
+
+product.msrp = ec.list.spicalprice
+
+product.name = ec.list.productname Max 45
+
+product.copy = ec.list.ko_wiseman_ID left join ko_wiseman
+
+
+ -- 固定
+
+reviewStatus : composing 提案 draft 測試
+
+subStationId : sub1
+
+type : newListing
+
+listing.catItemId : catItem10070
+
+listing.deliveryType : normal
+
+product.attributeDisplayMode : table
+
+product.catItemId : catItem10070
+
+shipType {id : 1}
+
+struDataAttrClusterId : 000002836363

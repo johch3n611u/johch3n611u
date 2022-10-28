@@ -1,0 +1,95 @@
+<div class="ui-g-12">
+    <div class="ui-g-12 ui-md-5" style="width: 45%;">
+        <div style="height: 28px;">
+            {{'Change.Type6Source'|translate}}</div>
+        <p-table #table [value]="items" [resizableColumns]="false"
+            [style]="{'text-align': 'center','width':'100%','margin-right':'-50px'}" [scrollable]="true" scrollHeight="300px">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:120px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox name="group_all" value="all" (onChange)="All(1)" [(ngModel)]="selectedValues_All">
+                        </p-checkbox>
+                    </th>
+                    <th>{{'Change.softwarename'|translate}}</th>
+                    <th>{{'Change.assetnumber'|translate}}</th>
+                    <th>{{'Change.computername'|translate}}</th>
+                    <th>{{'Change.softwareVersion'|translate}}</th>
+                    <th>{{'Change.custodian'|translate}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" value="{{ item.Id }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.SwName}}</td>
+                    <td>{{item.HsamMainaccessNo}}</td>
+                    <td>{{item.HsamComputerName}}</td>
+                    <td>{{item.OriginalSoftwareVersion}}</td>
+                    <td>{{item.OriginalAssetsManager}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="ui-g-12 ui-md-1" style="text-align: center;padding-top: 40px;width: 10%;" >
+        <p-button [disabled]="!IsEanble" label=">" (click)="addItems()"></p-button>
+        <br> <br>
+        <p-button *ngIf="IsEanble" label="<" (click)="reomveItems()"></p-button>
+    </div>
+    <div class="ui-g-12 ui-md-5" style="width: 45%;">
+        <div style=" height: 28px;">
+            {{'Change.Type6Target'|translate}}</div>
+        <p-table #table [value]="items_Selected" [resizableColumns]="false"
+            [style]="{'width':'100%','text-align': 'center'}" [scrollable]="true" scrollHeight="300px">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:80px">
+                    <col style="width:120px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                    <col style="width:75px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox name="group_all" value="all" (onChange)="All(2)"
+                            [(ngModel)]="selectedValues_RemoveAll">
+                        </p-checkbox>
+                    </th>
+                    <th>{{'Change.FormatId'|translate}}</th>
+                    <th>{{'Change.softwarename'|translate}}</th>
+                    <th>{{'Change.assetnumber'|translate}}</th>
+                    <th>{{'Change.computername'|translate}}</th>
+                    <th>{{'Change.newsoftwareVersion'|translate}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" value="{{ item.Id }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.FormatId}}</td>
+                    <td>{{item.SwName}}</td>
+                    <td>{{item.HsamMainaccessNo}}</td>
+                    <td>{{item.HsamComputerName}}</td>
+                    <td><input pInputText type="text" [disabled]="!IsEanble" [(ngModel)]="item.NewSoftwareVersion"
+                            name="NewSoftwareVersion" /></td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

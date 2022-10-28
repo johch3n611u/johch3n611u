@@ -1,0 +1,390 @@
+//header start
+$primary-color:#3F5D45;
+$secondary-color:#EAF0ED;
+@mixin pad {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+
+.wrap {
+    max-width: 940px;
+    margin: 0 auto;
+    @include pad() {
+        max-width: 768px;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: space-between;
+    @include pad() {
+        justify-content: space-around;
+    }
+    .rwd_logo {
+        @include pad() {
+            width: 32%;
+            height: auto;
+            display: blocks;
+        }
+    }
+    .logo {
+        width: 23%;
+        &:hover {
+            transform: scale3d(1.3, 1.3, 1.3);
+            transition: all 2s;
+        }
+        @include pad() {
+            display: none;
+        }
+    }
+    .ham_menu {
+        display: none;
+        @include pad() {
+            display: block;
+            padding: 10px;
+            border: none;
+            background: transparent;
+        }
+    }
+}
+
+.menu {
+    font-size: 16px;
+    display: flex;
+    line-height: 73px;
+    margin-left: 400px;
+    @include pad() {
+        display: none;
+    }
+    .rwd_none {
+        a {
+            display: block;
+            text-decoration: none;
+            color: $primary-color;
+            transition: all 1s;
+            padding-right: 20px;
+            padding-left: 20px;
+            @include pad() {
+                display: none;
+            }
+            &:hover {
+                box-shadow: 5px 5px 5px $primary-color;
+                background-color: $secondary-color;
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+.shopcart {
+    display: block;
+    padding: 15px 0 10px 0;
+    &:hover {
+        border-radius: 50%;
+        transform: translateY(-10px);
+        background-color: $secondary-color;
+        box-shadow: 5px 5px 5px $primary-color;
+        transition: all 1s;
+    }
+    @include pad() {}
+}
+
+//header end
+.banner {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.main {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include pad() {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .category {
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 24px;
+        line-height: 40px;
+        @include pad() {
+            width: 100%;
+        }
+        h3 {
+            color: $secondary-color;
+            background-color: $primary-color;
+            padding: 13px 66px 13px 66px;
+        }
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            display: block;
+            padding: 13px 66px 13px 66px;
+            &:hover {
+                box-shadow: 5px 5px 5px $primary-color;
+                background-color: $secondary-color;
+                transition: all 1s;
+                transform: translate3d(10px, 10px, 10px);
+                @include pad() {
+                    transform: none;
+                }
+            }
+        }
+    }
+    .product {
+        width: 66%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include pad() {
+            width: 100%;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    }
+}
+
+.card {
+    margin-bottom: 20px;
+    position: relative;
+    p {
+        color: $secondary-color;
+        writing-mode: vertical-rl;
+        position: absolute;
+        left: 20px;
+        top: 0;
+        font-size: 16px;
+        padding: 10px;
+        background-color: $primary-color;
+        letter-spacing: 5.5px;
+        font-weight: 700;
+    }
+    &:hover {
+        box-shadow: 6px 6px 10px gray;
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .namePrice {
+        color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $secondary-color;
+        h4 {
+            font-weight: 400;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 33px;
+            padding-right: 20px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        span {
+            border-left: 1px solid $secondary-color;
+            font-weight: 900;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 20px;
+            padding-right: 24px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+    .putincart {
+        background-color: $secondary-color;
+        border: none;
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: 900;
+        width: 100%;
+        padding: 15.5px;
+        cursor: pointer;
+        transition: all 1s;
+        &:hover {
+            color: $secondary-color;
+            background-color: $primary-color;
+            transition: all 3s;
+        }
+    }
+    .favorite {
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        transition: all 1s;
+        &:hover {
+            background-color: pink;
+            border: 1px solid $primary-color;
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.pagemark {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    @include pad() {
+        justify-content: center;
+    }
+    a {
+        display: block;
+        border: 1px solid#EAF0ED;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px 25px 20px 25px;
+        color: $primary-color;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        line-height: 20px;
+        @include pad() {
+            padding: 20px;
+        }
+        &:hover {
+            color: $secondary-color;
+            background-color: $primary-color;
+            transition: all 2s;
+        }
+    }
+}
+
+footer {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.mailbox {
+    display: flex;
+    padding: 3% 12% 3% 12%;
+    background-color: $primary-color;
+    @include pad() {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12%;
+    }
+    .boxitem1 {
+        display: flex;
+        align-items: center;
+        @include pad() {
+            margin-bottom: 30px;
+        }
+        .sub {
+            font-size: 24px;
+            line-height: 29px;
+            display: block;
+            text-decoration: none;
+            color: $secondary-color;
+        }
+        .icon {
+            width: 10%;
+            margin-right: 20px;
+        }
+    }
+    .mail {
+        display: flex;
+        position: relative;
+        img {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+        }
+        .yourmail {
+            width: 308px;
+            background-color: $secondary-color;
+            padding: 0 0 0 15%;
+            border: 0;
+            @include pad() {
+                width: auto;
+            }
+        }
+        .arrow {
+            background-color: #FFE180;
+            padding: 16px 20px 16px 20px;
+        }
+    }
+}
+
+.contact {
+    background-color: $secondary-color;
+    display: flex;
+    padding-bottom: 25px;
+    @include pad() {
+        flex-direction: column;
+    }
+}
+
+.footerlogo {
+    margin-left: 125px;
+    @include pad() {
+        margin-left: 53px;
+    }
+    .footericon {
+        margin-top: 39px;
+        width: 57%;
+        &:hover {
+            transform: rotateY(360deg);
+            transition: all 2s;
+        }
+    }
+    p {
+        margin-top: 115.5px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary-color;
+        @include pad() {
+            margin-top: 39px;
+        }
+    }
+    .line {
+        width: 10%;
+        margin-top: 30px;
+        margin-right: 4px;
+        &:hover {
+            transform: translateY(-15px);
+            transition: all 1s;
+        }
+    }
+    .fb {
+        width: 10%;
+        margin-top: 30px;
+        &:hover {
+            transform: translateY(-15px);
+            transition: all 1s;
+        }
+    }
+}
+
+.sloganbox {
+    margin-left: 200px;
+    @include pad() {
+        margin-left: 53px;
+    }
+    .slogan {
+        writing-mode: vertical-lr;
+        writing-mode: vertical-rl;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 5px;
+        margin: 30px 0px 0px 0px;
+        float: right;
+        font-weight: 700;
+        color: $primary-color;
+        @include pad () {
+            display: none;
+        }
+    }
+    .copyright {
+        margin-top: 300px;
+        color: $primary-color;
+        @include pad() {
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+*.rb linguist-language=.net core
+*.js linguist-language=.net core
+*.css linguist-language=.net core
+*.html linguist-language=.net core

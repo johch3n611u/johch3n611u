@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3 style="background-color:yellow;">This is my Homepage!!</h3>
+    <h3 style="background-color:yellow;text-align:center">This is my Homepage!!</h3>
+    <h3 style="background-color:yellow;text-align:right">This is my Homepage!!</h3>
+
+    <span id="big">大</span>　<span id="default">中</span>　<span id="small">小</span>
+    <p id="news" style="text-indent:2em">
+        蔡英文作為台灣首位的女總統，原本國人是給予很高的期待的。根據台灣民意基金會的追蹤民調顯示，2016年五二○上台之初，蔡英文的支持度將近七成，到了去年九合一選舉，蔡英文的聲望來到谷底，蔡英文的滿意度僅剩二成多，不滿意度卻高達六成。
+
+        為什麼蔡英文的執政光環消退得這麼快？很重要的原因是，蔡英文被政治包裝的手法，包裝得太美好了，原本以為蔡英文是上天送給台灣最貴重的禮物，結果把精美的包裝打開時，發現裡面只裝一包廉價衛生紙，那種心裡重重的失落感，難以言喻。
+
+        看看2012年蔡英文經典的敗選宣言是怎麼說的？「你可以哭泣，但不要洩氣。你可以悲傷，但是不要放棄。因為明天起來，我們要像過去四年一樣的勇敢，心裡充滿著希望。」蔡英文這一席話，讓台下的選民哭成一片，深深覺得下次選舉一定要投給可以帶給台灣希望的蔡英文，不然這樣太對不起蔡英文了。
+    </p>
+
+    <hr />
+
+    <p style="text-decoration:underline;color:blue;cursor:pointer">蔡英文作為台灣首位的女總統，原本國人是給予很高的期待的。</p>
+    <a href="#" style="text-decoration:none;color:black;cursor:none">蔡英文作為台灣首位的女總統，原本國人是給予很高的期待的。</a>
+    <h3 style="color:#808080;text-decoration:line-through">原價:$360,000</h3>
+
+    <hr />
+
+    <h2 style="text-transform:lowercase">document getElement by Id this is my Homepage!!</h2>
+    <h2 style="text-transform:uppercase">document getElement by Id this is my Homepage!!</h2>
+    <h2 style="text-transform:capitalize">document getElement by ID thIS is my Homepage!!</h2>
+    <h2 style="letter-spacing:30pt">document getElement by Id this is my Homepage!!</h2>
+    <h2 style="word-spacing:2em">document getElement by Id this is my Homepage!!</h2>
+    <h2 style="letter-spacing:2em">蔡英文作為台灣首位的女總統，原本國人是給予很高的期待的</h2>
+
+    <hr />
+
+
+    <h1 style="font-family:'Arial Black';text-shadow:3px 3px 7px black">This is my Homepage!!</h1>
+
+    <h1 style="font-family:'Arial Black';text-shadow:0px 0px 15px black">This is my Homepage!!</h1>
+
+    <h1 style="font-family:'Arial Black';text-shadow:2px 1px 3px red">This is my Homepage!!</h1>
+
+    <h1 style="font-family:'Arial Black';text-shadow:2px 2px 3px red, 4px 4px 3px green,0px 0px 10px yellow">This is my Homepage!!</h1>
+    <script>
+        var big = document.getElementById("big");
+        var d = document.getElementById("default");
+        var small = document.getElementById("small");
+        var news = document.getElementById("news");
+
+        big.addEventListener("click", function () {
+            news.style.fontSize = "36pt";
+        });
+        d.addEventListener("click", function () {
+            news.style.fontSize = "12pt";
+        });
+        small.addEventListener("click", function () {
+            news.style.fontSize = "8pt";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<form #f="ngForm">
+    <div class="ui-md-11">
+        <div>
+            <h3>帳號權限自檢作業</h3>
+        </div>
+    </div>
+    <hr />
+    <div style="padding: 0.2em;">
+        <!-- 排程 ( PAM604改為產出 Mail 資料 ) -->
+        <p-button label="產出自檢通知資料" (click)="CallPAM604()"></p-button>
+        <!-- 寄信 -->
+        <p-button label="寄送自檢通知" style="margin-left: 1em;" (click)='SendMail()'></p-button>
+        <!-- <p-button label="測試主管信連結" style="margin-left: 1em;" (click)='TestMrgLink()'>
+        </p-button> -->
+    </div>
+    <div class="ui-g ui-fluid">
+        <div class="ui-g paddingin">
+            <div class="ui-g-11 ui-md-11">
+                <p-table #table [columns]="cols" [(first)]="firstPage" [value]="Mails" [scrollable]="true"
+                    [style]="{'min-hight':'400px'}" [showCurrentPageReport]="true" currentPageReportTemplate=""
+                    [resizableColumns]="true" [paginator]="true" [rows]="15" [style]="{ overflow: 'auto' }"
+                    (onFilter)="onFilter($event, table)">
+                    <ng-template pTemplate="colgroup" let-columns>
+                        <colgroup>
+                            <col style="width:100px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                            <col style="width:100px">
+                        </colgroup>
+                    </ng-template>
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th style="width: 40px;text-align: center;" [hidden]="false">
+                                <div *ngIf="true">
+                                    <p-checkbox name="group_all" value="all" (onChange)="CheckAll()"></p-checkbox>
+                                </div>
+                            </th>
+                            <th pResizableColumn *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                {{col.header}}
+                                <p-sortIcon [field]="col.field"></p-sortIcon>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th *ngFor="let col of columns" [ngSwitch]="col.field">
+                                <p-multiSelect *ngSwitchCase="'DEPT_CENTER'" appendTo="body"
+                                    [options]="DeptCenterSelect" defaultLabel="All"
+                                    (onChange)="table.filter($event.value, col.field, 'in')">
+                                </p-multiSelect>
+                                <p-multiSelect *ngSwitchCase="'DEPT_NO'" appendTo="body" [options]="DeptNoSelect"
+                                    defaultLabel="All" (onChange)="table.filter($event.value, col.field, 'in')">
+                                </p-multiSelect>
+                                <input *ngSwitchCase="'EMP_NO'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')">
+                                <input *ngSwitchCase="'EMP_NAME'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')">
+                                <input *ngSwitchCase="'STATE'" pInputText type="text" style="width: 100%;"
+                                    (input)="table.filter($event.target.value, col.field, 'contains')">
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
+                        <tr>
+                            <td style="text-align: center;" [hidden]="false">
+                                <div *ngIf="item.STATE != '已通知'">
+                                    <p-checkbox name="Test" value="{{item.ID}}" [(ngModel)]='SelectedMailsId'>
+                                    </p-checkbox>
+                                </div>
+                            </td>
+                            <td>{{item.DEPT_CENTER}}</td>
+                            <td>{{item.DEPT_NO}}</td>
+                            <td>{{item.EMP_NO}}</td>
+                            <td>{{item.EMP_NAME}}</td>
+                            <td><span *ngIf="item.STATE=='已通知'">{{item.STATE}}</span></td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="paginatorleft" let-state>
+                        <div style="padding: 5px 5px;">
+                            Showing {{(state.page * state.rows) + 1}} to {{state.rows * (state.page + 1)}} of
+                            {{state.totalRecords}} entries
+                        </div>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "RazorTest";
+}
+@*//03-4-4 Razor語法練習*@
+
+<h2>RazorTest</h2>
+
+@*這是單行註解*@
+
+@*這是
+    區塊
+    註解*@
+
+@{
+    string name = "Jacky";
+    int Math = 95;
+    int Eng = 90;
+    int Chi = 85;
+
+    <h2>歡迎 @name 光臨本站</h2>
+
+    @:歡迎 @name 光臨本站
+
+}
+
+<h2>@Math+@Eng+@Chi</h2>
+<h2>@(Math + Eng + Chi)</h2>
+<hr />
+
+@(ViewBag.IsLogin = true)
+
+@if (ViewBag.IsLogin)
+{
+    @:會員已登入
+}
+else
+{
+    <span>會員未登入</span>
+}
+<hr />
+
+@{
+    string[] NightName = { "瑞豐夜市", "新堀江商圈", "六合夜市", "青年夜市", "花園夜市", "大東夜市", "武聖夜市" };
+
+}
+
+<ul>
+    @foreach (var item in NightName)
+    {
+        <li>@item</li>
+    }
+</ul>

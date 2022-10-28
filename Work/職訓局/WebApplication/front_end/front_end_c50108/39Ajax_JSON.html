@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #tb1{
+            width:90%;
+            margin:auto;
+        }
+        #tb1 thead tr{
+            background-color:#383838;
+            color:white;
+        }
+
+            #tb1 tbody tr:nth-child(2n+1) {
+                background-color:#acacac;
+            }
+            #tb1 tbody tr:nth-child(2n) {
+                background-color:white;
+            }
+
+            #tb1 tbody tr:hover {
+                background-color:aquamarine;
+                color:red;
+                border:5px solid black;
+            }
+    </style>
+</head>
+<body>
+    <table id="tb1">
+        
+    </table>
+
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+     
+        $.ajax({
+            type: 'GET',
+            url: 'ProductPrice.json',
+            format: 'json',
+            success: function (data) {
+                //alert('Success!!');
+                $('#tb1').append("<thead><tr><th>品項名稱</th><th>報價</th><th>年</th><th>月</th><th>旬</th><th>鄉鎮農會</th></tr></thead>");
+                $('#tb1').append("<tbody>");
+                for (var i = 0; i < data.length; i++) {
+                    $('#tb1').append("<tr><th>" + data[i].PRODUCTNAME + "</th><th>" + data[i].AVGPRICE + "</th><th>" + data[i].YEAR + "</th><th>" + data[i].MONTH + "</th><th>" + data[i].PERIOD + "</th><th>" + data[i].ORGNAME +"</th></tr>");
+
+                }
+                $('#tb1').append("</tbody>");
+
+            },
+            error: function () {
+                alert('Error!!');
+            }
+
+        });
+
+
+    </script>
+</body>
+</html>

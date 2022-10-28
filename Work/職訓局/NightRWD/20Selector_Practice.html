@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #tb{
+            border:3px solid;
+            width:1200px;
+            margin:auto;
+        }
+
+        #tb tr:first-child {
+            background-color:brown;
+            color:white;
+        }
+            #tb tr:first-child ~ tr:nth-child(2n+1) {
+                background-color:cornsilk;
+            }
+
+            #tb tr:first-child ~ tr:nth-child(2n) {
+                background-color:gainsboro;
+            }
+            #tb tr:first-child~tr:hover {
+                background-color:cadetblue;
+                color:yellow;
+                border:1px solid red;
+            }
+    </style>
+</head>
+<body>
+
+    <table id="tb"></table>
+
+
+    <script>
+        var tb = document.getElementById("tb");
+        var tr = document.createElement("tr");
+        for (j = 1; j <= 10; j++) {
+            var td = document.createElement("th");
+            var txt = document.createTextNode("欄位"+j);
+            td.appendChild(txt);
+            tr.appendChild(td);
+        }
+        tb.appendChild(tr);
+
+        for (i = 1; i <= 100; i++) {
+            var tr = document.createElement("tr");
+            for (j = 1; j <= 10; j++) {
+                var td = document.createElement("td");
+                var txt = document.createTextNode("第" + i + "列第" + j + "欄");
+                td.appendChild(txt);
+                tr.appendChild(td);
+            }
+            tb.appendChild(tr);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<app-sign-header (outputSend)='send($event)' (outputSave)='Save($event)'></app-sign-header>
+<p-panel #pnl class="pnl">
+    <div class="ui-g ui-fluid paddingin">
+        <div class="ui-g-3 ui-md-3">
+            <div class="ui-inputgroup  required">
+                <span>
+                    {{"ResignationDisabled.User" | translate}}</span>
+            </div>
+        </div>
+        <div class="ui-g-3 ui-md-3">
+            <div class="ui-inputgroup ">
+                <input type="text" value="{{items.User}}" pInputText readonly="true" />
+            </div>
+        </div>
+        <div class="ui-g-3 ui-md-3">
+            <div class="ui-inputgroup  required">
+                <span>
+                    {{"ResignationDisabled.CloseDate" | translate}}
+                </span>
+            </div>
+        </div>
+        <div class="ui-g-3 ui-md-3">
+            <div class="ui-inputgroup ">
+                <input type="text" value="{{items.CloseDate|date:'yyyy/MM/dd'}}" pInputText readonly="true" />
+            </div>
+        </div>
+        <p-radioButton name="groupname" label="{{'ResignationDisabled.NotBefore' | translate}}" value="1"
+            [(ngModel)]="items.Type">
+        </p-radioButton>
+        <div class="ui-g-12">
+            {{"ResignationDisabled.Desc1" | translate}} {{fixPreDisabledDate|date:'yyyy/MM/dd'}}
+        </div>
+        <hr class="ui-g-12">
+        <p-radioButton name="groupname" label="{{'ResignationDisabled.Before' | translate}}" value="2"
+            [(ngModel)]="items.Type"></p-radioButton>
+        <div class="ui-g-12">
+            <div class="ui-g-2">
+                {{"ResignationDisabled.Desc2" | translate}}
+            </div>
+            <div class="ui-g">
+                <p-calendar dateFormat="yy/mm/dd" [(ngModel)]="dynamicPreDisabledDate"></p-calendar>
+            </div>
+        </div>
+        <div class="ui-g-12">
+            {{"ResignationDisabled.Desc3" | translate}}
+        </div>
+        <hr class="ui-g-12">
+        <p-radioButton name="groupname" label="{{'ResignationDisabled.FunctionDisable' | translate}}" value="3"
+            [(ngModel)]="items.Type">
+        </p-radioButton>
+        <p-table [value]="items.Data" [style]="{' text-align': 'center' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>{{'ResignationDisabled.ServiceItem' | translate}}</th>
+                    <th>{{'ResignationDisabled.Disabled' | translate}}</th>
+                    <th>{{'ResignationDisabled.PreCloseDate' | translate}}</th>
+                    <th>{{'ResignationDisabled.Status1' | translate}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr>
+                    <td>
+                        {{item.ServiceItem}}
+                    </td>
+                    <td>
+                        <p-checkbox name="groupname" [(ngModel)]="item.Disabled" binary="true">
+                        </p-checkbox>
+                    </td>
+                    <td>
+                        <p-calendar dateFormat="yy/mm/dd" [(ngModel)]="item.PreCloseDate">
+                            {{item.PreCloseDate}}
+                        </p-calendar>
+                    </td>
+                    <td *ngIf="item.Status==this.StatusEnum.Doing">
+                        {{'ResignationDisabled.Doing' | translate}}
+                    </td>
+                    <td *ngIf="item.Status==this.StatusEnum.Finish">
+                        {{'ResignationDisabled.Finish' | translate}}
+                    </td>
+                    <td *ngIf="item.Status==this.StatusEnum.Stop">
+                        {{'ResignationDisabled.Stop' | translate}}
+                    </td>
+                    <td *ngIf="item.Status==this.StatusEnum.Apply">
+                        {{'ResignationDisabled.Apply' | translate}}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</p-panel>
+<app-sign-footer></app-sign-footer>

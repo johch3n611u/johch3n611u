@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="container">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="text" class="form-control" placeholder="Enter email..."  />
+                    <small class="form-text text-muted">忘記帳號</small>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input id="pwd" type="password" class="form-control" placeholder="Password"  />
+                </div>
+                <div class="form-group form-check">
+                    <input id="remember" type="checkbox" class="form-check-input"  title="必須勾選" data-toggle="tooltip" data-placement="top"  />
+                    <label for="remember">我同意</label>
+                </div>
+                <!--<input id="Submit1" type="submit" value="submit" class="btn btn-secondary" />-->
+                <input id="Submit1" type="button" value="submit" class="btn btn-secondary"  />
+            </div>
+        </form>
+        <hr /><hr /><hr /><hr /><hr /><hr /><hr />
+        <button type="button" class="btn btn-secondary" data-toggle="popover" title="Popover展示" data-placement="bottom" data-content="這是一個Popover" data-container="body">
+            Popover
+        </button>
+
+        <img src="Desert.jpg" title="這是沙漠" alt="這是沙漠" data-toggle="tooltip" data-placement="right"  />
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#Submit1').click(function () {
+            console.log($('#remember').is(':checked'));
+
+            if (!$('#remember').is(':checked'))
+                $('#remember').tooltip('show');
+        });
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+
+        $('[data-toggle="popover"]').popover();
+    </script>
+</body>
+</html>

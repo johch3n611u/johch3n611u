@@ -1,0 +1,12 @@
+div {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid;
+  text-align: center;
+}
+
+div > h1 {
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */

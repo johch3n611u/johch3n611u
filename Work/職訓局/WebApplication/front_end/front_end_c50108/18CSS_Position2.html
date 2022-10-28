@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #container {
+            width: 770px;
+            margin: auto;
+            position: relative;
+        }
+
+        header {
+        }
+
+        aside {
+            width: 210px;
+            float: left;
+        }
+
+        article {
+            width: 560px;
+            float: right;
+        }
+
+        footer {
+            clear: both;
+        }
+
+        #ad1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #ad2 {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        #ad3 {
+            position: absolute;
+            top: 50px;
+        }
+
+            #ad3 > span {
+                background-color: pink;
+                color: red;
+                font-size: 10pt;
+                cursor: pointer;
+            }
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="ad3">
+            <span>點我關閉</span>
+            <br />
+            <img src="images/ad.jpg" />
+        </div>
+
+        <header>
+
+            <img src="images/top.jpg" />
+        </header>
+        <aside>
+
+            <img src="images/left.jpg" />
+        </aside>
+        <article>
+
+            <img src="images/right.jpg" />
+        </article>
+        <footer>
+
+            <img src="images/bottom.jpg" />
+        </footer>
+    </div>
+
+
+
+    <img src="images/banner1.jpg" id="ad1" />
+    <img src="images/banner2.jpg" id="ad2" />
+
+    <script>
+        var ad3 = document.getElementById("ad3");
+
+        function re() {
+            var container = document.getElementById("container");
+            var w = (container.clientWidth - ad3.clientWidth) / 2;
+            var a = container.clientWidth;
+            var b = ad3.clientWidth;
+
+            console.log(a);
+            console.log(b);
+            console.log(w);
+
+            ad3.style.left = w + "px";
+
+            $('#ad3').hide();
+            $('#ad3').show(3000);
+        }
+        window.onload = re;
+
+
+        ad3.children[0].addEventListener('click', function () {
+            //ad3.hidden = true;
+            $('#ad3').slideUp(2000);
+        });
+    </script>
+
+  
+</body>
+</html>

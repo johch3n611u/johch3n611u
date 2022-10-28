@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "5f38e8fb-3c80-4d1c-8f79-c97958555ed4",
+		"name": "YahooAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://tw.supplier.yahoo.com/api/spa/v1/signIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-token",
+						"value": "Supplier_478",
+						"type": "text"
+					},
+					{
+						"key": "api-keyversion",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "api-timestamp",
+						"value": "1574060659",
+						"type": "text"
+					},
+					{
+						"key": "api-signature",
+						"value": "f1cba824dee440a449aab3b68016781a0fde71f83f91a34105395f997987223272a6be16c2f91272a146fae9451602e53ddaa39d8d071d9730a140d091facff9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Ej+Gc3beGBIupv9gW6dZNFAQVM+oubRZqkbFTwnByL8=",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tw.supplier.yahoo.com/api/spa/v1/signIn",
+					"protocol": "https",
+					"host": [
+						"tw",
+						"supplier",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"api",
+						"spa",
+						"v1",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://tw.supplier.yahoo.com/api/spa/v1/token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tw.supplier.yahoo.com/api/spa/v1/token",
+					"protocol": "https",
+					"host": [
+						"tw",
+						"supplier",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"api",
+						"spa",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://tw.supplier.yahoo.com/api/spa/v1/proposals",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-YahooWSSID-Authorization",
+						"value": "UpbKbMKxk4pPIt9lhIep2Q--~A",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"applicant\": \"孫協志\",\r\n  \"product\": {\r\n    \"attributeDisplayMode\": \"table\",\r\n    \"attributes\": [\r\n    \t\r\n    \t{\"name\": \"記憶體插槽\",\r\n        \"values\": [\r\n          \"4\"\r\n        ]},\r\n        {\"name\": \"光碟機\",\r\n        \"values\": [\r\n          \"DVD燒錄機\"\r\n        ]},\r\n        {\"name\": \"記憶體類型\",\r\n        \"values\": [\r\n          \"DDR3\"\r\n        ]},\r\n        {\"name\": \"網路攝影機\",\r\n        \"values\": [\r\n          \"自訂\"\r\n        ]},\r\n        {\"name\": \"無線網路\",\r\n        \"values\": [\r\n          \"自訂\"\r\n        ]},\r\n        {\"name\": \"藍牙\",\r\n        \"values\": [\r\n          \"3.0\"\r\n        ]},\r\n        {\"name\": \"I/O連接埠\",\r\n        \"values\": [\r\n          \"自訂\"\r\n        ]},\r\n        {\"name\": \"顯示卡記憶體容量(GB)\",\r\n        \"values\": [\r\n          \"1G\"\r\n        ]},\r\n        {\"name\": \"定位\",\r\n        \"values\": [\r\n          \"文書機\"\r\n        ]},\r\n        {\"name\": \"型號\",\r\n        \"values\": [\r\n          \"自訂\"\r\n        ]},\r\n        {\"name\": \"記憶體最高支援容量\",\r\n        \"values\": [\r\n          \"4G\"\r\n        ]},\r\n         {\"name\": \"電池容量(cell/mAh.)\",\r\n        \"values\": [\r\n          \"自訂\"\r\n        ]},\r\n        {\"name\": \"保固\",\r\n        \"values\": [\r\n          \"6個月\"\r\n        ]},\r\n        {\"name\": \"指紋辨識\",\r\n        \"values\": [\r\n          \"有指紋辨識\"\r\n        ]},\r\n        {\"name\": \"螢幕解析度\",\r\n        \"values\": [\r\n          \"HD+\"\r\n        ]},\r\n         {\"name\": \"螢幕尺寸(吋)\",\r\n        \"values\": [\r\n          \"10.1吋\"\r\n        ]},\r\n         {\"name\": \"記憶體容量\",\r\n        \"values\": [\r\n          \"4G\"\r\n        ]},\r\n        {\"name\": \"螢幕類型\",\r\n        \"values\": [\r\n          \"鏡面\"\r\n        ]},\r\n        {\"name\": \"固態硬碟 SSD/eMMC\",\r\n        \"values\": [\r\n          \"8GB\"\r\n        ]},\r\n        {\"name\": \"螢幕觸控\",\r\n        \"values\": [\r\n          \"有螢幕觸控\"\r\n        ]},\r\n          {\"name\": \"中央處理器型號\",\r\n        \"values\": [\r\n          \"AMD\"\r\n        ]},\r\n        {\"name\": \"重量(kg)\",\r\n        \"values\": [\r\n          \"自定義\"\r\n        ]},\r\n        {\"name\": \"螢幕解析度類型\",\r\n        \"values\": [\r\n          \"HD+\"\r\n        ]},\r\n         {\"name\": \"標準配件\",\r\n        \"values\": [\r\n          \"滑鼠\"\r\n        ]},\r\n        {\"name\": \"顯示晶片卡型號\",\r\n        \"values\": [\r\n          \"P4200\"\r\n        ]},\r\n        {\"name\": \"2.5吋傳統硬碟轉數\",\r\n        \"values\": [\r\n          \"無\" \r\n        ]},\r\n        {\"name\": \"作業系統\",\r\n        \"values\": [\r\n          \"Win7 home\"\r\n        ]},\r\n        {\"name\": \"其他連接埠\",\r\n        \"values\": [\r\n          \"自定義\"\r\n        ]},\r\n        {\"name\": \"中央處理器品牌\",\r\n        \"values\": [\r\n          \"Intel\"\r\n        ]},\r\n        {\"name\": \"CPU類型\",\r\n        \"values\": [\r\n          \"i5\"\r\n        ]},\r\n        {\"name\": \"硬碟類型\",\r\n        \"values\": [\r\n          \"固態硬碟\"\r\n        ]},\r\n        {\"name\": \"顯示卡記憶體類型\",\r\n        \"values\": [\r\n          \"DDR5\"\r\n        ]},\r\n        {\"name\": \"顯示卡類型\",\r\n        \"values\": [\r\n          \"內顯\"\r\n        ]},\r\n        {\"name\": \"2.5吋傳統硬碟容量\",\r\n        \"values\": [\r\n          \"無\"\r\n        ]},\r\n        {\"name\": \"讀卡機\",\r\n        \"values\": [\r\n          \"自定義\"\r\n        ]}\r\n    ],\r\n    \"catItemId\": \"catItem10070\",\r\n    \"contentRating\": \"G\",\r\n    \"cost\": \"50.00\",\r\n    \"isExpiringItem\": false,\r\n    \"isInstallRequired\": false,\r\n    \"isLargeVolume\": false,\r\n    \"isLargeVolumnProductGift\": false,\r\n    \"isNeedRecycle\": false,\r\n    \"isOutrightPurchase\": false,\r\n    \"minPackingCount\": 10,\r\n    \"models\": [\r\n      {\r\n        \"items\": [\r\n          {\r\n            \"partNo\": \"5566\",\r\n            \"barcode\": \"725272730706\",\r\n            \"warehouseBarcode\": \"9785109946480\",\r\n            \"spec\": {\r\n              \"name\": \"顏色\",\r\n              \"values\": [\r\n                \"金色系\"\r\n              ]\r\n            },\r\n            \"displayName\": \"可以自定義\"\r\n          },\r\n          {\r\n            \"partNo\": \"5567\",\r\n            \"spec\": {\r\n              \"name\": \"顏色\",\r\n              \"values\": [\r\n                \"灰色系\"\r\n              ]\r\n            },\r\n            \"displayName\": \"灰色\"\r\n          }\r\n        ],\r\n         \"videos\": [\r\n          {\r\n            \"url\": \"https://s.yimg.com/bp/Files/374d9974ab2cbce382e42724fede7aa07313cae6.qt\",\r\n            \"order\": 1\r\n          }\r\n        ],\r\n        \"images\": [\r\n          {\r\n            \"url\": \"https://s.yimg.com/bp/Files/ba0b8bf005bab4e7cc8821afea217e342a1dfca3.png\",\r\n            \"order\": 1\r\n          },\r\n          {\r\n            \"url\": \"https://s.yimg.com/bp/Files/3b0bc05cf3c5af7cd17b878edce05eab7d0b97d0.jpg\",\r\n            \"order\": 2\r\n          }\r\n        ],\r\n\r\n        \"spec\": {\r\n          \"name\": \"品牌\",\r\n          \"values\": [\r\n            \"Dell戴爾\"\r\n          ]\r\n        },\r\n        \"displayName\": \"極致簡約Dell2019\"\r\n      },\r\n      {\r\n        \"spec\": {\r\n          \"name\": \"品牌\",\r\n          \"values\": [\r\n            \"AVITA 美國品牌\"\r\n          ]\r\n        },\r\n        \"items\": [\r\n          {\r\n            \"partNo\": \"5568\",\r\n            \"spec\": {\r\n              \"name\": \"顏色\",\r\n              \"values\": [\r\n                \"金色系\"\r\n              ]\r\n            },\r\n            \"displayName\": \"自定義\"\r\n          },\r\n          {\r\n            \"partNo\": \"5569\",\r\n            \"spec\": {\r\n              \"name\": \"顏色\",\r\n              \"values\": [\r\n                \"灰色系\"\r\n              ]\r\n            },\r\n            \"displayName\": \"灰色\"\r\n          }\r\n        ],\r\n          \"videos\": [\r\n          {\r\n            \"url\": \"https://s.yimg.com/bp/Files/374d9974ab2cbce382e42724fede7aa07313cae6.qt\",\r\n            \"order\": 1\r\n          }\r\n        ],\r\n        \"images\": [\r\n          {\r\n            \"url\": \"https://s.yimg.com/bp/Files/ba0b8bf005bab4e7cc8821afea217e342a1dfca3.png\",\r\n            \"order\": 1\r\n          },\r\n          {\r\n            \"url\": \"https://s.yimg.com/bp/Files/3b0bc05cf3c5af7cd17b878edce05eab7d0b97d0.jpg\",\r\n            \"order\": 2\r\n          }\r\n        ],\r\n        \"displayName\": \"低調奢華hp讚\"\r\n      }\r\n    ],\r\n    \"msrp\": \"100.00\",\r\n    \"name\": \"(即期品)我是商品名稱\",\r\n    \"partNo\": \"12345\",\r\n    \"shipType\": {\r\n      \"id\": 61\r\n    },\r\n    \"shortDescription\": [\r\n      \"我是簡短說明\",\r\n      \"我是簡短說明2\"\r\n    ],\r\n    \"struDataAttrClusterId\": \"000002836363\",\r\n    \"warranty\": {\r\n      \"period\": \"一個月\",\r\n      \"description\": \"保固說明文字\",\r\n      \"handler\": \"official\",\r\n      \"scope\": \"新品瑕疵\"\r\n    },\r\n    \"copy\": \"<p>內容圖片與影片需經過驗證為有效url才可提交</p>\",\r\n    \"brand\": \"我是品牌\",\r\n    \"height\": 10,\r\n    \"length\": 10,\r\n    \"model\": \"我是商品型號\",\r\n    \"preserveDays\": 56,\r\n    \"weight\": 88,\r\n    \"width\": 66,\r\n    \"specs\": [\r\n      {\r\n        \"level\": 1,\r\n        \"name\": \"品牌\"\r\n      },\r\n      {\r\n        \"level\": 2,\r\n        \"name\": \"顏色\"\r\n      }\r\n    ]\r\n  },\r\n  \"reviewStatus\": \"draft\",\r\n  \"subStationId\": \"sub1\",\r\n  \"type\": \"newListing\",\r\n  \"note\": \"我是備註\",\r\n  \"listing\": {\r\n    \"catItemId\": \"catItem10070\",\r\n    \"deliveryType\": \"normal\",\r\n    \"featureTitle\": \"我是特色標題\",\r\n    \"price\": \"100.00\",\r\n    \"seoUrl\": \"我是商品名稱\"\r\n  }\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tw.supplier.yahoo.com/api/spa/v1/proposals",
+					"protocol": "https",
+					"host": [
+						"tw",
+						"supplier",
+						"yahoo",
+						"com"
+					],
+					"path": [
+						"api",
+						"spa",
+						"v1",
+						"proposals"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

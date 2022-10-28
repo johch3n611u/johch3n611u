@@ -1,0 +1,66 @@
+﻿@model IEnumerable<_08ShoppingCar.Models.tOrder>
+@*//07-3-1 修改英文字為中文*@
+@{
+    ViewBag.Title = "會員訂單列表";
+}
+
+<h2>會員訂單列表</h2>
+@*//07-3-2 刪除Create連結功能*@
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fOrderGuid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fReceiver)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fOrderGuid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fReceiver)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fDate)
+            </td>
+            <td>
+                @*//07-3-3 修改最後一欄為查看訂單明細功能*@
+                <a href="@Url.Action("OrderDetail")?fOrderGuid=@item.fOrderGuid" class="btn btn-info">查看明細</a>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.fId }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.fId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.fId })*@
+            </td>
+        </tr>
+    }
+
+</table>

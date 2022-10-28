@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "討論區";
+}
+<div>
+
+    選單:@Html.MvcSiteMap().Menu(false,false,false)
+
+    目前所在位置:@Html.MvcSiteMap().SiteMapPath()
+
+
+    <h2>討論區</h2>
+    <hr />
+    <p>@Html.ActionLink("新增留言", "Create")</p>
+
+    @Html.Action("_PhotoGallery", "Photos")
+
+</div>
+
+

@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #booklist {
+            width: 1000px;
+            border: double 2px;
+            margin: auto;
+        }
+
+            #booklist tr {
+                border-bottom: solid 2px;
+            }
+
+            #booklist > tbody tr:nth-child(2n+1) {
+                background-color: #c6c6c6;
+            }
+
+            #booklist > tbody tr:hover {
+                background-color: black;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    書名：<input id="Text1" type="text" /><input id="Button1" type="button" value="搜尋" />
+    <table id="booklist">
+
+    </table>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#Button1').click(function () {
+            var bkurl = "https://www.googleapis.com/books/v1/volumes?q=" + $('#Text1').val();
+
+            $.ajax({
+                type: 'GET',
+                url: bkurl,
+                success: function (data) {
+                    $('#booklist').append('<thead><th>圖示</th><th>書名</th><th>作者</th><th>出版商</th></thead>');
+                    $('#booklist').append('<tbody>');
+                    for (var i = 0; i < data.items.length; i++)
+                    {
+                        var item = data.items[i];
+                        var tr = "<tr>";
+                        tr += "<td><img src='" + item.volumeInfo.imageLinks.smallThumbnail + "' /></td>";
+                        tr += "<td>" + item.volumeInfo.title + "</td>";
+                        tr += "<td>" + item.volumeInfo.authors + "</td>";
+                        tr += "<td>" + item.volumeInfo.publisher + "</td>";
+                        tr += "</tr>";
+                        $('#booklist').append(tr);
+                    }
+
+                    $('#booklist').append('</tbody>');
+
+                },
+                error: function () {
+                    alert('Error!!');
+                }
+
+            });
+
+
+        });
+
+    </script>
+
+</body>
+</html>

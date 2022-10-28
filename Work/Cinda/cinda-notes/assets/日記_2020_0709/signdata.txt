@@ -1,0 +1,13 @@
+Comment: ""
+FormData: AccountApplyForm {ApplyItem: "電腦帳號申請", Citrix: Array(0), ComputerAccount: Array(0), PushMail: Array(0), SSLVpn: Array(0), …}
+Sign:
+ApplicanterEmpNO: "99999"
+ApplicanterName: "Administrator"
+FillerEmpNO: "99999"
+FormStatus: "Draft"
+FormType: "Account"
+RequiredDate: Thu Jul 09 2020 00:00:00 GMT+0800 (台北標準時間) {}
+ServiceCode: "AA01_001"
+SignFromID: 0
+__proto__: Object
+SignButtonKey: "SignButton.Draft.Save"

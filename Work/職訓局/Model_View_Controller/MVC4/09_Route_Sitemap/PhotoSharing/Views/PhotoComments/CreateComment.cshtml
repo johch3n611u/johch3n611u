@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "CreateComment";
+}
+
+<h2>回覆留言</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    <p>
+        <label for="subject">回覆主題:</label>
+        <input id="subject" name="subject" type="text" />
+    </p>
+
+    <p>
+        <label for="body">回覆內容:</label>
+        <textarea id="body" name="body" rows="5" cols="30"></textarea>
+
+    </p>
+    <p>
+        <label for="username">回覆人名稱:</label>
+        <input id="username" name="username" type="text" />
+    </p>
+
+    <input id="photoid" name="photoid" type="hidden" value="@ViewBag.PhotoID" />
+
+    <p>
+        <input id="Submit1" type="submit" value="確定送出" class="btn btn-default" />
+    </p>
+
+
+}

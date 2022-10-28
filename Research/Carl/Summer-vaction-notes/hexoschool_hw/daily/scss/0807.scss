@@ -1,0 +1,42 @@
+img {
+    display: block;
+}
+
+.card {
+    width: 300px;
+    position: relative;
+    &-tag {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        writing-mode: vertical-lr;
+        letter-spacing: 5px;
+        padding: 10px;
+        background: #3F5D45;
+        color: #EAF0ED;
+    }
+    &-text {
+        display: flex;
+    }
+    &-title {
+        font-size: 20px;
+        line-height: 24px;
+        border: 1px solid #EAF0ED;
+        padding: 14px 28px;
+        color: #3F5D45;
+        font-weight: bold;
+    }
+    &-btn {
+        display: block;
+        padding: 16px 90px;
+        border: none;
+        font-size: 24px;
+        line-height: 20px;
+        background: #EAF0ED;
+        color: #3F5D45;
+    }
+    &-btn:hover {
+        background: #3F5D45;
+        color: white;
+    }
+}

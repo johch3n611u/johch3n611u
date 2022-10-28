@@ -1,0 +1,62 @@
+<div class="ui-g ui-fluid">
+    <div class="ui-g paddingin">
+        <div class="ui-g-12">
+            <h3 class="align signFormName">
+                {{'Type.DeviceReturn' | translate}}
+            </h3>
+        </div>
+
+        <div class="ui-g-12 ui-md-12">
+
+            <p-table #tb [columns]="cols" [value]="items" [style]="{'text-align': 'center'}">
+                <ng-template pTemplate="colgroup" let-columns>
+                    <colgroup>
+                        <col style="width:140px">
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <col style="width:100px">
+                    </colgroup>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th>{{'DeviceReturn.Id' | translate}}</th>
+                        <th>{{'DeviceReturn.ReturnDate' | translate}}</th>
+                        <th>{{'DeviceReturn.Department' | translate}}</th>
+                        <th>{{'DeviceReturn.EmpNo' | translate}}</th>
+                        <th>{{'DeviceReturn.EmpName' | translate}}</th>
+                        <th>{{'DeviceReturn.DeviceReturn' | translate}}</th>
+                        <th>{{'DeviceReturn.Xfort' | translate}}</th>
+                        <th>{{'DeviceReturn.NB' | translate}}</th>
+                    </tr>
+                    <tr>
+                        <th *ngFor="let col of columns;">
+                            <input type="text" (input)="tb.filter($event.target.value, col.field)" pInputText
+                                style="max-width: 100%;" />
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                        <ng-container *ngFor="let col of columns; let i = index">
+                            <td *ngIf="i==0" (click)="URL(rowData.SignFormId)" style="cursor: pointer;">
+                                {{rowData[col.field]}}
+                            </td>
+                            <ng-container [ngSwitch]="true">
+                                <td *ngSwitchCase="i == 1">
+                                    {{rowData[col.field] | date:'yyyy-MM-dd'}}
+                                </td>
+                                <td *ngSwitchCase="i > 0 && i != 1">
+                                    {{rowData[col.field]}}
+                                </td>
+                            </ng-container>
+
+                        </ng-container>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>

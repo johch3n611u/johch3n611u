@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .line {
+            border: 1px solid;
+        }
+        .red {
+            background-color: red;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+        <li>eee</li>
+    </ul>
+
+    <ol id="list2">
+        <li>aaa
+            <ul id="list3">
+                <li>aaa</li>
+                <li>bbb</li>
+                <li>ccc</li>
+                <li>ddd</li>
+                <li>eee</li>
+            </ul>
+        </li>
+        <li>bbb
+        
+            <ul id="list4">
+                <li>aaa</li>
+                <li>bbb</li>
+                <li>ccc</li>
+                <li>ddd</li>
+                <li>eee</li>
+            </ul>
+        </li>
+        <li>ccc</li>
+        <li>ddd</li>
+        <li>eee</li>
+    </ol>
+
+
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        //$('#list').addClass('yellow');
+        //$('#list').addClass('line');
+        //$('#list').addClass('red');
+       // $('#list>li').addClass('red').addClass('line');
+        //$('#list>li:nth-child(2n+1)').addClass('yellow');
+
+
+        var list = document.getElementById("list");
+        for (i = 0; i < list.children.length; i++) {
+            list.children[i].className = "red line";
+            if (i % 2 == 0)
+                list.children[i].className += " yellow";
+        }
+
+        //$('#list2>li:first-child').addClass('line');
+
+        var list2 = document.getElementById("list2");
+        //for (i = 0; i < list2.children.length; i++) {
+            list2.children[0].className = "line";
+          
+       //}
+
+    </script>
+</body>
+</html>

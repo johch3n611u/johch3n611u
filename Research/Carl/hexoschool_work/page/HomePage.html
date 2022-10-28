@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="多頁式網站練習">
+    <meta name="keywords" content="多頁式網站">
+    <meta name="author" content="Carl">
+    <meta name="generator" content="vscode">
+    <meta http-equiv="Content-Language" content="zh-TW">
+    <title>多頁式網站練習</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="https://www.filepicker.io/api/file/tNa2so2RRMuedpc2yydt">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/all.css">
+</head>
+
+<body>
+    <div class="container banner p-0">
+        <header class="container d-flex nav">
+            <a href="#" class="nav_logo">
+                <h1>六角學院</h1>
+            </a>
+            <ul class="nav-bar d-flex">
+                <li><a href="#">首頁</a></li>
+                <li class="menu-course"><a href="#" class="course-slide">課程</a>
+                    <ul class="course-open">
+                        <li><a href="#">HTML 5 基礎教學</a></li>
+                        <li><a href="#">響應式網站設計</a></li>
+                        <li><a href="#">jQuery 實戰教學</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="question">問答</a>
+                    <form class="subscription">
+                        <label for="name">
+                                   <h3>立即註冊，專人回答</h3>
+                        </label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="你的名字是 ?">
+                        <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="example@mail.com.tw">
+                        <div class="w-100 d-flex justify-content-between">
+                            <button class="btn-cancel" onclick="cancel()" type="button">略 過
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button class="btn-white" onclick="success()" type="button">送 出
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <h5 class="success"><i class="fas fa-smile-wink"></i> 感謝註冊 !</h5>
+                </li>
+            </ul>
+        </header>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background:url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/bg_index.png) no-repeat center;">
+                    <div class="banner-text">
+                        <h2 class="banner-text-green d-inline">歡迎來到</h2>
+                        <h2 class="text-white d-inline">六角學院</h2>
+                        <h2 class="banner-text-green">帶你一起攻略前端設計</h2>
+                        <a href="#" class="banner-button d-inline-block">馬上去註冊<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background:url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/bg_course.png) no-repeat center;"></div>
+                <div class="swiper-slide" style="background:url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/bg_QA.png) no-repeat center;"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <!-- swiper -->
+    </div>
+    <div class="course-list container clearfix">
+        <h3 class="course-list-title d-inline">精選課程</h3>
+        <p class="d-inline course-list-text">幫助你拿到前端工程師的門票</p>
+        <a class="d-inline-block course-btn" href="#">更多課程</a>
+        <ul class="course-list-card d-flex">
+            <li>
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" data-lightbox="roadtrip" data-title="Html 5"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/html5.png" alt="html5"></a>
+                <h4>Html 5 基礎教學</h4>
+                <p>主流前端網站設計的基礎，透過實際的範例，瞭解正確的網站開發流程。</p>
+            </li>
+            <li>
+                <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/rwd.png" data-lightbox="roadtrip" data-title="RWD"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/rwd.png
+" alt="rwd"></a>
+                <h4>響應式網站設計</h4>
+                <p>六角學院提供業界響應式開發方法，讓學生瞭解完善的行動版開發觀念。</p>
+            </li>
+            <li>
+                <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/jQuery.png" data-lightbox="roadtrip" data-title="jQuery"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/jQuery.png" alt="jQuery"></a>
+                <h4>jQuery 實戰教學</h4>
+                <p>分為四大主題 : 變數的使用、操作 DOM、基本數學運算和套件運用。</p>
+            </li>
+        </ul>
+    </div>
+    <div class="course-list container">
+        <h3 class="course-list-title d-inline">課程比較</h3>
+        <p class="d-inline course-list-text">線上課程與實體課程的差異</p>
+        <table class="course-table">
+            <tr class="bg-gray">
+                <th>項目</th>
+                <th>Hex School 線上課程</th>
+                <th>一般線上課程</th>
+                <th>實體課程</th>
+            </tr>
+            <tr>
+                <td>費用</td>
+                <td class="green_light">較低</td>
+                <td class="green_light">較低</td>
+                <td>較高</td>
+            </tr>
+            <tr>
+                <td>學習效果</td>
+                <td>一般</td>
+                <td class="green_light">較低</td>
+                <td class="green_light">很好</td>
+            </tr>
+            <tr>
+                <td>Code review</td>
+                <td class="green_light">有</td>
+                <td>無</td>
+                <td>不一定</td>
+            </tr>
+            <tr>
+                <td>課程更新速度</td>
+                <td class="green_light">普通</td>
+                <td class="green_light">普通</td>
+                <td>較慢</td>
+            </tr>
+            <tr>
+                <td>多次複習</td>
+                <td class="green_light">可</td>
+                <td>可</td>
+                <td>不可</td>
+            </tr>
+            <tr>
+                <td>字幕</td>
+                <td class="green_light">有</td>
+                <td>不一定</td>
+                <td>板書</td>
+            </tr>
+        </table>
+    </div>
+    <div class="container bg-gray contact-box">
+        <div class="contact-text">
+            <p>你就是六角的下一個學生 !</p>
+            <p>快留下資料讓我們認識你吧</p>
+        </div>
+        <form class="formgroup clearfix">
+            <input type="text" name="name" class="form-control" placeholder="你的名字是 ?">
+            <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="example@mail.com.tw"> <button class="btn-green">送 出</button>
+        </form>
+    </div>
+    <div class="footer container">
+        <div class="footerLogo">
+            <a href="#"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/logo.png" alt="hexscool"></a>
+            <p>© 2018 hexschool</p>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/fb.png"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/ig.png
+"></a>
+            <a href="#"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/tw.png
+"></a>
+        </div>
+    </div>
+    <div class="top">
+        <a href="#">
+            <img src="../img/126-1265983_rocket-gif-rocket-animated-gif-free-clipart.png">
+        </a>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script src="../JS/all.js"></script>
+
+</html>

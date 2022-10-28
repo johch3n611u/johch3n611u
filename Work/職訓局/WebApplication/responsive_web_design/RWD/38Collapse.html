@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+  
+    
+    <div class="container">
+
+        <input id="Button1" type="button" value="一次控制兩個" data-toggle="collapse" data-target=".collapseMulti" />
+
+        <div class="card bg-warning">
+            <div class="card-header">
+                <a data-toggle="collapse" href="#collapse1">這是一個景點介紹</a>
+            </div>
+            <div class="collapse collapseMulti" id="collapse1">
+                <img src="Desert.jpg" style="width:100%" />
+                <div class="card-body">
+                    Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
+                    fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est
+                    quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.
+                    Petierunt uti sibi concilium totius Galliae in diem certam indicere.
+                    Cras mattis iudicium purus sit amet fermentum.
+                </div>
+                <footer class="card-footer">
+                    <input id="Button1" type="button" value="OK" class="btn btn-primary" />
+                </footer>
+            </div>
+        </div>
+
+        <hr />
+        <button data-toggle="collapse" data-target="#collapse2">景點介紹</button>
+        <div class="collapse collapseMulti" id="collapse2">
+            <div class="card bg-warning">
+                <div class="card-header">
+                    這是一個景點介紹
+                </div>
+
+                <img src="Desert.jpg" style="width:100%" />
+                <div class="card-body">
+                    Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
+                    fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est
+                    quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.
+                    Petierunt uti sibi concilium totius Galliae in diem certam indicere.
+                    Cras mattis iudicium purus sit amet fermentum.
+                </div>
+                <footer class="card-footer">
+                    <input id="Button1" type="button" value="OK" class="btn btn-primary" />
+                </footer>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script>
+    
+    </script>
+</body>
+</html>

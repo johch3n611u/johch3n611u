@@ -1,0 +1,45 @@
+﻿@*//06-3-3 在最上方加上@model _06ViewModel.ViewModel.CVMDepEmp*@
+@model _05ViewModel.ViewModel.CVM
+
+@{
+    ViewBag.Title = "部門員工列表";
+}
+
+<h2>Index</h2>
+
+@*//06-3-5 在Index View中撰寫顯示畫面*@
+<div class="row">
+    <div class="col-xs-3">
+        @foreach (var item in Model.department)
+        {
+            <p>
+                @Html.ActionLink(item.fDepName, "Index", new { id = item.fDepId })
+
+            </p>
+        }
+    </div>
+    <div class="col-xs-9">
+        <table class="table">
+            <tr>
+                <th>工號</th>
+                <th>姓名</th>
+                <th>電話</th>
+                <th>部門</th>
+                <th>刪除</th>
+            </tr>
+            @foreach (var item in Model.employee)
+            {
+            <tr>
+                <td>@item.fEmpId</td>
+                <td>@item.fName</td>
+                <td>@item.fPhone</td>
+                <td>@item.fDepId</td>
+                <td>
+                    @Html.ActionLink("刪除","Delete",new { id=item.fEmpId},new { @class="btn btn-danger", onclick="return confirm('確定刪除?')"})
+                </td>
+            </tr>
+            }
+
+        </table>
+    </div>
+</div>

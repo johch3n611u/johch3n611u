@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        #container {
+            width: 500px;
+            position: relative;
+        }
+
+        #menu {
+            height: 50px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 200px;
+        }
+
+
+            #menu, #menu ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+                #menu li {
+                    background-color: #477dff;
+                }
+
+                #menu a {
+                    color: white;
+                    text-decoration: none;
+                    padding: 5px;
+                    display: block;
+                    width: 200px;
+                }
+
+                #menu li ul {
+                    width: 200px;
+                }
+
+                #menu > li > ul > li {
+                    background-color: white;
+                }
+
+                    #menu > li > ul > li > a {
+                        color: #477dff;
+                    }
+    </style>
+</head>
+<body>
+
+    <ol>
+        <li>
+            aaa
+            <ul>
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+                <li>444</li>
+                <li>555</li>
+            </ul>
+        </li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ol>
+
+
+    <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+    </ul>
+
+
+    <hr />
+    <div id="container">
+        <ul id="menu">
+            <li>
+                <a href="#">產品</a>
+                <ul class="submenu">
+                    <li><a href="#">ASP.net</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">服務</a>
+                <ul class="submenu">
+                    <li><a href="#">線上客服</a></li>
+                    <li><a href="#">檔案下載</a></li>
+                    <li><a href="#">資料查詢</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">查詢</a>
+                <ul class="submenu">
+                    <li><a href="#">訂單查詢</a></li>
+                    <li><a href="#">歷史訂單</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $('#menu li ul').hide();
+        $('#menu>li').click(function () {
+            $(this).find('ul').slideToggle(500);
+        });
+
+    </script>
+
+</body>
+</html>

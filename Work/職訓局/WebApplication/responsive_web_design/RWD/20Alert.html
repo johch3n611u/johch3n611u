@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-danger">
+            您現在是最高權限,用完後請馬上登出!!
+
+        </div>
+        <div class="alert alert-warning">
+            您現在是最高權限,用完後請馬上登出!!
+
+        </div>
+        <div class="alert alert-info">
+            您現在是最高權限,用完後請馬上登出!!
+
+        </div>
+        <div class="alert alert-dark">
+            您現在是最高權限,用完後請馬上登出!!
+
+        </div>
+        <hr />
+
+        <div class="alert alert-danger">
+            您現在是最高權限,用完後請馬上登出!!<a href="#" class="alert-link">點我登出系統</a>
+
+        </div>
+        <div class="alert alert-info">
+            您現在是最高權限,用完後請馬上登出!!<a href="#" class="alert-link">點我登出系統</a>
+
+        </div>
+        <hr />
+        <div class="alert alert-success">
+            <h4>您好!!系統管理員!!</h4>
+            <p>您現在是最高權限,用完後請馬上登出!!</p>
+            <hr />
+            <p>目前登入系統是危險的!!請注意密碼外洩或其他資安問題</p>
+        </div>
+
+        <div class="alert alert-dark" data-dismiss="alert">
+            您現在是最高權限,用完後請馬上登出!!
+            <button type="button" class="close">
+                &times;
+            </button>
+        </div>
+
+        <div class="alert alert-danger" id="myAlert">
+            <button type="button" class="close" data-dismiss="alert">
+                &times;
+            </button>
+            <h4>您好!!系統管理員!!</h4>
+            <p>您現在是最高權限,用完後請馬上登出!!</p>
+            <hr />
+            <p>目前登入系統是危險的!!請注意密碼外洩或其他資安問題</p>
+
+        </div>
+
+    </div>
+   
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+        
+        
+        $('#myAlert').on('closed.bs.alert', function () {
+            alert("您關閉了系統警告訊息!!記得用完後馬上登出系統!!");
+
+
+        });
+    </script>
+</body>
+</html>

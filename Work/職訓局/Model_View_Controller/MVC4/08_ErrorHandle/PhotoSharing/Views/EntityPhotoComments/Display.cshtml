@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Display";
+    var data = ViewBag.Data;
+}
+
+<h2>留言列表</h2>
+
+@if (data.GetType().GetProperty("Count").GetValue(data) == 0)
+{
+    <h2>無任何留言</h2>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                PhotoID
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                CreatedDate
+            </th>
+            <th>
+                Subject
+            </th>
+            <th>
+                Body
+            </th>
+            <th>
+                UserName
+            </th>
+        </tr>
+
+        @foreach (var item in data)
+        {
+            var PhotoID = item.GetType().GetProperty("PhotoID").GetValue(item);
+            <tr>
+                <td>
+                    @item.GetType().GetProperty("PhotoID").GetValue(item)
+
+                </td>
+                <td>
+                    @item.GetType().GetProperty("Title").GetValue(item)
+
+                </td>
+                <td>
+                    @item.GetType().GetProperty("Description").GetValue(item)
+
+                </td>
+                <td>
+                    @item.GetType().GetProperty("CreatedDate").GetValue(item)
+
+                </td>
+                <td>
+                    @item.GetType().GetProperty("Subject").GetValue(item)
+
+                </td>
+                <td>
+                    @item.GetType().GetProperty("Body").GetValue(item)
+
+                </td>
+                <td>
+                    @item.GetType().GetProperty("UserName").GetValue(item)
+
+                </td>
+                <td>
+                    @Html.ActionLink("回覆留言", "CreateComment", new { id = PhotoID }) |
+                    @Html.ActionLink("詳細資料", "Display", new { id = PhotoID }) |
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+@Html.ActionLink("回留言列表", "Index")
+

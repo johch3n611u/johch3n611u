@@ -1,0 +1,7 @@
+使用  FileZilla Client
+
+連線參數  
+
+ftp1.mxic.com.tw
+ftpSystexSW
+oK7D1z6q

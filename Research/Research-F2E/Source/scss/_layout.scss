@@ -1,0 +1,54 @@
+@mixin pad {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+
+// ---------------------------------------------header
+.dropdown-menu {
+    left: -30px;
+}
+
+.cart-num {
+    top: 5px;
+    right: 55px;
+    font-size: 12px;
+    padding: 0px 5px
+}
+
+.nav-link {
+    transition: all 1s;
+    color: #8D8D8D;
+    font-size: 20px;
+    @include pad() {
+        background-color: #8D8D8D;
+        color: #FFFFFF;
+        border-top: 1px solid #FFFFFF;
+    }
+    i {
+        @include pad() {
+            display: none;
+        }
+    }
+}
+
+// ---------------------------------------------footer
+.footer-banner {
+    background-image: url("/Carl/Summer-vaction-notes/hexoschool_hw/week7/image/photo-footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    padding-top: 312px;
+    @include pad () {
+        background-image: url("/Carl/Summer-vaction-notes/hexoschool_hw/week7/image/photo-footer-md.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+    }
+}
+
+.font-14px {
+    font-size: 14px;
+}

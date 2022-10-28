@@ -1,0 +1,298 @@
+{
+"Strange": "陌生",
+
+"Initializing": "初始化",
+
+"Assign ment": "分配",
+
+"Operators": "運算符號",
+
+"Comments": "註解",
+
+"Common": "共同",
+
+"collections": "蒐集",
+
+"generic": "通用的",
+
+"Interactive": "互動",
+
+"Escape": "逃避",
+
+"Sequences": "順序",
+
+"Accept": "接受",
+
+"Convert": "兌換",
+
+"Decisions": "決定",
+
+"Exception": "例外",
+
+"Specific": "特定",
+
+"Divide": "劃分",
+
+"Oriented": "面向",
+
+"Fields": "領域",
+
+"Constructors": "施工人 建構子",
+
+"Instantiating": "實例化",
+
+"Static": "靜態",
+
+"Polymorphism": "多型",
+
+"virtual": "虛擬",
+
+"override": "複寫",
+
+"Struct": "結構體",
+
+"Integrated": "整合集成",
+
+"ascending": "上升",
+
+"order by": "排序",
+
+"dispose": "處置",
+
+"comment": "評論",
+
+"spam": "垃圾郵件",
+
+"Property": "屬性",
+
+"Attribute": "特性",
+
+"Agile": "敏捷",
+
+"funnel": "漏斗",
+
+"statement": "聲明",
+
+"Snippet": "片段",
+
+"directive": "指令",
+
+"initialize": "初始化",
+
+"summary": "摘要",
+
+"variables": "變數",
+
+"Decimal": "小數",
+
+"currency": "貨幣",
+
+"percent": "百分比",
+
+"navigation": "導航 nav",
+
+"undefined": "未定義",
+
+"Introduction": "簡介",
+
+"article": "文章",
+
+"declaration": "宣告",
+
+"Destroy": "銷毀",
+
+"implement": "實作",
+
+"Motion": "提案",
+
+"Emitter": "發射器",
+
+"providers": "提供者",
+
+"private": "私人的",
+
+"resolve": "解析",
+
+"Observable": "觀察",
+
+"subscribe": "訂閱",
+
+"portal": "門台門戶網站",
+
+"Feature": "特徵",
+
+"current": "當前",
+
+"Subject": "主題",
+
+"Behavior": "行為",
+
+"Maintainer": "維護員",
+
+"Require": "要求",
+
+"undertaken": "承擔",
+
+"Status": "狀態",
+
+"Announcement": "公告",
+
+"Role": "腳色",
+
+"approve": "批准",
+
+"reject": "拒絕",
+
+"Approver": "批准人",
+
+"Invalid": "無效",
+
+"Dept": "部門",
+
+"Disable": "停用",
+
+"Apply": "應用 申請",
+
+"Deploy": "部屬",
+
+"Applicant": "申請人",
+
+"demand": "需求",
+
+"compliance": "合規",
+
+"inspect": "檢查",
+
+"confirmation": "確認",
+
+"pre-review": "預審",
+
+"Custodian": "保管人",
+
+"Filler": "填料",
+
+"Responsible": "負責任的",
+
+"Exclude": "排除",
+
+"Staff": "員工",
+
+"approval": "認可",
+
+"rad": "工作",
+
+"Modify": "修改",
+
+"Complex": "綜合",
+
+"Description": "描述",
+
+"Organizer": "組織者",
+
+"deactivate": "停用",
+
+"Standard": "標準",
+
+"Risk": "風險",
+
+"permission": "權限",
+
+"Unregulated": "不管制",
+
+"Account": "帳號",
+
+"authorization": "授權",
+
+"designate": "指定",
+
+"reserve": "保留",
+
+"Specify": "指明",
+
+"quantity": "數量",
+
+"inventory": "庫存",
+
+"separately": "分別",
+
+"Configuration": "組態",
+
+"relate": "涉及",
+
+"authority": "權威",
+
+"classification": "分類",
+
+"Trial": "考驗",
+
+"Unlimited": "無限的",
+
+"External": "外部",
+
+"category": "類別",
+
+"enum": "列舉",
+
+"Software Requirements Specification": "軟體需求說明",
+
+"Spec": "規格",
+
+"process": "處理",
+
+"functor": "函子",
+
+"generator": "發電機",
+
+"fortune": "幸運",
+
+"empty": "空的",
+
+"blank": "空白",
+
+"Syntax": "語法",
+
+"Statement": "聲明",
+
+"Literal": "文字",
+
+"Interpreter": "翻譯員",
+
+"Compiler": "編輯員",
+
+"sufficient": "足夠的",
+
+"independent": "獨立",
+
+"assignment": "分配",
+
+"compound": "複合",
+
+"increment": "遞增",
+
+"decrement": "遞減",
+
+"access": "訪問",
+
+"bracket": "托架",
+
+"notation": "符號",
+
+"equality": "平等",
+
+"comparison":"比較",
+
+"wise":"明智",
+
+"Region":"地區",
+
+"Implement":"實作",
+
+"Decorator":"裝飾器",
+
+"Register":"寄存器",
+
+"deploy":"部屬",
+
+"dialog":"對話"
+
+}

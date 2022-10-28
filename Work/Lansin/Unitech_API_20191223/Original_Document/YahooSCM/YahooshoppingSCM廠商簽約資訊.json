@@ -1,0 +1,44 @@
+{
+  "cookieType": "_sp",
+  "fullName": "林",
+  "id": "12215548",
+  "name": "林",
+  "profile": {
+    "accessoryContracts": [ "outrightPurchase", "warehouse" ],
+    "repairInfo": {
+      "contactWindow": {
+        "email": "9975@unitech.com.tw",
+        "fax": "(02)2792-1521",
+        "location": {
+          "address": "新湖二路236號2樓",
+          "city": "台北市",
+          "district": "內湖區",
+          "zipCode": "114"
+        },
+        "name": "精技客服專線",
+        "phone": "0800089558"
+      },
+      "method": "directRepair"
+    },
+    "returnGoodDestination": "supplier",
+    "signedSubStationIds": [ "sub1", "sub2", "sub15", "sub17", "sub22", "sub24", "sub26", "sub27", "sub34", "sub36", "sub38", "sub51", "sub52", "sub55", "sub107", "sub112", "sub121", "sub168", "sub197", "sub215", "sub408", "sub431", "sub436", "sub453", "sub454", "sub455", "sub469", "sub583", "sub617", "sub681", "sub682", "sub693", "sub695", "sub696", "sub704", "sub788", "sub792", "sub793", "sub794", "sub810", "sub812", "sub813" ],
+    "toggles": [ "accounting", "repair", "returnGood", "batchCheckConsignment", "batchCheckOutrightPurchase", "applyProductAndListing", "warehouse", "performanceRanking", "advertisingExposure", "applyMarketingMaterial", "autoApproveListingProposal", "autoReplenishmentWarehouseInventory" ],
+    "warehouse": "daxi",
+    "withdrawalInfo": {
+      "contactWindow": {
+        "email": "a427@unitech.com.tw",
+        "location": {
+          "address": "新湖二路236號2樓",
+          "city": "台北市",
+          "district": "內湖區",
+          "zipCode": "114"
+        },
+        "name": "精技-楊冀斌 先生(不對外)",
+        "phone": "02-27962345#594"
+      }
+    }
+  },
+  "simulated": false,
+  "supplierId": 478,
+  "supplierName": "精技電腦股份有限公司"
+}

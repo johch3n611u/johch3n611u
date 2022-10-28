@@ -1,0 +1,52 @@
+$red:#ff0000;
+$white:#fff;
+.header {
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../asset/img/header_desktop.png);
+    background-repeat: no-repeat;
+    .banner {
+        min-height: 420px;
+    }
+    .menu-bg {
+        min-height: 58px;
+        background: $red;
+        position: relative;
+    }
+    .menu {
+        top: 0;
+        ul {
+            a {
+                display: block;
+            }
+            li {
+                color: $white;
+                a:hover {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    .banner-title {
+        max-width: 460px;
+        background: $red;
+        color: $white;
+    }
+    .main-menu {
+        background: $red;
+        overflow: hidden;
+        a:hover {
+            background: $red;
+        }
+    }
+    .hamburger-menu {
+        display: block;
+        float: right;
+    }
+    .menu-show {
+        max-height: 165px;
+    }
+    .block-md {
+        display: block;
+    }
+}

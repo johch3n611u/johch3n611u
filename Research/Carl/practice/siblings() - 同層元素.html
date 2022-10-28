@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        .wrap {
+            margin: 0 auto;
+            width: 1000px;
+        }
+        
+        ul {
+            padding: 10px;
+            border: 1px dashed gray;
+        }
+        
+        li {
+            font-size: 24px;
+            padding: 10px 0;
+            margin: 3% auto;
+            border: 1px solid black;
+            width: 900px;
+        }
+        
+        a {
+            padding: 0px 5px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        a:hover,
+        a.active {
+            transition: all 1s;
+            border-radius: 0% 0% 10% 35%;
+            background: linear-gradient(transparent 45%, rgba(17, 234, 234, 0.5) 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li><a href="#" class="button">分類1
+            </a></li>
+            <li><a href="#">分類2
+            </a></li>
+            <li><a href="#">分類3
+            </a></li>
+            <li><a href="#">分類4
+            </a></li>
+            <li><a href="#">分類5
+            </a></li>
+            <li><a href="#">分類6
+            </a></li>
+            <li><a href="#">分類7
+            </a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.wrap a').click(function(event) {
+            event.preventDefault();
+            $(this).addClass('active').parent().siblings().children().removeClass('active');
+        });
+    });
+</script>
+
+</html>

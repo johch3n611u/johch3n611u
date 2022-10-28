@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .line {
+            border: 1px solid;
+            cursor: pointer;
+        }
+        .large {
+            font-size: 36pt;
+            
+        }
+
+        .small {
+            font-size: 8pt;
+        }
+
+        .selected {
+            background-color: yellow;
+            font-weight: 900;
+            border: 3px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="switcher">
+        <span id="small">縮小</span>
+        <span id="default">標準</span>
+        <span id="large">放大</span>
+
+    </div>
+    <p>Hello jQuery</p>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#switcher>span').addClass('line');
+
+        $('#large').click(function () {
+            $('p').removeClass().addClass('large');
+            $('#switcher>span').removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        $('#small').click(function () {
+            $('p').removeClass().addClass('small');
+            $('#switcher>span').removeClass('selected');
+            $(this).addClass('selected');
+        });
+
+        $('#default').click(function () {
+            $('p').removeClass();
+            $('#switcher>span').removeClass('selected');
+            $(this).addClass('selected');
+        });
+    </script>
+
+</body>
+</html>

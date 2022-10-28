@@ -1,0 +1,76 @@
+﻿@using System.Data
+
+@model System.Data.DataTable
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>留言列表</h2>
+
+@if (Model.Rows.Count == 0)
+{
+    <h2>無任何留言</h2>
+}
+else
+{
+<table class="table">
+    <tr>
+        <th>
+            PhotoID
+        </th>
+        <th>
+             Title
+            </th>
+        <th>
+           Description
+        </th>
+        <th>
+            CreatedDate
+        </th>
+        <th>
+            Subject
+        </th>
+        <th>
+            Body
+        </th>
+        <th>
+            UserName
+        </th>
+    </tr>
+
+    @foreach (DataRow dr in Model.Rows)
+    {
+    <tr>
+        <td>
+            @dr["PhotoID"]
+        </td>
+        <td>
+            @dr["Title"]
+        </td>
+        <td>
+            @dr["Description"]
+        </td>
+        <td>
+            @dr["CreatedDate"]
+        </td>
+        <td>
+            @dr["Subject"]
+        </td>
+        <td>
+            @dr["Body"]
+        </td>
+        <td>
+            @dr["UserName"]
+        </td>
+        <td>
+            @Html.ActionLink("回覆留言", "CreateComment", new { id = dr["PhotoID"] }) |
+            @Html.ActionLink("詳細資料", "Display", new { id = dr["PhotoID"] }) |
+            
+        </td>
+    </tr>
+    }
+
+</table>
+}
+
+

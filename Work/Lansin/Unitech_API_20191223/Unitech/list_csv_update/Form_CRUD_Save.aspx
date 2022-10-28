@@ -1,0 +1,1 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Form_CRUD_Save.aspx.vb" Inherits="mng_ShoppingCash_SC_UserList_Form_CRUD_Save" %>

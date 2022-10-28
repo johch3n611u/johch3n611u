@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    
+    <script>
+        //Prototype物件
+
+        function circle(r, color) {
+            this.r = r;
+            this.color = color;
+            this.display = showCircle;
+        }
+
+        function showCircle() {
+            document.write("半徑:" + this.r + "<br />");
+            document.write("色彩:" + this.color + "<br />");
+            document.write("圓周率:" + this.PI + "<hr />");
+        }
+
+        function getArea() {
+            var result = this.PI * this.r * this.r;
+            document.write("圓面積:" + result + "<hr />");
+           
+        }
+
+
+        /////////////////////////////////////////////////////////////
+
+        var C1 = new circle(2, "red");
+        var C2 = new circle(3, "green");
+        circle.prototype.PI = 3.1415926;
+        circle.prototype.showArea = getArea; 
+
+        C1.display();
+        C1.showArea();
+        C2.display();
+        C2.showArea();
+        ///////////////////////////////////////////////////////////////////////
+
+        function reverse_string() {
+            document.write("倒排字串:");
+            for (i = (this.length - 1); i >= 0; i--) {
+                document.write(this.charAt(i));
+            }
+            document.write("<hr>");
+
+        }
+
+
+        var objMessage = new String("高屏澎東分署KPPTR");
+        document.write("原始字串:" + objMessage + "<br>");
+        String.prototype.reverse = reverse_string;
+        objMessage.reverse();
+
+
+        var objMessage2 = new String("ABCDEFGabcdefg");
+        document.write("原始字串:" + objMessage2 + "<br>");
+        objMessage2.reverse();
+    </script>
+</body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetaste_hexo</title>
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset200802.css">
+    <!--css reset-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- 引入字體 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif TC', serif;
+        }
+        
+        .wrap {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        
+        .header {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ham_menu {
+            display: none;
+        }
+        
+        .logo {
+            width: 70.5%;
+        }
+        
+        .menu {
+            font-size: 16px;
+            display: flex;
+            width: 33%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .menu a {
+            padding: 4px;
+            display: block;
+            font-weight: 700;
+            text-decoration: none;
+            color: #3F5D45;
+            transition: all .5s;
+        }
+        
+        .menu a:hover {
+            background-color: #EAF0ED;
+            border-bottom: 1px solid green;
+        }
+        
+        @media (max-width:768px) {
+            .logo {
+                display: none;
+            }
+            .rwd_none {
+                display: none;
+            }
+            .rwd_logo {
+                width: 32%;
+                height: 18px;
+                display: block;
+            }
+            .menu {
+                width: 18%;
+            }
+            .ham_menu {
+                display: block;
+            }
+        }
+        /* --------------------------------------------------以上包在header------------------------------------------------------------ */
+        
+        .banner {
+            max-width: 100%;
+            margin-top: 30px;
+            width: 1024px;
+        }
+        
+        .main {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .category h3 {
+            color: #EAF0ED;
+            background-color: #3F5D45
+        }
+        
+        .category li {
+            font-size: 24px;
+            font-weight: 700;
+            width: 300px;
+            text-align: center;
+            line-height: 65px;
+        }
+        
+        .category a {
+            height: 63px;
+            border: 1px solid #EAF0ED;
+            display: block;
+            color: #3F5D45;
+            text-decoration: none;
+            transition: all .5s;
+        }
+        
+        .category a:hover {
+            background-color: #EAF0ED;
+            border: 1px solid #3F5D45;
+        }
+        
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 620px;
+        }
+        
+        .card {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .namePrice {
+            color: #3F5D45;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #EAF0ED;
+        }
+        
+        .namePrice h4 {
+            font-weight: 400;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 33px;
+            padding-right: 20px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        .namePrice span {
+            border-left: 1px solid #EAF0ED;
+            font-weight: 900;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 20px;
+            padding-right: 24px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        
+        .putincart {
+            background-color: #EAF0ED;
+            border: none;
+            color: #3F5D45;
+            font-size: 24px;
+            font-weight: 900;
+            width: 100%;
+            padding: 15.5px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        
+        .putincart:hover {
+            color: #EAF0ED;
+            background-color: #3F5D45;
+            transition: all 3s;
+        }
+        
+        .card:hover {
+            box-shadow: 6px 6px 10px gray;
+            cursor: pointer;
+            transition: all 1s;
+        }
+        
+        .card p {
+            color: #EAF0ED;
+            writing-mode: vertical-rl;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #3F5D45;
+            letter-spacing: 5.5px;
+            font-weight: 700;
+        }
+        
+        .favorite {
+            position: absolute;
+            top: 19px;
+            right: 22px;
+            transition: all .5s;
+        }
+        
+        .favorite:hover {
+            background-color: pink;
+            border: 1px solid #3F5D45;
+        }
+        
+        .pagemark {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .pagemark a {
+            display: flex;
+            border: 1px solid#EAF0ED;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 60px;
+            height: 60px;
+            color: #3F5D45;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        
+        .pagemark a:hover {
+            color: #EAF0ED;
+            background-color: #3F5D45;
+            transition: all 1s;
+        }
+        
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                margin-top: 0px;
+            }
+            .category {
+                width: 100%;
+            }
+            .category li {
+                width: 100%;
+            }
+            .product {
+                width: 100%;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            .pagemark {
+                justify-content: center;
+            }
+        }
+        /* 以上包在main-------------------- */
+        
+        .mailbox {
+            background-color: #3F5D45;
+            height: 116px;
+            padding: 0 12.9%;
+            font-size: 24px;
+            color: #EAF0ED;
+            display: flex;
+            align-items: center;
+        }
+        
+        .icon {
+            width: 40px;
+        }
+        
+        .sub {
+            padding-left: 20px;
+            width: 100%;
+            color: #EAF0ED;
+            text-decoration: none;
+        }
+        
+        .mail {
+            width: 308px;
+            height: 56px;
+            position: relative;
+            display: flex;
+        }
+        
+        .mail img {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+        }
+        
+        .yourmail {
+            background-color: #EAF0ED;
+            width: 308px;
+            height: 56px;
+            border: 0;
+            padding: 0 0 0 19%;
+        }
+        
+        .arrow {
+            background-color: #FFE180;
+            width: 64px;
+            height: 56px;
+            box-sizing: border-box;
+            border: 0;
+            padding: 17px 20px;
+        }
+        
+        .contact {
+            background-color: #EAF0ED;
+            padding: 0 12.9%;
+            color: #3F5D45;
+            height: 341px;
+        }
+        
+        .footerlogo {
+            width: 50%;
+            float: left;
+        }
+        
+        .footerlogo img {
+            width: 171.22px;
+            height: 26.6px;
+            margin: 38.9px 0 115.5px 0;
+        }
+        
+        .footerlogo p {
+            line-height: 24px;
+            margin: 0 0 30px;
+            font-weight: 600;
+        }
+        
+        .line {
+            width: 32px;
+            height: auto;
+        }
+        
+        .fb {
+            width: 32px;
+            height: auto;
+            margin-left: 8px;
+        }
+        
+        .sloganbox {
+            width: 50%;
+            float: right;
+        }
+        
+        .slogan {
+            writing-mode: vertical-lr;
+            writing-mode: vertical-rl;
+            font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: 5px;
+            margin: 30px 0 46.31px;
+            float: right;
+            font-weight: 700;
+        }
+        
+        .copyright {
+            margin: 0 0 0 21%;
+            clear: both;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .icon {
+                margin-top: 8px;
+            }
+            .sub {
+                width: auto;
+            }
+            .sub p {
+                margin-top: 8px;
+            }
+            .mailbox {
+                flex-wrap: wrap;
+                height: 186px;
+                padding: 0;
+                justify-content: center;
+            }
+            .mail {
+                width: auto;
+                margin-bottom: 3px;
+            }
+            .yourmail {
+                width: 251px;
+            }
+            .arrow {
+                margin-bottom: 3px;
+            }
+            .slogan {
+                display: none;
+            }
+            .contact {
+                display: flex;
+                flex-direction: column;
+                height: 311px;
+                padding: 0px 0px 0px 30px;
+            }
+            .sloganbox {
+                width: 100%;
+                margin-top: 23px;
+            }
+            .footerlogo img {
+                margin-bottom: 39.5px;
+            }
+            .footerlogo p {
+                width: 230px;
+            }
+            .copyright {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--  主要的容器包          -->
+        <div data-aos="fade-right" data-aos-duration="1500" data-aos-anchor="#trigger-left" class="header">
+            <!-- 功能導覽列               -->
+
+            <a href="#mail"><img class="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg" alt="sweetaste.icon"></a>
+            <a href="#mail"><img class="ham_menu" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true"></a>
+            <a class="rwd_logo" href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-sm-dark.svg" alt="logo"> </a>
+            <ul class="menu">
+                <li class="rwd_none"><a href="#">首頁</a></li>
+                <li class="rwd_none"><a href="#">甜點</a></li>
+                <li class="rwd_none"><a href="#">登入</a></li>
+                <li>
+                    <a href="#mail"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true" alt="購物車"></a>
+                </li>
+            </ul>
+        </div>
+        <img class="banner" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/banner.png?raw=true" alt="banner.png ">
+        <!--   商家照片        -->
+        <div class="main">
+            <!--     商品陳列           -->
+            <ul class="category">
+                <!--       商品種類             -->
+                <li>
+                    <h3>甜點類別</h3>
+                </li>
+                <li>
+                    <a href="#">所有甜點（48）</a>
+                </li>
+                <li>
+                    <a href="#">本日精選（10）</a>
+                </li>
+                <li>
+                    <a href="#">人氣推薦（26）</a>
+                </li>
+                <li>
+                    <a href="#">新品上市（12）</a>
+                </li>
+            </ul>
+            <ul class="product">
+                <!--         商品瀏覽，專屬卡片           -->
+                <li class="card"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true" alt="p-1.png">
+                    <div class="namePrice">
+                        <h4>焦糖瑪卡龍</h4>
+                        <span>NT$ 450</span>
+                    </div>
+                    <button type="button" class="putincart" onclick="alert('已加入購物車!')">加入購物車</button>
+                    <p>本日精選</p>
+                    <a href="#" class="favorite" onclick="alert('已加入我的收藏!')"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="加入收藏"></a>
+                </li>
+                <li class="card"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true" alt="p-2.png">
+
+                    <div class="namePrice">
+                        <h4>焦糖瑪卡龍</h4>
+                        <span>NT$ 450</span>
+                    </div>
+                    <button type="button" class="putincart" onclick="alert('已加入購物車!')">加入購物車</button>
+                    <p>本日精選</p>
+                    <a href="#" class="favorite" onclick="alert('已加入我的收藏!')"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="加入收藏"></a>
+                </li>
+                <li class="card"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-3.png?raw=true" alt="p-3.png">
+                    <div class="namePrice">
+                        <h4>焦糖瑪卡龍</h4>
+                        <span>NT$ 450</span>
+                    </div>
+                    <button type="button" class="putincart" onclick="alert('已加入購物車!')">加入購物車</button>
+                    <p>本日精選</p>
+                    <a href="#" class="favorite" onclick="alert('已加入我的收藏!')"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="加入收藏"></a>
+                </li>
+                <li class="card"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-4.png?raw=true" alt="p-4.png">
+                    <div class="namePrice">
+                        <h4>焦糖瑪卡龍</h4>
+                        <span>NT$ 450</span>
+                    </div>
+                    <button type="button" class="putincart" onclick="alert('已加入購物車!')">加入購物車</button>
+                    <p>本日精選</p>
+                    <a href="#" class="favorite" onclick="alert('已加入我的收藏!')"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="加入收藏"></a>
+                </li>
+                <li class="card"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-5.png?raw=true" alt="p-5.png">
+                    <div class="namePrice">
+                        <h4>焦糖瑪卡龍</h4>
+                        <span>NT$ 450</span>
+                    </div>
+                    <button type="button" class="putincart" onclick="alert('已加入購物車!')">加入購物車</button>
+                    <p>本日精選</p>
+                    <a href="#" class="favorite" onclick="alert('已加入我的收藏!')"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="加入收藏"></a>
+                </li>
+                <li class="card"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-6.png?raw=true" alt="p-6.png">
+                    <div class="namePrice">
+                        <h4>焦糖瑪卡龍</h4>
+                        <span>NT$ 450</span>
+                    </div>
+                    <button type="button" class="putincart" onclick="alert('已加入購物車!')">加入購物車</button>
+                    <p>本日精選</p>
+                    <a href="#" class="favorite" onclick="alert('已加入我的收藏!')"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="加入收藏"></a>
+                </li>
+            </ul>
+        </div>
+        <ul class="pagemark">
+            <!--       換頁欄         -->
+            <li>
+                <a href="#">◂</a>
+                <!--       使用符號取代照片，來達到相同效果    -->
+            </li>
+            <li><a href="#">1</a></li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a class="nextpage" href="#">▸</a>
+                <!--       使用符號取代照片，來達到相同效果    -->
+            </li>
+        </ul>
+        <footer>
+            <form class="mailbox">
+                <img class="icon" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg" alt="sweet">
+                <a class="sub" href="#mail">
+                    <p>訂閱你我的甜蜜郵件</p>
+                </a>
+                <lable class="mail" for="mail">
+                    <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true" alt="">
+                    <input class="yourmail" type="email" name="email" id="mail" required>
+                </lable>
+                <input class="arrow" type="image" img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png" onclick="alert('已寄確認發信件至：' + getElementById('mail').value);this.submit()">
+            </form>
+            <div class="contact">
+                <div class="footerlogo">
+                    <a href="#">
+                        <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-lg-dark.svg" />
+                    </a>
+                    <p>07-1234-5678<br/>sweetaste@email.com<br/>800 高雄市新興區幸福路 520 號</p>
+                    <a href="#"><input class="line" type="image" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/ic-line%40.svg "></a>
+                    <a href="#">
+                        <input class="fb" type="image" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/ic-facebook.svg">
+                    </a>
+                </div>
+                <div class="sloganbox">
+                    <p class="slogan">今天是個――<br/>吃甜點的好日子。</p>
+                    <p class="copyright">© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
+<!-- 觀察與別人任務不同之處，發現差異在於別人的class選擇器如有相同的css樣式會寫在一起，這樣看起來會更簡潔，不過可讀性也許會降低，但如果利用了css預處理器之後，能讓CSS更加簡潔、適應性更強、可讀性更佳，更易於代碼的維護，所以各有好壞，不過都能用css預處器解決，參考https://changtsuiling.gitbooks.io/sass/chapter1/1-1-shi-me-shi-css-yu-chu-li-qi-ff1f.html -->

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #btn{
+            border:2px solid;
+            width:100px;
+            cursor:pointer;
+            background-color:#808080;
+            box-shadow:2px 2px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="400" id="myTable">
+        <tr>
+            <td>姓名</td>
+            <td>成績</td>
+        </tr>
+        <tr>
+            <td>張三</td>
+            <td>54</td>
+        </tr>
+
+        <tr>
+            <td>李四</td>
+            <td>78</td>
+        </tr>
+
+
+    </table>
+
+    <hr />
+    姓名:<input id="txtName" type="text" /><br />
+    成績:<input id="txtScore" type="text" />
+    <div id="btn" onclick="InsertData()">插入成績資料</div>
+
+
+    <script>
+        var myTable = document.getElementById("myTable");
+        var Name = document.getElementById("txtName");
+        var Score = document.getElementById("txtScore");
+
+        function InsertData() {
+
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+
+            td1.innerText= Name.value;
+            td2.innerText = Score.value;
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+
+            myTable.children[0].appendChild(tr);
+        }
+
+    </script>
+</body>
+</html>

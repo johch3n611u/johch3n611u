@@ -1,0 +1,19 @@
+﻿@model IEnumerable<PhotoSharing.Models.Photo>
+
+@foreach (var item in Model)
+{
+    <h2>『@item.Title』</h2>
+    <img src="@Url.Action("GetImage","Photos",new { id=item.PhotoID})" style="width:80%" />
+    <p>
+        建立者:@Html.DisplayFor(model => item.UserName)
+    </p>
+    <p>
+        建立日期:@Html.DisplayFor(model => item.CreatedDate)
+    </p>
+    <p>
+        @Html.ActionLink("顯示詳細資料", "Display", new { id = item.PhotoID }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink("詳細資料ByTitle", "DisplayByTitle", new { title = item.Title },new { @class="btn btn-info"}) |
+    </p>
+<hr />
+
+}

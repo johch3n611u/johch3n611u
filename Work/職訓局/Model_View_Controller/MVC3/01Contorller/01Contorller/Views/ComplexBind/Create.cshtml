@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+@*//02-3-9 修改title文字與加入form內容*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>產品新增</title>
+</head>
+<body>
+    <form method="post" action="@Url.Action("Create")">
+        <h2>產品增作業</h2>
+        <div>
+            <p>編號：<input id="PId" name="PId" type="text" value="@ViewBag.PId" required /></p>
+            <p>品名：<input id="PName" name="PName" type="text" value="@ViewBag.PName" required /></p>
+            <p>單價：<input id="Price" name="Price" type="number" value="@ViewBag.Price" required /></p>
+            <p><input id="Submit1" type="submit" value="新增商品" /></p>
+            <hr />
+            @{
+                if (ViewBag.PId != null && ViewBag.PName != null && ViewBag.Price != null)
+                {
+                    <h2>產品增作業完成!!!!</h2>
+                    <h3>編號：@ViewBag.PId, 品名：@ViewBag.PName, 單價：@ViewBag.Price</h3>
+                }
+            }
+        </div>
+
+
+    </form>
+</body>
+</html>

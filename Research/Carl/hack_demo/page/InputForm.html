@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <style>
+        .container {
+            max-width: 550px;
+        }
+        
+        .has-error label,
+        .has-error input,
+        .has-error textarea {
+            color: red;
+            border-color: red;
+        }
+        
+        .list-unstyled li {
+            font-size: 13px;
+            padding: 4px 0 0;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="insertform" class="container mt-5">
+        <div class="card">
+            <h5 class="card-header text-center">張貼公告</h5>
+            <div class="card-body">
+                <div>
+                    <div class="form-group">
+                        <label>時辰</label>
+                        <input class="form-control" data-error="請選定時辰" id="datetime" placeholder="時辰" type="date" required />
+
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>誰需要我需要誰</label>
+                        <input class="form-control" data-error="請輸入事由" id="title" placeholder="事由" type="text" required />
+
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>飛鴿傳書</label>
+                        <input class="form-control" data-error="請輸入聯絡方式" id="connect" placeholder="聯絡方式" type="text" required />
+
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>分類</label>
+                        <input class="form-control" data-error="請選定時辰" id="sort" placeholder="分類" type="sort" required />
+
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>懸賞榜</label>
+                        <textarea class="form-control" data-error="請輸入公告" id="content" placeholder="懸賞榜 " required=""></textarea>
+
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">貼上傳單</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            //let sendButton = document.querySelector('button');
+            //sendButton.addEventListener('click', send);
+
+            function send() {
+                let datetime = document.querySelector('#datetime').value;
+                let title = document.querySelector('#title').value;
+                let connect = document.querySelector('#connect').value;
+                let sort = document.querySelector('#sort').value;
+                let content = document.querySelector('#content').value;
+                let type = 'insert';
+                $.ajax({
+                    url: "https://script.google.com/a/gapp.fju.edu.tw/macros/s/AKfycbz1ppLl9AWcVHNX8rnirR6R5_1DC-DyPxECav2o/exec",
+                    data: {
+                        "datetime": datetime,
+                        "title": title,
+                        "connect": connect,
+                        "sort": sort,
+                        "content": content,
+                        "type": type
+                    },
+                    success: function(response) {
+
+                        if (response == "成功 ") {
+                            alert(response);
+                        }
+                    },
+                });
+                return false;
+            };
+        </script>
+</body>
+
+</html>

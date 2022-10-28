@@ -1,0 +1,46 @@
+﻿@model IEnumerable <Member.Models.DTO.Mix>
+
+@{
+    ViewBag.Title = "新達2020/9/25活動報名系統";
+}
+
+    <h2>新達2020/9/25活動報名系統</h2>
+
+@*<p>
+    @Html.ActionLink("新增活動", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JoinCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cActiveDt)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JoinCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cActiveDt)
+            </td>
+            <td>
+                @*@Html.ActionLink("編輯", "Edit", new { id = item.cItemID }) |*@
+                @Html.ActionLink("詳細頁", "Details", new { cItemID = item.cItemID }) |
+                @*@Html.ActionLink("刪除", "Delete", new { id = item.cItemID })*@
+            </td>
+        </tr>
+    }
+    @Html.Raw(@ViewBag.Message)
+</table>

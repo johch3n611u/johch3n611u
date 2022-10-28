@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrap{
+    width: 1024px;
+    margin:0 auto;
+    position:relative;
+
+}
+.header{
+    width:1000px;
+    height: 80px;
+    background: #FFF;    
+}
+.topbar{
+    background:#F6F6F6;
+    height: 40px;
+    margin-top:30px;
+    
+}
+
+.topbar li{
+    float: right;
+    list-style: none;
+    font-size:20px;
+    padding-top:1px;
+     
+}
+
+
+
+.topbar li a{
+    display:block;
+    width:70px;
+    text-align: center;
+    font-size:10px;
+    text-decoration: none;
+    color: black;
+    margin-right:50px;
+    color:#8dd5f1; 
+}
+.topbar li span{
+    color:#4460a0;
+}
+
+.header h1{
+    float: left;
+
+}
+
+.header h1 a{
+    background-image: url(img/logo.png);
+    width:220px;
+    height: 50px;
+    display:block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.topmenu ul {
+    float:right;
+    margin-bottom:20px;
+}
+
+.topmenu  li{
+    float:right;
+    padding-right:30px;
+     
+}
+
+.topmenu a{
+    color: #80e6cc;
+    text-decoration: none;
+}
+.topmenu a:hover{
+    color:red;
+}
+.topmenu a:active{
+    color:blue;
+}
+.banner{
+    display: block;
+    margin-top:20px;
+    width:1000px;
+    height:250px;
+    background-image: url(img/banner.png);
+    background-repeat:no-repeat;
+}
+.banner h2{
+    font-size: 20px;
+    color: white;
+    padding-top:100px;
+    padding-bottom:50px;
+    padding-left:20px;  
+    line-height: 30px; 
+}
+.course{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 50px;
+   
+}
+
+.course-item {   
+    width: 300px;
+    border-right: 1px solid  #d6d6d6 ;
+    border-left: 1px solid  #d6d6d6 ;
+    border-top: 1px solid  #d6d6d6 ;  
+    border-bottom: 3px solid  #d6d6d6 ;  
+}
+.course-item h2{  
+    text-align: center; 
+    font-size:20px;
+    padding-top:10px;
+    font-weight:bold;
+
+}
+.course-item p{
+    text-align: center;
+    font-size:15px;
+    padding:20px;
+    letter-spacing: 1.5px;
+       
+}
+.course-item ul{
+    text-align: left;
+    font-size:15px;
+    padding-left:40px;
+    padding-top:20px;
+    letter-spacing: 1.5px;
+    list-style-type: disc;
+}
+.info{
+    width:1024px;
+    margin:0 auto;
+    
+}
+
+.info h3{
+    text-align: center;
+    font-size:30px;
+    color:black;
+    font-weight:bold;
+    padding-top:50px;
+    padding-bottom:30px;
+}
+.menu {
+    margin:0 auto;
+    
+}
+.menu th{
+    font-size:20px;
+    font-weight:bold;
+    text-align: center; 
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:70px;
+    padding-right:70px;
+    color:black;
+    background: #f7f7f7;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    font-family: "Roboto", "微軟正黑體";
+       
+}
+.menu tr td {
+    font-size:20px;
+    text-align: left ;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:95px;
+    padding-left:90px;
+    color:black;
+    border-bottom: 1px solid #dddddd;
+    font-family: "Roboto", "微軟正黑體";
+}
+.form{
+    margin:0 auto;
+    margin-top: 30px;
+    width:960px;
+    height: 350px;
+    padding-top: 50px;
+    background: #00674d;
+    font-size: 25px;
+    color: white;
+    text-align:center;
+    letter-spacing: 1px;
+    font-family: "Roboto", "微軟正黑體";
+    
+}
+
+.form h4{
+    padding-bottom:20px;
+}
+.message{
+    float:left;
+    padding-left:50px;
+}
+
+
+.list{
+    float:right;
+    padding-right:20%;
+    text-align: left;
+    
+}
+.btn{
+    background: #00cc99;
+    color:#FFF;
+    float:right;
+    
+
+    
+}
+
+
+
+.footer{
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.footer h5{
+    float: left;
+}
+
+.footer h5 a{
+    background-image: url(img/footerLogo.png);
+    width:171px;
+    height: 36px;
+    display:block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.footer li{
+    font-size: 15px;
+    text-align:right;
+    color: #929292;
+    padding-right:50px;
+    list-style:none;
+       
+}
+
+.footer span{
+    color:#f4b2d0;
+
+}

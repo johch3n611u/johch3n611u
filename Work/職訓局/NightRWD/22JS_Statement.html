@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    
+    <script>
+        //選擇敘述
+        //if
+        age = 15;
+        //if (age >12 && age<=18) {
+        //    document.write("要買半票");
+        //}
+
+        //if (age <= 12) {
+        //    document.write("不用買票");
+        //}
+
+        //if (age > 18) {
+        //    document.write("要買全票");
+        //}
+
+        if (age > 18) {
+            document.write("要買全票");
+        }
+        else if (age > 12) {
+            document.write("要買半票");
+        }
+        else{
+            document.write("不用買票");
+        }
+        //------------------------------------------
+        //switch
+        color = "Orange";
+        switch (color) {
+            case "Red":
+                document.write("紅色");
+                break;
+            case "Yellow":
+                document.write("黃色");
+                break;
+            case "Green":
+                document.write("綠色");
+                break;
+            default:
+                document.write("這不是黃綠紅");
+                break;
+        }
+        document.write("<hr>");
+      //------------------------------------------
+        //重複敘述
+        //迴圈
+        //for
+        //i++  i=i+1  i+=1
+        for (j = 1; j <=10; j++) {
+            for (i = 1; i <= 6; i++) {
+                document.write("<h" + i + ">綠色</h" + i + ">");
+            }
+        }
+
+        for (j = 1; j <= 10; j++) {
+            for (i = 1; i <=j ; i++) {
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+        document.write("<hr>");
+        var star="";
+        for (j = 1; j <= 10; j++) {
+            star += "*"; //star = star+"*"
+            document.write(star);
+            
+            document.write("<br/>");
+        }
+        document.write("<hr>");
+        //------------------------------------------
+         //while
+        //a = 15;
+        k = 1;
+        while (k<=10) {
+            star += "*"; //star = star+"*"
+            document.write(star);
+            document.write("<br/>");
+            k++;
+        }
+        //------------------------------------------
+         //for  (each for)
+        var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        //var colors = new Array("red", "orange", "yellow", "green", "blue", "indigo", "violet");
+        var colorName = Array("紅", "橙", "黃", "綠", "藍", "綻", "紫");
+
+        for (var i in colors) {
+            document.write(colors[i]);
+        }
+
+        for (i = 0; i < colorName.length;i++) {
+            document.write(colorName[i]);
+        }
+        document.write("<hr>");
+        for (i = 0; i < colorName.length; i++) {
+            document.write("<h3 style='color:" + colors[i]+ "'>"+colorName[i]+"</h3>");
+        }
+
+        //document.write(colorName[4]);
+
+    </script>
+</body>
+</html>

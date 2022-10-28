@@ -1,0 +1,52 @@
+﻿@*//06-3-9 加入給下拉選單用的資料*@
+@model IEnumerable<_05ViewModel.Models.tDepartment>
+
+@{
+    ViewBag.Title = "新增員工";
+}
+
+@*//06-3-10 將英文字改為中文字*@
+<h2>新增員工</h2>
+@*//06-3-11 建立員工資料新增表單*@
+<form method="post" action="@Url.Action("Create")">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="fEmpId">員工代號</label>
+            <div class="col-md-10">
+                <input id="fEmpId" name="fEmpId" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="fDepId">部門</label>
+            <div class="col-md-10">
+                <select id="fDepId" name="fDepId" class="form-control">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.fDepId">@item.fDepName</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="fName">姓名</label>
+            <div class="col-md-10">
+                <input id="fName" name="fName" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="fPhone">電話</label>
+            <div class="col-md-10">
+                <input id="fPhone" name="fPhone" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-md-10 col-md-offset-2">
+                <input id="Submit1" type="submit" value="新增" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+
+
+
+</form>

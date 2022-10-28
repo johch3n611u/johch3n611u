@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MVC2.Models.tProduct>
+
+@*//00-2-5 修改Index View,英文文字為中文*@
+@{
+    ViewBag.Title = "產品列表";
+}
+
+<h2>產品列表</h2>
+
+<p>
+    @Html.ActionLink("新增產品", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            產品編號
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fImg)
+        </th>
+        <th>
+            項目管理
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fPrice)
+            </td>
+            <td>
+                @*//00-2-6 修改圖片顯示處,處理沒有圖片的產品*@
+                <img src="~/images/@item.fImg" width="130" />
+
+            </td>
+            <td>
+                @*//00-2-7 修改功能連結處 (id=>fId) *@
+                @Html.ActionLink("編輯", "Edit", new { fId = item.fId }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.fId }) |*@
+                @Html.ActionLink("刪除", "Delete", new { fId = item.fId }, new { OnClick = "return confirm('確定刪除？')" })
+            </td>
+        </tr>
+    }
+
+</table>

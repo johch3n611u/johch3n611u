@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1 style="font-size:12pt;font-weight:100;color:#30571f">Welcome My Website</h1>
+    <h2 style="background-color:darkred;color:white">Welcome My Website</h2>
+    <p style="font-size:36pt;font-weight:900">Welcome My Website</p>
+    <h3>Welcome My Website</h3>
+    <h4>Welcome My Website</h4>
+    <h5>Welcome My Website</h5>
+    <h6>Welcome My Website</h6>
+    <div style="font-size:36pt;font-weight:900">Welcome My Website</div>
+    <hr />
+
+    <h1 style="font-family:Calibri">Welcome My Website</h1>
+    <h1 style="font-family:'Bernard MT'">Welcome My Website</h1>
+    <h1 style="font-family:'Bernard MT',Algerian,'Bookman Old Style','Century Schoolbook'">Welcome My Website</h1>
+    <h1 style="font-family:華康娃娃體,微軟正黑體,標楷體">Welcome My Website</h1>
+    <h1 style="font-family:Webdings;font-size:20pt">Welcome My Website</h1>
+
+    <hr />
+    <span style="">Font-Size</span>
+    <span style="font-size:large">Font-Size</span>
+    <span style="font-size:larger">Font-Size</span>
+    <span style="font-size:x-large">Font-Size</span>
+    <hr />
+
+    <span style="font-size:2em">Font-Size</span>
+    <span style="font-size:3em">Font-Size</span>
+    <span style="font-size:5em">Font-Size</span>
+    <span style="font-size:1.5em">Font-Size</span>
+
+    <div style="font-size:24px">
+        <span style="font-size:2em">Font-Size</span>
+        <span style="font-size:3em">Font-Size</span>
+        <span style="font-size:5em">Font-Size</span>
+        <span style="font-size:1.5em">Font-Size</span>
+    </div>
+    <div style="font-size:2em">
+        <span style="font-size:2em">Font-Size</span>
+        <span style="font-size:3em">Font-Size</span>
+        <span style="font-size:5em">Font-Size</span>
+        <span style="font-size:1.5em">Font-Size</span>
+    </div>
+
+
+    <div style="font-size:2em">
+        <span style="font-size:1rem">Font-Size</span>
+        <span style="font-size:16px">Font-Size</span>
+        <span style="font-size:1.2rem">Font-Size</span>
+        <span style="font-size:1.4rem">Font-Size</span>
+        <span style="font-size:1.4em">Font-Size</span>
+    </div>
+    <hr />
+    <span id="big">大</span>　<span id="default">中</span>　<span id="small">小</span>
+    <div id="news" style="width:300px;">
+        上周五（5月3日）中國突然全面推翻美中協議草案的7個重大承諾，讓美中10個月的貿易談判前功盡棄，其中國家主席習近平關鍵的一句話，更成為壓迫駱駝背上的最後一根稻草，終於引爆川普5日宣布從5月10日就要將2000億美元中國產品關稅從10％調高至25％，並揚言對其餘3250億美元的中國產品很也要課徵25%的關稅。
+
+        8日川普再度怒氣推文：「中國推翻談好的美中協議草案，如果最後沒有達成協議，中國面臨嚴厲的懲罰關稅。」
+    </div>
+    <script>
+        var big = document.getElementById("big");
+        var d = document.getElementById("default");
+        var small = document.getElementById("small");
+        var news = document.getElementById("news");
+
+        big.addEventListener("click", function () {
+            news.style.fontSize = "36pt";
+        });
+        d.addEventListener("click", function () {
+            news.style.fontSize = "12pt";
+        });
+        small.addEventListener("click", function () {
+            news.style.fontSize = "8pt";
+        });
+    </script>
+</body>
+</html>

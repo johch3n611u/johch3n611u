@@ -1,0 +1,68 @@
+﻿@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/webdings.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/webdings.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/webdings.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/webdings.woff') format('woff');
+}
+
+#FuncBtn > span {
+    border: 2px solid;
+    cursor: pointer;
+    font-family: MyFont;
+    font-size: 24pt;
+    /*box-shadow: 2px 2px 4px black;*/
+}
+
+#ControlPanel {
+    border: 5px double;
+    height: 200px;
+    margin: auto;
+}
+
+#volValue {
+    width: 25px;
+    background-color: black;
+    color: yellow;
+    text-align: center;
+}
+
+#settime {
+    background-color: #d5d5d5;
+    height: 10px;
+    cursor: pointer;
+}
+
+#progress {
+    background-color: brown;
+    height: 10px;
+    width: 0;
+}
+
+#Sbook, #Tbook {
+    width: 300px;
+    height: 500px;
+    float: left;
+    border: 3px solid;
+    overflow: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

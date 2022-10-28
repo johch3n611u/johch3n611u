@@ -1,0 +1,72 @@
+﻿@model PhotoSharing.Models.Photo
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@*<form method="post" action="/photos/create" enctype="multipart/form-data">*@
+
+@using (Html.BeginForm("Create", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+    <p>
+       @Html.LabelFor(model => model.Title)
+                      @Html.EditorFor(model => model.Title)
+                        @Html.ValidationMessageFor(model => model.Title)
+    </p>
+    <p>
+        @Html.LabelFor(model => model.PhotoFile)
+        <input id = "image" name = "image" type = "file" required />
+
+
+           </p>
+
+
+           <p>
+               @Html.LabelFor(model => model.Description)
+                        @Html.EditorFor(model => model.Description)
+                        @Html.ValidationMessageFor(model => model.Description)
+    </p>
+    <p>
+        @Html.LabelFor(model => model.UserName)
+                        @Html.EditorFor(model => model.UserName)
+                        @Html.ValidationMessageFor(model => model.UserName)
+    </p>
+    <p>
+        @Html.LabelFor(model => model.CreatedDate)
+                        @Html.DisplayFor(model => model.CreatedDate)
+
+    </p>
+    <p>
+        <input id = "Submit1" type = "submit" value = "新增資料" class="btn btn-default" />
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+}
+
+
+@*<p>
+    <label>主題:</label>
+    <input id="Title" name="Title" type="text" />
+</p>
+<p>
+    <label>上傳照片:</label>
+    <input id="image" name="image" type="text" />
+</p>
+<p>
+    <label>描述:</label>
+    <input id="Description" name="Description" type="text" />
+</p>
+<p>
+    <label>發表人名稱:</label>
+    <input id="UserName" name="UserName" type="text" />
+</p>
+<p>
+    <label>建立日期:</label>
+    <input id="CreatedDate" name="CreatedDate" type="text" />
+</p>*@
+
+@*</form>*@
+

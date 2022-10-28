@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <link href="PlayerStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <audio id="audio">
+        <source id="song" type="audio/mpeg" />
+    </audio>
+
+    <div id="ControlPanel" style="width:600px;">
+        <select id="music"></select>
+
+        <div id="FuncBtn">
+            <span id="play">4</span>
+            <span id="stop"><</span>
+            <span id="prevsong">9</span>
+            <span id="prevtime">7</span>
+            <span id="nexttime">8</span>
+            <span id="nextsong">:</span>
+            <span id="muted">V</span>
+            <span id="loop">q</span>
+            <span id="random">s</span>
+            <span id="allloop">`</span>
+            <span id="songbook">@</span>
+        </div>
+        <div id="volume">
+            <input id="vol" type="range" max="100" min="0" value="40" />
+            <input id="volM" type="button" value="-" />
+            <input id="volP" type="button" value="+" />
+            <input id="volValue" type="text" readonly="readonly" />
+        </div>
+        <div id="settime">
+            <div id="progress"></div>
+        </div>
+
+
+        <div id="InfoPanel">
+            <div id="duration">00:00 / 00:00</div>
+            <marquee id="info">請按播放鈕~~~~~~~~~~~~</marquee>
+            <div id="info2"></div>
+        </div>
+
+
+    </div>
+
+    <hr />
+    <div id="book" class="hide">
+        <div id="Sbook">
+            <div title="music/nothing.mp3">Nothing Gonna Change My Love For You</div>
+            <div title="music/nomouth.mp3">真的不想嘴</div>
+            <div title="music/travel.mp3">帶你去旅行</div>
+            <div title="music/tearshining.mp3">夏川里美-淚光閃閃</div>
+            <div title="music/elysees.mp3">Champs-Elyees</div>
+            <div title="music/Right.mp3">Keren Ann-Right Now & Right Here</div>
+            <div title="music\moon.mp3">五月天-私奔到月球</div>
+            <div title="music\sliverdragon.mp3">中島美雪-騎在銀龍的背上</div>
+            <div title="music\onlyflower.mp3">SMAP-世界唯一僅有的花 </div>
+        </div>
+        <div id="Tbook">
+
+        </div>
+        <input id="btnUpdateMusic" type="button" value="更新歌本" />
+
+    </div>
+
+
+
+    <script src="PlayerJS.js"></script>
+</body>
+</html>

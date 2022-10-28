@@ -1,0 +1,151 @@
+<div class="ui-g-12">
+    <div class="ui-g-12 ui-md-5" style="width: 45%;">
+        <div style="height: 28px;">
+            {{'Change.Type8Source'|translate}}</div>
+        <p-table #table [columns]="cols" [value]="items" [resizableColumns]="true"
+            [style]="{'text-align': 'center','width':'100%','margin-right':'-50px'}" [scrollable]="true" scrollHeight="300px">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox name="group_all" value="all" (onChange)="All(1)" [(ngModel)]="selectedValues_All">
+                        </p-checkbox>
+                    </th>
+                    <ng-container *ngFor="let col of columns; let i = index">
+                        <th *ngIf="i >= 0" style="width: 100px;" [pSortableColumn]="col.field" pResizableColumn>
+                            {{ col.header }}
+                            <p-sortIcon [field]=" col.field"></p-sortIcon>
+                        </th>
+                    </ng-container>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'softwarename', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'assetnumber', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'computername', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'custodian', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'bookkeeper', 'contains')">
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" value="{{ item.Id }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.SwName}}</td>
+                    <td>{{item.HsamMainaccessNo}}</td>
+                    <td>{{item.HsamComputerName}}</td>
+                    <td>{{item.custodian}}</td>
+                    <td>{{item.AuthBookkeeper}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="ui-g-12 ui-md-1" style="text-align: center;padding-top: 40px;width: 10%;">
+        <p-button [disabled]="!IsEanble" label=">" (click)="addItems()"></p-button>
+        <br> <br>
+        <p-button *ngIf="IsEanble" label="<" (click)="reomveItems()"></p-button>
+    </div>
+    <div class="ui-g-12 ui-md-5" style="width: 45%;">
+        <div style="margin-bottom: 5px;">
+            <div>
+                {{'Change.Type8Target'|translate}}
+                <input pInputText type="text" style="width: 150px !important;" readonly="true"
+                    (click)='IsEanble ? emp_showDialog(0) : ""' [(ngModel)]="custodian" name="custodian" />
+            </div>
+        </div>
+        <p-table #table [columns]="cols2" [value]="items_Selected" [resizableColumns]="true"
+            [style]="{'width':'100%','text-align': 'center'}" [scrollable]="true" scrollHeight="300px">
+            <ng-template pTemplate="colgroup" let-columns>
+                <colgroup>
+                    <col style="width:30px" *ngIf="IsEanble">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                    <col style="width:60px">
+                </colgroup>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th style="width: 30px;" *ngIf="IsEanble">
+                        <p-checkbox name="group_all" value="all" (onChange)="All(2)"
+                            [(ngModel)]="selectedValues_RemoveAll">
+                        </p-checkbox>
+                    </th>
+                    <ng-container *ngFor="let col of columns; let i = index">
+                        <th *ngIf="i >= 0" style="width: 100px;" [pSortableColumn]="col.field" pResizableColumn>
+                            {{ col.header }}
+                            <p-sortIcon [field]=" col.field"></p-sortIcon>
+                        </th>
+                    </ng-container>
+                    <!-- <th>{{'Change.bookkeeper'|translate}}</th> -->
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'FormatId', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'softwareNewName', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'assetnumber', 'contains')">
+                    </th>
+                    <th>
+                        <input pInputText type="text"
+                            (input)="table.filter($event.target.value, 'computername', 'contains')">
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-item>
+                <tr class='breakall'>
+                    <td style="text-align: center;" *ngIf="IsEanble">
+                        <p-checkbox name="group_delete" value="{{ item.Id }}" [(ngModel)]="selectedValues_Delete">
+                        </p-checkbox>
+                    </td>
+                    <td>{{item.FormatId}}</td>
+                    <td>{{item.SwName}}</td>
+                    <td>{{item.HsamMainaccessNo}}</td>
+                    <td>{{item.HsamComputerName}}</td>
+                    <!-- <td style="cursor: pointer;" (click)='IsEanble ? emp_showDialog(item.Id) : ""'>
+                        {{item.NewAuthBookkeeper}}
+                        <button *ngIf="IsEanble" pButton type="button" icon="fa fa-edit" class="form-add"
+                        (click)='IsEanble ? emp_showDialog(item.Id) : ""'></button>
+                    </td> -->
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+
+<app-employee-selector-standard [(visible)]="emp_display" (OKEvent)="emp_Add($event)"
+    (CancelEvent)="emp_ColseDialog($event)" [(CanMultiple)]="CanMultiple">
+</app-employee-selector-standard>

@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'cwTeXFangSong';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot);
+    src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot?#iefix) format('embedded-opentype'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff2) format('woff2'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff) format('woff'), url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.ttf) format('truetype');
+}
+
+.banner {
+    /* background: rgb(246, 242, 239);
+    background: linear-gradient(90deg, rgba(246, 242, 239, 1) 0%, rgba(184, 168, 133, 1) 100%, rgba(104, 122, 97, 1) 100%); */
+    height: 100vh;
+    background-image: url(../img/背景.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner_click:hover {
+    text-decoration: none;
+}
+
+.banner_logo {
+    width: 800px;
+}
+
+.banner_text {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: 'cwTeXFangSong';
+    color: black;
+    text-decoration: none;
+}
+
+.bg {
+    background: rgb(246, 242, 239);
+    padding: 10%;
+}
+
+.teaching_banner {
+    position: relative;
+}
+
+.skill {
+    font-size: 40px;
+    font-family: 'cwTeXFangSong';
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 61%;
+    left: 2%;
+    text-shadow: black 2px 2px 1px;
+}
+
+.skillp {
+    font-size: 24px;
+    font-family: 'cwTeXFangSong';
+    color: white;
+    position: absolute;
+    top: 79%;
+    left: 3%;
+    text-shadow: black 2px 2px 1px;
+}
+
+.edu {
+    font-size: 40px;
+    font-family: 'cwTeXFangSong';
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 61%;
+    left: 35%;
+    text-shadow: black 2px 2px 1px;
+}
+
+.edup {
+    font-size: 24px;
+    font-family: 'cwTeXFangSong';
+    color: white;
+    position: absolute;
+    top: 79%;
+    left: 35%;
+    text-shadow: black 2px 2px 1px;
+}
+
+.know {
+    font-size: 40px;
+    font-family: 'cwTeXFangSong';
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 61%;
+    left: 67%;
+    text-shadow: black 2px 2px 1px;
+}
+
+.knowp {
+    font-size: 24px;
+    font-family: 'cwTeXFangSong';
+    color: white;
+    position: absolute;
+    top: 79%;
+    left: 67%;
+    text-shadow: black 2px 2px 1px;
+}
+
+.teaching {
+    opacity: 0.7;
+    width: 33.33333%;
+}
+
+.teaching:hover {
+    transition: all 1s;
+    opacity: 1;
+}
+
+.sdg_logo {
+    width: 25%;
+}
+
+.sdgs_text h3 {
+    font-size: 40px;
+    font-family: 'cwTeXFangSong';
+    font-weight: bolder;
+}
+
+.sdgs_text p {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: justify;
+    font-family: 'Noto Serif TC', serif;
+}
+
+.sdg {
+    margin: 2% 5%;
+    width: 10%;
+}
+
+.god {
+    width: 590px;
+}
+
+.card-body {
+    font-family: 'Noto Serif TC', serif;
+}
+
+#menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 8em;
+    margin-top: -2.5em;
+    writing-mode: vertical-rl;
+    z-index: 10000;
+}
+
+#menu a>h2 {
+    background-color: black;
+    text-decoration: none;
+    font-family: 'Noto Serif TC', serif;
+    color: #ffde59;
+}
+
+#menu a>h2:hover {
+    background-color: red;
+    outline-color: #f9aa1a;
+    outline-width: 3px;
+    outline-style: dashed;
+}

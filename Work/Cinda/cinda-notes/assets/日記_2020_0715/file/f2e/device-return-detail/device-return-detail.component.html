@@ -1,0 +1,59 @@
+<app-sign-header [signFormName]="'Type.DeviceReturn' | translate " [ApplicationCategory]='ApplicationCategory'
+    [signFormID]='signFormID' (outputSend)='send($event)' (outputSave)='Save($event)'></app-sign-header>
+<button *ngIf='TopBtn==true' pButton type="button" label="{{'DeviceReturn.DeciceNoReturn'|translate}}"
+    (click)="this.item.DeviceReturn = true"></button>
+<p-panel class="pnl">
+    <div class="ui-fluid ui-g">
+        <div class="ui-g-12 FakeTable" style="margin-bottom: 1em;">
+            <div class="ui-g-3">{{'DeviceReturn.EmpName'|translate}}</div>
+            <div class="ui-g-3">{{item.ResignName}}</div>
+            <div class="ui-g-3">{{'DeviceReturn.ReturnDate'|translate}}</div>
+            <div class="ui-g-3">{{item.ReturnDate| date:'yyyy-MM-dd'}}</div>
+        </div>
+        <h4>{{'DeviceReturn.Info'|translate}}</h4>
+        <div class="ui-g-12 FakeTable">
+            <div class="ui-g-3">{{'DeviceReturn.Xfort1'|translate}}</div>
+            <div class="ui-g-3">{{item.XfortControl}}</div>
+            <div class="ui-g-3">{{'DeviceReturn.AssetId'|translate}}</div>
+            <div class="ui-g-3">{{item.XfortAssetNo}}</div>
+        </div>
+        <div class="ui-g-12 FakeTable" style="margin-bottom: 1em;">
+            <div class="ui-g-3">{{'DeviceReturn.NB1'|translate}}</div>
+            <div class="ui-g-3">{{item.NbCustody}}</div>
+            <div class="ui-g-3">{{'DeviceReturn.AssetId'|translate}}</div>
+            <div class="ui-g-3">{{item.NbAssetNo}}</div>
+        </div>
+
+
+
+        <h4>{{'DeviceReturn.DeviceReturnByPeople'|translate}}</h4>
+        <div class="ui-g-12 FakeTable">
+            <div class="ui-g-4">{{'DeviceReturn.DeciceNoReturn'|translate}}</div>
+            <div class="ui-g-8">
+                <p-checkbox [(ngModel)]="item.DeviceReturn" binary="true" label="Y" [disabled]='DeviceChk==false'>
+                </p-checkbox><input class="ChkInput" type="text" pInputText *ngIf="!item.DeviceReturn"
+                    [(ngModel)]="item.DeviceReturnDesc" [disabled]='DeviceChk==false' />
+            </div>
+        </div>
+        <div class="ui-g-12 FakeTable">
+            <div class="ui-g-4">{{'DeviceReturn.XfortFinish'|translate}}</div>
+            <div class="ui-g-8">
+                <p-checkbox [(ngModel)]="item.XfortReturn" binary="true" label="Y"
+                    [disabled]="item.DeviceReturn!=true||XfortChk==false">
+                </p-checkbox><input class="ChkInput" type="text" pInputText *ngIf="!item.XfortReturn"
+                    [(ngModel)]="item.XfortDesc" [disabled]="item.DeviceReturn!=true||XfortChk==false" />
+            </div>
+        </div>
+        <div class="ui-g-12 FakeTable">
+            <div class="ui-g-4">{{'DeviceReturn.NBFinish'|translate}}</div>
+            <div class="ui-g-8">
+                <p-checkbox [(ngModel)]="item.NbBringout" binary="true" label="Y"
+                    [disabled]="item.DeviceReturn!=true||NBChk==false">
+                </p-checkbox>
+                <input class="ChkInput" type="text" pInputText *ngIf="!item.NbBringout"
+                    [(ngModel)]="item.NbBringoutDesc" [disabled]="item.DeviceReturn!=true||NBChk==false" />
+            </div>
+        </div>
+    </div>
+</p-panel>
+<app-sign-footer></app-sign-footer>

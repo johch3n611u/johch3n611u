@@ -1,0 +1,1 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="call_MomoAPI.aspx.vb" Inherits="call_MomoAPI" %>

@@ -1,0 +1,58 @@
+.navbar {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: grey 1px 1px 1px 1px;
+}
+
+.seo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo a {
+    display: block;
+    background: url('/Carl/sample/image/burger.png') no-repeat;
+    text-indent: 101%;
+    /*首行縮排*/
+    overflow: hidden;
+    /*自動隱藏超出的文字或圖片*/
+    white-space: nowrap;
+    /*希望元素在第一排上面，沒有斷行*/
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.Inc a {
+    padding: 25px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    background-color: palegoldenrod;
+    display: block;
+    padding: 25px 25px 25px 25px;
+}
+
+.menu a:hover {
+    transition: all 1s;
+    transform: translateY(-10px);
+    box-shadow: gray 2px 1px 1px 1px;
+}

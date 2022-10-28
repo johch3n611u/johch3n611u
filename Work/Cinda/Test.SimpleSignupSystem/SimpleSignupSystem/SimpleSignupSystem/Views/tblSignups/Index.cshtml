@@ -1,0 +1,117 @@
+﻿@model SimpleSignupSystem.Controllers.tblSignupsController.IndexModel
+
+@{
+    ViewBag.Title = "活動報名系統";
+}
+
+<h2>活動報名系統</h2>
+
+@*<p>
+        @Html.ActionLink("新增活動", "Create")
+    </p>*@
+
+<details>
+    <summary>功能列表</summary>
+    <p></p>
+    <p>* 需要欄位(手機、姓名、email 、活動項目(可多選)( AM10:00 ~ AM11:00排球、AM11:00 ~ PM12:00羽球、PM15:00 ~ PM16:00自行車 …) ✔️</p>
+    <p>* 活動項目，須從資料庫來 ✔️</p>
+    <p>* 所有欄位都必填(需檢查) ✔️</p>
+    <p>* 相同的手機，只能報名一次 ✔️</p>
+    <p>* 報名完成，需要顯示 報名詳細資訊 ✔️</p>
+    <p>* 列表 所有活動名稱、報名人數 及 詳細頁 報名人員、姓名、手機、報名時間 ✔️</p>
+    <p>* 刪除需有確認提示視窗 ✔️</p>
+    <p>* 列表根據三個欄位(姓名/手機(模糊查詢)、活動項目(含全部)(下拉) 進行查詢 ✔️</p>
+    <p>* 查詢出來的列表，需有會 手機、姓名、email 、活動項目(用逗點區隔),報名時間 欄位 ✔️</p>
+    <p>* 與資料庫聯繫，需使用EF codefirst ✔️</p>
+    <p>* 建立專案，須將專案加入git版控 ✔️</p>
+    <p>* 須將網站，部屬至本機端IIS上 ✔️</p>
+</details>
+
+<h3>活動列表</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMixList.FirstOrDefault().cItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMixList.FirstOrDefault().JoinCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMixList.FirstOrDefault().cActiveDt)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.TotalMixList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JoinCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cActiveDt)
+            </td>
+            <td>
+                @*@Html.ActionLink("編輯", "Edit", new { id = item.cItemID }) |*@
+                @Html.ActionLink("詳細頁", "Details", new { cItemID = item.cItemID })
+                @*@Html.ActionLink("刪除", "Delete", new { id = item.cItemID })*@
+            </td>
+        </tr>
+    }
+</table>
+<h3 style="display:inline-block">人員清單</h3>
+<form style="display:inline-block;" action="/tblSignups/Index">
+    <input placeholder="  姓名 / 手機 ( 模糊查詢 )" name="Search" />
+    <select name="SelectId">
+        @{
+            foreach (var item in ViewBag.SelectItem_List)
+            {
+                @: <option value="@item.cItemID">@item.cItemName</option>
+            }
+        }
+    </select>
+    <button>查詢</button>
+</form>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cMobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SearchMixList.FirstOrDefault().cCreateDT)
+        </th>
+    </tr>
+    @foreach (var item in Model.SearchMixList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cCreateDT)
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.Raw(@ViewData["Message"])

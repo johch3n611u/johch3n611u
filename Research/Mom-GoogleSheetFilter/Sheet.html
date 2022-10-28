@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSC476F');</script>
+<!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoogleSheetFilter</title>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css" />
+    <style>
+        body {
+            padding: 1% 7%;
+        }
+
+        li,
+        ul {
+            list-style-type: none
+        }
+
+        .phone {
+            margin: 2% 2%;
+            display: none;
+        }
+
+        .phone:hover {
+            color: white;
+            background-color: black;
+        }
+
+        @media screen and (max-width: 479px) {
+            .phone {
+                display: block;
+            }
+
+            .phoneSearch {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<!-- <body onload="startTime()"> -->
+
+<body>
+    
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSC476F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    <h1 id="h1" class="display-6" style="display: inline-block;">v4 - © 2020.11 Made by johch3n611u all rights reserved.
+    </h1>
+    <span style="padding-left: 2%;padding-right: 2%;" id="clock"></span>
+    <span>v4 - © 2020.11 Made by johch3n611u all rights reserved.</span>
+    <!-- <input style="margin-left: 2%;" type="button" onclick="ClearSearch()" value="清除查詢" class="dt-button buttons-print" /> -->
+    <button class='phone col-12 btn badge badge-secondary' onclick="PickUP()"> 展開或收合進階查詢功能 </button>
+    <hr class="w-100" />
+    <div class="">
+        <div id="searchTable" width="100%"></div>
+        <hr class="w-100" />
+        <table id="dataTable" class="display" style="width:100vw" width="100%"></table>
+    </div>
+    <p style="text-align: center;">v4 - © 2020.11 Made by johch3n611u all rights reserved.</p>
+    <script src='https://code.jquery.com/jquery-3.5.1.js'>
+        // jquery.js
+    </script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+        // DataTables.js
+    </script>
+    <!-- export 相關 -->
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
+    <!-- export 相關 -->
+    <script>
+        // https://matthung0807.blogspot.com/2017/08/javascript.html
+
+        function startTime() {
+            // // console.log((new Date() - StartTime));
+            if ((new Date() - StartTime) > 5000000) {
+                document.location.href = "/Case/GoogleSheetFilter/index.html";
+            }
+            var timeoutId = setTimeout(startTime, 500);
+        }
+
+        var StartTime = new Date();
+        var hh = StartTime.getHours();
+        var mm = StartTime.getMinutes();
+        var ss = StartTime.getSeconds();
+        mm = checkTime(mm);
+        ss = checkTime(ss);
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        document.getElementById('clock').innerHTML = "StartTime：" + hh + ":" + mm + ":" + ss;
+
+        // https://www.runoob.com/w3cnote/js-get-url-param.html
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return (false);
+        }
+
+        var index = getQueryVariable("index");
+
+        if (getQueryVariable("name") === 'admin') {
+            // alert('Welcome to Use SecurityAudit Sheet Filter !!');
+            // https://blog.csdn.net/muzidigbig/article/details/101523197
+            var url = window.location.href;
+            var valiable = url.split("?")[0];
+            window.history.pushState({}, 0, valiable);
+        } else {
+            alert('!!! 請選擇表單 !!!');
+            document.location.href = "/Case/GoogleSheetFilter/index.html";
+        }
+
+        // console.log('index', index);
+    </script>
+    <script>
+        // 全域
+        var GoogleSheetData;
+        var stheader = [];
+        var dt;
+        // 裡面就是區域無法藉由 // console 直接讀取
+        $(function () {
+            // Get 取整包資料
+            $.get('https://spreadsheets.google.com/feeds/list/1u6CNgegIsg6EMMb6EoHzMLu9IAIQYoghqPbqY96xpq0/' + index + '/public/values?alt=json', function (response) {
+                // Google Sheet API 給的資料結構看 f12 的 // console
+                // console.log('※※※ response ※※※', response);
+                GoogleSheetData = response; // // console 查詢用
+                // 整理出 DataTable.js 函式庫所需要的資料，詳細看官網或網路資料，這邊我直接用之前寫的套用
+
+                // ★★★★★ 首先整理出 DataTable 所需的頁首 ★★★★★
+
+                // var 裝頁首的容器
+                var HeadArray = [];
+                // // console.log("※※※ HeadArray ※※※", HeadArray)
+                var HeadObject = {
+                    title: "",
+                    sTitle: ""
+                };
+                // // console.log("※※※ HeadData ※※※", HeadObject)
+                HeadArray.push(HeadObject);
+                // // console.log("※※※ HeadArray.push(HeadObject) ※※※", HeadArray)
+
+                // ★★★★★ 整理出方便整理資料的物件 ★★★★★
+                var HeadArrayForSetData = [];
+
+                // ★★★★★ 用一筆資料 整理頁首就夠了 ★★★★★
+                // // console.log('※※※ Object.keys(data.feed.entry) ※※※', Object.keys(data.feed.entry));
+                Object.keys(response.feed.entry[0]).forEach(
+                    function (key) {
+                        var value = response.feed.entry[0][key];
+                        // // console.log('※※※ value ※※※', value);
+                        // // console.log('※※※ key ※※※', key);
+                        // // console.log('key.includes("gsx$");', key.includes('gsx$'));
+
+                        // ★★★★★ 若 key 比對到 gsx$ 時，將 header push 一筆 ★★★★★
+
+                        if (key.includes('gsx$')) {
+                            // // console.log('※※※ key ※※※', key)
+                            key = key.replace('gsx$', '')
+                            // // console.log('※※※ key.replace("gsx$","") ※※※', key)
+                            HeadObject = {
+                                title: key,
+                                sTitle: key
+                            };
+                            // // console.log('※※※ HeadObject ※※※', HeadObject)
+                            HeadArray.push(HeadObject);
+                            HeadArrayForSetData.push('gsx$' + key);
+                            // // console.log("※※※ HeadArray.push(HeadObject) ※※※", HeadArray)
+                        }
+                    }
+                );
+
+                // ★★★★★ 整理完成後的 DataTable.js 所需 header 資料 ★★★★★
+                // console.log("※※※ HeadObject ※※※", HeadArray);
+                // ★★★★★ 整理成純 header 資料，方便整理資料 ★★★★★
+                // console.log("※※※ HeadArrayForSetData ※※※", HeadArrayForSetData);
+
+
+                // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+
+                // ★★★★★ 接著整理出 顯示所需要的 DataTable.js 資料 ★★★★★
+
+                // var 裝資料的容器
+                var DateArray = [];
+
+                response.feed.entry.forEach(SetData);
+
+                function SetData(SetDataItem, SetDataIndex, SetDataArr) {
+                    // // console.log('※※※ SetDataItem ※※※', SetDataItem);
+                    // // console.log('※※※ SetDataIndex ※※※', SetDataIndex);
+                    // // console.log('※※※ SetDataArr ※※※', SetDataArr);
+
+                    // 每走一次迴圈刷新一次這個物件在 push 進 DateArray
+                    var ObjectArray = [];
+                    ObjectArray.push(null);
+                    // // console.log("※※※ ObjectArray ※※※", ObjectArray);
+
+                    // X 乘 X 次數的 filter 不管誰在外面都要做固定次數
+                    HeadArrayForSetData.forEach(FilterData);
+
+                    function FilterData(FilterDataItem, FilterDataIndex, FilterDataArr) {
+                        // // console.log('※※※ FilterDataItem ※※※', FilterDataItem);
+                        // // console.log('※※※ FilterDataIndex ※※※', FilterDataIndex);
+                        // // console.log('※※※ FilterDataArr ※※※', FilterDataArr);
+                        // // console.log("'gsx$' + FilterDataItem", 'gsx$' + FilterDataItem);
+                        // // console.log("data.feed.entry", data.feed.entry);
+
+                        // ★★★★★ 利用物件 Key 名稱 取出值 SetDataItem[KeyName]].$t ★★★★★
+                        // // console.log('※※※ item : SetDataItem[KeyName].$t ※※※', FilterDataItem + " : " + SetDataItem[FilterDataItem].$t);
+                        // ★★★★★ 這裡資料比較多比較雜利用字串組成 JSON 字串後 再由字串轉 object 再存進陣列 ★★★★★
+                        // ★★★★★ 但後來發現 DataTable.js 所需要的資料檔案不是物件是陣列，所以比較簡單一些直接放進陣列，再放進 DateArray 變數即可 ★★★★★
+
+                        var GetData = SetDataItem[FilterDataItem].$t;
+                        // // console.log('※※※ GetData ※※※', GetData);
+                        ObjectArray.push(GetData);
+                        // // console.log("※※※ ObjectArray ※※※", ObjectArray);
+                    }
+
+                    DateArray.push(ObjectArray);
+
+                }
+
+                // ★★★★★ 整理完成後的 DataTable.js 所需 Data 資料 ★★★★★
+                // console.log("※※※ DateArray ※※※", DateArray);
+
+
+                // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+
+                // ★★★★★ 接著引入 DataTable.js 函式庫，做渲染刷新，即完成 ★★★★★
+                // ★★★★★ 這邊我們就回到之前的專案直接 copy 自己寫的東西... ★★★★★
+
+
+                HeadArrayForSetData.forEach(FilterHeader);
+
+                function FilterHeader(params) {
+                    // // console.log(params);
+                    params = params.replace('gsx$', '');
+                    // // console.log('params', params);
+                    stheader.push(params);
+                }
+
+                // console.log('stheader', stheader);
+
+                //生成 SearchTable
+                // console.log('★★★ SearchTable Set ★★★');
+
+                let st_html = "<ul style='display:flex;flex-wrap:wrap;justify-content:flex-start;    margin-bottom: 0;padding: 0;'>";
+
+                for (let i = 0; i < stheader.length; i++) {
+
+                    st_html += '<li class="col-12 col-lg-2" style="width: 12.5%;" data-column="' + (i + 1) + '">';
+                    st_html += '<input placeholder="' + stheader[i] + '" class="column_filter" type="text" id="stheader_' + (i + 1);
+                    st_html += '" style="margin-left:3%;"/></li >';
+
+                    // st_html += '<li style="width: 25%;" data-column="' + (i + 1) + '"><label for="stheader_' + (i + 1) + '">' + stheader[i];
+                    // st_html += '</label> (智慧搜尋 <input type="checkbox" class="column_filter" id="stheader_smart_' + (i + 1);
+                    // st_html += '" checked="checked">)<input class="column_filter" type="text" id="stheader_' + (i + 1);
+                    // st_html += '" style="margin-left:3%;"/></li >';
+
+                    // // console.log('st_html_Set', st_html);
+
+                };
+
+                st_html += "</ul>";
+
+                // // console.log('st_html_End', st_html);
+
+                // console.log("$('#searchTable')", $('#searchTable'));
+
+                $('#searchTable').html(st_html);
+
+                // console.log('★★★ SearchTable Set ★★★');
+
+                //生成 DataTable
+                // console.log('★★★ DataTable Set ★★★');
+                dt = $('#dataTable').DataTable({
+                    responsive: true,
+                    iDisplayLength: 100,
+                    // dom: 'Bfrtip',
+                    language: {
+                        "searchPlaceholder": "範例：2021 自 33",
+                        "processing": "處理中...",
+                        "loadingRecords": "載入中...",
+                        "lengthMenu": "顯示 _MENU_ 項結果",
+                        "zeroRecords": "沒有符合的結果",
+                        "info": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                        "infoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                        "infoFiltered": "(從 _MAX_ 項結果中過濾)",
+                        "infoPostFix": "",
+                        "search": "點擊參數 ▲▼ 即可排序<hr>( 順序不拘 ) 快速搜尋：",
+                        "paginate": {
+                            "first": "第一頁",
+                            "previous": "上一頁",
+                            "next": "下一頁",
+                            "last": "最後一頁"
+                        },
+                        "aria": {
+                            "sortAscending": ": 升冪排列",
+                            "sortDescending": ": 降冪排列"
+                        }
+                    },
+                    columns: HeadArray,
+                    columnDefs: [{
+
+                        targets: 0,
+                        searchable: false,
+                        orderable: false,
+
+                    }],
+                    data: DateArray,
+                    destroy: true //Cannot reinitialise DataTable,解决重新加载表格内容问题
+                });
+                dt.on('order.dt search.dt', function () {
+                    dt.column(0, {
+                        search: 'applied',
+                        order: 'applied'
+                    }).nodes().each(
+                        function (cell, i) {
+                            cell.innerHTML = i + 1;
+                        }
+                    );
+                }).draw();
+
+                // console.log('★★★ DataTable End ★★★');
+
+                // console.log('★★★ function Start ★★★');
+
+                // console.log('$("input.column_filter")', $('input.column_filter'))
+
+                $('input.column_filter').on('keyup click', function () {
+                    // console.log('★★★ keyup click ★★★');
+                    // // console.log('$(this).parents("li").attr("data - column")', $(this).parents('li').attr('data-column'));
+                    filterColumn($(this).parents('li').attr('data-column'));
+                });
+
+                function filterColumn(i) {
+                    // console.log('i', i);
+                    // console.log('$("#stheader_" + i).val()', $('#stheader_' + i).val());
+                    // console.log('$("#dataTable").DataTable().column(i+1)', $('#dataTable').DataTable().column(i + 1));
+                    // console.log('$("#stheader_smart_i").prop("checked")', $('#stheader_smart_' + i).prop('checked'));
+                    $('#dataTable').DataTable().column(i).search(
+                        $('#stheader_' + i).val(),
+                        false,
+                        true
+                    ).draw();
+                }
+
+                // console.log('★★★ function End ★★★');
+
+                // console.log('★★★ async function End ★★★');
+
+                // sTitle
+                $("#h1").text(GoogleSheetData.feed.title.$t);
+
+                // https://km.nicetypo.com/doc/ec4295b7b6804473f98e1a6d341e24d6
+                if (isMobile()) { //....這裡就放入如果是行動裝置的話，要怎麼弄....
+                    stheader.forEach((value, index) => {
+                        // console.log('★★★ foreach value ★★★', value),
+                        //     console.log('★★★ foreach index ★★★', index),
+                        $('#stheader_' + (index + 1)).attr("style", "display:none;");
+                    })
+                } else { //....這裡就放入一般正常裝置的程式碼....
+                }
+            });
+        });
+
+        function ClearSearch() {
+            alert('施工中，v4 版本更新如下 \n * IMG Display \n * Clear All Search \n v5 預計更新 RWD 手機版頁面');
+            // stheader.forEach((value, index) => {
+            //  console.log('★★★ foreach value ★★★', value),
+            //   console.log('★★★ foreach index ★★★', index),
+            //  $('#stheader_' + (index + 1)).val("");
+            //  })
+            //   dt.on('order.dt search.dt', function() {
+            //   dt.column(0, {
+            //       search: 'applied',
+            //        order: 'applied'
+            //      }).nodes().each(
+            //          function(cell, i) {
+            //              cell.innerHTML = i + 1;
+            //           }
+            //         );
+            //     }).draw();
+        }
+
+        function PickUP() {
+            stheader.forEach((value, index) => {
+                // console.log('★★★ foreach value ★★★', value),
+                //     console.log('★★★ foreach index ★★★', index),
+                if ($('#stheader_' + (index + 1)).attr("style") == "display:none;") {
+                    $('#stheader_' + (index + 1)).attr("style", "display:black;");
+                } else {
+                    $('#stheader_' + (index + 1)).attr("style", "display:none;");
+                }
+            })
+        }
+
+        function isMobile() {
+            try {
+                document.createEvent("TouchEvent");
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

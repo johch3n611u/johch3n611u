@@ -1,0 +1,43 @@
+        .card-hover {
+            cursor: pointer;
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 10px 10px 8px #916000;
+                transition: all 1s;
+            }
+        }
+        
+        .card-btn {
+            transition: all 1s;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            color: #916000;
+            &:hover {
+                transform: scale(1.5);
+                color: #AC8A46;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+        
+        .act {
+            color: #AC8A46;
+            border-bottom: 1px solid #AC8A46;
+            padding: 0 5px 0 5px;
+        }
+        
+        .page {
+            font-size: 20px;
+            margin: 0 5px 0 5px;
+            a {
+                color: black;
+                line-height: 30px;
+                padding: 0 5px 0 5px;
+                text-decoration: none;
+                &:hover {
+                    color: #AC8A46;
+                }
+            }
+        }

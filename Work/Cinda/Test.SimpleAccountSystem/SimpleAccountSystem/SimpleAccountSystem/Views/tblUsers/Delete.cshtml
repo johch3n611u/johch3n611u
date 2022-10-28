@@ -1,0 +1,41 @@
+﻿@model SimpleAccountSystem.Models.tblUser
+
+@{
+    ViewBag.Title = "刪除";
+}
+
+<h2>帳號刪除</h2>
+
+<h3>確定要刪除此帳號?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dd>
+            @Html.DisplayFor(model => model.cName)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.cEmail)
+        </dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input value="刪除" class="btn btn-default btn-danger" onclick="submit(CheckDelete())" /> |
+            @Html.ActionLink("返回首頁", "Index")
+        </div>
+    }
+</div>
+
+<script>
+    function CheckDelete() {
+
+        return confirm('你確定要刪除嗎？');
+    }
+</script>

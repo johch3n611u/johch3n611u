@@ -1,0 +1,50 @@
+<app-sign-header [signFormID]='signFromID' (outputSave)='Save($event)' [isEdit]='false'></app-sign-header>
+<p-card>
+    <div class="ui-g-12" *ngIf="close<now">
+        <p-button label="Click" class="ui-g-1"></p-button>
+        <p-button label="Click" class="ui-g-1"></p-button>
+    </div>
+    <table style="min-width: 100%; text-align: center;">
+        <tr>
+            <th colspan="9">{{'Disable.title'|translate}}</th>
+        </tr>
+        <tr>
+            <th colspan="1">{{'Disable.Applicant'|translate}}</th>
+            <td colspan="8">{{item.Applicant}}</td>
+        </tr>
+        <tr>
+            <th colspan="1">{{'Disable.Reason'|translate}}</th>
+            <td colspan="8">{{item.Reason}}</td>
+        </tr>
+        <tr>
+            <th>{{'Disable.Item'|translate}}</th>
+            <th>{{'Disable.FunctionType'|translate}}</th>
+            <th>{{'Disable.UseType'|translate}}</th>
+            <th>{{'Disable.AssetId'|translate}}</th>
+            <th>{{'Disable.ApplyId'|translate}}</th>
+            <th>{{'Disable.Name'|translate}}</th>
+            <th>{{'Disable.Serial'|translate}}</th>
+            <th>{{'Disable.Module'|translate}}</th>
+            <th>{{'Disable.CloseDate'|translate}}</th>
+
+        </tr>
+        <tr *ngFor="let row of item.Data">
+            <td>{{row.Item}}</td>
+            <td>{{row.FunctionType}}</td>
+            <td *ngIf="row.UseType==UsetypeEnum.Long">
+                {{ "FormMain.Long" | translate }}</td>
+            <td *ngIf="row.UseType==UsetypeEnum.Short">
+                {{ "FormMain.Short" | translate }}
+                <!-- Not Delete -->
+                <!-- ({{ item.StartDate| date:'yyyy-mm-dd'}}/{{ item.EndDate| date:'yyyy-mm-dd'}}) -->
+            </td>
+            <td>{{row.AssetId}}</td>
+            <td>{{row.ApplyId}}</td>
+            <td>{{row.Name}}</td>
+            <td>{{row.Serial}}</td>
+            <td>{{row.Module}}</td>
+            <td>{{row.CloseDate|date:'yyyy-MM-dd'}}</td>
+        </tr>
+    </table>
+</p-card>
+<app-sign-footer></app-sign-footer>

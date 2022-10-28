@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+    <h3 id="myTime"></h3>
+    X:<input id="txtX" type="text"  />
+    Y:<input id="txtY" type="text" />
+    <script>
+        function showMyTime() {
+            var myDate = new Date();
+            var h = myDate.getHours();
+            var m = myDate.getMinutes();
+            var s = myDate.getSeconds();
+
+            if (h < 10) h = "0" + h;
+            if (m < 10) m = "0" + m;
+            s = s < 10 ? "0" + s : s;
+
+
+            myTime.innerText = h + ":" + m + ":" + s;
+            setTimeout(showMyTime,1000);
+        }
+
+        showMyTime();
+        ////////////////////////////////////////////////////////////////
+        document.onmousemove = function (evt) {
+            txtX.value = evt.pageX;
+            txtY.value = evt.pageY;
+        }
+
+
+    </script>
+</body>
+</html>

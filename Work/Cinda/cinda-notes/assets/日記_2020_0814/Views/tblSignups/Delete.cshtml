@@ -1,0 +1,50 @@
+﻿@model Member.Models.tblSignup
+
+@{
+    ViewBag.Title = "新達2020/9/25活動報名系統";
+}
+
+<h2>新達2020/9/25活動報名系統</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSignup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cCreateDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cCreateDT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+@Html.Raw(@ViewBag.Message)

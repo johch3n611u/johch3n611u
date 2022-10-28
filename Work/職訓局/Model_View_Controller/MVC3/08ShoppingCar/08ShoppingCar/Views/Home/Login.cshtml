@@ -1,0 +1,32 @@
+﻿@*//03-1-4 撰寫Login View*@
+@{
+    ViewBag.Title = "會員登入";
+}
+
+<h2>會員登入</h2>
+
+<form accept-charset="@Url.Action("Login")" method="post">
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            <label for="fUserId" class="control-label col-md-2">帳號</label>
+            <div class="col-md-10">
+                <input id="fUserId" name="fUserId" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fPwd" class="control-label col-md-2">密碼</label>
+            <div class="col-md-10">
+                <input id="fPwd" name="fPwd" type="password" class="form-control" required />
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-md-10 col-md-offset-2">
+                <input id="Submit1" type="submit" value="登入" class="btn btn-default" />
+                <div class="alert-danger">@ViewBag.Message</div>
+            </div>
+        </div>
+    </div>
+
+</form>

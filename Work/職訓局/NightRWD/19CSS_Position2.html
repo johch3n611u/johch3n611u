@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        aside {
+           float:left;
+        }
+        article{
+            float:right;
+        }
+        footer{
+            clear:both;
+        }
+        #container {
+            width: 770px;
+            margin: auto;
+            position:relative;
+        }
+        #ad1{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #ad2 {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        #ad{
+            position:absolute;
+            top:20px;
+            left:127px;
+           
+        }
+        #ad>span{
+            background-color:pink;
+            color:red;
+            font-size:10pt;
+            cursor:pointer;
+        }
+        .disable{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+
+            <img src="images/top.jpg" />
+        </header>
+        <aside>
+
+            <img src="images/left.jpg" />
+        </aside>
+        <article>
+            <img src="images/right.jpg" />
+
+        </article>
+        <footer>
+            <img src="images/bottom.jpg" />
+        </footer>
+        <div id="ad">
+            <span>點我關閉</span><br />
+            <img src="images/ad.jpg" />
+        </div>
+    </div>
+    <img src="images/banner2.jpg" id="ad2" />
+    <img src="images/banner1.jpg" id="ad1" />
+    
+    <script>
+        var ad = document.getElementById("ad");
+        ad.children[0].addEventListener('click', function () {
+            ad.className = "disable";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Homework3.css" rel="stylesheet" />
+    <!-- 讀取順位: 標籤上style tag > link stylesheet > html 內 style tag -->
+    <style>
+        /* 以下沒註解之程式碼為影響功能之CSS程式碼，故置於HTML檔案style tag中。完成介面為藍區，以下head style為方便視讀用，原因如上方註解。 */
+        
+        @font-face {
+            font-family: 'MyPlayerFont';
+            src: url('fonts/WEBDINGS.ttf') format('truetype'), url('fonts/WEBDINGS.svg') format('svg'), url('fonts/WEBDINGS.eot') format('embedded-opentype'), url('fonts/WEBDINGS.woff') format('woff');
+        }
+        /* 
+           CSS@規則:@font-face規則中將可使用網路上或設計者提供的字型。 
+           font-family屬性:定義了此字型檔案在此CSS的名稱。
+           src: url('')屬性:指定字型檔案位置。
+           src: local('')屬性:指定使用者電腦中的字型。
+           src: format('')屬性:標示字型檔案格式。
+        */
+        /* 
+        #ControlPanel {
+            margin: auto;
+            border: 5px solid;
+        } 
+        */
+        
+        #FuncBtn>span {
+            /* border: 2px solid;
+            box-shadow: 3px 3px 3px black;
+            cursor: pointer; */
+            font-family: MyPlayerFont;
+            /* font-size: 24pt; */
+            background-color: blue;
+        }
+        /* 
+        #volValue {
+            width: 25px;
+            background-color: black;
+            color: yellow;
+            text-align: center;
+        } 
+        */
+        
+        #settime {
+            /* background-color: #808080; */
+            height: 10px;
+            cursor: pointer;
+            background-color: rgb(79, 79, 251);
+        }
+        
+        #progress {
+            /* background-color: #ff6a00; */
+            height: 10px;
+            width: 0;
+            background-color: blue;
+        }
+        
+        #Sbook,
+        #Tbook {
+            width: 294px;
+            border: 3px solid;
+            float: left;
+            height: 200px;
+            overflow: auto;
+            cursor: copy;
+            background-color: blue;
+        }
+        
+        #btnUpdateMusic {
+            border: 2px solid;
+            text-align: center;
+            /* font-size: 18pt; */
+            cursor: pointer;
+            /* background-color: pink; */
+            clear: both;
+            background-color: blue;
+        }
+        
+        .hide {
+            display: none;
+            background-color: blue;
+        }
+        
+        .show {
+            display: block;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="audio">
+        <source id="song" type="audio/mpeg" />
+    </audio>
+    <!-- 
+         audio 標籤:HTML5新增標籤，定義聲音。http://www.w3school.com.cn/tags/tag_audio.asp
+         標籤文本內容 屬性:定義當瀏覽器不支援此標籤時顯示之文本。
+         source 標籤:HTML5新增標籤，為元素定義媒介資源來源，定義可替換的影片/音效檔案，供瀏覽器根據類型編譯。 http://www.w3school.com.cn/tags/tag_source.asp
+         type 標籤:定義媒體類型。audio/mpeg 值:用於音效檔。 http://www.w3school.com.cn/tags/att_source_type.asp
+         此處:定義以下使用之使用音效檔audio，id為audio用於擷取當前音效檔案之狀態；來源source，id為song，用以轉換音效檔案來源。
+     -->
+
+    <div id="ControlPanel" style="width:600px;">
+        <!--  
+             HTML5新增了許多語意標籤如<header>、<nav>、<main>、<footer>、<mark>、<time> 等等...，具有和<div>、<span>相同特性，但更利於搜索引擎了解區塊設計目的，便於分享查詢增強網頁SEO效果。
+             div 標籤:定義文檔中的分區，為無語意無元樣式屬性之區塊元素，瀏覽器會在元素前後各放置一換行符號。
+             http://www.w3school.com.cn/tags/tag_div.asp
+             https://developer.mozilla.org/zh-TW/docs/Web/HTML/Block-level_elements
+             https://developer.mozilla.org/zh-TW/docs/Web/HTML/Inline_elemente   
+             參考:
+             https://training.pada-x.com/docs/article.jsp?key=html5-semantic-elements
+             http://yongxjb.pixnet.net/blog/post/6312952-html5%E6%A8%99%E8%A8%98div%E3%80%81section%E3%80%81article%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E_19
+             https://waterlily-lsl.com/modules/article/view.article.php/258
+             此處:定義一id為ControlPanel之固定大小width:600px的div盒子。
+         -->
+
+        <select id="music"></select>
+        <!-- 
+             select 標籤:創建下拉式選擇框。http://www.w3school.com.cn/tags/tag_select.asp
+             此處:下拉式選擇框id為music，用以顯示當前撥放id為Sbook之歌單內容src音效來源&text歌曲名稱之屬性，而下拉式選單內為Sbook歌單內容。
+         -->
+
+        <div id="FuncBtn" style="font-family: MyPlayerFont;">
+            <!-- 此處:用於存放功能按鈕。 -->
+            <span id="play">4</span>
+            <!-- 
+                span 標籤:被用來組合整理其內部元素，為無語意無元樣式之行內元素，如不對span進行改變，則行內元素保持原樣。http://www.w3school.com.cn/tags/tag_span.asp
+                此處:用於撥放功能串聯。
+             -->
+            <!--<span id="pause">;</span>-->
+            <span id="stop"><</span>
+            <!-- 此處:用於暫停功能串聯。 -->
+            <span id="prevsong">9</span>
+            <!-- 此處:用於上一首功能串聯。 -->
+            <span id="prevtime">7</span>
+            <!-- 此處:用於倒轉功能串聯。 -->
+            <span id="nexttime">8</span>
+            <!-- 此處:用於快轉功能串聯。 -->
+            <span id="nextsong">:</span>
+            <!-- 此處:用於下一首功能串聯。 -->
+            <span id="muted">V</span>
+            <!-- 此處:用於靜音功能串聯。 -->
+            <span id="loop">q</span>
+            <!-- 此處:用於單曲循環撥放功能串聯。 -->
+            <span id="random">s</span>
+            <!-- 此處:用於隨機撥放功能串聯。 -->
+            <span id="allloop">`</span>
+            <!-- 此處:用於全曲循環撥放功能串聯。 -->
+            <span id="songbook">@</span>
+            <!-- 此處:用於顯示歌單功能串聯。 -->
+        </div>
+        <div id="volume">
+            <!-- 此處:用於顯示音量與調整音量功能。 -->
+            <input id="vol" type="range" min="0" max="100" value="10" />
+            <input id="volM" type="button" value="-" />
+            <input id="volP" type="button" value="+" />
+            <input id="volValue" type="text" readonly="readonly" />
+        </div>
+        <div id="settime" style="height:10px;cursor:pointer;background-color:rgb(79, 79, 251);">
+            <!-- 此處:配合上下div，用於手動歌曲進度檻功能。 -->
+            <div id="progress"></div>
+        </div>
+
+        <div id="InfoPanel">
+            <div id="duration">00:00 / 00:00</div>
+            <marquee id="info">請按播放鈕~~~~~</marquee>
+            <div id="info2"></div>
+            <!-- 此處:用於顯示資訊欄。 -->
+        </div>
+        <hr />
+        <div id="book" class="hide" title="hide">
+            <!-- 此處:顯示歌單，並藉由標籤做屬性html&javascript轉換，藉此轉換CSS顯示歌本或隱藏歌本。 -->
+            <div id="Sbook">
+                <!-- 此處:歌單內容，並藉由標籤做屬性html&javascript轉換，藉此轉換當前撥放歌曲與資訊欄顯示資訊。 -->
+                <div title="music/nothing.mp3">Nothing Gonna Change My Love For You</div>
+                <div title="music/nomouth.mp3">真的不想嘴</div>
+                <div title="music/travel.mp3">帶你去旅行</div>
+                <div title="music/tearshining.mp3">夏川里美-淚光閃閃</div>
+                <div title="music/airball.mp3">周杰倫-告白汽球</div>
+                <div title="music/sweety.mp3">汪蘇瀧&By2-有點甜</div>
+                <div title="music/careyou.mp3">鄧麗君-我只在乎你</div>
+                <div title="music/elysees.mp3">Champs-Elyees</div>
+                <div title="music/little.mp3">田馥甄-小幸運</div>
+                <div title="music/MV.mp3">旺福-咖啡戀曲</div>
+                <div title="music/Right.mp3">Keren Ann-Right Now & Right Here</div>
+                <div title="music\prettyboy.mp3">M2M-Pretty Boy</div>
+                <div title="music\moon.mp3">五月天-私奔到月球</div>
+                <div title="music\PartyAnimal.mp3">五月天-派對動物</div>
+                <div title="music\warmheart.mp3">郁可唯-暖心</div>
+                <div title="music\lovegood.mp3">蘇永康&陳潔儀-愛的正好</div>
+                <div title="music\oldclock.mp3">平井堅-古老的大鐘</div>
+                <div title="music\yoursmile.mp3">FIR-你的微笑</div>
+                <div title="music\onion.mp3">丁噹-洋蔥</div>
+                <div title="music\iamfly.mp3">FIR飛兒樂團-我要飛</div>
+                <div title="music\notlove.mp3">張韶涵 - 親愛的那不是愛情</div>
+                <div title="music\always.mp3">SHE-Always on my mind</div>
+                <div title="music\years.mp3">胡夏-那些年</div>
+                <div title="music\sliverdragon.mp3">中島美雪-騎在銀龍的背上</div>
+                <div title="music\onlyflower.mp3">SMAP-世界唯一僅有的花 </div>
+                <div title="music\lovehim.mp3">李聖傑&林隆旋-你那麼愛他</div>
+                <div title="music\remember.mp3">張惠妹-記得</div>
+                <div title="music\couple.mp3">曹格-兩隻戀人</div>
+                <div title="music\myangle.mp3">Tank-專屬天使</div>
+            </div>
+            <div id="Tbook">
+                <!-- 此處:用於轉換當前歌本清單。 -->
+            </div>
+            <div id="btnUpdateMusic" style="background-color: blue;">
+                更新歌單
+            </div>
+        </div>
+    </div>
+    <script src="Homework3.js"></script>
+</body>
+
+</html>

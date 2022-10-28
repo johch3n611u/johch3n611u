@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body>
+
+    <h2 id="shownews">顯示</h2>
+    <div id="news">
+        「于太」的老公是昔日經營地下網路簽賭，身家逾千億元的于國柱：他也是台中起家，跟當初所爆出林太的背景資料相符。說起于國柱，就不得不回顧過往他在台灣有多麼風起雲湧，雖然他的行事低調，不過2005年他在國道被綁，行凶的是曾經策劃多起巨額綁票、使用重型軍械與警方駁火的張錫銘。當時張錫銘綁架了于國柱，贖金獅子大開口開價新台幣40億元。
+
+        于國柱曾被綁架，而且贖金高達新台幣40億元。（翻攝自三立新聞）
+        張錫銘被逮，判無期徒刑。他因擁有重軍火與警方對峙而史上聞名。（翻攝自東森新聞）
+        于國柱最初經營天王星賓果西餐廳，後又開了天蠍星賓果西餐廳及超級大賭場，並取得楊登魁經營的龍虎榜百家樂衛星賭場中部經營權、然後與友人合組天下科技公司，生產電腦式的賓果賭博軟體及機台；之後他前往對岸砸上億元經營寶盈線上運動賭博網站。
+
+        全盛時期，于國柱日賺高達4億元，寶盈5年就賺了新台幣4000億元；另外，于國柱還曾在喝一杯咖啡的時間，就決定買了一輛700多萬元保時捷，並且把車子給老婆開，如此驚人手筆「寵妻」也成為台中車界傳奇。
+
+        勝利進行DJ表演，于太在他身後的最佳觀賞位置。（翻攝自jenniferz_zgri IG）
+        GD跟勝利都是于太（之前名為林太）的追星對象，也有一說她是為了GD才接近勝利。（翻攝自ruru15微博）
+        于太身為賣力砸錢的超級粉絲，自然有不少親近他們的自拍合影。（翻攝自Burning Sun官網）
+        至於為何于太會傳成林太？其一是因于國柱本身極為低調，除了行蹤連老婆都瞞，豪宅也裝了密密麻麻的監視器，跟鄰居更是互無往來。公司員工甚至不知他是老闆，有人找時，員工還回：「要找于先生！你等一下喔！我們公司沒有這個人！」
+    </div>
+    <hr />
+    <input id="Button1" type="button" value="登入系統" />
+
+    <fieldset id="login" style="width:250px">
+        <legend>登入系統</legend>
+        <table>
+            <tr>
+                <td>帳號</td>
+                <td>
+                    <input id="Text1" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>密碼</td>
+                <td>
+                    <input id="Password1" type="password" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="Button1" type="button" value="登入" /></td>
+
+            </tr>
+
+
+        </table>
+
+
+    </fieldset>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#news').hide();
+        $('#login').hide();
+
+        $('#shownews').click(function () {
+            $('#news').slideDown(1500);
+
+        });
+
+
+        $('#Button1').click(function () {
+            $('#login').slideToggle(1000);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PhotoSharing.Models.Comment>
+
+@using (Ajax.BeginForm("_CommentsForPhoto",new { PhotoID=ViewBag.PhotoID},new AjaxOptions {UpdateTargetId= "comments-tool",HttpMethod="Post" }))
+{
+<div id="comments-tool">
+    <div class="well">
+        @* 7.6-4 加入_Create Action********************************************** *@
+        @*Action Name是_Create才對!!*@
+        @Html.Action("_Create", "Comment", new { PhotoID = ViewBag.PhotoID })
+
+
+        @foreach (var item in Model)
+        {
+            @*7.3 在/Shared/_CommentsForPhoto.cshtml加入IEnumerable<T>及foreach (var item in Model){}*@
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>@item.Subject</h4>
+            </div>
+            <div class="panel-body">
+                <p>@item.Body</p>
+                <p class="text-right">
+                    回覆人:@item.UserName
+                </p>
+            </div>
+            @*//7-8-2 在_CommentsForPhoto.cshtml加入Delete連結*@
+            <div class="panel-footer">
+                @Html.ActionLink("刪除回覆","Delete",new { id=item.CommentID},new { @class="btn btn-danger", onclick="return confirm('確定刪除嗎??')"})
+            </div>
+        </div>
+        }
+    </div>
+</div>
+}

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Member.Models.DTO.Mix>
+
+@{
+    ViewBag.Title = "新達2020/9/25活動報名系統";
+}
+
+<h2>新達2020/9/25活動報名系統</h2>
+@Html.ActionLink("新增", "Edit", new { tblSignupItem_ID = 0, cItemID = @ViewBag.cItemID })
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cMobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cCreateDT)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cCreateDT)
+            </td>
+            <td>
+                @Html.ActionLink("編輯", "Edit", new { tblSignupItem_ID = item.tblSignupItem_ID, cItemID = item.cItemID }) |
+                @Html.ActionLink("刪除", "Delete", new { tblSignupItem_ID = item.tblSignupItem_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.Raw(@ViewBag.Message)
+
+
+@*<div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.cName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.cName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.cEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.cEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.cCreateDT)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.cCreateDT)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.cMobile }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

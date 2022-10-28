@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="教務系統Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="學生">
+          <Key>
+            <PropertyRef Name="學號" />
+          </Key>
+          <Property Name="學號" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="姓名" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="性別" Type="char" MaxLength="2" />
+          <Property Name="電話" Type="varchar" MaxLength="15" />
+          <Property Name="生日" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="教務系統ModelStoreContainer">
+          <EntitySet Name="學生" EntityType="Self.學生" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="教務系統Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="學生">
+          <Key>
+            <PropertyRef Name="學號" />
+          </Key>
+          <Property Name="學號" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="姓名" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="性別" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="電話" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="生日" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="教務系統Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="學生" EntityType="Self.學生" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="教務系統ModelStoreContainer" CdmEntityContainer="教務系統Entities">
+          <EntitySetMapping Name="學生">
+            <EntityTypeMapping TypeName="教務系統Model.學生">
+              <MappingFragment StoreEntitySet="學生">
+                <ScalarProperty Name="學號" ColumnName="學號" />
+                <ScalarProperty Name="姓名" ColumnName="姓名" />
+                <ScalarProperty Name="性別" ColumnName="性別" />
+                <ScalarProperty Name="電話" ColumnName="電話" />
+                <ScalarProperty Name="生日" ColumnName="生日" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

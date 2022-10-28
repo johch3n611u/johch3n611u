@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #tb1{
+            width:90%;
+            margin:auto;
+        }
+        #tb1 thead tr{
+            background-color:#383838;
+            color:white;
+        }
+
+            #tb1 tbody tr:nth-child(2n+1) {
+                background-color:#acacac;
+            }
+            #tb1 tbody tr:nth-child(2n) {
+                background-color:white;
+            }
+
+            #tb1 tbody tr:hover {
+                background-color:aquamarine;
+                color:red;
+                border:5px solid black;
+            }
+    </style>
+</head>
+<body>
+    <input id="StationName" type="text" /><input id="Button1" type="button" value="查詢" />
+    <table id="tb1">
+        
+    </table>
+
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        var StationName;
+        $('#Button1').click(function () {
+            StationName = $('#StationName').val();
+            updateData(StationName);
+        });
+
+        setInterval(function () { updateData($('#StationName').val()) }, 120000);
+
+        function updateData(StationName) {
+            $('#tb1').empty();
+            $.ajax({
+                type: 'GET',
+                url: 'https://ptx.transportdata.tw/MOTC/v2/Rail/TRA/LiveBoard?$format=JSON',
+                format: 'json',
+                success: function (data) {
+                    //alert(data.length);
+                    var TripLine;
+                    var DelayTime;
+                    var Direction;
+                    $('#tb1').append("<thead><tr><td>站名</td><td>車次</td><td>車種</td><td>山/海線</td><td>行車方向</td><td>到站時間</td><td>發車時間</td><td>誤點時間</td></tr></thead>");
+                    $('#tb1').append("<tbody>");
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].StationName.Zh_tw == StationName) {
+                            switch (data[i].TripLine) {
+                                case 0:
+                                    TripLine = "不經山海線";
+                                    break;
+                                case 1:
+                                    TripLine = "山線";
+                                    break;
+                                case 2:
+                                    TripLine = "海線";
+                                    break;
+                            }
+                            DelayTime = data[i].DelayTime == 0 ? "準點" : "<span style='color:red'>誤點" + data[i].DelayTime + "分鐘</span>"
+                            Direction = data[i].Direction == 0 ? "順行" : "逆行";
+
+
+                            $('#tb1').append("<tr><th>" + data[i].StationName.Zh_tw + "</th><th>" + data[i].TrainNo + "</th><th>" + data[i].TrainTypeName.Zh_tw + "</th><th>" + TripLine + "</th><th>" + Direction + "</th><th>" + data[i].ScheduledArrivalTime + "</th><th>" + data[i].ScheduledDepartureTime + "</th><th>" + DelayTime + "</th></tr>");
+                        }
+                    }
+                    $('#tb1').append("</tbody>");
+
+                },
+                error: function () {
+                    alert('Error!!');
+                }
+
+            });
+            
+        }
+        //updateData();
+    </script>
+</body>
+</html>

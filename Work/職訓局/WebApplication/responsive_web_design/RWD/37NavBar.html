@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="MyStyle.css" rel="stylesheet" />
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-md navbar-light bg-info">
+        <div class="container">
+            <a href="#" class="navbar-brand h1">WDA</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MyMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="MyMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            Item
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Action</a>
+                            <a href="#" class="dropdown-item disabled">Another action</a>
+                            <a href="#" class="dropdown-item">Something else here</a>
+                            <a href="#" class="dropdown-item">Separated link</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Action</a>
+                            <a href="#" class="dropdown-item">Another action</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link disabled">Order</a>
+                    </li>
+                </ul>
+                <form class="form-inline" action="https://www.google.com/search" method="get">
+                    <div>
+                        <input id="Text1" name="q" class="form-control" type="text" placeholder="請輸入關鍵字..." />
+                        <input id="Submit1" type="submit" value="Search" class="btn btn-success" />
+                    </div>
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+    </nav>
+    <div class="container">
+
+        <div class="modal fade" id="LoginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Login</h3>
+                        <button class="close" data-dismiss="modal"> &times;</button>
+
+                    </div>
+
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input id="email" type="email" class="form-control" placeholder="Enter email..." required />
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input id="pwd" type="password" class="form-control" placeholder="Password" required />
+                                <div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <input id="" type="button" value="Cancel" class="btn btn-light" data-dismiss="modal" />
+                        <input id="" type="button" value="Login" class="btn btn-primary" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="text-right">
+            <input type="button" value="登入" class="btn btn-link" data-toggle="modal" data-target="#LoginModal" /> | <input type="button" value="聯絡我們" class="btn btn-link" />
+        </div>
+        <div class="jumbotron ">
+            <h1 class="MyFontForH"><strong>世界那麼大 我想去看看</strong></h1>
+            <p class="MyFontForP">錢包那麼小 是要看三小</p>
+            <hr />
+            <input id="Button1" type="button" value="了解更多行程" class="btn btn-success MyFontForP" />
+        </div>
+
+        <div class="media">
+            <div class="media-left">
+                <img src="images/01.jpg" class="media-object img-thumbnail" width="200" />
+            </div>
+            <div class="media-body">
+                <h3 class="media-heading MyFont">瑪雅金字塔遺跡</h3>
+                <p class="MyFont">
+                    台南市刑大副大隊長林清榮表示，陳女臉部朝下被壓在一張雙人沙發下，
+                    臉部朝下雙腳及部分頭髮露出沙發外，由於死者衣著整齊，口中被塞入深咖啡色抹布，
+                    被發現時已有屍斑。由於陳女陳屍位置特殊，警方初步推估有他殺可能，並研判是窒息死亡，
+                    詳細死因則待檢察官會同法醫相驗確認。
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="media">
+
+            <div class="media-body">
+                <h3 class="media-heading MyFont">柬埔寨吳哥窟</h3>
+                <p class="MyFont">
+                    台南市刑大副大隊長林清榮表示，陳女臉部朝下被壓在一張雙人沙發下，
+                    臉部朝下雙腳及部分頭髮露出沙發外，由於死者衣著整齊，口中被塞入深咖啡色抹布，
+                    被發現時已有屍斑。由於陳女陳屍位置特殊，警方初步推估有他殺可能，並研判是窒息死亡，
+                    詳細死因則待檢察官會同法醫相驗確認。
+
+                </p>
+
+            </div>
+            <div class="media-right">
+                <img src="images/02.jpg" class="media-object img-thumbnail" width="200" />
+            </div>
+
+        </div>
+        <div class="media">
+            <div class="col-md-5">
+
+                <div class="media-left media-middle">
+                    <img src="images/03.jpg" class="media-object img-thumbnail" width="200" />
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading MyFont">越南下龍灣</h3>
+                    <p class="MyFont">
+                        台南市刑大副大隊長林清榮表示，陳女臉部朝下被壓在一張雙人沙發下，
+                        臉部朝下雙腳及部分頭髮露出沙發外，由於死者衣著整齊，口中被塞入深咖啡色抹布，
+                        被發現時已有屍斑。由於陳女陳屍位置特殊，警方初步推估有他殺可能，並研判是窒息死亡，
+                        詳細死因則待檢察官會同法醫相驗確認。
+
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="media-body">
+                    <h3 class="media-heading MyFont">埃及金字塔與人面獅身</h3>
+                    <p class="MyFont">
+                        台南市刑大副大隊長林清榮表示，陳女臉部朝下被壓在一張雙人沙發下，
+                        臉部朝下雙腳及部分頭髮露出沙發外，由於死者衣著整齊，口中被塞入深咖啡色抹布，
+                        被發現時已有屍斑。由於陳女陳屍位置特殊，警方初步推估有他殺可能，並研判是窒息死亡，
+                        詳細死因則待檢察官會同法醫相驗確認。
+
+                    </p>
+
+                </div>
+                <div class="media-right">
+                    <img src="images/04.jpg" class="media-object img-thumbnail" width="200" />
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <div class="col-md-6">
+
+                <div class="media-body">
+                    <h3 class="media-heading MyFont">梵帝崗聖彼德大教堂</h3>
+                    <p class="MyFont">
+                        桃園市消防局表示，28日晚間9時26分，敬鵬平鎮3廠發生火警，到場時得知有2名移工受困，且當時1樓僅有濃煙，尚未有火光，2名小隊長各帶1組人員總共7人進入1樓，22時26分時指揮所發現狀況不對，用無線電急喊撤退，但只得到游曜陽回應「收到」，就再也聽不到任何回音。
+                        指揮所研判7人發生意外，隨即整備搜救隊伍進入。
+                    </p>
+                </div>
+                <div class="media-left media-middle">
+                    <img src="images/05.jpg" width="250" class="media-object img-thumbnail" />
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <div class="media-body">
+                    <h3 class="media-heading MyFont">台北101</h3>
+                    <p class="MyFont">
+                        桃園市消防局表示，28日晚間9時26分，敬鵬平鎮3廠發生火警，到場時得知有2名移工受困，且當時1樓僅有濃煙，尚未有火光，2名小隊長各帶1組人員總共7人進入1樓，22時26分時指揮所發現狀況不對，用無線電急喊撤退，但只得到游曜陽回應「收到」，就再也聽不到任何回音。
+                        指揮所研判7人發生意外，隨即整備搜救隊伍進入。
+                    </p>
+                </div>
+                <div class="media-right media-middle">
+                    <img src="images/06.jpg" width="200" class="media-object img-thumbnail" />
+                </div>
+            </div>
+        </div>
+        <div class="media">
+
+            <div class="media-left media-middle">
+                <img src="images/07.jpg" width="250" class="media-object img-thumbnail" />
+            </div>
+
+            <div class="media-body">
+                <h3 class="media-heading MyFont">尼加拉瓜大瀑布</h3>
+                <p class="MyFont">
+                    桃園市消防局表示，28日晚間9時26分，敬鵬平鎮3廠發生火警，到場時得知有2名移工受困，且當時1樓僅有濃煙，尚未有火光，2名小隊長各帶1組人員總共7人進入1樓，22時26分時指揮所發現狀況不對，用無線電急喊撤退，但只得到游曜陽回應「收到」，就再也聽不到任何回音。
+                    指揮所研判7人發生意外，隨即整備搜救隊伍進入。
+                </p>
+            </div>
+        </div>
+        <div class="media">
+
+            <div class="media-body">
+                <h3 class="media-heading MyFont">雪梨歌劇院</h3>
+                <p class="MyFont">
+                    桃園市消防局表示，28日晚間9時26分，敬鵬平鎮3廠發生火警，到場時得知有2名移工受困，且當時1樓僅有濃煙，尚未有火光，2名小隊長各帶1組人員總共7人進入1樓，22時26分時指揮所發現狀況不對，用無線電急喊撤退
+                </p>
+            </div>
+            <div class="media-left media-middle">
+                <img src="images/08.jpg" width="200" class="media-object img-thumbnail" />
+            </div>
+        </div>
+
+        <div id="carouselOne" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselOne" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselOne" data-slide-to="1"></li>
+                <li data-target="#carouselOne" data-slide-to="2"></li>
+                <li data-target="#carouselOne" data-slide-to="3"></li>
+                <li data-target="#carouselOne" data-slide-to="4"></li>
+                <li data-target="#carouselOne" data-slide-to="5"></li>
+                <li data-target="#carouselOne" data-slide-to="6"></li>
+                <li data-target="#carouselOne" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/11.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/12.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/13.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/14.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/15.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/16.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/17.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/18.jpg" class="d-block w-100" />
+                    <div class="carousel-caption d-none d-md-block MyFont">
+                        <h5><strong>瑪雅金字塔遺跡</strong></h5>
+                        <p>瑪雅金字塔遺跡瑪雅金字塔遺跡瑪雅金字塔遺跡</p>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselOne" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            </a>
+            <a class="carousel-control-next" href="#carouselOne" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            </a>
+        </div>
+
+
+    </div>
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#carouselOne').carousel({ interval: 2000 });
+
+               // $('#LoginModal').modal('show');
+
+    </script>
+</body>
+</html>

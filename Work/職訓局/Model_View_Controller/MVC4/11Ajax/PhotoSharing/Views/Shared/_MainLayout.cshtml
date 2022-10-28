@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @*//6.1-1-1<title>@ViewBag.Title</title>*@
+    <title>@ViewBag.Title | 高屏澎東分署股份有限公司</title>
+
+    @*//6.1-1-1<title>@ViewBag.Title</title>*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*6.2.4 將自訂CSS Section插入Layout*@
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @RenderSection("CSS", false)
+
+</head>
+<body>
+    @*//6.1-1-2  製作<header> </header>裡的Navbar*@
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">WDA</a>
+                    @*@Html.ActionLink("應用程式名稱", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                </div>
+                <div class="navbar-collapse collapse">
+                    @*<ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                            <li>@Html.ActionLink("關於", "About", "Home")</li>
+                            <li>@Html.ActionLink("連絡人", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("討論區", "Index", "Photos")</li>
+                        </ul>*@
+
+                    @Html.MvcSiteMap().Menu()
+
+                </div>
+            </div>
+        </div>
+    </header>
+    @*6.1-1-3...........................................*@
+    <section class="container body-content">
+        @RenderBody()
+
+    </section>
+    @*6.1-1-4............................................*@
+    <footer class="container">
+        <hr />
+        <p>目前所在位置:@Html.MvcSiteMap().SiteMapPath()</p>
+        <p>&copy; @DateTime.Now.Year - 高屏澎東分署股份有限公司</p>
+    </footer>
+
+
+    @*6.2.3 在layout View(Shared\_MainLayout.cshtml)使用BootStrap/Jquery JS*@
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    @*6.2.5 將自訂Scripts Section插入Layout*@
+    @*//6.5.3 更新(Shared\_MainLayout.cshtml),加入JQUERY, 產生<li><form method="get" action="https://www.google.com.tw/search" class="form-inline"><input id="q" name="q" type="text" class="form-control" placeholder="Please Input Something..." /><input id="Submit1" type="submit" value="Search" class="btn btn-success" /></form></li>*@
+    @RenderSection("Script", false)
+    <script>
+        //6.5.2 更新(Shared\_MainLayout.cshtml), 加入JQUERY, 產生 < ul id = "menu" class="nav navbar-nav" >
+        $('#menu').addClass('nav navbar-nav');
+        $('#menu').append('<li><form method="get" action="https://www.google.com.tw/search" class="form-inline"><input id="q" name="q" type="text" class="form-control" placeholder="Please Input Something..." /><input id="Submit1" type="submit" value="Search" class="btn btn-success" /></form></li>');
+
+    </script>
+</body>
+</html>

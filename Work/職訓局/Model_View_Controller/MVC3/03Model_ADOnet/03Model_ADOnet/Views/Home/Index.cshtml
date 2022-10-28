@@ -1,0 +1,31 @@
+﻿@using System.Data;
+@model System.Data.DataTable
+
+@{
+    ViewBag.Title = "學生列表";
+}
+
+<h2>學生列表</h2>
+
+<div>
+    @Html.ActionLink("新增一筆資料", "Create")
+</div>
+<table class="table table-striped">
+    <tr>
+        <th>學號</th>
+        <th>姓名</th>
+        <th>信箱</th>
+        <th>成績</th>
+        <th>刪除</th>
+    </tr>
+    @foreach (DataRow row in Model.Rows)
+    {
+    <tr>
+        <td>@row["fStuId"]</td>
+        <td>@row["fName"]</td>
+        <td>@row["fEmail"]</td>
+        <td>@row["fScore"]</td>
+        <td>@Html.ActionLink("刪除","Delete",new { id=row["fStuId"]},new { @class="btn btn-danger", onclick="return confirm('確定刪除嗎?')"})</td>
+    </tr>
+    }
+</table>

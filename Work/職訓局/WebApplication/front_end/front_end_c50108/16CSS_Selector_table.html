@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #tb1 {
+            margin: auto;
+            border: 3px solid;
+            border-bottom: 10px dotted red;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+          
+        }
+            #tb1 td, #tb1 th {
+                border: 1px solid;
+            }
+        #tb1 > tbody > tr:first-child > td:first-child {
+            border: 1px solid red;
+        }
+            #tb1 > tbody > tr:first-child > td:first-child + td {
+                padding: 20px;
+            }
+
+            a:link{
+                color:white;
+                background-color:blue;
+            }
+            a:active{
+                color:yellow;
+                background-color:black;
+            }
+        a:visited {
+            color:aquamarine;
+            background-color:darkblue;
+        }
+
+        a:hover {
+            color:brown;
+            background-color:aqua;
+        }
+
+        #tb2 > tbody tr:hover {
+            background-color: yellow;
+            border: 3px dotted red;
+            font-size: 24pt;
+        }
+        #tb2 > tbody td:hover {
+         
+            border: 3px dotted red;
+  
+        }
+
+        #tb3{
+            border:2px double #808080;
+        }
+        #tb3 td {
+            border: 1px solid #808080;
+        }
+           
+
+        #tb3 tr{
+            background-color:antiquewhite;
+        }
+
+            #tb3 tr:nth-child(2n+1) {
+                background-color: pink;
+            }
+            #tb3 tr:hover {
+                background-color: black;
+                color: white;
+            }
+          
+    </style>
+
+</head>
+<body>
+
+    <a href="https://www.goo99999gle.com.tw">點我前往Google!!</a>
+    <a href="https://www.google.com.tw">點我前往Google!!</a>
+    <table id="tb1">
+        <tfoot>
+            <tr>
+                <td colspan="3">製表日:2019/1/11</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>張三</td>
+                <td>88</td>
+                <td>78</td>
+            </tr>
+
+            <tr>
+                <td>李四</td>
+                <td>90</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>92</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>趙六</td>
+                <td>92</td>
+                <td>95</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>國文</th>
+                <th>數學</th>
+            </tr>
+        </thead>
+        <caption>一年二班成績單</caption>
+
+    </table>
+    <hr />
+
+
+    <table id="tb2">
+        <tfoot>
+            <tr>
+                <td colspan="3">製表日:2019/1/11</td>
+            </tr>
+        </tfoot>
+        <tbody>
+
+
+            <tr>
+                <td>王五</td>
+                <td>92</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>趙六</td>
+                <td>92</td>
+                <td>95</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>國文</th>
+                <th>數學</th>
+            </tr>
+        </thead>
+        <caption>一年二班成績單</caption>
+
+    </table>
+
+    <hr />
+    <table id="tb3"></table>
+
+
+    <script>
+        var tb3 = document.getElementById("tb3");
+
+        for (i = 1; i <= 100; i++) {
+            var tr = document.createElement("tr");
+            for (j = 1; j <= 20; j++) {
+                var td = document.createElement("td");
+                var txt = document.createTextNode("第" + i + "列第" + j + "欄");
+                td.appendChild(txt);
+                tr.appendChild(td);
+            }
+            tb3.appendChild(tr);
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+{ path: 'PermissionMultiApply', component: PermissionMultiApplyComponent },
+{ path: 'PermissionMultiApply/:id', component: PermissionMultiApplyComponent },
+
+{
+   path: 'pages/self-account-check', component: SelfAccountCheckComponent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public void PAM6041(List<string> EmpNos)
+        {
+            string StrMailTitle, StrMailContent;
+            var sbMailCC = new List<string>();
+            var vTaskList = new List<NOTIFICATION_TASK>();
+
+            // 每半年通知使用人與其主管進行帳號權限自檢，PAM 發出通知信，
+            // 信件內容連結到 “轄下帳號權限使用狀況報表 - 轄下帳號權限報表” UCPAM112
+
+            using (var resp = new BatchRepository())
+            {
+                try
+                {
+                    // 全刪全建
+                    Entities.PAM_SELF_ACCOUNT_CHECK.RemoveRange(Entities.PAM_SELF_ACCOUNT_CHECK);
+                    Entities.SaveChanges();
+
+                    var PortalRepository = new PortalRepository();
+                    var VIP = PortalRepository.GetPortalSystemVipApplicant();
+                    var VIPList = new List<string>();
+                    if (VIP != null)
+                    {
+                        VIPList = VIP.Entries.Select(x => x.EMPNO).ToList();
+                        _logger.Debug(VIPList);
+                    }
+                    else
+                    {
+                        _logger.Error("系統取不到 Portal VIP 資料");
+                    }
+
+                    var NoVipAccounts = EmpNos.Where(x =>
+                    !VIPList.Contains(x)
+                    ).ToList();
+                    StrMailTitle = resp.GetMailTitle("PAM604");
+                    StrMailContent = resp.GetMailContent("PAM604");
+                    sbMailCC = new List<string>();
+                    var Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    var mailList = HrMasterService.GetEmployees(NoVipAccounts).Where(y => !string.IsNullOrEmpty(y.email)).ToList();
+                    foreach (var item in mailList)
+                    {
+                        // ISSUE 1521 先存緩送出
+                        var NewMail = new NOTIFICATION_TASK();
+                        NewMail.TITLE = StrMailTitle;//主旨
+                        NewMail.CONTENT = StrMailContent;//內容
+                        NewMail.SEND_EMP_NO = string.Join(";", item.email);
+                        NewMail.TYPE = "PAM604";
+                        NewMail.SEND_STATUS = 0;
+                        NewMail.REMARK = "備註";
+                        NewMail.ESTIMATE_DATE = DateTime.Now.AddMinutes(1);
+                        NewMail.CC_EMP_NO = string.Join(";", sbMailCC); //CC軟體管理員
+                        NewMail.REF_ID = "PAM604" + Date;
+
+                        var autoID = (int)Entities.NOTIFICATION_TASK.AsNoTracking()
+                        .Select(x => x.ID)
+                        .DefaultIfEmpty(0)
+                        .Max() + 1;
+
+                        NewMail.ID = autoID;
+                        Entities.NOTIFICATION_TASK.Add(NewMail);
+                        Entities.SaveChanges();
+
+                        // 暫存表 PAM_SELF_ACCOUNT_CHECK
+                        var Account = Entities.ACCOUNT.FirstOrDefault(x => x.EMP_NO == item.empNo);
+                        var PamSelfAccountCheck = new PAM_SELF_ACCOUNT_CHECK();
+                        if (Account != null)
+                        {
+                            PamSelfAccountCheck.DEPT_CENTER = Account.DEPT_CENTER;
+                        }
+                        PamSelfAccountCheck.DEPT_NO = item.deptNo;
+                        PamSelfAccountCheck.EMP_NO = item.empNo;
+                        PamSelfAccountCheck.EMP_NAME = item.empName;
+                        PamSelfAccountCheck.STATE = "未通知";
+                        PamSelfAccountCheck.WAIT_NOTIFICATION_ID = autoID;
+
+                        var TempID = (int)Entities.PAM_SELF_ACCOUNT_CHECK.AsNoTracking()
+                        .Select(x => x.ID)
+                        .DefaultIfEmpty(0)
+                        .Max() + 1;
+
+                        PamSelfAccountCheck.ID = TempID;
+                        Entities.PAM_SELF_ACCOUNT_CHECK.Add(PamSelfAccountCheck);
+                        Entities.SaveChanges();
+                    }
+
+                    //resp.InsertTask(vTaskList);
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    _logger.Error("⭐⭐⭐PAM604⭐⭐⭐");
+                    var errorMessages = ex.EntityValidationErrors
+                            .SelectMany(x => x.ValidationErrors)
+                            .Select(x => x.ErrorMessage);
+                    var fullErrorMessage = string.Join("; ", errorMessages);
+                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                    _logger.Error(exceptionMessage);
+                    _logger.Error(ex.EntityValidationErrors);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error("⭐⭐⭐PAM604⭐⭐⭐");
+                    _logger.Error(ex.Message);
+                    _logger.Error(ex.StackTrace);
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void PAM6042(List<string> Accounts)
+        {
+            string StrMailTitle, StrMailContent;
+            var sbMailCC = new List<string>();
+            var vTaskList = new List<NOTIFICATION_TASK>();
+
+            // issue 1491 抓這個人的所有主管，然後把所有主管都抓出來，但一個主管只要一封信
+
+            // issue 1491 排除 vip / 內容修正
+            var PortalRepository = new PortalRepository();
+            var VIP = PortalRepository.GetPortalSystemVipApplicant();
+            var VIPList = new List<string>();
+            if (VIP != null)
+            {
+                VIPList = VIP.Entries.Select(x => x.EMPNO).ToList();
+                _logger.Debug(VIPList);
+            }
+            else
+            {
+                _logger.Error("系統取不到 Portal VIP 資料");
+            }
+
+            var NoVipAccounts = Accounts.Where(x =>
+            !VIPList.Contains(x)
+            ).ToList();
+
+            using (var resp = new BatchRepository())
+            {
+                try
+                {
+                    StrMailTitle = resp.GetMailTitle("PAM604-2");
+                    StrMailContent = resp.GetMailContent("PAM604-2");
+                    sbMailCC = new List<string>();
+                    var Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    var mailList = HrMasterService.GetEmployees(NoVipAccounts).Where(x => x.email != null).Distinct().ToList();
+                    foreach (var item in mailList)
+                    {
+                        // ISSUE 1521 先存緩送出
+                        var NewMail = new NOTIFICATION_TASK();
+                        NewMail.TITLE = StrMailTitle;//主旨
+                        NewMail.CONTENT = StrMailContent;//內容
+                        NewMail.SEND_EMP_NO = string.Join(";", item.email);
+                        NewMail.TYPE = "PAM604-2";
+                        NewMail.SEND_STATUS = 0;
+                        NewMail.REMARK = "備註";
+                        NewMail.ESTIMATE_DATE = DateTime.Now.AddMinutes(1);
+                        NewMail.CC_EMP_NO = string.Join(";", sbMailCC); //CC軟體管理員
+                        NewMail.REF_ID = "PAM604-2" + Date;
+
+                        var autoID = (int)Entities.NOTIFICATION_TASK.AsNoTracking()
+                        .Select(x => x.ID)
+                        .DefaultIfEmpty(0)
+                        .Max() + 1;
+
+                        NewMail.ID = autoID;
+                        Entities.NOTIFICATION_TASK.Add(NewMail);
+                        Entities.SaveChanges();
+
+                        // 暫存表 PAM_SELF_ACCOUNT_CHECK
+                        var Account = Entities.ACCOUNT.FirstOrDefault(x => x.EMP_NO == item.empNo);
+                        var PamSelfAccountCheck = new PAM_SELF_ACCOUNT_CHECK();
+                        if (Account != null)
+                        {
+                            PamSelfAccountCheck.DEPT_CENTER = Account.DEPT_CENTER;
+                        }
+                        PamSelfAccountCheck.DEPT_NO = item.deptNo;
+                        PamSelfAccountCheck.EMP_NO = item.empNo;
+                        PamSelfAccountCheck.EMP_NAME = item.empName;
+                        PamSelfAccountCheck.STATE = "未通知";
+                        PamSelfAccountCheck.WAIT_NOTIFICATION_ID = autoID;
+
+                        var TempID = (int)Entities.PAM_SELF_ACCOUNT_CHECK.AsNoTracking()
+                        .Select(x => x.ID)
+                        .DefaultIfEmpty(0)
+                        .Max() + 1;
+
+                        PamSelfAccountCheck.ID = TempID;
+                        Entities.PAM_SELF_ACCOUNT_CHECK.Add(PamSelfAccountCheck);
+                        Entities.SaveChanges();
+                    }
+
+                    // resp.InsertTask(vTaskList);
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    _logger.Error("⭐⭐⭐PAM604-2⭐⭐⭐");
+                    var errorMessages = ex.EntityValidationErrors
+                            .SelectMany(x => x.ValidationErrors)
+                            .Select(x => x.ErrorMessage);
+                    var fullErrorMessage = string.Join("; ", errorMessages);
+                    var exceptionMessage = string.Concat(ex.Message, " The validation errors are: ", fullErrorMessage);
+                    _logger.Error(exceptionMessage);
+                    _logger.Error(ex.EntityValidationErrors);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error("⭐⭐⭐PAM604-2⭐⭐⭐");
+                    _logger.Error(ex.Message);
+                    _logger.Error(ex.StackTrace);
+                }
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+public void SendMailtoAdmin(GLEmployee PAMAdmin)
+        {
+            var NewMail = new NOTIFICATION_TASK();
+            NewMail.TITLE = "[系統通知] 帳號權限自檢作業自檢信件資料已產出";//主旨
+            NewMail.CONTENT = $"[系統通知] 帳號權限自檢作業<a  href='{ITCWebUri}pages/self-account-check'>自檢信件資料</a>已產出";//內容
+            NewMail.SEND_EMP_NO = string.Join(";", PAMAdmin.email);
+            NewMail.TYPE = "PAM604";
+            NewMail.SEND_STATUS = 0;
+            NewMail.REMARK = "備註";
+            NewMail.ESTIMATE_DATE = DateTime.Now.AddMinutes(1);
+            NewMail.CC_EMP_NO = "";
+            NewMail.REF_ID = "PAM604"+ NewMail.ESTIMATE_DATE + PAMAdmin.email;
+
+            var autoID = (int)Entities.NOTIFICATION_TASK.AsNoTracking()
+            .Select(x => x.ID)
+            .DefaultIfEmpty(0)
+            .Max() + 1;
+
+            NewMail.ID = autoID;
+            var MaliList = new List<NOTIFICATION_TASK>();
+            MaliList.Add(NewMail);
+
+            InsertTask(MaliList);
+        }
+
+
+                case "PAM604-2":
+                    StrTitle = "[PAM] IT Accounts & Privileges Review Notice";
+                    break;
+
+
+case "PAM604":
+                    // StrContent += "To: 使用人及使用人主管<br>主旨：";
+                    StrContent += "同仁您好:<br>";
+                    StrContent += $"為落實IT資源有效使用與管理，請點選<a href='{ITCPORTALWebUri}pages/AccountPermissionReport' target=_blank>系統連結</a>登入，以檢視您已申請使用中的服務。<br>";
+                    StrContent += "若所列的服務已不再使用，請進行相關的停用申請，若須繼續使用，則無須回覆此通知信。<br>";
+                    StrContent += "<br>";
+                    StrContent += "若有任何問題再請與MR140 Lisa Lai連絡或撥打79999 IT Helpdesk請其協助。<br>";
+                    StrContent += "<br>";
+                    StrContent += "Dear All:<br>";
+                    StrContent += $"In order to implement the effective use and management of IT resources, please click on the <a href='{ITCPORTALWebUri}pages/AccountPermissionReport' target=_blank> system link </a>to log in to view the services that you have applied for.<br>";
+                    StrContent += "If the listed services are no longer in use,please make a relevant suspension application.If you need to countinue using it, you do not need to reply to this notification letter.<br>";
+                    StrContent += "<br>";
+                    StrContent += "If you have any questions, please contact MR140 Lisa Lai or call 79999 IT Helpdesk for assistance.<br>";
+                    break;
+
+
+                case "PAM604-2":
+                    // StrContent += "To: 使用人及使用人主管<br>主旨：";
+                    StrContent += "主管您好:<br>";
+                    StrContent += $"為落實IT資源有效使用與管理，請點選<a href='{ITCPORTALWebUri}pages/AccountPermissionReport/mrg' target=_blank>系統連結</a>登入，以檢視您轄下同仁已申請使用中的服務。<br>";
+                    StrContent += "若您對於所列的服務已不再使用，請要求同仁進行相關的停用申請，若須繼續使用，則無須回覆此通知信。<br>";
+                    StrContent += "<br>";
+                    StrContent += "若有任何問題再請與MR140 Lisa Lai連絡或撥打79999 IT Helpdesk請其協助。<br>";
+                    StrContent += "<br>";
+                    StrContent += "Dear All:<br>";
+                    StrContent += $"In order to implement the effective use and management of IT resources, please click on the <a href='{ITCPORTALWebUri}pages/AccountPermissionReport' target=_blank> system link </a>to log in to view the services that you or your colleagues have applied for.<br>";
+                    StrContent += "If the listed services are no longer in use,please make a relevant suspension application.If you need to countinue using it, you do not need to reply to this notification letter.<br>";
+                    StrContent += "<br>";
+                    StrContent += "If you have any questions, please contact MR140 Lisa Lai or call 79999 IT Helpdesk for assistance.<br>";
+                    break;
+
+
+
+
+
+
+
+
+
+
+
+this.PAM604Mail();
+
+
+    PAM604Mail() {
+        // issue 1521
+        this._ActivatedRoute.params.subscribe(params => {
+            if (params.type == 'mrg') {
+                this.selectedType = '2';
+            }
+        });
+    }
+
+
+
+.mous>td>a{
+    cursor: pointer;
+}
+
+

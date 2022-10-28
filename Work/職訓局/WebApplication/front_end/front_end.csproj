@@ -1,0 +1,354 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56A56198-B29D-4240-AB1E-63B53C5B1154}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>front_end</RootNamespace>
+    <AssemblyName>front_end</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="front_end_c50108\01heading.html" />
+    <Content Include="front_end_c50108\02pre.html" />
+    <Content Include="front_end_c50108\03hr.html" />
+    <Content Include="front_end_c50108\04font.html" />
+    <Content Include="front_end_c50108\05division.html" />
+    <Content Include="front_end_c50108\06item.html" />
+    <Content Include="front_end_c50108\07a.html" />
+    <Content Include="front_end_c50108\08image.html" />
+    <Content Include="front_end_c50108\09table-1.html" />
+    <Content Include="front_end_c50108\09table.html" />
+    <Content Include="front_end_c50108\10form.html" />
+    <Content Include="front_end_c50108\11CSS.html" />
+    <Content Include="front_end_c50108\11CSS_font.html" />
+    <Content Include="front_end_c50108\12CSS_text.html" />
+    <Content Include="front_end_c50108\13CSS_color.html" />
+    <Content Include="front_end_c50108\14CSS_table.html" />
+    <Content Include="front_end_c50108\15CSS_Selector.html" />
+    <Content Include="front_end_c50108\16CSS_Selector_table.html" />
+    <Content Include="front_end_c50108\17CSS_Position.html" />
+    <Content Include="front_end_c50108\18CSS_Position2.html" />
+    <Content Include="front_end_c50108\19JS_Test.html" />
+    <Content Include="front_end_c50108\20JS_Password.html" />
+    <Content Include="front_end_c50108\20Password.html" />
+    <Content Include="front_end_c50108\21JS_Player.html" />
+    <Content Include="front_end_c50108\22JS_DOM.html" />
+    <Content Include="front_end_c50108\23jQuery_intro.html" />
+    <Content Include="front_end_c50108\24jQuery_CSS.html" />
+    <Content Include="front_end_c50108\25jQuery_Selecotr.html" />
+    <Content Include="front_end_c50108\26jQuery_Selecotr2.html" />
+    <Content Include="front_end_c50108\27jQuery_DOM.html" />
+    <Content Include="front_end_c50108\28GridView.aspx" />
+    <Content Include="front_end_c50108\28jQuery_GoogleAPI.html" />
+    <Content Include="front_end_c50108\29jQuery_GoogleAPI.html" />
+    <Content Include="front_end_c50108\30jQuery_Event.html" />
+    <Content Include="front_end_c50108\31jQuery_Event2.html" />
+    <Content Include="front_end_c50108\32jQuery_MouseEvent.html" />
+    <Content Include="front_end_c50108\33jQuery_KeyBoardEvent.html" />
+    <Content Include="front_end_c50108\34jQuery_ShowHide.html" />
+    <Content Include="front_end_c50108\35jQuery_Slide.html" />
+    <Content Include="front_end_c50108\36jQuery_fade.html" />
+    <Content Include="front_end_c50108\37jQuery_Basic_Animate.html" />
+    <Content Include="front_end_c50108\38jQuery_Pokamon_Animate.html" />
+    <Content Include="front_end_c50108\39Ajax_JSON.html" />
+    <Content Include="front_end_c50108\40Ajax_WebAPI.html" />
+    <Content Include="front_end_c50108\fonts\webdings.svg" />
+    <Content Include="front_end_c50108\hyperlink\01Heading.html" />
+    <Content Include="front_end_c50108\hyperlink\123132132ss.html" />
+    <Content Include="front_end_c50108\images2\chameleon.ico" />
+    <Content Include="front_end_c50108\images2\Jellyfish.jpg" />
+    <Content Include="front_end_c50108\images2\rustic-sandwich-on-wooden-background-260nw-261738053.jpg" />
+    <Content Include="front_end_c50108\images2\Tulips.jpg" />
+    <Content Include="front_end_c50108\images2\下載.jpg" />
+    <Content Include="front_end_c50108\images\08image2.html" />
+    <Content Include="front_end_c50108\images\08image25.html" />
+    <Content Include="front_end_c50108\images\45646465 %281%29.jpg" />
+    <Content Include="front_end_c50108\images\45646465.jpg" />
+    <Content Include="front_end_c50108\images\56387.jpg" />
+    <Content Include="front_end_c50108\images\ad.jpg" />
+    <Content Include="front_end_c50108\images\banner1.jpg" />
+    <Content Include="front_end_c50108\images\banner2.jpg" />
+    <Content Include="front_end_c50108\images\bottom.jpg" />
+    <Content Include="front_end_c50108\images\car.png" />
+    <Content Include="front_end_c50108\images\Koala.jpg" />
+    <Content Include="front_end_c50108\images\left.jpg" />
+    <Content Include="front_end_c50108\images\Lighthouse.jpg" />
+    <Content Include="front_end_c50108\images\right.jpg" />
+    <Content Include="front_end_c50108\images\top.jpg" />
+    <Content Include="front_end_c50108\music\airball.mp3" />
+    <Content Include="front_end_c50108\music\allnew.mp3" />
+    <Content Include="front_end_c50108\music\always.mp3" />
+    <Content Include="front_end_c50108\music\bibibi.mp3" />
+    <Content Include="front_end_c50108\music\careyou.MP3" />
+    <Content Include="front_end_c50108\music\couple.mp3" />
+    <Content Include="front_end_c50108\music\elysees.mp3" />
+    <Content Include="front_end_c50108\music\iamfly.MP3" />
+    <Content Include="front_end_c50108\music\little.mp3" />
+    <Content Include="front_end_c50108\music\lovegood.mp3" />
+    <Content Include="front_end_c50108\music\lovehim.mp3" />
+    <Content Include="front_end_c50108\music\moon.mp3" />
+    <Content Include="front_end_c50108\music\MV.mp3" />
+    <Content Include="front_end_c50108\music\myangle.mp3" />
+    <Content Include="front_end_c50108\music\nomouth.mp3" />
+    <Content Include="front_end_c50108\music\nothing.mp3" />
+    <Content Include="front_end_c50108\music\noting.mp3" />
+    <Content Include="front_end_c50108\music\notlove.mp3" />
+    <Content Include="front_end_c50108\music\oldclock.mp3" />
+    <Content Include="front_end_c50108\music\onion.mp3" />
+    <Content Include="front_end_c50108\music\onlyflower.mp3" />
+    <Content Include="front_end_c50108\music\ooh.mp3" />
+    <Content Include="front_end_c50108\music\PartyAnimal.mp3" />
+    <Content Include="front_end_c50108\music\prettyboy.MP3" />
+    <Content Include="front_end_c50108\music\remember.mp3" />
+    <Content Include="front_end_c50108\music\Right.mp3" />
+    <Content Include="front_end_c50108\music\sliverdragon.mp3" />
+    <Content Include="front_end_c50108\music\SovietAnthem.mp3" />
+    <Content Include="front_end_c50108\music\starlight.MP3" />
+    <Content Include="front_end_c50108\music\sweety.mp3" />
+    <Content Include="front_end_c50108\music\tearshining.MP3" />
+    <Content Include="front_end_c50108\music\travel.mp3" />
+    <Content Include="front_end_c50108\music\warmheart.mp3" />
+    <Content Include="front_end_c50108\music\years.mp3" />
+    <Content Include="front_end_c50108\music\yoursmile.mp3" />
+    <Content Include="front_end_c50108\note\VScode_Yourself.html" />
+    <Content Include="front_end_c50108\Player.js" />
+    <Content Include="front_end_c50108\PlayerStyle.css" />
+    <Content Include="front_end_c50108\ProductPrice.json" />
+    <None Include="front_end_c50108\Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="front_end_c50108\Scripts\jquery-3.3.1.js" />
+    <Content Include="front_end_c50108\Scripts\jquery-3.3.1.min.js" />
+    <Content Include="front_end_c50108\Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="front_end_c50108\Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="front_end_c50108\style.css" />
+    <Content Include="front_end_c50108\前端作業三\fonts\webdings.svg" />
+    <Content Include="front_end_c50108\前端作業三\Homework3.css" />
+    <Content Include="front_end_c50108\前端作業三\Homework3.html" />
+    <Content Include="front_end_c50108\前端作業三\Homework3.js" />
+    <Content Include="front_end_c50108\前端作業三\music\airball.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\allnew.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\always.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\bibibi.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\careyou.MP3" />
+    <Content Include="front_end_c50108\前端作業三\music\couple.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\elysees.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\iamfly.MP3" />
+    <Content Include="front_end_c50108\前端作業三\music\little.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\lovegood.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\lovehim.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\moon.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\MV.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\myangle.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\nomouth.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\nothing.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\noting.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\notlove.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\oldclock.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\onion.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\onlyflower.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\ooh.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\PartyAnimal.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\prettyboy.MP3" />
+    <Content Include="front_end_c50108\前端作業三\music\remember.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\Right.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\sliverdragon.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\SovietAnthem.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\starlight.MP3" />
+    <Content Include="front_end_c50108\前端作業三\music\sweety.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\tearshining.MP3" />
+    <Content Include="front_end_c50108\前端作業三\music\travel.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\warmheart.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\years.mp3" />
+    <Content Include="front_end_c50108\前端作業三\music\yoursmile.mp3" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="front_end_c50108\fonts\webdings.eot" />
+    <Content Include="front_end_c50108\fonts\webdings.ttf" />
+    <Content Include="front_end_c50108\fonts\webdings.woff" />
+    <Content Include="front_end_c50108\Scripts\jquery-3.3.1.min.map" />
+    <Content Include="front_end_c50108\Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="front_end_c50108\前端作業三\fonts\webdings.eot" />
+    <Content Include="front_end_c50108\前端作業三\fonts\webdings.ttf" />
+    <Content Include="front_end_c50108\前端作業三\fonts\webdings.woff" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="front_end_c50108\28GridView.aspx.cs">
+      <DependentUpon>28GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="front_end_c50108\28GridView.aspx.designer.cs">
+      <DependentUpon>28GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64070</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64070/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

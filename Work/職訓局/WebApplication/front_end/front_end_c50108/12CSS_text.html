@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Welcome My Website</h1>
+    <h1 style="text-align:center">Welcome My Website</h1>
+    <h1 style="text-align:right">Welcome My Website</h1>
+
+    <hr />
+    <h1 style="width:800px;background-color:antiquewhite">Welcome My Website</h1>
+    <h1 style="width:800px;text-align:center;background-color:antiquewhite">Welcome My Website</h1>
+    <h1 style="width:800px;text-align:right;background-color:antiquewhite">Welcome My Website</h1>
+    <hr />
+    <p style="background-color:antiquewhite">Welcome My Website</p>
+    <p style="background-color:antiquewhite">Welcome My Website</p>
+    <p style="background-color:antiquewhite">Welcome My Website</p>
+    <p style="background-color:antiquewhite;cursor:pointer">Welcome My Website</p>
+    <hr />
+    <a href="https://www.google.com.tw" style="font-size:36pt;text-decoration:none;cursor:copy">點我前往Google!!</a>
+    <h2 style="text-decoration:line-through">原價:$350,000</h2>
+    <h1 style="font-size:48pt;color:red;font-family:Forte">特價:$35,000</h1>
+    <h2 style="text-decoration:overline">doooooooooooooooooooog</h2>
+
+    <hr />
+    <h1 style="text-transform:uppercase">Welcome My Website</h1>
+    <h1 style="text-transform:lowercase">Welcome My Website</h1>
+
+    <h1 style="text-transform:capitalize">welcome my web site</h1>
+    <h1 style="text-transform:capitalize">WELCOME MY WEBSITE</h1>
+    <hr />
+
+
+    <h1 style="font-size:48pt;text-shadow:10px 8px 20px #000000,15px 11px 20px #4800ff,18px 14px 20px #ffd800">Welcome My Website</h1>
+
+    <h1 style="width:800px; font-size:48pt;box-shadow:10px 8px 20px #000000,15px 11px 20px #4800ff,18px 14px 20px #ffd800">Welcome My Website</h1>
+    <hr />
+
+    <h1 style="letter-spacing:12pt">Welcome My Website</h1>
+    <h1 style="word-spacing:24pt">Welcome My Website</h1>
+    <h1 style="word-spacing:24pt">高屏澎東分署</h1>
+    <h1 style="letter-spacing:24pt">高屏澎東分署</h1>
+
+    <hr />
+    <input id="Button1" type="button" value="放大" />
+    <input id="Button2" type="button" value="縮小" />
+    <input id="Button3" type="button" value="還原" />
+    <p id="news">
+        高雄市拋出將發行區域性商圈金融貨幣「高雄幣」，中央銀行發行局局長施遵驊昨（8）日表示，「高雄幣」其實不是貨幣，是某種折扣或優惠券，與央行的鑄幣權或專利並不牴觸。
+
+        為刺激高雄經濟、促進消費，高雄市長韓國瑜將於1月18日推出高雄幣App，首波試辦選定六合、光華及南華等三大商圈百家業者，只要消費者使用，不限消費方式，就可以獲得1%到10%回饋金，下次消費時可直接折抵，且地點限定為高雄。
+
+        對於全台首創的高雄幣，施遵驊表示，根據央行的了解，「高雄幣」是為發展高雄地方的經濟，比較像一種折扣或是優惠券，只是沒有實體化，變成手機在行動支付的載具中使用。
+
+        他提到，雖然名字叫做高雄幣，但其實應該不是貨幣，而是某種折扣或優惠券（Coupon），跟中央銀行的鑄幣權或專利應該沒有任何牴觸。施遵驊認為，這個想法很不錯，央行也預祝高雄市政府推展相關業務可以順利成功。
+    </p>
+
+    <script>
+        var btn1 = document.getElementById("Button1");
+        var btn2 = document.getElementById("Button2");
+        var btn3 = document.getElementById("Button3");
+        var news = document.getElementById("news");
+
+        btn1.addEventListener('click', function () {
+            news.style.fontSize = "36pt";
+        });
+        btn2.addEventListener('click', function () {
+            news.style.fontSize = "8pt";
+        });
+        btn3.addEventListener('click', function () {
+            news.style.fontSize = "12pt";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="ui-g-6 ui-md-3">
+    <span>{{ "file-upload.file-upload" | translate }}</span>
+</div>
+<div class="ui-g-6 ui-md-9 ui-inputgroup">
+    <app-file-upload [CanMultiple]="true" [(UploadFiles)]="this.UploadFile"
+        (OutputUploadedFiles)="uploadHandler($event)">
+    </app-file-upload>
+</div>
+<div class="ui-g-6 ui-md-3">
+    <span>{{ "file-upload.file-Import" | translate }}</span>
+</div>
+<div class="ui-g-6 ui-md-9 ui-inputgroup">
+    <button pButton type="submit" icon="fa fa-plus" (click)="ImportXLSX()"
+        label="{{ 'file-upload.file-Import' | translate }}"></button>
+</div>
+<div class="ui-g-6 ui-md-3">
+    <span>{{ "file-upload.file-Example" | translate }}</span>
+</div>
+<div class="ui-g-6 ui-md-9 ui-inputgroup" style="margin-top: 0.4%;">
+    <a pButton href="{{this.downloadFile}}" icon="fa fa-plus" label="{{ 'file-upload.file-Example' | translate }}"></a>
+</div>

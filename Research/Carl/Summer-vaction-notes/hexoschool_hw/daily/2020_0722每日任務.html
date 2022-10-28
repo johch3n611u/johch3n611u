@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+        
+        .container {
+            margin: 0 auto;
+        }
+        
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            width: 25%;
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                width: 50%;
+            }
+            .container {
+                max-width: 720px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .card {
+                width: 100%;
+            }
+            .container {
+                max-width: 540px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <small>9 mins</small>
+                    <button class="card-btn">點我</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <small>9 mins</small>
+                    <button class="card-btn">點我</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <small>9 mins</small>
+                    <button class="card-btn">點我</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <small>9 mins</small>
+                    <button class="card-btn">點我</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

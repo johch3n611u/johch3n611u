@@ -1,0 +1,36 @@
+<p-card class="ui-g-12">
+    <div class="ui-g">
+        <div class="ui-g">{{'ResignationDisabled.Status'|translate}}</div>
+        <p-dropdown [options]="selectStatus" [(ngModel)]="this.status"></p-dropdown>
+    </div>
+    <p-table [columns]="cols" [value]="items">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{col.header}}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr *ngIf="rowData.Status==this.status">
+                <td>
+                    {{rowData.Department}}
+                </td>
+                <td>
+                    <div (click)="URL(rowData.EmpNo)" style="cursor: pointer;">{{rowData.EmpNo}}</div>
+
+                </td>
+                <td>
+                    {{rowData.Name}}
+                </td>
+                <td>
+                    {{rowData.CloseDate|date:'yyyy-MM-dd'}}
+                </td>
+                <td>
+                    {{rowData.FormType}}
+                </td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</p-card>

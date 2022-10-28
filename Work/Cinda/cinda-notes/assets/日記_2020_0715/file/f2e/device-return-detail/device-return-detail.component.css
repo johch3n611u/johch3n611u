@@ -1,0 +1,17 @@
+.FakeTable{
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+}
+.FakeTable>div{
+    padding: 0.5em;
+    border: 1px solid #d6d7d9;
+    min-height: 37px;
+}
+.FakeTable>div:nth-child(odd){
+        background-color: rgb(255, 254, 177);
+}
+.ChkInput{
+    max-width: 90%;
+    margin-left: 1em;
+}

@@ -1,0 +1,198 @@
+待確認使用在哪個功能(Portal):
+
+"newsys": "新系統",
+"sysconfig": "系統功能．．．",
+
+
+
+
+
+
+
+
+"Demo": {
+        "account": "帳號",
+        "account_placeholder": "請輸入帳號",
+        "createdate": "建立日期",
+        "createdate_placeholder": "請選擇日期",
+        "id": "流水號",
+        "Content": "內容",
+        "Date": "日期"
+    },
+
+demo.component.html 被註解
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	 "Fake": {
+        "type1": "(申請人確認中)",
+        "type0": "草稿",
+        "Username": "使用者名稱",
+        "Searchbybrand": "以...搜尋",
+        "Physicalmachine": "實體機",
+        "Virtualmachine": "虛擬機",
+        "Available": "可選擇",
+        "Selected": "已選擇",
+        "Dept": "部門",
+        "EmployeeNo": "員工編號",
+        "EmployeeName": "員工姓名",
+        "Extension": "擴充",
+        "chooserole": "請選擇角色"
+    },
+
+sign-header.component.ts 被註解
+
+
+
+
+	"Addsoftwareform": "新增軟體表單",
+	"Computercustodian": "電腦保管人表單",	
+	
+	"informationservice": {        
+        "other": "其他說明文字",
+        "applicant_placeholder": "請輸入申請人",
+        "softwarerequirements": "軟體需求",
+        "APPLYType": "申請類別",
+        "softwareapplicationinstallation": "軟體申請安裝",
+        "softwaretrialinstallation": "軟體試用安裝",
+         "ApllyType": "申請類別",        
+    },
+	
+	 "QA": {
+        "Title": "相關問題 Q&A",
+        "Time": "發布時間",
+        " QATitle": "問題標題"
+    },
+	
+	 "Sign": {
+        "signexplain": "簽核說明",
+        "ChangeExplain": "變更簽核說明",
+        "watchflow": "檢視流程圖",
+        "isrequired": "為必填欄位！",
+        "Description1": "服務申請分長短期使用",
+        "Description2": "因業務需要需長期使用此服務，可申請長期使用，長期使用每半年通知部級以上主管確認續用或停用",
+        "Description3": "因出差或專案期間須使用此服務，可申請短期使用，短期使用可依實際需求自行點選起訖日，短期使用到期將進行服務停用",
+        "Description4": "欲停止使用此服務，可使用\"帳號權限停用\"功能提出停用申請",
+        "SignComment": "您的簽核結果為{}，如有其他輔助意見，請說明於意見說明欄",
+        "CommentHint": "意見說明",
+        "Invalid": "作廢"
+    },
+	
+	 "SignBox": {
+              "FormID": "部門編號",
+            },
+			
+"Type": {
+        "Softward": "軟體",
+        "AccountDisabled": "帳號權限-停用",
+        "SoftwareApply": "軟體-申請",
+        "SoftwareChange": "軟體-異動",
+        "AccountCitrix": "帳號權限-Citrix",
+        "AccountChange": "帳號權限-異動",
+        "AccountApply": "帳號權限-申請",
+        "Hardward": "硬體",
+        "Account": "帳號",
+        "Complex": "綜合",     
+"SignOff": "簽核中",]
+"Approving": "核定中",		
+    },			
+	
+"SoftwareAvailable": {
+        "miss": "缺少",	
+	
+待確認使用在哪個功能(SAM):	
+  "Fake": {
+        "type1": "(Applicant check)",
+        "type0": "draft",
+        "ApplicationCategory": "Softward",
+        "Username": "Username",
+        "Searchbybrand": "Search by brand",
+        "Physicalmachine": "Physical Machine",
+        "Virtualmachine": "Virtual Machine",
+        "Available": "Available",
+        "Selected": "Selected",
+        "Dept": "Department",
+        "EmployeeNo": "Employee No.",
+        "EmployeeName": "Name",
+        "Extension": "Extension",
+        "chooserole": "Plaese choose Role"
+    },
+	    "Demo": {
+        "account": "Account",
+        "account_placeholder": "Please enter account",
+        "createdate": "CreateDate",
+        "createdate_placeholder": "Please enter date",
+        "id": "Seq",
+        "Content": "Content",
+        "Date": "Date"
+    },
+ 
+
+==============================
+英文Json 中沒有  
+ "BPMType": {
+        "SAMSwapplyForm": "軟體申請單",
+        "SWChangeForm": "軟體異動單"
+    },
+	
+==================
+一樣的中文?
+ "HSAMUsage": {
+        
+        "UOwnerDeptId": "電腦權責單位",
+        "UOwnerDeptName": "電腦權責單位",
+        
+    },	
+
+<==========SAM===>
+一樣的中文?
+"header": {        
+        "EmpList": "人員選單",        
+        "MemberList": "人員選單",
+       
+    },	
+	
+ "SoftwareAuthorization": {      
+        "Id": "軟體編號",
+        "FormatId": "軟體編號",
+       
+    },	
+	
+	 "Sign": {
+      
+        "required": "為必填欄位",              
+        "isrequired": "為必填欄位！",        
+        "CommentHint": "意見說明",
+        "ChangeExplain": "意見說明"
+    },
+	
+  "Type": {
+        
+        "PSamAdminConfirm": "SAM確認中",        
+        "SAMChecking": "SAM確認中",       
+    },	
+	
+  "informationservice": {        
+        "computername": "電腦名稱",        
+        "PCName": "電腦名稱",
+      
+    },	
+	
+	 "Change": {
+       
+        "Type3Target": "保留部門:",
+        "department": "保留部門",
+            },

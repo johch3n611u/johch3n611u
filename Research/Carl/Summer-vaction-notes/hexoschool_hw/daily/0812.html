@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/發票頁.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!--  主要的容器包          -->
+        <div data-aos="fade-right" data-aos-duration="3000" class="header">
+            <!-- 功能導覽列               -->
+
+            <h1>
+                <a class="logo" href="#">sweetaste.icon</a>
+            </h1>
+            <button class="ham_menu" href="#"><img
+                    src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true"></button>
+            <a class="rwd_logo" href="#"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-sm-dark.svg" alt="logo"> </a>
+            <ul class="menu">
+                <li class="rwd_none"><a href="第五周主線任務+漢堡選單.html">首頁</a></li>
+                <li class="rwd_none"><a href="#">甜點</a></li>
+                <li class="rwd_none"><a href="#">登入</a></li>
+            </ul>
+            <a class="shopcart" href="#"><img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true" alt="購物車"></a>
+
+        </div>
+        <div data-aos="fade-up" class="pay_banner">
+            <div class="checkbox">
+                <span class="material-icons left">
+                check_circle
+            </span>
+                <span class="stepgap_left"></span>
+                <span class="material-icons">
+                    check_circle
+                </span>
+                <span class="stepgap_right"></span>
+                <span class="material-icons right">
+                        check_circle
+                    </span>
+            </div>
+            <img class="success" src="https://bingbingboom.github.io/week3_main/img/lg-success.svg" alt="付款成功">
+            <a class="keepshopping" href="第五周主線任務+漢堡選單.html">繼續逛逛</a>
+        </div>
+    </div>
+    <footer data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+        <form class=" mailbox">
+            <div class="boxitem1"><img class="icon" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-light.svg " alt="sweet">
+                <a class="sub" href="#mail ">
+                            訂閱你我的甜蜜郵件
+                        </a>
+            </div>
+            <lable class="mail" for="mail">
+                <img class="mail_icon" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true" alt=" ">
+                <input class="yourmail" type="email" name="email" id="mail" required>
+                <img class="arrow" img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_forward-24px.png?raw=true" onclick="alert( '已寄確認發信件至：' + getElementById( 'mail').value);this.submit() ">
+            </lable>
+        </form>
+        <div class="contact">
+            <div class="footerlogo">
+                <a href="# ">
+                    <img class="footericon" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-lg-dark.svg " />
+                </a>
+                <p>07-1234-5678<br />sweetaste@email.com<br />800 高雄市新興區幸福路 520 號</p>
+                <a href="# "><img class="line " src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/ic-line%40.svg "></a>
+                <a href="# ">
+                    <img class="fb" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/ic-facebook.svg ">
+                </a>
+            </div>
+            <div class="sloganbox">
+                <p data-aos="zoom-in-left" data-aos-offset="300" data-aos-delay="150" data-aos-duration="2000" class="slogan ">
+                    今天是個―<br />吃甜點的好日子。</p>
+                <p class="copyright ">© 2018 Sweetaste* All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+<script>
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 200, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+</script>
+<script>
+    $('.ham_menu').click(function() {
+        $('.menu').toggleClass('active')
+    })
+</script>
+
+</html>

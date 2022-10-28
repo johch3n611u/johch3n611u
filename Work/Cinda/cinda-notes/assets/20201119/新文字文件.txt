@@ -1,0 +1,187 @@
+<p-dialog header="{{ 'Button.confirm' | translate }}" [(visible)]="displayDialog" [modal]="true" [draggable]="false" width="800" appendTo="body">
+    <div class="ui-fluid">
+        <div class="ui-g">
+            <div class="ui-g-12 paddingin">
+                <div class="ui-g-12 ui-md-12 ">
+                    <!-- <label for="input" [innerHTML]="GetCommentDescription()">{{
+GetCommentDescription()
+}}</label> -->
+                </div>
+                <div class="ui-g-12 ui-md-12 ">
+                    <textarea pInputTextarea [rows]="6" placeholder="{{'Sign.CommentHint' | translate}}" [(ngModel)]="this.SIGN_SUGGESTION"></textarea>
+                </div>
+                <div class="ui-g-12 ui-md-12 paddingin"></div>
+                <div class="ui-md-offset-4 ui-g-offset-3 ui-g-6 ui-md-2">
+                    <button type="button" pButton label="{{ 'Button.confirm' | translate }}" icon="fa-check fa" (click)="confirm_OK(this.e)"></button>
+                </div>
+                <div class="ui-g-6 ui-md-2">
+                    <button type="button" pButton label="{{ 'Button.cancel' | translate }}" icon="fa-times fa" class="ui-button-secondary" (click)="ColseDialog()"></button>
+                    <!-- (click)="Role_Cancel()" style="margin-left: 50px"></button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</p-dialog>
+
+<p-dialog header="{{ 'Button.confirm' | translate }}" [(visible)]="displayCloseDialog" [modal]="true" [draggable]="false" width="800" appendTo="body">
+    <div class="ui-fluid">
+        <div class="ui-g">
+            <div class="ui-g-12 paddingin">
+                <div class="ui-g-12 ui-md-12 ">
+                    <!-- <label for="input" [innerHTML]="GetCommentDescription()">{{
+GetCommentDescription()
+}}</label> -->
+                </div>
+                <div class="ui-g-12 ui-md-12 ">
+                    <span>
+                        {{"ResignationDisabled.CloseDate" | translate}}
+                    </span>
+                    <!-- <p-dropdown [autoDisplayFirst]='true' appendTo="body" [options]="this.DetailCloseDate" required
+                        [(ngModel)]="this.NewDetailCloseDate">
+                    </p-dropdown> [maxDate]="items.CloseDate"-->
+                    <!-- [maxDate]="MaxCloseDate" [disabledDays]="[0,1,3,4,5,6]" -->
+                    <p-calendar class="blue" appendTo="body" dateFormat="yy/mm/dd" [(ngModel)]="items.CloseDate" [minDate]="this.Today">
+                        {{items.CloseDate}}
+                    </p-calendar>
+                    <textarea pInputTextarea [rows]="6" placeholder="{{'Sign.CommentHint' | translate}}" [(ngModel)]="this.SIGN_SUGGESTION"></textarea>
+                </div>
+                <div class="ui-g-12 ui-md-12 paddingin"></div>
+                <div class="ui-md-offset-4 ui-g-offset-3 ui-g-6 ui-md-2">
+                    <button type="button" pButton label="{{ 'Button.confirm' | translate }}" icon="fa-check fa" (click)="confirmCloseDate_OK(this.e2)"></button>
+                </div>
+                <div class="ui-g-6 ui-md-2">
+                    <button type="button" pButton label="{{ 'Button.cancel' | translate }}" icon="fa-times fa" class="ui-button-secondary" (click)="ColseDialog()"></button>
+                    <!-- (click)="Role_Cancel()" style="margin-left: 50px"></button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</p-dialog>
+
+<!-- <button (click)="check()">123</button> -->
+
+<app-sign-header [signFormName]="'Type.ResignationDisabled' | translate " [ApplicationCategory]='ApplicationCategory' [signFormID]='BackSignId' (outputSave)='Save($event)' (outputSend)='Send($event)' [forceStatus]="this.forceStatus" (outputInvalid)='Invalid($event)'>
+</app-sign-header>
+
+<p-panel #pnl class="pnl">
+    <div class="ui-g ui-fluid">
+        <div class="ui-g-3 ui-md-3 FakeTable">
+            <div class="ui-inputgroup  required" style="text-align: left;padding: 0 4%;">
+                <span>
+                    {{"ResignationDisabled.User" | translate}}</span>
+            </div>
+        </div>
+        <div class="ui-g-3 ui-md-3">
+            <div class="ui-inputgroup ">
+                <input class="fakeinput" type="text" value="{{items.User}}" pInputText readonly="true" />
+            </div>
+        </div>
+        <div class="ui-g-3 ui-md-3 FakeTable">
+            <div class="ui-inputgroup  required" style="text-align: left;padding: 0 4%;">
+                <span>
+                    {{"ResignationDisabled.CloseDate" | translate}}
+                </span>
+            </div>
+        </div>
+        <div class="ui-g-3 ui-md-3">
+            <div class="ui-inputgroup ">
+                <!-- <p-calendar *ngIf="this.forceStatus == 'ThreeOfOneAdmin'" class="blue" dateFormat="yy/mm/dd"
+                    [(ngModel)]="items.CloseDate" [ngStyle]="{'width': '75%','color':'blue'}">
+                </p-calendar> -->
+                <input class="blue fakeinput" type="text" value="{{this.displayCloseDate|date:'yyyy/MM/dd'}}" pInputText readonly="true" />
+            </div>
+        </div>
+        <p class="blue-p ui-g-12">{{"ResignationDisabled.Desc5" | translate}}。</p>
+        <p-radioButton [disabled]="IsMrg != 'True'" name="groupname" label="{{'ResignationDisabled.NotBefore' | translate}}" value="1" [(ngModel)]="items.Type" class="radiopadding" (click)="SetBackDate()">
+        </p-radioButton>
+        <div class="ui-g-"> </div>
+        <div class="ui-g-12" style="padding-left: 3.1%;">
+            {{"ResignationDisabled.Desc1" | translate}}
+            <span class="blue">{{this.MaxCloseDate|date:'yyyy/MM/dd'}}</span>
+        </div>
+        <!-- <hr class="ui-g-12"> -->
+        <!--  this.items.Status == 'ThreeOfOneWork' || this.items.Status === 'Closed' || this.items.Status === 'Invalid' || -->
+        <p-radioButton [disabled]="IsMrg != 'True'" name="groupname" label="{{'ResignationDisabled.Before' | translate}}" value="2" [(ngModel)]="items.Type" class="ui-g-6 radiopadding"></p-radioButton>
+        <div class="ui-g-6" style="line-height: 2;" *ngIf="items.Type ==2">
+            <div class="ui-g-6" style="text-align: center;line-height: 2em;">
+                {{"ResignationDisabled.Desc2" | translate}}
+            </div>
+            <div class="ui-g-6 blue">
+                <!-- <p-calendar [disabled]="this.forceStatus == 'ThreeOfOneAdmin' || this.items.Status == 'ThreeOfOneWork'"
+                    class="blue" dateFormat="yy/mm/dd" [(ngModel)]="dynamicPreDisabledDate" [maxDate]="items.CloseDate"
+                    [disabledDays]="[0,1,3,4,5,6]" [inputStyle]="{'color':'blue'}">
+                </p-calendar> -->
+                <p-dropdown *ngIf="this.items.TOFormStatus == 'ThreeOfOneWait'" styleClass="closeDateDropdown" [disabled]="IsMrg != 'True'" appendTo="body" [options]="this.DetailCloseDate" required [(ngModel)]="items.CloseDate" [disabled]="item.Disabled==false">
+                </p-dropdown>
+                <p *ngIf="this.items.TOFormStatus == 'ThreeOfOneWork'">{{items.CloseDate |date:'yyyy/MM/dd'}}</p>
+            </div>
+        </div>
+        <div class="ui-g-12" style="padding-left: 3.1%;">
+            {{"ResignationDisabled.Desc3" | translate}}
+        </div>
+        <div *ngIf="this.CheckDetail !== -1">
+            <!-- <hr class="ui-g-12"> -->
+            <p-radioButton [disabled]="IsMrg != 'True'" name="groupname" label="{{'ResignationDisabled.FunctionDisable' | translate}}" value="3" [(ngModel)]="items.Type" class="ui-g-6 radiopadding" (click)="SetBackDate()">
+            </p-radioButton>
+            <p-table [value]="items.Data" [style]="{' text-align': 'center' ,'padding-left': '3.1%'}" *ngIf="items.Type ==3">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>{{'ResignationDisabled.ServiceItem' | translate}}</th>
+                        <th>{{'ResignationDisabled.ServiceName' | translate}}</th>
+                        <th>{{'ResignationDisabled.Disabled' | translate}}</th>
+                        <th>{{'ResignationDisabled.PreCloseDate' | translate}}</th>
+                        <th>{{'ResignationDisabled.Status1' | translate}}</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-item>
+                    <tr>
+                        <td>
+                            {{item.FunctionType}}
+                        </td>
+                        <td>
+                            {{item.ServiceCode}}
+                        </td>
+                        <td style="padding: 0% 9%;">
+                            <p-checkbox [disabled]="IsMrg != 'True'" name="groupname" [(ngModel)]="item.Disabled" binary="true">
+                            </p-checkbox>
+                        </td>
+                        <td>
+                            <!-- *ngIf="SetCloseDateSelect(item.PreCloseDate)" <p-calendar class="blue" appendTo="body" dateFormat="yy/mm/dd"
+                                [(ngModel)]="item.PreCloseDate" [disabled]="item.Disabled==false"
+                                [disabledDays]="[0,1,3,4,5,6]" [maxDate]="items.CloseDate">
+                                {{item.PreCloseDate}}
+                            </p-calendar> -->
+                            <!-- this.forceStatus == 'ThreeOfOneAdmin' || -->
+                            <p-dropdown *ngIf="item.Disabled && this.items.TOFormStatus == 'ThreeOfOneWait'" appendTo="body" styleClass="closeDateDropdown" class="blue" [options]="this.DetailCloseDate" required [style]="{ width: '100%' ,opacity: 1,'color': 'blue'  }" [(ngModel)]="item.PreCloseDate"
+                                [disabled]="item.Disabled==false && IsMrg != 'True'" [panelStyle]="{'color': 'blue'}">
+                            </p-dropdown>
+                            <!-- {{'ResignationDisabled.LastSelectDate' | translate}} -->
+                            <span style="padding-left: 2%;" *ngIf="this.items.TOFormStatus == 'ThreeOfOneWork'" class="blue">{{item.PreCloseDate |date:'yyyy/MM/dd'}}</span>
+                        </td>
+                        <td *ngIf="item.Status==this.StatusEnum.Doing">
+                            {{'ResignationDisabled.Doing' | translate}}
+                        </td>
+                        <td *ngIf="item.Status==this.StatusEnum.Finish">
+                            {{'ResignationDisabled.Finish' | translate}}
+                        </td>
+                        <td *ngIf="item.Status==this.StatusEnum.Stop">
+                            {{'ResignationDisabled.Stop' | translate}}
+                        </td>
+                        <td *ngIf="item.Status==this.StatusEnum.Apply">
+                            {{'ResignationDisabled.Apply' | translate}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+            <p style="width: 100%; padding-left: 3.1%;" *ngIf="items.Type ==3">
+                ({{'ResignationDisabled.CloseDateDescription' | translate}})
+            </p>
+            <p class="ui-g-6" style="width: 100%; padding-left: 3.1%;">{{"ResignationDisabled.Desc1" | translate}}
+                <span class="blue">{{this.MaxCloseDate|date:'yyyy/MM/dd'}}</span>
+            </p>
+            <p class="ui-g-6" style="width: 100%; padding-left: 3.1%;">{{"ResignationDisabled.Desc4" | translate}}</p>
+        </div>
+    </div>
+</p-panel>
+<p>{{'ResignationDisabled.AccountDeviceStatus' | translate}} : {{'Type.'+items.FormStatus | translate}}</p>
+<app-sign-footer [signFormID]='BackSignId' [DescDisplay]='false'></app-sign-footer>

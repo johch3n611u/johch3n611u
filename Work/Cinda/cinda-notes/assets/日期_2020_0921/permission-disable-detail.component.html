@@ -1,0 +1,65 @@
+<app-sign-header [signFormID]='signFromID' (outputSend)='Send($event)' [isEdit]='false'
+    [ApplicationCategory]="'PermissionDisableList'" (outputClose)='Close($event)' (outputapproved)="Approve($event)">
+</app-sign-header>
+
+<p-card>
+
+    <div class="ui-g-12" *ngIf="close<now" style="margin-bottom: 5px;">
+        <p-button label="{{'Button.disable'|translate}}" class="ui-g-2" (click)="display=true"></p-button>
+    </div>
+    <table style="min-width: 100%; text-align: center;">
+        <tr>
+            <th colspan="9" class="FakeTable">{{'Disable.title'|translate}}</th>
+        </tr>
+        <tr>
+            <th colspan="1" class="FakeTable">{{'Disable.Applicant'|translate}}</th>
+            <td colspan="8">{{item.Applicant}}</td>
+        </tr>
+        <tr>
+            <th colspan="1" class="FakeTable">{{'Disable.Reason'|translate}}</th>
+            <td colspan="8">{{item.Reason}}</td>
+        </tr>
+        <tr class="FakeTable">
+            <th>{{'Disable.Item'|translate}}</th>
+            <th>{{'Disable.FunctionType'|translate}}</th>
+            <th>{{'Disable.UseType'|translate}}</th>
+            <th>{{'Disable.AssetId'|translate}}</th>
+            <th>{{'Disable.ApplyId'|translate}}</th>
+            <th>{{'Disable.Name'|translate}}</th>
+            <th>{{'Disable.Serial'|translate}}</th>
+            <th>{{'Disable.Module'|translate}}</th>
+            <th>{{'Disable.CloseDate'|translate}}</th>
+        </tr>
+        <tr *ngFor="let row of item.Data" class="FakeTr">
+            <td>{{row.Item}}</td>
+            <td>{{row.FunctionType}}</td>
+            <td></td>
+            <!-- <td *ngIf="row.UseType==UsetypeEnum.Long">
+                {{ "FormMain.Long" | translate }}</td>
+            <td *ngIf="row.UseType==UsetypeEnum.Short">
+                {{ "FormMain.Short" | translate }}
+                ({{ item.StartDate| date:'yyyy-mm-dd'}}/{{ item.EndDate| date:'yyyy-mm-dd'}})
+            </td> -->
+            <td>{{row.AssetId}}</td>
+            <td>{{row.ApplyId}}</td>
+            <td>{{row.Name}}</td>
+            <td>{{row.Serial}}</td>
+            <td>{{row.Module}}</td>
+            <td>{{row.CloseDate|date:'yyyy-MM-dd'}}</td>
+
+        </tr>
+        <tr>
+            <th class="FakeTable">{{'Disable.Desc'|translate}}</th>
+            <td colspan="8">{{item.Desc}}</td>
+        </tr>
+    </table>
+</p-card>
+<app-sign-footer [signFormID]='signFromID'></app-sign-footer>
+<p-dialog header="{{'Button.disable'|translate}}" [(visible)]="display">
+    <textarea class="ui-g-12" [(ngModel)]="this.item.Desc"></textarea>
+    <p-footer>
+        <button type="button" pButton icon="pi pi-check" (click)="display=false" label="Yes"></button>
+        <button type="button" pButton icon="pi pi-times" (click)="display=false" label="No"
+            class="ui-button-secondary"></button>
+    </p-footer>
+</p-dialog>

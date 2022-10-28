@@ -1,0 +1,241 @@
+
+
+問題 : 編碼置換多次，元件不確定有沒有做其他動作。
+
+
+
+
+***** 步驟 : cookie文本轉為密文 *****
+
+java原始碼 :  
+// Credential Ciphertext
+Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+SecretKeySpec secretKeySpec = new SecretKeySpec(Base64.decodeBase64(secretKey), "AES");
+IvParameterSpec ivParameterSpec = new IvParameterSpec(Base64.decodeBase64(iv));
+cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
+String ciphertext = Base64.encodeBase64String(cipher.doFinal(plaintext.getBytes(StandardCharsets.UTF_8.name())));
+
+檢查點 AES/CBC 、 base64 、 UTF_8
+
+
+
+***** 模組 : cipher *****
+組件 : secretkeyspec 
+參考 : https://yowlab.shps.kh.edu.tw/javadocs/javax/crypto/spec/SecretKeySpec.html
+功能 : secretkeyspec (byte[] 密鑰 , string 加密方法) - 根據給定的位元組陣列建構一個密鑰。
+
+組件 : IvParameterSpec 
+參考 : https://yowlab.shps.kh.edu.tw/javadocs/javax/crypto/spec/IvParameterSpec.html
+功能 : IvParameterSpec  (byte[] iv ) - 使用 iv 中的位元組作為 IV 來建構一個 IvParameterSpec 物件。
+
+方法 : cipher.getInstance 
+參考 : https://www.geeksforgeeks.org/java-signature-getinstance-method-with-examples/
+功能 : 用於返回實現指定簽名算法的Signature對象。
+
+方法 : cipher.init 
+參考 : https://yowlab.shps.kh.edu.tw/javadocs/
+功能 : cipher.init(模式(此處使用加密模式) , key加密密鑰(此處使用secretkeyspec) , random隨機源(此處使用IvParameterSpec) ) - 初始化該cipher
+
+方法 : cipher.doFinal 
+參考 : https://yowlab.shps.kh.edu.tw/javadocs/
+功能 : cipher.init(byte[] input 輸入緩衝區) - 依cipher內容操作加密或解密資料，或者結束一個多部分操作。
+
+
+
+
+***** 模組 : Base64 *****
+方法 : Base64.decodeBase64 
+參考 : https://www.runoob.com/java/java8-base64.html
+功能 : 返回：包含解碼數據的數組。
+
+方法 : encodeBase64String 
+參考 : https://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/binary/Base64.html#encodeBase64String-byte:A-
+功能 : 返回一個包含Base64字符的字符串。
+
+***** 模組 : StandardCharsets *****
+方法 : StandardCharsets.UTF_8
+參考 : https://docs.oracle.com/javase/7/docs/api/java/nio/charset/StandardCharsets.html
+功能 : 八位UCS轉換格式
+
+方法 : StandardCharsets.UTF_8.name
+參考 : https://www.javatpoint.com/post/java-enum-name-method
+功能 : 方法返回此枚舉的名稱。
+
+
+
+
+
+
+
+
+
+***** 步驟 : 加密參數為簽章 *****
+
+java原始碼 : 
+// Credential Signature
+String signatureSource = String.format("%s%s%s%s", timestamp, token, saltKey, ciphertext);
+SecretKey signatureSecretKey = new SecretKeySpec(secretKey.getBytes(StandardCharsets.UTF_8.name()), "HmacSHA512");
+Mac mac = Mac.getInstance("HmacSHA512");
+mac.init(signatureSecretKey);
+byte[] rawHmac = mac.doFinal(signatureSource.getBytes(StandardCharsets.UTF_8.name()));
+byte[] hexBytes = new Hex().encode(rawHmac);
+String signature = new String(hexBytes, StandardCharsets.ISO_8859_1.name());
+
+檢查點 HmacSHA512 、 UTF_8 、 Hex 、 ISO_8859_1
+
+
+
+
+***** 模組 : secretkey *****
+組件 : SecretKeySpec
+參考 : https://yowlab.shps.kh.edu.tw/javadocs/
+建構子摘要 : SecretKeySpec(byte[] key(此處使用secretKey UTF_8), String (此處使用HmacSHA512)算法) 根據給定的位元組陣列建構一個密鑰。
+
+
+**** 模組 : Mac *****
+組件 : Mac 基於秘密密鑰提供一種方式來檢查在不可靠介質上進行傳輸或存儲的資訊的完整性。
+方法 : Mac.getInstance("HmacSHA512") 用於返回實現指定簽名算法的Signature對象。
+方法 : mac.init(signatureSecretKey) 初始化該mac
+方法 : mac.doFinal(signatureSource.getBytes(StandardCharsets.UTF_8.name()))  處理給定的 byte 陣列並完成 MAC 操作。
+方法 : Hax()十六進位
+
+
+
+
+
+
+
+
+***** VB 開發中程式碼 *****
+
+Imports System.Text
+Imports System.IO
+Imports YahooAPI2.YahooApi
+Imports System.Security.Cryptography
+Imports System.Reflection
+Imports System.Configuration
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+Imports System.Net
+
+#Region "YahooShoppingSCM_API_request_header_加密方式"
+    '依雅虎購物商城api_sign in_WSSID規格需求加密
+    Public Function YSSCM_header_forcookic()
+
+        'HTTP_request需求包含4個 header (api-token、api-version、api-timesta、api-signture)與 Credential密文(加密後的cookie)
+        '雅虎購物中心API_KEY查詢 : https://scm.monday.com.tw/ApprovalForm/Query/ApiKeyQuery.aspx
+
+
+
+        'request實際欄位名稱為 api-timestamp 為Request發送當下的UnixTimestamp，例如1548225833，此Timestamp的有效期限為90秒
+        Dim timestamp As String = Int((DateTime.UtcNow - New DateTime(1970, 1, 1, 0, 0, 0)).TotalSeconds)
+        'request實際欄位名稱為 api-token 為API Key查詢頁提供之Token
+        Dim token As String = "Supplier_478"
+        '供應商編號
+        Dim supplierId As Integer = 478
+        '為API Key查詢頁提供之KeyValue
+        Dim secretKey As String = "yrsW8ukCXsEZOkKmegF7T2WrK0MTq9U2jH3DmSIod24="
+        '為API Key查詢頁提供之KeyIV
+        Dim iv As String = "MmThDVTcmRpN5jFgzxb+nQ=="
+        '為API Key查詢頁提供之SaltKey
+        Dim saltKey As String = "doTzTL6Ev0ttm2OF3kxpzloGTtxky1eI"
+        'request實際欄位名稱為 api-Version 為API Key查詢頁提供之Version
+        Dim Version As String = "1"
+
+
+        '***** Credential Plaintext 憑證文本 *****
+
+        Dim cookie As New Newtonsoft.Json.Linq.JObject
+        cookie.Add("supplierId", supplierId)
+        Dim plaintext As String = cookie.ToString
+
+
+        '***** Credential Signature 憑證密文 *****
+        '參考文章 : https://stackoverflow.com/questions/5987186/aes-encrypt-string-in-vb-net
+        '參考文章 : https://dotblogs.com.tw/yc421206/archive/2012/04/18/71609.aspx
+        'AES / CBC / PKCS5Padding 加密方式
+        '此步驟使用到 supplierId / secretKey / iv
+
+        Dim aes As AesCryptoServiceProvider = New AesCryptoServiceProvider()
+
+        Dim key As Byte() = Convert.FromBase64String(secretKey)
+        Dim iv2 As Byte() = Convert.FromBase64String(iv)
+        Dim dataByteArray As Byte() = Encoding.UTF8.GetBytes(supplierId)
+
+        aes.Key = key
+        aes.IV = iv2
+
+        Dim ms As MemoryStream = New MemoryStream()
+        Dim cs As CryptoStream = New CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write)
+        cs.Write(dataByteArray, 0, dataByteArray.Length)
+        cs.FlushFinalBlock()
+        Dim ciphertext As String = ""
+        ciphertext = Convert.ToBase64String(ms.ToArray())
+
+        '***** Credential Signature 憑證簽章 *****
+        '參考文章 : https://kknews.cc/zh-tw/code/33bzv9y.html
+        'hmacsha512 加密方式
+        '此步驟使用到 timestamp / token / saltKey / secretKey
+
+        Dim signatureSource As String = String.Format("{0}{1}{2}{3}", timestamp, token, saltKey, ciphertext)
+
+        Dim utf8 As UTF8Encoding = New UTF8Encoding()
+        Dim keyByte As Byte() = utf8.GetBytes(secretKey)
+        Dim HMACSHA512 As HMACSHA512 = New HMACSHA512(keyByte)
+        Dim messageBytes As Byte() = utf8.GetBytes(signatureSource)
+        Dim hashmessage As Byte() = HMACSHA512.ComputeHash(messageBytes)
+
+
+        Dim builder As New StringBuilder(hashmessage.Length * 2)
+        For Each data As Byte In hashmessage
+            builder.Append(Convert.ToString(data, 16).PadLeft(2, "0"c).PadRight(2, " "c))
+        Next
+
+        Dim metadata As Byte() = Encoding.UTF8.GetBytes(builder.ToString)
+
+
+        Dim signaturebyte As Byte() = Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding("iso-8859-1"), metadata)
+        Dim signature As String = System.Text.Encoding.Default.GetString(signaturebyte)
+
+
+        '***** 將包裹塞入封包header *****
+
+        ' 創建一個新的WebClient實例.
+        Dim ysscmAPI_webclient As New WebClient()
+        ysscmAPI_webclient.Encoding = Encoding.UTF8
+        Dim postUrl As String = "https://tw.supplier.yahoo.com/api/spa/v1/signIn"
+
+        ' 注意這種拼字符串的ContentType
+        ysscmAPI_webclient.Headers.Add("api-token", token)
+        ysscmAPI_webclient.Headers.Add("api-keyversion", Version)
+        ysscmAPI_webclient.Headers.Add("api-timestamp", timestamp)
+        ysscmAPI_webclient.Headers.Add("api-signature", signature)
+
+        ' 轉化成二進制數組
+        Dim byteArray As Byte() = Encoding.Default.GetBytes("ciphertext")
+        Dim postdata As String = JsonConvert.SerializeObject(ciphertext)
+
+        ' 上傳數據，並獲取返回的二進制數據.UploadData(postUrl, "POST", byteArray) UploadString(postUrl, postdata)
+        Dim Result As String = ""
+        Dim WebResponse As String
+        Try
+
+
+            WebResponse = ysscmAPI_webclient.UploadString(postUrl, postdata)
+
+
+
+        Catch ex As Exception
+
+        End Try
+
+
+        'Result = Encoding.UTF8.GetString(WebResponse)
+
+
+
+        ysscmAPI_webclient.Dispose()
+
+    End Function
+
+#End Region

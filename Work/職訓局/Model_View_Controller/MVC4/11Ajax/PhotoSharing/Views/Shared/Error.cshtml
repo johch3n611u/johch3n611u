@@ -1,0 +1,31 @@
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width" />
+        <title>忙碌中</title>
+    </head>
+    <body>
+        <hgroup>
+            <h1>伺服器忙碌中...</h1>
+            <h2>伺服器忙碌中，請稍後再試。</h2>
+        </hgroup>
+    </body>
+    </html>*@
+
+@model System.Web.Mvc.HandleErrorInfo
+
+@{
+
+}
+
+<h1>伺服器忙碌中...</h1>
+<h2>伺服器忙碌中，請稍後再試。</h2>
+<fieldset>
+    <legend>錯誤資訊</legend>
+    ControllerName:@Model.ControllerName<br />
+    ActionName:@Model.ActionName<br />
+    Exception:@Model.Exception.GetType().ToString()<br />
+    Message:@Model.Exception.Message<br />
+</fieldset>
+

@@ -1,0 +1,14 @@
+﻿'/////////////////////////////////////////////////////////////////////////////////
+' 關連程式:呼叫商品雅虎購物中心上架API
+' 相關聯檔案:App_Code/YahooShoppingSCM_API.vb
+'           App_Code/AmazonUploadFile.vb
+'           http://v3.eclifeapi.com.tw/api/Bucket/PutObject
+'           web.config 解除Webform既定防護機制避免後端無法存取HTML原始碼
+'                  <location path="mng/Unitech/yahooshoppingscm/Form_CRUD_Save.aspx">
+'                     <system.web>
+'                        <pages validateRequest="false"/>
+'                        <httpRuntime requestValidationMode="2.0"/>
+'                     </system.web>
+'                  </location>
+'  
+'/////////////////////////////////////////////////////////////////////////////////
