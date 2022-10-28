@@ -1,4 +1,4 @@
-* 參考 <https://www.slideshare.net/ccckmit/20-57269452>
+<!-- 參考 https://www.slideshare.net/ccckmit/20-57269452 -->
 
 ## 引言
 
