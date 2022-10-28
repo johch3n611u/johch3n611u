@@ -135,8 +135,12 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 
 ### ✦ <a href="https://www.eclife.com.tw/"> Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
+公司為品牌代操兼物流、自研發系統，同時也有自我品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，包含幾十個以上的站頁、系統資料庫，超過百支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
+ 
 <br><br><br>
 
+##  
+ 
 ## Education
 
 ### ✦ <a href="https://github.com/johch3n611u/Course-of-Mobile-Commerce-System-Design-and-Development/blob/master/README.md"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
