@@ -158,7 +158,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 ### ✦ <a href="https://www.landscape.fju.edu.tw/"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
 * [造園施⼯⼄、丙級技術⼠] 全國技術士技能檢定 , Summer 2015
-* [河廊組⾦獎、鐵橋組銅獎] ⾼屏溪左岸時代印記創意競賽 - 國際學⽣競圖 , Jan 2017
+* [河廊組⾦獎、鐵橋組銅獎](https://issuu.com/layout1165/docs/___compressed) ⾼屏溪左岸時代印記創意競賽 - 國際學⽣競圖 , Jan 2017
 * [班級 第⼆名] 饒⽂忠設計成績優異獎 , Summer 2016
 * [入圍] 第⼗⼀屆中華⺠國 - 全國景觀設計學⽣競圖 , Dec 2016
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
