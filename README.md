@@ -148,7 +148,8 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 除了開發「行動商務系統平台」所需的各項技能外，還有完整的軟體資訊系統開發過程及方法，<br>
 認識軟體產業之工作內容與生態，結訓後具備軟體開發工程師的各項技能。<br>
  
-* <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019 // Framework - ASP.NET - MVC 5 C# & Server-side Render - Razor & Bootstrap 4 & RWD
+* <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019 
+  - Framework - ASP.NET - MVC 5 C# & Server-side Render - Razor & Bootstrap 4 & RWD
 
 ### <a href="http://www.shinda.com.tw"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
