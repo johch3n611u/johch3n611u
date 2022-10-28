@@ -139,7 +139,7 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
  
 <br><br><br>
 
-##  
+## Side Project
  
 ## Education
 
