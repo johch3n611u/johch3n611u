@@ -139,11 +139,11 @@ Other：Figma、Adobe (XD、PS、AI)、AutoCad、Sketchup、Lumion etc...
 
 ## Education
 
-### <a href="http://www.shinda.com.tw"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
+### <a href="[http://www.shinda.com.tw](https://github.com/johch3n611u/Course-of-Mobile-Commerce-System-Design-and-Development/blob/master/README.md)"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
 
 `Course-of-Mobile-Commerce-System-Design-and-Development`
 
-此課程為期六個月全日班，主要訓練內容為「Web資訊系統平台開發」及「行動裝置APP開發」兩大領域，<br>
+此課程為期900小時全日制訓練，主要內容為「Web資訊系統平台開發」及「行動裝置APP開發」兩大領域，<br>
 涵蓋「網站系統開發」、「資料庫設計與開發」、「行動裝置APP開發」、「系統分析與設計」，<br>
 除了開發「行動商務系統平台」所需的各項技能外，還有完整的軟體資訊系統開發過程及方法，<br>
 認識軟體產業之工作內容與生態，結訓後具備軟體開發工程師的各項技能。<br>
