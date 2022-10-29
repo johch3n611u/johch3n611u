@@ -139,7 +139,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
  
 <details>
 
-### 日常開發與維護
+#### 日常開發與維護
 
 > 1. **專案較複雜的頁面由設計部門完成頁面切版、 Banner 、 EDM 等 UI，** </br>
 > 2. **協同數據發展部與需求單位與工程師討論 UX 並完成。** </br>
@@ -147,7 +147,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 > 4. **工程師團隊工作橫以品牌切割從前端、後端至資料庫與架站、排程。** </br>
 > 5. **縱為各品牌之間維護需求或功能新增相互支援。** </br>
 
-### 工作技能
+#### 工作技能
 
 Major
 
@@ -159,7 +159,7 @@ Secondary
 
 **註 :** .Net Core 架構，因從 ASP.NET MVC 轉上去的，所以沒有使用到 DI Container 撰寫 Service 、 Component ，使用公司自製的 Module 類別核心，使用少量的 ADO.NET Entity Framework ， 大部分使用 Dapper ORM 套件，操作 Transact-SQL 查詢語言。
 
-### 達成目標
+#### 達成目標
 
 > * [兩個禮拜內] 從只會 C# 與較熟悉 .Net MVC ，到熟悉前端 EasyUI 函式庫、後端 .net Webform 框架、 VB 語言。所架構之前台後台系統。
 >
@@ -167,9 +167,9 @@ Secondary
 >
 > * [第二個月末至第四個月末] 從不會 Winform 到獨立處理購物中心上架 API 約一萬行的程式，包含十三隻 API 功能，加密與後台 ERP 系統串接。
 
-### 工作項目
+#### 工作項目
 
-#### 專案開發
+##### 專案開發
 
 <details>
 <summary>MPA SSR CRM 平台 部分專案</summary>
@@ -224,7 +224,7 @@ Secondary
 
 </details>
 
-#### 需求單開發與維護
+##### 需求單開發與維護
 
 * MPA SSR 前台 需求單
   <details><summary>動態 Menu 首頁</summary>
