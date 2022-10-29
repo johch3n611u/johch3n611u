@@ -149,15 +149,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 #### 工作技能
 
-Major
-
 > **C# / VB / MPA / SSR / ASP.NET 4.7 / MVC 5 / WebForm / WebAPI / Winform ...**
-
-Secondary
-
 > **.NET Core 2.1 / Razor / SPA / CSR / HTML5 / Vue.js ...**
-
-**註 :** .Net Core 架構，因從 ASP.NET MVC 轉上去的，所以沒有使用到 DI Container 撰寫 Service 、 Component ，使用公司自製的 Module 類別核心，使用少量的 ADO.NET Entity Framework ， 大部分使用 Dapper ORM 套件，操作 Transact-SQL 查詢語言。
 
 #### 達成目標
 
@@ -165,11 +158,9 @@ Secondary
 >
 > * [第三個禮拜至離開前] 協助 CRM 平台專案架構，前端 @Razor 、後端 .net MVC 、 MSSQL 、 IIS 等相關網管協定之架設與程式撰寫、 WebAPI 串接。
 >
-> * [第二個月末至第四個月末] 從不會 Winform 到獨立處理購物中心上架 API 約一萬行的程式，包含十三隻 API 功能，加密與後台 ERP 系統串接。
+> * [第二個月末至第四個月末] 從不會 Winform 到獨立處理購物中心上架 API 程式，包含十三隻 API 功能，加密與後台 ERP 系統串接。
 
-#### 工作項目
-
-##### 專案開發
+#### 工作項目 [專案開發]
 
 <details>
 <summary>MPA SSR CRM 平台 部分專案</summary>
@@ -224,7 +215,7 @@ Secondary
 
 </details>
 
-##### 需求單開發與維護
+#### 工作項目 [需求單開發與維護]
 
 * MPA SSR 前台 需求單
   <details><summary>動態 Menu 首頁</summary>
