@@ -422,7 +422,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 * [入圍] 第⼗⼀屆中華⺠國 - 全國景觀設計學⽣競圖 , Dec 2016
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QOgFSvcloX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/embed/QOgFSvcloX8)
 
 ### ✦ <a href="https://www2.isu.edu.tw/2018/homepage_v01.php?dept_mno=652"> 義守大學資訊管理系 </a> , 2013 ~ 2014
 
