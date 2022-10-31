@@ -1,0 +1,346 @@
+<!-- CSS Slicing (PSD to HTML) History & Sample -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="inscription">
+        <h1> CSS Slicing (PSD to HTML) History & <a href="#Sample">Sample</a> </h1>
+
+        <h4>Reference
+            <a href="https://training.pada-x.com/docs/article.jsp?key=css-layout-float-inline-block-flex-grid">1.脈絡 - 澎澎學院</a>、
+            <a href="https://www.youtube.com/watch?v=SnsAxb4-gHA">2.範例 - CSSCoke</a>、
+            <a href="https://ithelp.ithome.com.tw/articles/10191240">3.歷史 - 好想工作室_Chris</a>、
+            <a href="https://zh-tw.learnlayout.com/">4.基礎 - Will保哥</a>、
+            <a href="https://blog.kdchang.cc/2016/10/11/responsive-web-design-tutorial-introduction/">5.RWD基礎教學 - 張凱迪</a>
+        </h4>
+        <hr/>
+        <h2>History</h2>
+        <ul>
+            <li>
+                <B>Personal Computer</B>
+            </li>
+            ( Fixed Size of Screen Monitor )
+            <ul>
+                <li>Layout by
+                    <code>Float</code> Attributes Since 2000</li>
+                <code>Float</code> Attributes Still Alive in Modern Web Design。<br/>
+                <div class="wordcard">CORE : Float Automatic Typesetting，It Almost Meet All Layout Needs。
+                    <hr/> KEYWORD : float: left | right、clear: both | left | right、Clear Fix。</div>
+                <li>Layout by
+                    <code>Table</code>、
+                    <code>Frame</code> Tag Since 2002</li>
+                <ul>
+                    <li>Newsletter、EDM Still Used <code>Table</code> Layout。(Fast & Intuitive)</li>
+                    <li><code>Frame</code> Tag Used on Sidebar Usually in The Past。</li>
+                    <li>Important !!! <code>Frame</code> Tag Not Supported in HTML5。(Substitute Iframe Tag)</li>
+                </ul>
+            </ul>
+        </ul>
+        <ul>
+            <li>
+                <B>Modern Web</B>
+            </li>
+            ( Mobile First、Unobtrusive JavaScript、Progressive Enhancement )
+            <ul>
+                <li>Layout by
+                    <code>Display : Inline-Block</code> Attributes Since 2008</li>
+                <div class="wordcard">CORE : Simpler Than Float Attributes to Align up and down and left and right。
+                    <hr/> KEYWORD : display: inline-block、text-align: left | center | right、vertical-align: top | middle | bottom。(Collocation width & height & box-sizing...)</div>
+                <li>Layout by
+                    <code>Display : Flex</code> Attributes Since 2012</li>
+                <div class="wordcard">CORE : One-Dimensional Typesetting Tool，The Most Mature and Widely Used Technique in Recent Years，Improve the Defects of Inline-Block in Settings and Provide a Dedicated and Complete Solution。
+                    <hr/> KEYWORD : flex: none | auto、flex: none | auto、justify-content: flex-start | center | flex-end、align-items: flex-start | center | flex-end。</div>
+                <li>Layout by
+                    <code>Display : Grid</code> Attributes Since 2017</li>
+                <div class="wordcard">CORE : Two-Dimensional，Concept-Like Table-Cutting Ability，and Maintain Complete Design Flexibility，At First, There Were Not Many Browsers That Supported Grid. However, Almost All New-Generation Browsers Have supported It Now. Even IE 11
+                    Supports。
+                    <hr/> KEYWORD : display: grid、grid-template: Grid cutting settings、justify-items, align-items、grid-column, grid-row。</div>
+            </ul>
+        </ul>
+        <ul>
+            <li>
+                <B>SPA Since 2003</B>
+            </li>
+            ( Single-Page Application )( Modules、Components )<br/>
+            <div class="wordcard">CORE : Is a Web Application or Website That Interacts With the Web Browser by Dynamically Rewriting the Current Web Page With New Data From The Web Server, Instead of The Default Method of The Browser Loading Entire New Pages. The Goal is
+                Faster Transitions That Make the Website Feel More Like a Native App。
+                <hr/> KEYWORD : CSS Preprocessor SASS | LESS | Stylus | PostCSS ...、JavaScript Framework React | Angular | Vue ...(Use Preprocessor to JavaScript Code Like Node.js-Webpack)
+            </div>
+        </ul>
+        <ul>
+            <li>
+                <B>RWD Since 2010</B>
+            </li>
+            ( Responsive Web Design )
+
+            <div class="wordcard">CORE : Is an Approach to Web Design That Makes Web Pages Render Well on a Variety of Devices and Window or Screen Sizes.Appropriate Rendering For Different Resolutions When Browsing。
+                <hr/> KEYWORD : Viewport、breakpoint、Media queries <code>@media</code>、Use Liquidity / Proportional Design System、Use Relative Proportions of Responsive Size Images / Viedos / Text</div>
+            <div class="wordcard">SAMPLE :
+                <br/> // 指定螢幕寬度為裝置寬度，畫面載入初始縮放比例 100%
+                <br/> &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                <br/> // 以下兩種設定都可以防止使用者做畫面縮放，將畫面鎖在縮放比例 100%
+                <br/> &lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"&gt;
+                <br/> &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
+                <hr/> @media (query) { /* CSS Rules used when query matches */ } <br/>
+                <br/> &lt;style&gt; &lt;!-- 當螢幕大小在 400 - 500px 間時使用 --!&gt;
+                <br/> @media (min-width: 400px) and (max-width: 500px){
+                <br/> h1 { color: fuchsia; }
+                <br/>.desc:after { content: " In fact, it's between 500px and 600px wide."; }
+                <br/> }&lt;/style&gt;
+                <hr/> 外觀設計模式 : <a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns?hl=zh-tw">詳細內容請閱 : Google RWD指南</a>
+                <br/>主體為流動 (mostly fluid)、欄內容下排 (column drop)、版面配置位移 (layout shifter)、微小調整 (tiny tweaks) 和畫布外空間利用 (off canvas)
+                <br/>
+
+            </div>
+        </ul>
+        <ul>
+            <li>
+                <B>PWA Since 2015</B>
+            </li>
+            ( Progressive Web Apps )
+            <br/>
+            <a href="https://blog.techbridge.cc/2018/10/13/pwa-in-action/">參考.1 TechBridge 技術共筆部落格</a><br/>
+            <a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=zh-tw">詳細內容請閱 : Google PWA指南</a>
+            <br/>是一種普通網頁或網站架構起來的網絡應用程式，但它可以以傳統應用程式或原生移動應用程式形式展示給用戶。這種應用程式形態視圖將目前最為現代化的瀏覽器提供的功能與行動裝置的體驗優勢相結合。
+            <div class="wordcard">KEYWORD : 瀏覽器的「新增到主畫面」的功能讓Web App 成為可能。
+                <hr/><code>Service Worker</code>以及<code>Manifest</code>、如果你能夠利用上面這兩項技術，讓你的 Web App 成功安裝在手機上並且看起來跟 Native App 沒兩樣，我覺得就能稱作是 PWA。by_huli</div>
+        </ul>
+        <ul>
+            <li>
+                <B>AMP Since 2016</B>
+            </li>
+            ( Progressive Web Apps )
+            <br/><a href="https://amp.dev/documentation/guides-and-tutorials/start/create/?referrer=ampproject.org">詳細內容請閱 : Google AMP指南</a>
+            <br/> 是Google帶領開發的開源專案，目的是為提升行動裝置對網站的存取速度。AMP也可指其衍生的標準和庫等專案成果。AMP在HTML等廣泛使用的網路技術基礎上進行改良，
+            <a href="https://blog.sharktech.tw/2018/02/07/google-amp">三大要素</a><code>AMP HTML</code>、<code>AMP JS</code>、<code>AMP Cache</code>。
+        </ul>
+        <hr/>
+        <h2 id="Sample">Layout Diplay System Sample by CSSCoke</h2>
+        <h6>Css Guide : 如何切版，並沒有絕對性的好或不好、適合與不適合，只有在有限的的條件下，找最符合需求的做法。 Ex: 為了增加相容性、彈性，犧牲結構碼單純、乾淨、易讀性。所以先決條件必須確認需求目標。</h6>
+
+        <div class="layoutSample">
+
+            <h3>01.</h3>
+            <div class="wrap sample1">
+                <table>
+                    <tr>
+                        <td class="pic">
+                            <div class="fakeimg"></div>
+                        </td>
+                        <td>
+                            <h2>Table 切版</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p>玩人創意設計有限公司 2015年7月9日 · 最早的網頁設計，是用table切版，特別的字是直接切出圖檔，說真的，速度真的蠻快的，後來趨勢是DIV+CSS，且字型幾字都要用崁入，盡量少用一點圖，這些工，是以前只用圖的二倍，因為字型全都要再轉檔，再加設崁入的語法，不是一個步驟就可以完成的。 但是，網頁設計的價格，隨著技術愈來愈複雜，價格卻都沒有漲，這樣的現象其實是很不好的，大家看到的網頁，不管有多漂亮，都不是只是一張圖，而是必須將每個元件都切成網頁元素，所以不要再覺得網頁設計貴了，本來就應該貴了，不管是設計、切版還是程式，每個專業都需要被尊重的!!
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>02.</h3>
+            <div class="wrap sample2">
+                <div class="pic">
+                    <div class="fakeimg"></div>
+                </div>
+                <div class="text">
+                    <h2>兩個 float 切版</h2>
+                    <p>無所不架 JA.anything -
+                        <a href="http://blog.ja-anything.com/2018/03/25/rwd%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88%E4%BA%94css-float%E5%B1%AC%E6%80%A7%EF%BC%9A2%E6%AC%84%E6%8E%92%E7%89%883%E7%A8%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F/">
+                        RWD網頁切版(五){CSS float屬性：2欄排版3種設定方式}
+                        </a> 2欄式網頁是最常見的排版之一，常用的方式有float和inline-block這種方式，這一篇介紹float的3種不同設定方法。 第1組：左右區塊都設定float:left; 第2組：左區塊設定float:left;，右區塊設定float:right; 第3組：左區塊設定float:left;，右區塊設定margin-left
+                    </p>
+                </div>
+            </div>
+
+            <h3>03.</h3>
+            <div class="wrap sample3">
+                <div class="pic">
+                    <div class="fakeimg"></div>
+                </div>
+                <div class="text">
+                    <h2>一個 float + margin 切版</h2>
+                    <p>無所不架 JA.anything -
+                        <a href="http://blog.ja-anything.com/2018/03/25/rwd%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88%E4%BA%94css-float%E5%B1%AC%E6%80%A7%EF%BC%9A2%E6%AC%84%E6%8E%92%E7%89%883%E7%A8%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F/">
+                        RWD網頁切版(五){CSS float屬性：2欄排版3種設定方式}
+                        </a> 2欄式網頁是最常見的排版之一，常用的方式有float和inline-block這種方式，這一篇介紹float的3種不同設定方法。 第1組：左右區塊都設定float:left; 第2組：左區塊設定float:left;，右區塊設定float:right; 第3組：左區塊設定float:left;，右區塊設定margin-left
+                    </p>
+                </div>
+            </div>
+
+            <h3>04.</h3>
+            <div class="wrap sample4">
+                <div class="pic">
+                    <div class="fakeimg"></div>
+                </div>
+                <div class="text">
+                    <h2>一個 float + overflow 切版 </h2>
+                    <p><code>(!!!overflow會排除避開掉float物件，或做完float後必須clear)<br/>.sample2:after 處理float或.warp使用overflow:hidden</code>
+                        <br/>無所不架 JA.anything -
+                        <a href="http://blog.ja-anything.com/2018/03/25/rwd%E7%B6%B2%E9%A0%81%E5%88%87%E7%89%88%E4%BA%94css-float%E5%B1%AC%E6%80%A7%EF%BC%9A2%E6%AC%84%E6%8E%92%E7%89%883%E7%A8%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E5%BC%8F/">
+                        RWD網頁切版(五){CSS float屬性：2欄排版3種設定方式}
+                        </a> 2欄式網頁是最常見的排版之一，常用的方式有float和inline-block這種方式，這一篇介紹float的3種不同設定方法。 第1組：左右區塊都設定float:left; 第2組：左區塊設定float:left;，右區塊設定float:right; 第3組：左區塊設定float:left;，右區塊設定margin-left
+                    </p>
+                </div>
+            </div>
+
+            <h3>05.</h3>
+            <div class="wrap sample5">
+                <div class="pic">
+                    <div class="fakeimg"></div>
+                </div>
+                <div class="text">
+                    <h2> absolute 切版 </h2>
+                    <p>
+                        <a href="http://nissentech.blogspot.com/2018/06/float.html">【網頁切版】想併排用float，想重疊用absolute - 尼桑的技術網站</a>
+                        <br/>使用時機：想要讓元素進行重疊 圖層關係：CSS與下面圖層愈上面，z-index愈大愈上面 Absolute定位：當下absolute時，元素會去找有設定relative的父元素為座標系定位，而如果都沒有就是以body為定位 缺點：absolute不會撐開父元素，因此如果元素本身太寬，會超出去。
+                        <hr/>float的缺點就是它不會撐開外部容器，所以需要加上clear讓外部容器正常撐開 如果Ａ元素開始不打算加入併排，就要在Ａ元素的CSS加上clear:both 建議把clear:both單獨寫在class=clearfix的div上，因為假設有n個需要clear，這樣就要必須改n個CSS（超級很麻煩），所以不如直接用div加在HTML上
+                    </p>
+                </div>
+            </div>
+
+            <h3>06.</h3>
+            <div class="wrap sample6">
+                <div class="text">
+                    <h2>
+                        <div class="fakeimg" style="display: inline-block;"></div>
+                        單欄 + 首行縮排 切版 </h2>
+                    <p>
+                        這種切版方式與上述其他有啥差異(圖片與文字合併再一起) ? 調整彈性、支援度、資料的解讀、復用 ? 列印 ?
+                    </p>
+                    <hr/>
+                    <p>『這個畫面要怎麼切? 』這大概是 Amos 最常被問到的問題了，此外一個經常被問到的則是『我這樣切對不對?』，而我的回覆也都差不多是一樣的『這樣切OK啊 ! 』，但同個畫面，兩三個不同人切出來的不同code為何都是同樣的回答呢? 就讓我們用影片一次解答這個問題吧。 歡迎Line搜尋『@CSScoke』加入Amos公開帳號
+                    </p>
+                </div>
+            </div>
+
+            <h3>07.</h3>
+            <div class="wrap sample7">
+                <div class="text">
+                    <div class="fakeimg" style="display: inline-block;"></div>
+                    <h2 style="display: inline-block;">
+                        單欄 + 背景圖 切版
+                    </h2>
+                    <p><code>背景圖url進css處理會造成後端套版上的一些問題。</code>『這個畫面要怎麼切? 』這大概是 Amos 最常被問到的問題了，此外一個經常被問到的則是『我這樣切對不對?』，而我的回覆也都差不多是一樣的『這樣切OK啊 ! 』，但同個畫面，兩三個不同人切出來的不同code為何都是同樣的回答呢? 就讓我們用影片一次解答這個問題吧。 歡迎Line搜尋『@CSScoke』加入Amos公開帳號
+                    </p>
+                </div>
+            </div>
+
+            <h3>08.</h3>
+            <div class="wrap sample8">
+                <div class="text">
+                    <h2>
+                        <div class="fakeimg" style="display: inline-block;"></div>
+                        單欄 + 文字縮排 切版
+                    </h2>
+                    <p><code>6與8比較，8結構較乾淨</code>『這個畫面要怎麼切? 』這大概是 Amos 最常被問到的問題了，此外一個經常被問到的則是『我這樣切對不對?』，而我的回覆也都差不多是一樣的『這樣切OK啊 ! 』，但同個畫面，兩三個不同人切出來的不同code為何都是同樣的回答呢? 就讓我們用影片一次解答這個問題吧。 歡迎Line搜尋『@CSScoke』加入Amos公開帳號
+                    </p>
+                </div>
+            </div>
+
+            <h3>09.</h3>
+            <div class="wrap sample9">
+                <div class="pic">
+                    <div class="fakeimg"></div>
+                </div>
+                <div class="text">
+                    <h2>
+                        Flex 兩欄 切版
+                    </h2>
+                    <p>
+                        <a href="https://wcc723.github.io/css/2017/07/21/css-flex/">圖解：CSS Flex 屬性一點也不難| 卡斯伯Blog - 前端，沒有極限</a>
+                    </p>
+                    <p>
+                        <a href="https://5xruby.tw/posts/flex/">第一次用Flex 切版就上手 - 五倍紅寶石</a>
+                    </p>
+                    <code>flex: flex-grow</code> 子元件的伸展性
+                    <br/>子元件可以從剩下的空間裡額外得到多少比例的空間。
+                    <br/><code>flex: flex-shrink</code> 子元件的收縮性
+                    <br/>父元素的空間不夠放入所有子元件時，整體收縮的比例是多少。
+                    <br/><code>flex-basis</code> 指的則是子物件的最小寬度或高度。
+                    <br/><code>flex-direction</code> 可以決定子元件的排序方向
+                    <br/><code>flex-wrap</code> 則決定了子物件是否可以換行
+                    <br/>子物件的對齊設定: <code>justify-content | align-items | align-content</code>
+                </div>
+            </div>
+
+
+
+            <h3>10.</h3>
+            <div class="wrap sample10">
+                <div class="fakeimg" style="display: inline-block;"></div>
+                <h2>
+                    Grid 切版
+                </h2>
+                <div class="text">
+                    <p>
+                        <a href="https://medium.com/enjoy-life-enjoy-coding/css-%E6%89%80%E4%BB%A5%E6%88%91%E8%AA%AA%E9%82%A3%E5%80%8B%E7%89%88%E8%83%BD%E4%B8%8D%E8%83%BD%E5%A5%BD%E5%88%87%E4%B8%80%E9%BB%9E-grid-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95-cd763091cf70">
+                            CSS | 所以我說那個版能不能好切一點？ - Grid 基本用法- Enjoy ...
+                        </a>
+                    </p>
+                    <code>grid-template-rows</code> & <code>grid-template-columns</code> 劃分 X 及 Y 軸隔線
+                    <br/><code>grid-auto-rows</code> & <code>grid-auto-columns</code>
+                    <br/>自動使用設定的寬度將 Grid Box 補滿
+                    <br/><code>grid-auto-flow</code> 控制資料的流向是橫向或是垂直的
+                    <br/><code>fr</code> 總數做比例單位
+                    <br/><code>justify-content</code> & <code>align-content</code>
+                    <br/>對齊方式 主軸與次軸的分別就是以 <code>grid-auto-flow</code> 設定的值為主
+                    <br/><code>grid-area</code> 為 Grid Box 內的區塊設置名稱
+                    <br/><code>grid-area</code> 必須連續及不能斷開。只能是 X * Y 的矩形
+                    <br/><code>grid-template-areas</code> 以設定了 <code>gird-area</code> 名稱的區塊填滿每個格子
+                    <br/><code>grid-row & grid-column</code>
+                    <br/>將指定區塊放到 Grid Box 的起始線和終點線
+                </div>
+            </div>
+
+
+
+            <h3>11.</h3>
+            <div class="wrap sample11">
+                <div class="pic">
+                    <div class="fakeimg" style="display: inline-block;"></div>
+                </div>
+
+
+                <div class="text">
+                    <h2>
+                        Grid 兩欄 切版
+                    </h2>
+                    <p>
+                        <a href="https://medium.com/enjoy-life-enjoy-coding/css-%E6%89%80%E4%BB%A5%E6%88%91%E8%AA%AA%E9%82%A3%E5%80%8B%E7%89%88%E8%83%BD%E4%B8%8D%E8%83%BD%E5%A5%BD%E5%88%87%E4%B8%80%E9%BB%9E-grid-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95-cd763091cf70">
+                        CSS | 所以我說那個版能不能好切一點？ - Grid 基本用法- Enjoy ...
+                    </a>
+                    </p>
+                    <code>grid-template-rows</code> & <code>grid-template-columns</code> 劃分 X 及 Y 軸隔線
+                    <br/><code>grid-auto-rows</code> & <code>grid-auto-columns</code>
+                    <br/>自動使用設定的寬度將 Grid Box 補滿
+                    <br/><code>grid-auto-flow</code> 控制資料的流向是橫向或是垂直的
+                    <br/><code>fr</code> 總數做比例單位
+                    <br/><code>justify-content</code> & <code>align-content</code>
+                    <br/>對齊方式 主軸與次軸的分別就是以 <code>grid-auto-flow</code> 設定的值為主
+                    <br/><code>grid-area</code> 為 Grid Box 內的區塊設置名稱
+                    <br/><code>grid-area</code> 必須連續及不能斷開。只能是 X * Y 的矩形
+                    <br/><code>grid-template-areas</code> 以設定了 <code>gird-area</code> 名稱的區塊填滿每個格子
+                    <br/><code>grid-row & grid-column</code>
+                    <br/>將指定區塊放到 Grid Box 的起始線和終點線
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

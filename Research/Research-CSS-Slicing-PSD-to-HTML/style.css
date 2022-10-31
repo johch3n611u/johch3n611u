@@ -1,0 +1,207 @@
+code {
+    color: red;
+    display: inline-block;
+    border-radius: 3%;
+    border-style: ridge;
+    border-width: 2px;
+    padding: 1.2px;
+    border-color: palevioletred;
+}
+
+.wordcard {
+    font-size: 0.7em;
+    margin: 1em;
+    border-style: groove;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+.inscription {
+    display: inline-block;
+    background-color: #eee;
+    padding: 2em;
+    margin: 2em;
+    box-shadow: 0px 0px 9px gray;
+}
+
+div .fakeimg {
+    background-color: blue;
+    border: 15px solid blue;
+    border-radius: 50%;
+}
+
+.layoutSample * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrap {
+    padding: 10px;
+    width: 520px;
+    margin: 10px 20px;
+    box-shadow: 0px 0px 0px 1px #ccc;
+}
+
+h1 {
+    margin: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    padding-bottom: .4em;
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.pic {
+    padding-right: 10px;
+}
+
+.sample1 .pic {
+    vertical-align: top;
+}
+
+.sample2 .pic {
+    width: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sample2 .text {
+    box-sizing: border-box;
+    float: left;
+    width: 460px;
+}
+
+.sample2:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.sample3 .pic {
+    width: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sample3 .text {
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+
+.sample4 .pic {
+    width: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sample4 .text {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sample5 {
+    position: relative;
+    height: 270px;
+}
+
+.sample5 .pic {
+    width: 30px;
+    position: absolute;
+}
+
+.sample5 .text {
+    width: 470px;
+    position: absolute;
+    left: 50px;
+}
+
+.sample6 h2 {
+    padding-left: 40px;
+    text-indent: -40px;
+}
+
+.sample6 .fakeimg {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.sample6 p {
+    padding-left: 40px
+}
+
+.sample7 p {
+    padding-left: 40px;
+}
+
+.sample7 h2 {
+    padding-left: 5px;
+    background: url(#) no-repeat;
+}
+
+.sample8 {
+    padding-left: 50px;
+    width: 480px;
+}
+
+.sample8 h2 {
+    text-indent: -40px;
+}
+
+.sample8 h2 .fakeimg {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.sample9 {
+    display: flex;
+}
+
+.sample9 .fakeimg {
+    flex: 0 0 40px;
+}
+
+.sample9 .text {
+    flex: 1 1 480px;
+}
+
+.sample10 {
+    display: grid;
+    grid-auto-rows: auto 1fr;
+    grid-auto-columns: 40px 1fr;
+    grid-template-areas: 'pic title' '. text';
+}
+
+.sample10 .fakeimg {
+    grid-area: pic;
+    margin-right: 10px;
+}
+
+.sample10 h2 {
+    grid-area: title;
+}
+
+.sample10 .text {
+    grid-area: text;
+}
+
+.sample11 {
+    display: grid;
+    grid-auto-rows: auto auto;
+    grid-auto-columns: 40px 1fr;
+    grid-template-areas: 'pic text' '. text';
+}
+
+.sample11 .pic {
+    grid-area: pic;
+}
+
+.sample11 .text {
+    grid-area: text;
+}

@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.todo-list {
+    min-width: 45%;
+}
+
+.todo-list-body {
+    padding: 3%;
+}
+
+.todo-list-todos {
+    margin-top: 5%;
+}
+
+.todo-item {
+    margin: 3% 0;
+}
+
+.todo-list-todos-controller {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.todo-list-display-sort {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+    .todo-list-display-sort {
+        flex-direction: column;
+    }
+}
+
+.todo-list-display-sort>button {
+    margin: 2%;
+    padding: 1%;
+}

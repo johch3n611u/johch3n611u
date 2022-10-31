@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>!!! React。Todo-List_Demo !!!</title>
+    <link rel="stylesheet" type="text/css" href="/Todo-List_Demo/assets/css/reset-font-min.css" />
+    <link rel="stylesheet" type="text/css" href="/Todo-List_Demo/assets/css/clearfix.css" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <!-- https://github.com/jdan/98.css?fbclid=IwAR1rCsmipzAA5RBq3RInac7Pz4pCKIRp8Y0OzBRi-LsdSGlNplcgw2o4NMQ -->
+    <link rel="stylesheet" type="text/css" href="/Todo-List_Demo/assets/css/todolist.css" />
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+        
+        .active {
+            color: white;
+            background-color: blue;
+        }
+        
+        .chkbox {
+            -webkit-appearance: button !important;
+            opacity: 1 !important;
+            position: unset !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="todo-list">
+        <!-- This element's contents will be replaced with your component. -->
+    </div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="assets/js/todolist.js"></script>
+</body>
+
+</html>

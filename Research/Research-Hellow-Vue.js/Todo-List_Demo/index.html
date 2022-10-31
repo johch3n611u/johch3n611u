@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!!! Vue。Todo-List_Demo !!!</title>
+    <link rel="stylesheet" type="text/css" href="/Todo-List_Demo/assets/css/reset-font-min.css">
+    <link rel="stylesheet" type="text/css" href="/Todo-List_Demo/assets/css/clearfix.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <!-- https://github.com/jdan/98.css?fbclid=IwAR1rCsmipzAA5RBq3RInac7Pz4pCKIRp8Y0OzBRi-LsdSGlNplcgw2o4NMQ -->
+    <link rel="stylesheet" type="text/css" href="/Todo-List_Demo/assets/css/todolist.css">
+
+    <style>
+        .completed {
+            text-decoration: line-through
+        }
+        
+        .active {
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="todo-list" class="todo-list window">
+
+        <div class="todo-list-head title-bar">
+            <div class="todo-list-heading title-bar-text">Vue.js TodoList Demo：今日代辦項目</div>
+        </div>
+
+        <div class="todo-list-body window-body">
+
+            <div class="todo-list-new-todo">
+                <label for="new-todo">增加新項目：</label>
+                <input class="new-todo" v-model="newTodoText" id="new-todo" v-on:keyup.enter="addNewTodo" placeholder="例如：澆花。Enter ↲ 鍵入">
+            </div>
+
+            <ul class="todo-list-todos">
+                <li is="todo-item" v-for="(todo, index) in list" :todo="todo" :key="todo.id" :title="todo.title" v-on:remove="todos.splice(index, 1)"></li>
+            </ul>
+
+            <div class="todo-list-display-sort">
+                <button v-on:click="setFilter('show_all')" :class="{ active: filter === 'show_all'}">全部 ( {{ allCount }} )</button>
+                <button v-on:click="setFilter('show_completed')" :class="{ active: filter === 'show_completed'}">已完成 ( {{ completedCount }} )</button>
+                <button v-on:click="setFilter('show_incomplete')" :class="{ active: filter === 'show_incomplete'}">未完成 ( {{ incompleteCount }} )</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/Todo-List_Demo/assets/js/todolist.js"></script>
+
+</body>
+
+</html>
