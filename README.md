@@ -404,15 +404,19 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 * <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019
   - Framework - ASP.NET - MVC 5 C# & Server-side Render - Razor & Bootstrap 4 & RWD
 
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/10.gif)
+
 ### ✦ <a href="https://www.landscape.fju.edu.tw/"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
-[詳細內容請點擊觀看]()
+[詳細內容請點擊觀看](https://issuu.com/layout1165)
 
 * [造園施⼯⼄、丙級技術⼠] 全國技術士技能檢定 , Summer 2015
 * [[河廊組⾦獎、鐵橋組銅獎](https://issuu.com/layout1165/docs/___compressed)] ⾼屏溪左岸時代印記創意競賽 - 國際學⽣競圖 , Jan 2017
 * [班級 第⼆名] 饒⽂忠設計成績優異獎 , Summer 2016
 * [入圍] 第⼗⼀屆中華⺠國 - 全國景觀設計學⽣競圖 , Dec 2016
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QOgFSvcloX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### ✦ <a href="https://www2.isu.edu.tw/2018/homepage_v01.php?dept_mno=652"> 義守大學資訊管理系 </a> , 2013 ~ 2014
 
