@@ -163,7 +163,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 #### 工作項目 [專案開發]
 
 <details>
-<summary>MPA SSR CRM 平台 部分專案</summary>
+<summary>良興電商官網 MPA SSR CRM 平台 部分專案</summary>
 
 * 使用技術 : C# / .NET MVC 5 / SendGrid / Tableau / Power BI / Analytics.js / Embed.js / Chart.js / Google Chat API / Datatables.js / Sourcetree...
   * 需求: 根據數據分析部需求提供應用。
@@ -217,7 +217,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 #### 工作項目 [需求單開發與維護]
 
-* MPA SSR 前台 需求單
+* [MSI代操商城 MPA SSR 前台 需求單](https://tw-store.msi.com/)
   <details><summary>動態 Menu 首頁</summary>
 
    * 需求: [官網前台改版](https://twstore.msi.com/)
@@ -227,7 +227,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `AJAX 拋資料`
 
   </details>
-  <details><summary>商品包裝問券頁面、登入送購物金功能</summary>
+  <details><summary>Sastty 美妝代操商城 商品包裝問券頁面、登入送購物金功能</summary>
 
    * 需求: [官網前台改版](https://www.sastty.com.tw/)
      * 使用技術 : ASP.NET Page / CSS / Javascript / JQ / TSQL
