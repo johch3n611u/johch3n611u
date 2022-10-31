@@ -163,7 +163,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 #### 工作項目 [專案開發]
 
 <details>
-<summary>良興電商官網 MPA SSR CRM 平台 部分專案</summary>
+<summary>[良興電商官網 MPA SSR CRM 平台 部分專案](https://www.eclife.com.tw/)</summary>
 
 * 使用技術 : C# / .NET MVC 5 / SendGrid / Tableau / Power BI / Analytics.js / Embed.js / Chart.js / Google Chat API / Datatables.js / Sourcetree...
   * 需求: 根據數據分析部需求提供應用。
@@ -217,19 +217,19 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 #### 工作項目 [需求單開發與維護]
 
-* [MSI代操商城 MPA SSR 前台 需求單](https://tw-store.msi.com/)
-  <details><summary>動態 Menu 首頁</summary>
+* MPA SSR 前台 需求單
+  <details><summary>[MSI代操商城](https://tw-store.msi.com/) 動態 Menu 首頁</summary>
 
-   * 需求: [官網前台改版](https://twstore.msi.com/)
+   * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : MPA / SSR /jQ / AJAX / ASP.NET
        * [實作包含]
        * `TSQL 查詢`
        * `AJAX 拋資料`
 
   </details>
-  <details><summary>Sastty 美妝代操商城 商品包裝問券頁面、登入送購物金功能</summary>
+  <details><summary>[Sastty 美妝代操商城](https://www.sastty.com.tw/) 商品包裝問券頁面、登入送購物金功能</summary>
 
-   * 需求: [官網前台改版](https://www.sastty.com.tw/)
+   * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : ASP.NET Page / CSS / Javascript / JQ / TSQL
        * [實作包含]
        * `商品說明書上 QR-Code , 拍了之後連到官網問券`
@@ -240,16 +240,16 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `version 2 。 階層權限 Css 樣式覆蓋、 RWD 手機板畫面`
 
   </details>
-  <details><summary>春聯廣告頁</summary>
+  <details><summary>[Aimedia 製造商代操商城](https://www.aimedia.com.tw/)春聯廣告頁</summary>
 
-   * 需求: [根據行銷企劃部需求提供應用](https://www.aimedia.com.tw/)...
+   * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : jQ DOM / jQ library EasyUI / MPA / AJaX / ASP.NET ...
        * [實作包含]
        * `前台動態頁面`
        * `後台上稿功能`
 
   </details>
-  <details><summary>抽獎活動登入頁面</summary>
+  <details><summary>[Sastty 美妝代操商城](https://www.sastty.com.tw/) 抽獎活動登入頁面</summary>
 
    * 需求: 基本資料填寫，驗證後存庫。
      * 使用技術 : jQ / Js / Webforms
@@ -266,9 +266,9 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `無重複存入資料庫並轉回抽獎列表頁面`
 
   </details>
-  <details><summary>文章頁面</summary>
+  <details><summary>[lab101 美妝代操商城](https://www.lab101.asia/) 文章頁面</summary>
 
-   * 需求: [新增行銷露出頁面](https://www.lab101.asia/)。
+   * 需求: 新增行銷露出頁面。
      * 使用技術 : Primary CSS / EasyUI.js / ASP.NET / Youtube API
        * [實作包含]
        * `後台 EasyUI 行銷頁面類別與文章新增`
@@ -276,7 +276,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `後台資料前台樣式套版顯示`
 
   </details>
-  <details><summary>產品頁頁面</summary>
+  <details><summary>[lab101 美妝代操商城](https://www.lab101.asia/) 產品頁頁面</summary>
 
    * 需求: 訊息不明顯，購物車功能常駐頁面。
      * 使用技術 : JQ / Primary CSS
@@ -286,7 +286,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `後台資料前台樣式套版顯示`
 
   </details>
-  <details><summary>金流購物車付款頁面</summary>
+  <details><summary>[lab101 美妝代操商城](https://www.lab101.asia/) 金流購物車付款頁面</summary>
 
    * 需求: 選擇宅配時顯示地址表單，選擇超商付款時顯示超商 API 串接內容。並將資料傳回資料庫。
      * 使用技術 : JQ / webforms
@@ -302,7 +302,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
   </details>
 
 * ERP CMS EasyUI.js AJAX 後台 需求單
-  <details><summary>後台抽獎功能清單轉存功能</summary>
+  <details><summary>[Sastty 美妝代操商城](https://www.sastty.com.tw/) 後台抽獎功能清單轉存功能</summary>
 
   * 需求: 後台顯示前台抽獎頁面登入之內容，並有按鈕可以將清單轉出 Excel 。
      * 使用技術 : EasyUI.js
@@ -314,7 +314,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `EasyUI 匯出清單 Excel`
 
   </details>
-  <details><summary>後台 banner 上稿系統</summary>
+  <details><summary>[Sastty 美妝代操商城](https://www.sastty.com.tw/) 後台 banner 上稿系統</summary>
 
   * 需求: 後台顯示前台抽獎頁面登入之內容，並有按鈕可以將清單轉出 Excel 。
      * 使用技術 : MPA /jQ /AJaX / EasyUI.js / ASP.NET
@@ -325,7 +325,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `AJAX 拋資料`
 
   </details>
-  <details><summary>後台會員權限、預存排程管理、報表統計匯出功能、業務綁定報表功</summary>
+  <details><summary>[良興](https://www.eclife.com.tw/) 後台會員權限、預存排程管理、報表統計匯出功能、業務綁定報表功</summary>
 
   * 需求: 購物車未結帳資料建置，用以數據發展部測試弱 AI 廣告投放演算與行銷部 KPI 報表統計。
      * 使用技術 : TSQL / C# / .NET / EasyUI.js
@@ -339,7 +339,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
   </details>
 
 * Winform 需求單
-  <details><summary>FTP API 串接 排程載入資料庫</summary>
+  <details><summary>[全國電子代操商城](https://ec.elifemall.com.tw/) FTP API 串接 排程載入資料庫</summary>
 
   * 需求: 串接 API 載入 FTP 檔案，轉存資料庫，並設定自動排程。
      * 使用技術 : Winform
