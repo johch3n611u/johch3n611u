@@ -178,6 +178,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
     * `嵌入 Power BI、Tableau、Google Analytics API 報表顯示與應用`
     * `架設 Tableau Server`
     * `串接 Tableau API 並嵌入應用`
+  * ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/1.gif)
 
 </details>
 
