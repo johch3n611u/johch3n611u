@@ -390,6 +390,21 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 ## Side Project
 
+ <details><summary>[錢董財商遊戲](https://github.com/L1uXO330B7/CashFlowProject) 系統架構、細節處理</summary>
+
+   * 需求: WebSocket 多人即時遊戲
+     * 使用技術 : Angular2 14 / Scss / SignalR Core / Net Core ( Net 6 ) / Swagger ( Web API ) / JWT / Layered Architecture / EF Core
+       * [實作包含]
+       * `MiniProfiler Pipeline Filter 效能監測與 AOP 全局錯誤處理`
+       * `Swagger SQL 語句監測`
+       * `Router / Controllers / Services / Bll / DPL / UnitTests 分層`
+       * `Angular2：Components、Pipe、Services、Rxjs`
+       * `SignalR Core 搭配 Caching Memory 即時互動`
+
+  ![](https://www.cakeresume.com/cdn-cgi/image/fit=scale-down,format=auto,w=1080/https://images.cakeresume.com/dONJx/carl-liu/f86533cf-c405-4941-9d44-8b3cfeb780be.gif)
+
+  </details>
+
 ## Education
 
 ### ✦ <a href="https://www.taiwanjobs.gov.tw/internet/index/index.aspx"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
@@ -422,7 +437,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 * [入圍] 第⼗⼀屆中華⺠國 - 全國景觀設計學⽣競圖 , Dec 2016
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
 
-[![IMAGE ALT TEXT HERE](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/11.png)](https://www.youtube.com/embed/QOgFSvcloX8)
+[![Youtube Viedo](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/12.png)](https://www.youtube.com/embed/QOgFSvcloX8)
 
 ### ✦ <a href="https://www2.isu.edu.tw/2018/homepage_v01.php?dept_mno=652"> 義守大學資訊管理系 </a> , 2013 ~ 2014
 
