@@ -165,6 +165,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 <details>
  <summary><a href="https://www.eclife.com.tw/">良興電商官網</a> MPA SSR CRM 平台 部分專案</summary>
 
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/1.gif)
+
 * 使用技術 : C# / .NET MVC 5 / SendGrid / Tableau / Power BI / Analytics.js / Embed.js / Chart.js / Google Chat API / Datatables.js / Sourcetree...
   * 需求: 根據數據分析部需求提供應用。
     * [實作包含]
@@ -178,9 +180,6 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
     * `嵌入 Power BI、Tableau、Google Analytics API 報表顯示與應用`
     * `架設 Tableau Server`
     * `串接 Tableau API 並嵌入應用`
-
-![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/1.gif)
-
 </details>
 
 <details>
