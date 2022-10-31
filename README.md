@@ -390,7 +390,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 ## Side Project
 
- <details><summary>[錢董財商遊戲](https://github.com/L1uXO330B7/CashFlowProject) 系統架構、細節處理</summary>
+<details><summary><a href="https://github.com/L1uXO330B7/CashFlowProject">錢董財商遊戲</a> 系統架構、細節處理</summary>
 
    * 需求: WebSocket 多人即時遊戲
      * 使用技術 : Angular2 14 / Scss / SignalR Core / Net Core ( Net 6 ) / Swagger ( Web API ) / JWT / Layered Architecture / EF Core
@@ -401,9 +401,9 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `Angular2：Components、Pipe、Services、Rxjs`
        * `SignalR Core 搭配 Caching Memory 即時互動`
 
-  ![](https://www.cakeresume.com/cdn-cgi/image/fit=scale-down,format=auto,w=1080/https://images.cakeresume.com/dONJx/carl-liu/f86533cf-c405-4941-9d44-8b3cfeb780be.gif)
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/11.gif)
 
-  </details>
+</details>
 
 ## Education
 
@@ -438,7 +438,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
 
 <a href="https://www.youtube.com/embed/QOgFSvcloX8">
-<img src="https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/12.png" width="200" height="400"/>
+<img src="https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/12.png" width="400" height="270"/>
 </a>
 
 ### ✦ <a href="https://www2.isu.edu.tw/2018/homepage_v01.php?dept_mno=652"> 義守大學資訊管理系 </a> , 2013 ~ 2014
