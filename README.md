@@ -132,7 +132,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 ## Experience
 
-### ✦ <a href="http://www.shinda.com.tw"> 新達科技 Shinda Tech </a> , Sr. Web Developer , Jun 2020 ~ Sep 2022
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Web Developer , Jun 2020 ~ Sep 2022
 
 ### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
