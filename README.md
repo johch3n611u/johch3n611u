@@ -217,6 +217,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
     * `EasyUI 清單建置 CRUD`
     * `圖表 Chart.js 建置`
 
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
 </details>
 
 #### 工作項目 [需求單開發與維護]
@@ -230,6 +232,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `TSQL 查詢`
        * `AJAX 拋資料`
 
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/5.png)
+ 
   </details>
   <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝代操電商</a> 商品包裝問券頁面、登入送購物金功能</summary>
 
@@ -243,6 +247,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `手機板頁面`
        * `version 2 。 階層權限 Css 樣式覆蓋、 RWD 手機板畫面`
 
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/4.gif)
+ 
   </details>
   <details><summary><a href="https://www.aimedia.com.tw/">Aimedia 製造商代操商城</a>春聯廣告頁</summary>
 
