@@ -137,7 +137,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 ### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
 公司為品牌代操兼物流、自研發系統，同時也有自我品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，包含幾十個以上的站頁、系統資料庫，超過百支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
- 
+
 <details>
 
 #### 日常開發與維護
@@ -180,7 +180,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
     * `串接 Tableau API 並嵌入應用`
 
 ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/1.gif)
- 
+
 </details>
 
 <details>
@@ -203,7 +203,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
     * `協同同事取 Token 將影音圖片 Stream 提報雅虎 Amazon S3 上傳檔案`
 
 ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/2.gif)
- 
+
 </details>
 
 <details>
@@ -224,7 +224,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 #### 工作項目 [需求單開發與維護]
 
 * MPA SSR 前台 需求單
-  <details><summary><a href="https://tw-store.msi.com/">MSI代操電商</a> 動態 Menu 首頁</summary>
+  <details><summary><a href="https://tw-store.msi.com/">MSI 電商代操</a> 動態 Menu 首頁</summary>
 
    * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : MPA / SSR /jQ / AJAX / ASP.NET
@@ -233,9 +233,32 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `AJAX 拋資料`
 
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/5.png)
- 
+
   </details>
-  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝代操電商</a> 商品包裝問券頁面、登入送購物金功能</summary>
+  <details><summary><a href="https://myepson.epson.com.tw/">EPSON 電商代操</a> MPA 前台動態 Megamenu / 後台 banner 上稿 CMS</summary>
+
+   * 需求: 動態 Menu 改版。
+     * 使用技術 : MPA /jQ /AJaX / EasyUI / ASP.NET
+       * [實作包含]
+       * `CISCO VPN串接`
+       * `TSQL 查詢`
+       * `AJax 拋資料`
+
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/6.gif)
+
+  </details>
+  <details><summary><a href="https://www.aimedia.com.tw/">Aimedia 製造商代操商城</a>春聯廣告頁</summary>
+
+   * 需求: 根據行銷企劃部需求提供應用。
+     * 使用技術 : jQ DOM / jQ library EasyUI / MPA / AJaX / ASP.NET ...
+       * [實作包含]
+       * `前台動態頁面`
+       * `後台上稿功能`
+
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/7.png)
+
+  </details>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 商品包裝問券頁面、登入送購物金功能</summary>
 
    * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : ASP.NET Page / CSS / Javascript / JQ / TSQL
@@ -248,18 +271,9 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `version 2 。 階層權限 Css 樣式覆蓋、 RWD 手機板畫面`
 
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/4.gif)
- 
-  </details>
-  <details><summary><a href="https://www.aimedia.com.tw/">Aimedia 製造商代操商城</a>春聯廣告頁</summary>
-
-   * 需求: 根據行銷企劃部需求提供應用。
-     * 使用技術 : jQ DOM / jQ library EasyUI / MPA / AJaX / ASP.NET ...
-       * [實作包含]
-       * `前台動態頁面`
-       * `後台上稿功能`
 
   </details>
-  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝代操電商</a> 抽獎活動登入頁面</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 抽獎活動登入頁面</summary>
 
    * 需求: 基本資料填寫，驗證後存庫。
      * 使用技術 : jQ / Js / Webforms
@@ -275,6 +289,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `有重複錯誤提示`
        * `無重複存入資料庫並轉回抽獎列表頁面`
 
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/9.gif)
+
   </details>
   <details><summary><a href="https://www.lab101.asia/">Lab101 美妝代操商城</a> 文章頁面</summary>
 
@@ -285,6 +301,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `前台 rewrite 分類參數進入類別頁`
        * `後台資料前台樣式套版顯示`
 
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/8.gif)
+
   </details>
   <details><summary><a href="https://www.lab101.asia/">Lab101 美妝代操商城</a> 產品頁頁面</summary>
 
@@ -294,6 +312,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `後台 EasyUI 行銷頁面類別與文章新增`
        * `前台 rewrite 分類參數進入類別頁`
        * `後台資料前台樣式套版顯示`
+
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/8.gif)
 
   </details>
   <details><summary><a href="https://www.lab101.asia/">Lab101 美妝代操商城</a> 金流購物車付款頁面</summary>
@@ -309,10 +329,12 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `回傳成功訊息並導入資料庫與跳轉頁面`
        * `物流 API 串接`
 
+  ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/8.gif)
+
   </details>
 
 * ERP CMS EasyUI.js AJAX 後台 需求單
-  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝代操電商</a> 後台抽獎功能清單轉存功能</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 後台抽獎功能清單轉存功能</summary>
 
   * 需求: 後台顯示前台抽獎頁面登入之內容，並有按鈕可以將清單轉出 Excel 。
      * 使用技術 : EasyUI.js
@@ -324,7 +346,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `EasyUI 匯出清單 Excel`
 
   </details>
-  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝代操電商</a> 後台 banner 上稿系統</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 後台 banner 上稿系統</summary>
 
   * 需求: 後台顯示前台抽獎頁面登入之內容，並有按鈕可以將清單轉出 Excel 。
      * 使用技術 : MPA /jQ /AJaX / EasyUI.js / ASP.NET
@@ -349,7 +371,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
   </details>
 
 * Winform 需求單
-  <details><summary><a href="https://ec.elifemall.com.tw/">全國電子代操電商</a> FTP API 串接 排程載入資料庫</summary>
+  <details><summary><a href="https://ec.elifemall.com.tw/">全國電子電商代操</a> FTP API 串接 排程載入資料庫</summary>
 
   * 需求: 串接 API 載入 FTP 檔案，轉存資料庫，並設定自動排程。
      * 使用技術 : Winform
@@ -361,13 +383,13 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `ShowDoc php Markdown 文件歸檔`
 
   </details>
- 
+
 </detail>
- 
+
 <br><br><br>
 
 ## Side Project
- 
+
 ## Education
 
 ### ✦ <a href="https://www.taiwanjobs.gov.tw/internet/index/index.aspx"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
@@ -378,30 +400,30 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 涵蓋「網站系統開發」、「資料庫設計與開發」、「行動裝置APP開發」、「系統分析與設計」，<br>
 除了開發「行動商務系統平台」所需的各項技能外，還有完整的軟體資訊系統開發過程及方法，<br>
 認識軟體產業之工作內容與生態，結訓後具備軟體開發工程師的各項技能。<br>
- 
-* <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019 
+
+* <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019
   - Framework - ASP.NET - MVC 5 C# & Server-side Render - Razor & Bootstrap 4 & RWD
 
 ### ✦ <a href="https://www.landscape.fju.edu.tw/"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
 [詳細內容請點擊觀看]()
- 
+
 * [造園施⼯⼄、丙級技術⼠] 全國技術士技能檢定 , Summer 2015
 * [[河廊組⾦獎、鐵橋組銅獎](https://issuu.com/layout1165/docs/___compressed)] ⾼屏溪左岸時代印記創意競賽 - 國際學⽣競圖 , Jan 2017
 * [班級 第⼆名] 饒⽂忠設計成績優異獎 , Summer 2016
 * [入圍] 第⼗⼀屆中華⺠國 - 全國景觀設計學⽣競圖 , Dec 2016
 * [入圍] 陳⽂成事件紀念廣場 - 創意設計構思競圖 , Jul 2016
- 
+
 ### ✦ <a href="https://www2.isu.edu.tw/2018/homepage_v01.php?dept_mno=652"> 義守大學資訊管理系 </a> , 2013 ~ 2014
 
 在學期間修習資訊方面理論，「計算機概論」、「資料結構」、<br>
 「網路概論」、「計算機數學」等專業知識，日後運用助益良多，<br>
 轉換原因 : 家庭因素轉學。<br>
- 
+
 ---
 
 </details>
 
 </details>
- 
+
 感謝您閱讀 🏄 如有建議煩請指教與分享
