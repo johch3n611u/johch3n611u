@@ -566,7 +566,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 * <a href="https://github.com/johch3n611u/Side-Project-A-Interactive-app-of-Pet-and-Friend">寵物交友平台 ( 前台寵物交友、後台數據管理 ) 專題實作</a> , Apr ~ Jul 2019
   - Framework - ASP.NET - MVC 5 C# & Server-side Render - Razor & Bootstrap 4 & RWD
 
-![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/10.gif)
+<img src="https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/10.gif" width="400" height="270">
 
 ### ✦ <a href="https://www.landscape.fju.edu.tw/"> 輔仁大學景觀建築系 </a> , 2015 ~ 2018
 
