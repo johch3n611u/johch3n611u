@@ -136,9 +136,11 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 公司為系統開發、整合之乙方公司，專案多為上游公司發包之上市櫃客製化需求軟體，公司定期舉辦研討會由同仁分享技術與經驗，小組內協同其餘工程、設計師、專案經理，配合看板管理，敏捷 Scrum 專案開發、CICD 維護管理，轉換原因 : 職涯規劃。
 
+<details>
+
 #### 日常開發與維護
 
-> 1.**根據專案 SRS / Spec 規格，設計階段由組長與組員討論 SA SD ( 架構 / 方法 ) 與選型 ( 框架 / 工具庫 ) 於開發階段 WBS 指派任務完成** </br>
+> 1.**根據專案 SRS / Spec，由組長與組員討論 SA SD 與選型 ( 框架 / 工具庫 ) 於開發階段 WBS 指派任務完成** </br>
 > 2.**協同小組四人從 SRS、Use case 檢討、測試需求、教育訓練等工作** </br>
 > 3.**團隊利用 G-Meet 與其餘 G-雲應用程式遠端協作、看板管理指派任務、Git Sourcetree 版本控制** </br>
 > 4.**工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS / Spec 與各種工作流程檢討並改進** </br>
@@ -148,14 +150,6 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 #### 工作技能
 
 > **C# / Angular2 / MPA / SSR / ASP.NET / MVC / WebForm / WebAPI / NET Core / SPA / CSR / Vue.js etc ...**
-
-#### 達成目標
-
-> * [兩個禮拜內] 從只會 C# 與較熟悉 .Net MVC ，到熟悉前端 EasyUI 函式庫、後端 .net Webform 框架、 VB 語言。所架構之前台後台系統。
->
-> * [第三個禮拜至離開前] 協助 CRM 平台專案架構，前端 @Razor 、後端 .net MVC 、 MSSQL 、 IIS 等相關網管協定之架設與程式撰寫、 WebAPI 串接。
->
-> * [第二個月末至第四個月末] 從不會 Winform 到獨立處理購物中心上架 API 程式，包含十三隻 API 功能，加密與後台 ERP 系統串接。
 
 > * [遠端經驗]
 >   * 疫情關係 WFH 遠端協作 `2021/03 - 2022/03`、分流協作 `2022/04 - 2022/06`
@@ -175,6 +169,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
     * `圖表 Chart.js 建置`
 
 ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
 
 </details>
 
