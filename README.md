@@ -168,13 +168,13 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 </details>
 
+</details>
+
 <br><br>
 
 ---
 
 <br><br>
-
-</details>
 
 ### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
