@@ -390,13 +390,14 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 ## Side Project
 
-<details><summary><a href="https://github.com/L1uXO330B7/CashFlowProject">錢董財商遊戲</a> 系統架構、細節處理</summary>
+<details><summary><a href="https://github.com/L1uXO330B7/CashFlowProject">錢董財商遊戲</a> 系統架構、前後台腳本產生器開發</summary>
 
    * 需求: WebSocket 多人即時遊戲
      * 使用技術 : Angular2 14 / Scss / SignalR Core / Net Core ( Net 6 ) / Swagger ( Web API ) / JWT / Layered Architecture / EF Core
        * [實作包含]
        * `MiniProfiler Pipeline Filter 效能監測與 AOP 全局錯誤處理`
        * `Swagger SQL 語句監測`
+       * `前後台腳本產生器開發`
        * `Router / Controllers / Services / Bll / DPL / UnitTests 分層`
        * `Angular2：Components、Pipe、Services、Rxjs`
        * `SignalR Core 搭配 Caching Memory 即時互動`
@@ -405,7 +406,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 </details>
 
-<details><summary><a href="https://github.com/johch3n611u/Side-Project-Personal-Branding-Image-Web">個人形象網站</a> Azure 佈署、展示大學作品</summary>
+<details><summary><a href="https://github.com/johch3n611u/Side-Project-Personal-Branding-Image-Web">個人形象網站</a> 前後端分離 AG NetCore  Api 開發、展示大學作品</summary>
 
    * 需求:
      * 使用技術 : Angular 2+ / .Net Core 2+ / Azure
@@ -413,12 +414,13 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
        * `Landing Page 發想與實作`
        * `特色頁如何呈現個人特色`
        * `作品集頁面如何展現作品特色`
+       * `Azure 佈署`
 
 ![](https://github.com/johch3n611u/Side-Project-Personal-Branding-Image-Web/raw/master/Personal-Branding-Image/Site_Reception/img/3.gif)
 
 </details>
 
-<details><summary><a href="https://github.com/johch3n611u/Side-Project-Fabow/tree/master/Fabow">Fabow 任務分配系統</a> 漸進式網路應用程式、快速導入易於使用</summary>
+<details><summary><a href="https://github.com/johch3n611u/Side-Project-Fabow/tree/master/Fabow">Fabow 任務分配系統</a> PWA 漸進式網路應用程式、快速導入易於使用</summary>
 
    * 需求: 親人需求方便管理階層快速導入的任務管理工具
      * 使用技術 : Angular2 / Firebase / PWA / Electron.net
