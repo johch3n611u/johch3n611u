@@ -406,6 +406,19 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 </details>
 
+<details><summary><a href="https://github.com/johch3n611u/Side-Project-Getting-Things-Done">Getting Things Done Tool</a> 個人生產力系統</summary>
+
+   * 需求: 親人需求方便管理階層快速導入的任務管理工具
+     * 使用技術 : Vue3 / Firebase / OKR
+       * [實作包含]
+       * `Getting Things Done 流程`
+       * `FireBase Auth`
+       * `圖庫 imgur 串接`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/14.gif)
+
+</details>
+
 <details><summary><a href="https://github.com/johch3n611u/Side-Project-Personal-Branding-Image-Web">個人形象網站</a> 前後端分離 AG NetCore  Api 開發、展示大學作品</summary>
 
    * 需求:
