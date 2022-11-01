@@ -128,8 +128,6 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 <details>
 
----
-
 ## Experience
 
 ### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Software Developer , Jun 2020 ~ Sep 2022
@@ -149,7 +147,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 #### 工作技能
 
-> **C# / Angular2 / MPA / SSR / ASP.NET / MVC / WebForm / WebAPI / NET Core / SPA / CSR / Vue.js etc ...**
+> ** Angular2 / ASP.NET / MVC / WebForm / WebAPI / NET Core / Vue.js / C# / SPA / CSR / MPA / SSR etc ...**
 
 > * [遠端經驗]
 >   * 疫情關係 WFH 遠端協作 `2021/03 - 2022/03`、分流協作 `2022/04 - 2022/06`
@@ -158,19 +156,23 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 >   * 遠端、分流協作 14 個月完成 6 個中大型專案
 
 <details>
-<summary><a href="https://www.eclife.com.tw/">良興</a> 系統發展部 需求單電子化 專案</summary>
+<summary><a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">上市電子公司</a> 入口平台與各流程管理平台 e.g. 帳號、軟體、設備管理</summary>
 
-* 使用技術 : Webform 架構改良之 EasyUi + API 、 Chart.js 、 AJAX 、JQ
-  * 需求: 量化質化系統發展部工作內容，合理安排工作順序、時程管控。
+* 使用技術 :
+  * 需求:
     * [實作包含]
-    * `UML 需求單流程架構討論`
-    * `MSSQL 資料庫與欄位建置`
-    * `EasyUI 清單建置 CRUD`
-    * `圖表 Chart.js 建置`
+      * 開發/維護 .NET WebAPI ( C# / Autofac / AutoMap / Dapper / 單元整合測試 ) / AG ( i18n / PrimeNG ) `2020/06 - 2022/04`
+      * 根據 SRS 規格書提供 spec. 應用並配合 DEV、UAT、QAS、PRD 開發階段進行開發與測試、文件 UTR SITR SAD SDD 技術移轉文件 撰寫
 
 ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
 
 </details>
+
+<br><br>
+
+---
+
+<br><br>
 
 </details>
 
