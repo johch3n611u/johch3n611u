@@ -128,6 +128,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 <details>
 
+<br><br>
+
 ## Experience
 
 ### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Software Developer , Jun 2020 ~ Sep 2022
@@ -156,13 +158,77 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 >   * 遠端、分流協作 14 個月完成 6 個中大型專案
 
 <details>
-<summary><a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">上市電子公司</a> 入口平台與各流程管理平台 e.g. 帳號、軟體、設備管理</summary>
+<summary>[2020/06 - 2022/04] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">上市電子公司</a> 入口平台與各流程管理平台 e.g. 帳號、軟體、設備管理</summary>
 
-* 使用技術 :
-  * 需求:
-    * [實作包含]
-      * 開發/維護 .NET WebAPI ( C# / Autofac / AutoMap / Dapper / 單元整合測試 ) / AG ( i18n / PrimeNG ) `2020/06 - 2022/04`
-      * 根據 SRS 規格書提供 spec. 應用並配合 DEV、UAT、QAS、PRD 開發階段進行開發與測試、文件 UTR SITR SAD SDD 技術移轉文件 撰寫
+* [實作包含]
+  * 開發/維護 .NET WebAPI ( C# / Autofac / AutoMap / Dapper / 單元整合測試 ) / AG ( i18n / PrimeNG )
+  * 根據 SRS 規格書提供 spec. 應用並配合 DEV、UAT、QAS、PRD 開發階段進行開發與測試、文件 UTR SITR SAD SDD 技術移轉文件 撰寫
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
+
+<details>
+<summary>[2021/10 - 2022/10] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">上市不動產公司</a> 前後端分離前台 & CMS/CRM 後台</summary>
+
+* [實作包含]
+  * 動態官網 & 後台 CMS ( 維護 Webform ) `2021/10 - 2021/11`
+  * 房仲官網 & 後台 CMS ( 開發/維護 AG + .NET CORE API ) `2021/10 - 2022/10`
+  * 銷售 CRM 前台 ( 維護 AG Ngx-admin + .NET CORE API ) `2021/10 - 2022/10`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
+
+<details>
+<summary>[2021/04 - 2022/09] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">連鎖超市</a> Web View APP & CMS 後台</summary>
+
+* [實作包含]
+  * APP 管理後台 ( 開發/維護 AG Ngx-admin + .NET CORE API ) `2021/04 - 2022/09`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
+
+<details>
+<summary>[2021/05 - 2021/10] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">知名主廚餐廳</a> 前後端分離前台 & CMS 後台</summary>
+
+* [實作包含]
+  * 維護 Webform 前台官網 / 後台 CMS `2021/05 - 2021/10`
+  * 重構 Webform => ( 開發/維護 AG Universal SSR + AG Ngx-admin + .NET CORE API ) 前台官網 / 後台 CMS `2021/05 - 2021/10`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
+
+<details>
+<summary>[2022/03 - 2022/10] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">上市金融公司</a> Web View APP & CMS 後台</summary>
+
+* 需求:
+  * [實作包含]
+    * 串接投信平台整合原生 APP / WebView `2021/06 - 2021/12`
+    * APP 模組管理後台 ( 開發/維護 AG + .NET CORE API ) 網關 Gateway 跳板 `2022/03 - 2022/10`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
+
+<details>
+<summary>[2022/04 - 2022/10] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">上市資產管理公司</a> CMS/CRM 前後端分離 AG + Net Core API</summary>
+
+* [實作包含]
+  * 房屋官網 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
+  * 戰情室平台 ( 開發/維護 Vue + .NET CORE API ) `2022/07 - 2022/09`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
+
+<details>
+<summary>[2021/02 - 2021/12] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">CDP / BI 產品</a> 前後端分離 AG + Net Core API</summary>
+
+* [實作包含]
+  * 前期開發 CDP 串接 BI ( AG Ngx-admin + FineReport + Nginx ) `2021/02 - 2021/12`
 
 ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
 
@@ -170,11 +236,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 </details>
 
-<br><br>
-
----
-
-<br><br>
+<br>
 
 ### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
@@ -501,6 +563,8 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 ![](https://github.com/johch3n611u/Side-Project-GoogleSheets-to-WebDatabase/raw/main/final.png)
 
 </details>
+
+<br><br>
 
 ## Education
 
