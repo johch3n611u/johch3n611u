@@ -132,11 +132,55 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
 
 ## Experience
 
-### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Web Developer , Jun 2020 ~ Sep 2022
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Software Developer , Jun 2020 ~ Sep 2022
+
+公司為系統開發、整合之乙方公司，專案多為上游公司發包之上市櫃客製化需求軟體，公司定期舉辦研討會由同仁分享技術與經驗，小組內協同其餘工程、設計師、專案經理，配合看板管理，敏捷 Scrum 專案開發、CICD 維護管理，轉換原因 : 職涯規劃。
+
+#### 日常開發與維護
+
+> 1.**根據專案 SRS / Spec 規格，設計階段由組長與組員討論 SA SD ( 架構 / 方法 ) 與選型 ( 框架 / 工具庫 ) 於開發階段 WBS 指派任務完成** </br>
+> 2.**協同小組四人從 SRS、Use case 檢討、測試需求、教育訓練等工作** </br>
+> 3.**團隊利用 G-Meet 與其餘 G-雲應用程式遠端協作、看板管理指派任務、Git Sourcetree 版本控制** </br>
+> 4.**工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS / Spec 與各種工作流程檢討並改進** </br>
+> 5.**依照 Redmine / SharePoint Issue 與客戶溝通並完成開發與維護** </br>
+> 6.**公司 ( 小組 / 兩禮拜 ) 分享站立研討會內容如連結 [Seminar.md](https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/Seminar.md) 負責過 IOC/DI、、Unit Test 研討** </br>
+
+#### 工作技能
+
+> **C# / Angular2 / MPA / SSR / ASP.NET / MVC / WebForm / WebAPI / NET Core / SPA / CSR / Vue.js etc ...**
+
+#### 達成目標
+
+> * [兩個禮拜內] 從只會 C# 與較熟悉 .Net MVC ，到熟悉前端 EasyUI 函式庫、後端 .net Webform 框架、 VB 語言。所架構之前台後台系統。
+>
+> * [第三個禮拜至離開前] 協助 CRM 平台專案架構，前端 @Razor 、後端 .net MVC 、 MSSQL 、 IIS 等相關網管協定之架設與程式撰寫、 WebAPI 串接。
+>
+> * [第二個月末至第四個月末] 從不會 Winform 到獨立處理購物中心上架 API 程式，包含十三隻 API 功能，加密與後台 ERP 系統串接。
+
+> * [遠端經驗]
+>   * 疫情關係 WFH 遠端協作 `2021/03 - 2022/03`、分流協作 `2022/04 - 2022/06`
+>   * 在同步與非同步遠端的狀況下完成專案
+>   * 整合不同工具 SOP 與同事協作 Google ( Meet / Sheet / Docs ...)、Citrix、Sourcetree、Redmine
+>   * 遠端、分流協作 14 個月完成 6 個中大型專案
+
+<details>
+<summary><a href="https://www.eclife.com.tw/">良興</a> 系統發展部 需求單電子化 專案</summary>
+
+* 使用技術 : Webform 架構改良之 EasyUi + API 、 Chart.js 、 AJAX 、JQ
+  * 需求: 量化質化系統發展部工作內容，合理安排工作順序、時程管控。
+    * [實作包含]
+    * `UML 需求單流程架構討論`
+    * `MSSQL 資料庫與欄位建置`
+    * `EasyUI 清單建置 CRUD`
+    * `圖表 Chart.js 建置`
+
+![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/3.gif)
+
+</details>
 
 ### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
-公司為品牌代操兼物流、自研發系統，同時也有自我品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，包含幾十個以上的站頁、系統資料庫，超過百支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
+公司為品牌代操兼物流，同時也有自有品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，包含幾十個以上的站頁、系統資料庫，超過百支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
 
 <details>
 
@@ -376,7 +420,7 @@ Other：Electron.net、Firebase、Figma、Adobe (XD、PS、AI)、AutoCad、Sketc
   * 需求: 串接 API 載入 FTP 檔案，轉存資料庫，並設定自動排程。
      * 使用技術 : Winform
        * [實作包含]
-       * `Windowsform 簡易排版`
+       * `Windowsform 排版`
        * `Windowsform 後台程式撰寫`
        * `串接 API 資轉存資料庫並顯示`
        * `時間處理函式導入排程`
