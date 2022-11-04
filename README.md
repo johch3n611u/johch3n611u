@@ -132,7 +132,7 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 
 ## Experience
 
-### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Software Developer , Jun 2020 ~ Sep 2022
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 新達科技 Shinda Tech </a> , Sr. Software Developer , 電腦系統整合服務業 30~100 人 , Jun 2020 ~ Sep 2022
 
 公司為系統開發、整合之乙方公司，專案多為上游公司發包之上市櫃客製化需求軟體，公司定期舉辦研討會由同仁分享技術與經驗，小組內協同其餘工程、設計師、專案經理，配合看板管理，敏捷 Scrum 專案開發、CICD 維護管理，轉換原因 : 職涯規劃。
 
@@ -226,7 +226,7 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 
 <br>
 
-### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
+### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , 電腦系統整合服務業 100~500 人 , Jul 2019 ~ Feb 2020
 
 公司為品牌代操兼物流，同時也有自有品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
 
