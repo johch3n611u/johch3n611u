@@ -479,6 +479,20 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 
 </details>
 
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 杭州薌富規劃有限公司 </a> , Internship , 景觀設計業 1~30 人 , Jun 2016 ~ Sep 2016
+
+1. 負責設計、總務、監工、業務工作
+2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工， 
+3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工， 
+4. 在職期間至支援山東東營市協助業務洽談案件。
+
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 達觀規劃設計有限公司 </a> , Internship , 景觀設計業 1~30 人 , May 2015 ~ Sep 2015
+
+1. 負責設計、總務工作
+2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工， 
+3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工， 
+4. 在職期間至支援山東東營市協助業務洽談案件。
+
 <br><br><br>
 
 ## Side Project
