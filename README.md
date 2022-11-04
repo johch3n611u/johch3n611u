@@ -479,6 +479,8 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 
 </details>
 
+<br>
+
 ### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 杭州薌富規劃有限公司 </a> , Internship , 景觀設計業 1~30 人 , Jun 2016 ~ Sep 2016
 
 1. 負責設計、總務、監工、業務工作
