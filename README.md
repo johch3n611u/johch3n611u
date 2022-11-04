@@ -228,17 +228,18 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 
 ### ✦ <a href="https://www.eclife.com.tw/"> 良興購物網 Liang Shing EcLife </a> , Jr. Web Developer , Jul 2019 ~ Feb 2020
 
-公司為品牌代操兼物流，同時也有自有品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，包含幾十個以上的站頁、系統資料庫，超過百支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
+公司為品牌代操兼物流，同時也有自有品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
 
 <details>
 
 #### 日常開發與維護
 
-> 1. **專案較複雜的頁面由設計部門完成頁面切版、 Banner 、 EDM 等 UI，** </br>
-> 2. **協同數據發展部與需求單位與工程師討論 UX 並完成。** </br>
-> 3. **團隊利用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制。** </br>
-> 4. **工程師團隊工作橫以品牌切割從前端、後端至資料庫與架站、排程。** </br>
-> 5. **縱為各品牌之間維護需求或功能新增相互支援。** </br>
+> 1. **在職期間開發維護幾十個以上的站頁、系統資料庫，幾十支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server** </br>
+> 2. **專案較複雜的頁面由設計部門完成頁面切版、 Banner 、 EDM 等 UI，** </br>
+> 3. **協同數據發展部與需求單位與工程師討論 UX 並完成。** </br>
+> 4. **團隊利用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制。** </br>
+> 5. **工程師團隊工作橫以品牌切割從前端、後端至資料庫與架站、排程。** </br>
+> 6. **縱為各品牌之間維護需求或功能新增相互支援。** </br>
 
 #### 工作技能
 
