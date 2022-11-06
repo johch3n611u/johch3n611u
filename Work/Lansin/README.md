@@ -2,8 +2,6 @@
 
 公司為品牌代操兼物流，同時也有自有品牌之乙方公司，擔任網站工程師職位，協同四位夥伴工程師，共同開發與維護多個電子商務平台，品牌前台形象建立與後台 CMS 等相關功能、後台 ERP、SCM、CRM、Workflow 等相關功能，每日專案開發、維護管理、新技術重構，團隊合作使用 Scrum、OKR、KPI、TRELLO 任務管理、Git / SVN 版本控制，轉換原因 : 職涯規劃。
 
-<details>
-
 #### 日常開發與維護
 
 > 1. **在職期間開發維護幾十個以上的站頁、系統資料庫，幾十支以上的 SQL Server Agent、Winform、Jenkins 排程，十幾個雲與本地 Server** </br>
@@ -248,5 +246,3 @@
        * `ShowDoc php Markdown 文件歸檔`
 
   </details>
-
-</details>
