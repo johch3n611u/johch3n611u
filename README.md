@@ -146,7 +146,7 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 > 4.**團隊利用 G-Meet 與其餘 G-雲應用程式遠端協作、看板管理指派任務、Git Sourcetree 版本控制** </br>
 > 5.**工程師團隊從前端、後端至資料庫與架站、排程皆有參與並依照 SRS / Spec 與各種工作流程檢討並改進** </br>
 > 6.**依照 Redmine / SharePoint Issue 與客戶溝通並完成開發與維護** </br>
-> 7.**公司 ( 小組 / 兩禮拜 ) 分享站立研討會內容如連結 [Seminar.md](https://github.com/johch3n611u/Experience-of-Cinda-Company/blob/master/Seminar.md) 負責過 IOC/DI、、Unit Test 研討** </br>
+> 7.**公司 ( 小組 / 兩禮拜 ) 分享站立研討會內容如連結 [Seminar.md](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Cinda/Seminar.md) 負責過 IOC/DI、、Unit Test 研討** </br>
 > 8.**遠端、分流協作 14 個月完成 6 個中大型專案** </br>
 
 #### 工作技能
@@ -484,15 +484,15 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 ### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 杭州薌富規劃有限公司 </a> , Internship , 景觀設計業 1~30 人 , Jun 2016 ~ Sep 2016
 
 1. 負責設計、總務、監工、業務工作
-2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工， 
-3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工， 
+2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工，
+3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工，
 4. 在職期間至支援山東東營市協助業務洽談案件。
 
 ### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 達觀規劃設計有限公司 </a> , Internship , 景觀設計業 1~30 人 , May 2015 ~ Sep 2015
 
 1. 負責設計、總務工作
-2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工， 
-3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工， 
+2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工，
+3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工，
 4. 在職期間至支援山東東營市協助業務洽談案件。
 
 <br><br><br>

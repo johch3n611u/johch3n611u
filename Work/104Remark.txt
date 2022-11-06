@@ -1,0 +1,53 @@
+礙於人力銀行自傳篇幅限制，
+請至 Cakeresume 觀看完整履歷，
+https://www.cakeresume.com/johch3n611u
+或下載附件  CV.pdf，感謝。
+
+
+您好，我是劉育誠，在學期間「興趣修習資工相關課程」，畢業於輔大景觀建築系，在這之前在「義大資管系」修習一年「資工基礎知識」。
+
+
+畢業後有機會南下高雄「職訓局」，修習為期「半年行動商務系統開發課程」，結訓後「具備_Web_應用程序開發人員的各項技能」，包含「軟體資訊系統開發的前後端技術」，像是「前端」的 「RWD」、「jQ」、「BS」、「AJAX」 與後端 「.NET相關框架」與 「C#」 語言，也完成了從「產業評估」、「客戶需求」、「可行性研究」、「UML」、「資料庫正規化」等一系列操作的專案，由前端「BS4」、「RWD」 的交友平台與後端 「.NET_MVC」、「Razor_模板語言」所組成的「CMS管理後台」多頁面伺服器渲染架構，
+
+在結訓後「第一份工作」，選擇一間「電子商務公司資訊部門」就職，協同四位夥伴工程師，共同「開發與維護多個電子商務平台」，「品牌前台形象建立」與「後台CMS等相關功能」、「後台ERP、SCM、CRM、Workflow等相關功能」，包含幾十個以上的站頁、系統資料庫，超過百支以上的「SQL_Server_Agent、Winform、Jenkins排程」，「近二十個雲與本地Server」，每日「專案開發、維護管理、新技術重構」，團隊合作使用「Scrum、OKR、KPI、TRELLO任務管理」、「Git/SVN版本控制」。在這份工作中，由只會「C#」與較熟悉「MVC框架」到之後熟悉前端「EasyUI函式庫」，與後端「Webform」框架「VB」語言，從協助「CRM平台」專案與「CMS品牌網站」需求到之後獨力完成「WinformAPI_SCM購物平台串接」，很感謝前主管的青睞與信任，也因如此在其間達成與主管面試時所談目標而薪水調漲。
+
+離職後因為本身畢業科系具備「設計能力」，所以嘗試往前端發展，自學「Angular」並寫了「個人網站專案」，由「靜態部落格」的前台搭配「AJAX」，與「.NET_Core_API」+「Angular單頁應用程序CMS後台」並架設於「Azure」上。
+
+
+Hustle Everyday 是我激勵自己的座右銘，「所學較廣涉及前端畫面與後端系統」，目前專注於「Angular」、「dotNET_Core」、「Azure」等技術研究，並保著持續學習的熱情，「具備溝與協作開發能力」，努力架構程式的可讀性、可維護性、可擴充性，以結果為導向，以客戶為中心，享受解決問題的成就感，「不排斥兼職接案，目前積極尋找"網路程式設計師"相關工作。」
+
+MBTI : INTP : 學者型 – 是理性解決問題者。
+PDP : 內斂精確完美、中立適應性高。
+
+除了上述程式技能，大學時修習「設計相關知識」和「施工技能」，「在每一次的專案中培養發現問題、解決問題的能力」，學習從「調查、分析中發現問題⾄設計、規劃並解決問題」，利用「2D、3D繪圖、多媒體、模型製作」呈現設計理念，並於學期間取得「乙級造園施工證照」，積極參與「國際競賽」，磨練「團隊合作」與累積個人能力，也獲得「屏東縣政府高屏左岸規劃競賽金獎」與其他獎項，為呈現規劃設計，學期間修習通識課「Web伺服器架設與網頁設計」並找到新的職涯規劃。
+
+
+感謝您的閱讀
+
+
+
+Hi, I'm Yucheng Liu, Hustle Everyday is my motto to inspire myself, Currently focusing on Angular, dotNET Core, Azure and other technical research, and maintaining the enthusiasm for continuous learning, I have communication and collaborative development capabilities, and strive to structure the program's readability, maintainability, and expandability, Results-oriented, customer-centric and enjoy the sense of accomplishment in solving problems. Currently actively looking for Web Application Developer related work.
+
+MBTI : INTP : Scholar type-is a rational problem solver.
+PDP : Introverted, precise, perfect, neutral and adaptable.
+
+After graduating from university, because of the wide range of learning fields, career planning became a Web Application Developer, and I went to Kaohsiung, participate 900 hours of Course-of-Mobile-Commerce-System-Design-and-Development, learned the development of Web information system platform, and had Web Application Developer Various skills after the training.
+
+I graduated from the Department of Landscape Architecture Fu Jen University. In addition to design-related knowledge and construction skills, I cultivated the ability to find and solve problems in each project, learned to find problems from investigation and analysis , learned to solve problems from  planning and design .
+
+And Use 2D, 3D drawing, multimedia,model making to present design concepts, and obtain Class B gardening construction licenses during the semester, actively participate in international competitions, hone teamwork and accumulate personal abilities.
+
+To present planning and design, I study "Web server setup and web design" on general courses during the semester, and find new possibilities.
+
+Reasons for conversion: During the course of studying, the field of study is wide, so it becomes a similar career environment and category that can be converted in career planning.
+
+
+
+
+Because of the limitation of the length of the autobiography of the human bank,
+
+Please visit Cakeresume to view the full resume,
+
+https://www.cakeresume.com/johch3n611u
+
+Or download the attachment CV.pdf, thanks.
