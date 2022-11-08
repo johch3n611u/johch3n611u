@@ -77,7 +77,7 @@ Explicit is better than implicit 🖖 歡迎互相交流
 * 電子商務甲方 1+y ( 品牌代營運網站開發、內部系統維運 )
 * 遠端、分流協作 14 個月內完成 6 個中大型專案
 * MBTI : INTP : 學者型 – 理性解決問題者
-* PDP : 內斂精確完美、中立適應性高
+* PDP : 貓頭鷹：內斂精確完美、中立適應性高
 * <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> 義守大學資訊管理系 1y ( 程式 )
 * <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> 輔仁大學景觀建築系 4y ( 規劃、設計、23D 繪圖 )
 
