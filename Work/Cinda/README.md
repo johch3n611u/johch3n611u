@@ -67,7 +67,7 @@
 * 維護 【Webform 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
   * RAW 第一版 Webform 系統功能維護
 * 重構 【Webform => ( 開發/維護 AG Universal SSR + AG Ngx-admin + .NET CORE API ) 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
-  * 考量 SEO 以 AG Universal 為前台，搭配 AG Ngx-admin 後台，重構 CMS
+  * RAW 改為前後端分離，考量 SEO 以 AG Universal 為前台，搭配 AG Ngx-admin 後台，重構 CMS
 
 </details>
 
@@ -85,13 +85,16 @@
 <summary>[2022/04 - 2022/10] <a href="https://www.hnamc.com.tw/">華南金資產</a> CMS/CRM 前後端分離 AG + Net Core API</summary>
 
 * 【房屋官網】 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
+  * 重構現有平台建立 BPM + CMS 系統 ( 功能類似新美齊仲介 )
 * 【戰情室平台】 ( 開發/維護 Vue + .NET CORE API ) `2022/07 - 2022/09`
-
+  * 重構現有平台整合上述後台，架構雙前台一後台的系統
+ 
 </details>
 
 <details>
 <summary>[2021/02 - 2021/12] <a href="#">CDP / BI 產品</a> 前後端分離 AG + Net Core API</summary>
 
 * 前期開發 【CDP 串接 BI ( AG Ngx-admin + FineReport + Nginx )】`2021/02 - 2021/12`
+  * 研究 FineReport 初階專案如何利用 Nginx 反向代理，以使用 FineReport 其餘功能
 
 </details>
