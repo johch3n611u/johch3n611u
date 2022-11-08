@@ -38,59 +38,52 @@
 <details>
 <summary>[2021/10 - 2022/10] <a href="https://www.jean.com.tw/tw/default">新美齊不動產公司</a> 前後端分離前台 & CMS/CRM 後台</summary>
 
-* [實作包含]
-  * 【動態官網 & 後台 CMS】 ( 維護 Webform ) `2021/10 - 2021/11`
-    * 在沒有良好的版控舊程式碼下，維護 Webform、jQuery、私有元件庫，並轉為 Git 版控
-  * 【房仲官網 & 後台 CMS】 ( 開發/維護 AG + .NET CORE API ) `2021/10 - 2022/10`
-    * 利用 Ngx-admin 架構開發後台房源上架 CMS、CRM 系統
-    * 後台拖移式排序上架介面優化使用者 UX
-    * 串接 GoogleMapApi 整合房源資料用於大數據分析
-    * 爬取內政部實價登錄資料用於大數據分析、並將資料視覺化、流程排程化
-  * 【銷售 CRM 前台】 ( 維護 AG Ngx-admin + .NET CORE API ) `2021/10 - 2022/10`
-    * 維護手機 APP RWD 版面與後台之介接，與銷售報表後台視覺化
+* 【動態官網 & 後台 CMS】 ( 維護 Webform ) `2021/10 - 2021/11`
+  * 在沒有良好的版控舊程式碼下，維護 Webform、jQuery、私有元件庫，並轉為 Git 版控
+* 【房仲官網 & 後台 CMS】 ( 開發/維護 AG + .NET CORE API ) `2021/10 - 2022/10`
+  * 利用 Ngx-admin 架構開發後台房源上架 CMS、CRM 系統
+  * 後台拖移式排序上架介面優化使用者 UX
+  * 串接 GoogleMapApi 整合房源資料用於大數據分析
+  * 爬取內政部實價登錄資料用於大數據分析、並將資料視覺化、流程排程化
+* 【銷售 CRM 前台】 ( 維護 AG Ngx-admin + .NET CORE API ) `2021/10 - 2022/10`
+  * 維護手機 APP RWD 版面與後台之介接，與銷售報表後台視覺化
 
 </details>
 
 <details>
 <summary>[2021/04 - 2022/09] <a href="https://www.pxmart.com.tw/#/index">全聯連鎖超市</a> Web View APP & CMS 後台</summary>
 
-* [實作包含]
-  * 【Pxpay Web View & APP 管理後台】 ( 開發/維護 AG Ngx-admin + .NET CORE API ) `2021/04 - 2022/09`
+* 【Pxpay Web View & APP 管理後台】 ( 開發/維護 AG Ngx-admin + .NET CORE API ) `2021/04 - 2022/09`
 
 </details>
 
 <details>
 <summary>[2021/05 - 2021/10] <a href="https://www.raw.com.tw/">赫士盟餐飲集團 </a> 前後端分離前台 & CMS 後台</summary>
 
-* [實作包含]
-  * 維護 【Webform 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
-  * 重構 【Webform => ( 開發/維護 AG Universal SSR + AG Ngx-admin + .NET CORE API ) 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
+* 維護 【Webform 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
+* 重構 【Webform => ( 開發/維護 AG Universal SSR + AG Ngx-admin + .NET CORE API ) 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
 
 </details>
 
 <details>
 <summary>[2022/03 - 2022/10] <a href="https://www.yuantabank.com.tw/bank/">元大銀行</a> Web View APP & CMS 後台</summary>
 
-* 需求:
-  * [實作包含]
-    * 【串接投信平台整合原生 APP / WebView】 `2021/06 - 2021/12`
-    * 【APP 模組管理後台 ( 開發/維護 AG + .NET CORE API ) 網關 Gateway 跳板】 `2022/03 - 2022/10`
+* 【串接投信平台整合原生 APP / WebView】 `2021/06 - 2021/12`
+* 【APP 模組管理後台 ( 開發/維護 AG + .NET CORE API ) 網關 Gateway 跳板】 `2022/03 - 2022/10`
 
 </details>
 
 <details>
 <summary>[2022/04 - 2022/10] <a href="https://www.hnamc.com.tw/">華南金資產</a> CMS/CRM 前後端分離 AG + Net Core API</summary>
 
-* [實作包含]
-  * 【房屋官網】 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
-  * 【戰情室平台】 ( 開發/維護 Vue + .NET CORE API ) `2022/07 - 2022/09`
+* 【房屋官網】 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
+* 【戰情室平台】 ( 開發/維護 Vue + .NET CORE API ) `2022/07 - 2022/09`
 
 </details>
 
 <details>
 <summary>[2021/02 - 2021/12] <a href="#">CDP / BI 產品</a> 前後端分離 AG + Net Core API</summary>
 
-* [實作包含]
-  * 前期開發 【CDP 串接 BI ( AG Ngx-admin + FineReport + Nginx )】`2021/02 - 2021/12`
+* 前期開發 【CDP 串接 BI ( AG Ngx-admin + FineReport + Nginx )】`2021/02 - 2021/12`
 
 </details>
