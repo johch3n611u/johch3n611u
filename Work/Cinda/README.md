@@ -92,6 +92,6 @@
 <summary>[2021/02 - 2021/12] <a href="#">CDP / BI 產品</a> 前後端分離 AG + Net Core API</summary>
 
 * [實作包含]
-  * 前期開發 CDP 串接 BI ( AG Ngx-admin + FineReport + Nginx ) `2021/02 - 2021/12`
+  * 前期開發 【CDP 串接 BI ( AG Ngx-admin + FineReport + Nginx )】`2021/02 - 2021/12`
 
 </details>
