@@ -441,7 +441,7 @@ Other：Electron.net、Firebase、DBeaver、Figma、Adobe (XD、PS、AI)、AutoC
 
 ## Side Project
 
-<details><summary><a href="https://github.com/L1uXO330B7/CashFlowProject">錢董財商遊戲</a> 系統架構、前後台腳本產生器開發</summary>
+<details><summary><a href="https://github.com/L1uXO330B7/CashFlowProject">錢董財商遊戲</a> SignalR Core 系統架構、前後台腳本產生器開發</summary>
 
    * 需求: WebSocket 多人即時遊戲
      * 使用技術 : Angular2 14 / Scss / SignalR Core / Net Core ( Net 6 ) / Swagger ( Web API ) / JWT / Layered Architecture / EF Core
