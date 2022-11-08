@@ -27,6 +27,7 @@
 <summary>[2020/06 - 2022/04] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">旺宏電子公司</a> 入口平台與各流程管理平台 e.g. 帳號、軟體、設備管理</summary>
 
 * [實作包含]
+  * 【EIP 串接 SAM、PAM、NAM 與其餘平台】
   * 開發/維護 .NET WebAPI ( C# / Autofac / AutoMap / Dapper / 單元整合測試 ) / AG ( i18n / PrimeNG )
   * 面對同時4000人的高併發使用的系統，透過資料庫、執行緒鎖、訊息佇列、非同步的方式，提高響應速度
   * 多種不同 ( 類型、流程、職級、海內外 ) 表單以簡單工廠模式搭配 ( 多型、泛型、介面、繼承、反射、映射 )，結合 IOC、DI 使攏長程式碼減少、方便維護與理解複雜商業邏輯
@@ -39,9 +40,15 @@
 <summary>[2021/10 - 2022/10] <a href="https://www.jean.com.tw/tw/default">新美齊不動產公司</a> 前後端分離前台 & CMS/CRM 後台</summary>
 
 * [實作包含]
-  * 動態官網 & 後台 CMS ( 維護 Webform ) `2021/10 - 2021/11`
-  * 房仲官網 & 後台 CMS ( 開發/維護 AG + .NET CORE API ) `2021/10 - 2022/10`
-  * 銷售 CRM 前台 ( 維護 AG Ngx-admin + .NET CORE API ) `2021/10 - 2022/10`
+  * 【動態官網 & 後台 CMS】 ( 維護 Webform ) `2021/10 - 2021/11`
+  * 閱讀舊邏輯在沒有良好的版控舊程式碼下維護 Webform、jQuery、私有元件庫 
+  * 【房仲官網 & 後台 CMS】 ( 開發/維護 AG + .NET CORE API ) `2021/10 - 2022/10`
+  * 利用 Ngx-admin 架構開發後台房源上架 CMS、CRM 系統
+  * 串接 GoogleMapApi 用於大數據分析
+  * 爬取內政部實價登錄資料用於大數據分析、並將資料視覺化、流程排程化
+  * ___________________
+  * 【銷售 CRM 前台】 ( 維護 AG Ngx-admin + .NET CORE API ) `2021/10 - 2022/10`
+  * 維護手機 APP RWD 版面與後台之介接，與銷售報表後台視覺化
 
 </details>
 
@@ -49,7 +56,7 @@
 <summary>[2021/04 - 2022/09] <a href="https://www.pxmart.com.tw/#/index">全聯連鎖超市</a> Web View APP & CMS 後台</summary>
 
 * [實作包含]
-  * Pxpay Web View & APP 管理後台 ( 開發/維護 AG Ngx-admin + .NET CORE API ) `2021/04 - 2022/09`
+  * 【Pxpay Web View & APP 管理後台】 ( 開發/維護 AG Ngx-admin + .NET CORE API ) `2021/04 - 2022/09`
 
 </details>
 
@@ -57,8 +64,8 @@
 <summary>[2021/05 - 2021/10] <a href="https://www.raw.com.tw/">赫士盟餐飲集團 </a> 前後端分離前台 & CMS 後台</summary>
 
 * [實作包含]
-  * 維護 Webform 前台官網 / 後台 CMS `2021/05 - 2021/10`
-  * 重構 Webform => ( 開發/維護 AG Universal SSR + AG Ngx-admin + .NET CORE API ) 前台官網 / 後台 CMS `2021/05 - 2021/10`
+  * 維護 【Webform 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
+  * 重構 【Webform => ( 開發/維護 AG Universal SSR + AG Ngx-admin + .NET CORE API ) 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
 
 </details>
 
@@ -76,8 +83,8 @@
 <summary>[2022/04 - 2022/10] <a href="https://www.hnamc.com.tw/">華南金資產</a> CMS/CRM 前後端分離 AG + Net Core API</summary>
 
 * [實作包含]
-  * 房屋官網 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
-  * 戰情室平台 ( 開發/維護 Vue + .NET CORE API ) `2022/07 - 2022/09`
+  * 【房屋官網】 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
+  * 【戰情室平台】 ( 開發/維護 Vue + .NET CORE API ) `2022/07 - 2022/09`
 
 </details>
 
