@@ -28,6 +28,9 @@
 
 * [實作包含]
   * 開發/維護 .NET WebAPI ( C# / Autofac / AutoMap / Dapper / 單元整合測試 ) / AG ( i18n / PrimeNG )
+  * 面對同時4000人的高併發使用的系統，透過資料庫、執行緒鎖、訊息佇列、非同步的方式，提高響應速度
+  * 多種不同(類型、流程、職級、海內外)表單以簡單工廠模式搭配多型泛型介面繼承反射映射，結合 IOC、DI 使攏長程式碼減少方便維護與理解
+  * 串接整合不同系同如 AD、自動化、BAT、排成器、NAC、BPM、SAM
   * 根據 SRS 規格書提供 spec. 應用並配合 DEV、UAT、QAS、PRD 開發階段進行開發與測試、文件 UTR SITR SAD SDD 技術移轉文件 撰寫
 
 </details>
