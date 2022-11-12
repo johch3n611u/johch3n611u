@@ -24,6 +24,7 @@
        * `Getting Things Done 流程`
        * `FireBase Auth`
        * `圖庫 imgur 串接`
+       * `Rx.js 多人協同合作、編輯`
 
 ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/14.gif)
 
