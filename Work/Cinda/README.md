@@ -32,7 +32,9 @@
   * 多種不同 ( 類型、流程、職級、海內外 ) 表單以簡單工廠模式搭配 ( 多型、泛型、介面、繼承、反射、映射 )，結合 IOC、DI 使攏長程式碼減少、方便維護與理解複雜商業邏輯
   * 串接整合不同系同如 AD、自動化、BAT、排成器、NAC、BPM、SAM
   * 根據 SRS 規格書提供 spec. 應用並配合 DEV、UAT、QAS、PRD 開發階段進行開發與測試、文件 UTR SITR SAD SDD 技術移轉文件 撰寫
-
+* 【使用技術】Angular2 v8+,TypeScript,PrimeNG,i18n,.NET MVC,Oracale,Autofac, Distributed System etc.
+* 【使用工具】Dbeaver,FTP,SharePoint ,Citrix, Postman, MS SQL Server Management Studio, Visual Studio/Visual Studio Code, Git,Sourcetree etc.
+ 
 </details>
 
 <details>
