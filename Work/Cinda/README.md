@@ -49,6 +49,8 @@
   * 爬取內政部實價登錄資料用於大數據分析、並將資料視覺化、流程排程化
 * 【銷售 CRM 前台】 ( 維護 AG Ngx-admin + .NET CORE API ) `2021/10 - 2022/10`
   * 維護手機 APP RWD 版面與後台之介接，與銷售報表後台視覺化
+* 【使用技術】Angular2 v8+,TypeScript,PrimeNG,i18n,.NET MVC,Oracale,Autofac, Distributed System etc.
+* 【使用工具】Dbeaver,FTP,SharePoint ,Citrix, Postman, MS SQL Server Management Studio, Visual Studio/Visual Studio Code, Git,Sourcetree etc.
 
 </details>
 
