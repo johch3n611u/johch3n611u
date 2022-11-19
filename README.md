@@ -62,9 +62,9 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 F2E：
 
-* Angular2 3+y     * Vue2 1+y        * PrimeNG     * Material      * SASS
+◉ Angular2 3+y     ◉ Vue2 1+y        ◉ PrimeNG     ◉ Material      ◉ SASS
 
-* TypeScript       * JS Lib (jQuery、Chart、Three、D3) etc...
+◉ TypeScript       ◉ JS Lib (jQuery、Chart、Three、D3) etc...
 
 B2E：
 
