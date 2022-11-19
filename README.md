@@ -62,27 +62,27 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 F2E：
 
-◉ Angular2 3+y     ◉ Vue2 1+y        ◉ PrimeNG     ◉ Material      ◉ SASS
+<p style="flex-wrap: nowrap;"> <span>◉ Angular2 3+y</span>     <span>◉ Vue2 1+y</span>        <span>◉ PrimeNG</span>     <span>◉ Material</span>      <span>◉ SASS</span> </p>
 
 ◉ TypeScript       ◉ JS Lib (jQuery、Chart、Three、D3) etc...
 
 B2E：
 
-* Net Core 3+y     * MVC API Webform * C# 4+y      * MS SQL 3+y    * AOP      * IOC      
+◉ Net Core 3+y     ◉ MVC API Webform ◉ C# 4+y      ◉ MS SQL 3+y    ◉ AOP      ◉ IOC      
 
-* Unit Test        * Dapper          * VB 1+y      * Oracle 1+y etc...
+◉ Unit Test        * Dapper          ◉ VB 1+y      ◉ Oracle 1+y etc...
 
 Tool：
 
-* Git              * SourceTree      * Quartz      * Jenkins       * IIS      * Nginx
+◉ Git              ◉ SourceTree      ◉ Quartz      ◉ Jenkins       ◉ IIS      ◉ Nginx
 
-* Redmine          * Azure、Swagger  * Postman     * Ngx-admin etc...
+◉ Redmine          ◉ Azure、Swagger  ◉ Postman     ◉ Ngx-admin etc...
 
 Other：
 
-* Electron.net     * Firebase        * DBeaver     * Figma         * Adobe (XD、PS、AI)
+◉ Electron.net     ◉ Firebase        ◉ DBeaver     ◉ Figma         ◉ Adobe (XD、PS、AI)
 
-* AutoCad          * Sketchup        * Lumion etc...
+◉ AutoCad          ◉ Sketchup        ◉ Lumion etc...
 
 <details>
 
