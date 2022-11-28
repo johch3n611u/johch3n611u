@@ -547,7 +547,7 @@ Other：
 
 ## Education
 
-### ✦ <a href="https://www.taiwanjobs.gov.tw/internet/index/index.aspx"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jun 2019 ~ Jul 2019
+### ✦ <a href="https://www.taiwanjobs.gov.tw/internet/index/index.aspx"> 職業訓練局 </a> , 移動商務系統設計與開發課程 , Jan 2019 ~ Jul 2019
 
 [詳細內容請點擊觀看](https://github.com/johch3n611u/johch3n611u/tree/main/Work/%E8%81%B7%E8%A8%93%E5%B1%80)
 
