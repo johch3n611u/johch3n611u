@@ -1,0 +1,251 @@
+@import "../general";
+
+main .e2FoodAngelPageTemplate {
+  @extend %e2HelpFaq !optional; 
+  @include showTemplate;
+  display: flex;
+  max-width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #faf8f1;
+  .FoodAngelTopBanner{
+    width: 100%;
+    e2-media{
+      background-color: #cdf2ca;
+      img {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+  }
+
+  .FoodAngelIntroduction,
+  .FoodAngelPastEvent,
+  .FoodAngelFaq,
+  .FoodAngelMachine,
+  .FoodAngelCategoryList,
+  .FoodAngelTandC {
+    padding: 0 80px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    @include breakpoint(sm-max) {
+      padding: 0 18px;
+    }
+    e2-banner, e2-paragraph{
+      // display: flex;
+      align-self: baseline;
+      text-align: center;
+      justify-content: center;
+    }
+    e2-paragraph {
+      max-width: 960px;
+      margin: 0 auto;
+      flex-grow: 0;
+      font-family: PingFangHK;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.8;
+      letter-spacing: 2px;
+      text-align: center;
+      color: #434542;
+    }
+  }
+
+  .FoodAngelPastEvent {
+    padding-bottom: 0;
+    margin-bottom: 60px;
+    @include breakpoint(sm-max) {
+      margin-bottom: 14px;
+    }
+  }
+
+  .FoodAngelIntroduction,
+  .FoodAngelPastEvent,
+  .FoodAngelFaq, {
+    e2-banner, e2-paragraph {
+      display: flex;
+      margin-bottom: 30px;
+      @include breakpoint(sm-max) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .FoodAngelFaq {
+    @include breakpoint(sm-max) {
+      margin-bottom: 60px;
+    }
+  }
+
+
+  .FoodAngelIntroduction {
+    e2-paragraph {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .FoodAngelCategoryList{
+    display: grid;
+    // flex-wrap: wrap;
+    padding: 0 110px;
+    // justify-content: space-between;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px 30px;
+    margin-bottom: 60px;
+    @include breakpoint(sm-max) {
+      padding: 18px;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+      grid-template-columns: repeat(2,1fr);
+    }
+    e2-banner{
+      // align-self: center;
+      text-align: center;
+      justify-content: center;
+      vertical-align: middle;
+
+      e2-media{
+        display: flex;
+        justify-content: center;
+        img {
+          width: 70%;
+        }
+      }
+      a{
+        text-decoration: none;
+      }
+
+      p {
+        color: #80c341;
+        align-content: center;
+        width: 100%;
+        margin: 0.5px 0 0;
+        padding: 12.7px 7.1px 11.7px 6.7px;
+        border-radius: 33.7px;
+        box-shadow: 0 1.7px 8.4px 0.8px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-align: center;
+        font-family: PingFangHK;
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .FoodAngelEvent{
+    // padding: 30px 0;
+    margin-bottom: 60px;
+    align-self: center;
+    @include breakpoint(sm-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .FoodAngelMachine{
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #f9f3df;
+    margin-bottom: 50px;
+    @include breakpoint(sm-max) {
+      margin-bottom: 41.5px;
+    }
+    &::before{
+      content: "";
+      z-index: 0;
+      background: #f9f3df;
+      position: absolute;
+      border-radius: 1200px 1200px 0 0;
+      height: 88%;
+      width: 100%;
+      top: 15%;
+      @include breakpoint(sm-max) {
+        top: 2.5%;
+        height: 102%;
+      }
+    }
+    flex-wrap: wrap;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    e2-banner, e2-paragraph{
+      z-index: 1;
+      margin-bottom: 60px;
+      &:nth-child(1), &:nth-child(2){
+        width: calc(50% - 15px);
+        // justify-content: space-between;
+        @include breakpoint(sm-max) {
+          margin-bottom: 40px;
+        }
+        img{
+          width: 100%;
+        }
+      }
+      &:nth-child(3) {
+        @include breakpoint(sm-max) {
+          margin-bottom: 40px;
+        }
+      }
+      &:nth-child(4){
+        margin-bottom: 20px;
+      }
+      &:nth-child(5) {
+        margin-bottom: 40px;
+      }
+      &:nth-child(6){
+        background-color: #fff;
+        padding: 20px;
+      }
+      &:nth-child(7){
+        margin: 0 50px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        padding: 20px;
+      }
+      &:nth-child(8){
+        background-color: #fff;
+        padding: 20px;
+      }
+      &:nth-child(6), &:nth-child(7), &:nth-child(8){
+        margin-bottom: 0;
+        @include breakpoint(sm-max) {
+          width: calc((100% - 30px) / 3);
+          padding: 10px;
+          &:nth-child(7){
+            margin: 0 15px;
+          }
+        }
+        img{
+          width: 100%;
+        }
+      }
+      
+    }
+  }
+
+  .FoodAngelTandC{
+    background-color: #f9f3df;
+    display: flex;
+    width: 100%;
+    padding-bottom: 274px;
+    justify-content: center;
+    @include breakpoint(sm-max) {
+      padding-bottom: 87px;
+    }
+    pns-help-faq {
+      width: 470px;
+      margin-top: 0;
+      .logo{
+        display: none;
+      }
+    }
+  }
+}
