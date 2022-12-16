@@ -55,3 +55,21 @@ export class PnsHelpFaqComponent implements OnInit, OnDestroy {
     this.isActive$?.unsubscribe();
   }
 }
+
+
+---
+  
+## component$ => result 5 次的
+
+{
+    "uid": "FoodAngelFaq1",
+    "uuid": "eyJpdGVtSWQiOiJGb29kQW5nZWxGYXExIiwiY2F0YWxvZ0lkIjoicG5zaGtDb250ZW50Q2F0YWxvZyIsImNhdGFsb2dWZXJzaW9uIjoiT25saW5lIn0=",
+    "typeCode": "E2HelpFaqComponent",
+    "name": "Food Angel FAQ Q1",
+    "container": "false",
+    "answer": "A: 百佳超級市場經已第8年聯同「惜食堂」展開「全城傳愛齊捐食」食物捐贈計劃，呼籲全港市民身體力行關注弱勢社群。配合政府電子消費券計劃，百佳將於旗下全線香港分店首次推出「消費『餸』愛心」食物捐贈計劃，希望鼓勵大家用消費券購物之餘亦可以透過捐贈愛心食材為善助人。連同百佳及家樂牌第3度推出的1%對捐活動，希望於疫情下為惜食堂籌集更多食材製作營養飯餐予有需要人士。顧客在過去8屆活動期間共連同百佳配對捐贈的「佳之選」貨品及品牌對捐產品，已籌集超過460,000件糧油食物予惜食堂，食物和捐款總值已超過港幣1,000萬！百佳會把籌集所得食物運往「惜食堂」以製作飯餐，預計可助「惜食堂」供應數十萬個熱飯餐，免費派發予社會上有需要人士。",
+    "question": "Q:「全城傳愛齊捐食消費愛心」是什麼樣的活動?",
+    "synchronizationBlocked": "false",
+    "ajax": "false",
+    "modifiedTime": "2022-11-24T11:14:04.109+08:00"
+}
