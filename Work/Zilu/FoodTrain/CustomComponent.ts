@@ -8,6 +8,19 @@ import { map, switchMap, take, tap } from 'rxjs/operators';
 @Component({
   selector: 'pns-help-faq',
   templateUrl: './pns-help-faq.component.html',
+  html:
+  
+  <ng-container *ngIf="component$ | async as data">
+    <div class="faq-item" (click)="isActive$.next(!isActive$.value)">
+        <div class="faq-context">{{ data.question }}</div>
+        <img src="assets/img/pns-help-faq-arrow.svg" [ngClass]="(isActive$ | async) ? 'arrow-up' : 'arrow-down'"/>
+    </div>
+
+    <div class="faq-response" [class.active]="isActive$ | async" *ngIf="isActive$ | async">
+      <div class="content" [innerHTML]="data.answer"></div>
+      <div class="logo"><img alt="" src="assets/img/share/food_angel_img.png" /></div>
+    </div>
+  </ng-container>
 })
 export class PnsHelpFaqComponent implements OnInit, OnDestroy {
   component$: Observable<E2HelpFaqCMSComponent> = this.cmsService
