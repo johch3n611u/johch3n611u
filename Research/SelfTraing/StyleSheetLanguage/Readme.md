@@ -2,9 +2,9 @@ Post your work to dribbble (if you're a member) or Twitter with #dailyui and you
 
 ## Daily UI Design Hint...
 
-`https://dribbble.com/search/dailyui-002`
+> https://dribbble.com/search/dailyui-002
 
-> 1. :: Sign Up
+### 1. :: Sign Up
 
 Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.
 
