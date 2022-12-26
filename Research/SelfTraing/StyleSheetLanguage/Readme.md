@@ -50,9 +50,7 @@ Design a Flash Message with both the outcome for an error and success. Is it for
 
 12. :: E-Commerce Shop (Single Item)
 
-Hint: Design an e-commerce shop. Is it simple for a local business or a large online retailer? Is it for clothing, shoes, handmade soap, or something else? 
-
-Consider the brand, the products offered, product views, product options, desired actions (conversions, product views, etc.) and the users! (As always, it's up to you!) Don't forget to share on Dribbble and/or Twitter with #dailyui when you're done.
+Design an e-commerce shop. Is it simple for a local business or a large online retailer? Is it for clothing, shoes, handmade soap, or something else? Consider the brand, the products offered, product views, product options, desired actions (conversions, product views, etc.) and the users! (As always, it's up to you!)
 
 13. :: Direct Messaging
 
