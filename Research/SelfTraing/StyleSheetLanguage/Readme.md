@@ -2,9 +2,9 @@ Post your work to dribbble (if you're a member) or Twitter with #dailyui and you
 
 ## Daily UI Design Hint...
 
-> https://dribbble.com/search/dailyui-002
+`https://dribbble.com/search/dailyui-002`
 
-1. :: Sign Up
+> 1. :: Sign Up
 
 Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.
 
@@ -56,93 +56,12 @@ Design an e-commerce shop. Is it simple for a local business or a large online r
 
 Design a Direct Messaging app, profile, or chatbox. Consider the parties involved in the messages, images, placement, and context of the messages. Are the messages for social purposes? Customer support?
 
+14. :: Countdown Timer
 
-20. :: 013 Credit Card Checkout
-21. :: 014 Credit Card Checkout
-22. :: 015 Credit Card Checkout
-23. :: 002 Credit Card Checkout
-24. :: 002 Credit Card Checkout
-25. :: 002 Credit Card Checkout
-26. :: 002 Credit Card Checkout
-27. :: 002 Credit Card Checkout
-28. :: 002 Credit Card Checkout
-29. :: 002 Credit Card Checkout
-30. :: 002 Credit Card Checkout
-31. :: 002 Credit Card Checkout
-32. :: 002 Credit Card Checkout
-33. :: 002 Credit Card Checkout
-34. :: 002 Credit Card Checkout
-35. :: 002 Credit Card Checkout
-36. :: 002 Credit Card Checkout
-37. :: 002 Credit Card Checkout
-38. :: 002 Credit Card Checkout
-39. :: 002 Credit Card Checkout
-40. :: 002 Credit Card Checkout
-41. :: 002 Credit Card Checkout
-42. :: 002 Credit Card Checkout
-43. :: 002 Credit Card Checkout
-44. :: 002 Credit Card Checkout
-45. :: 002 Credit Card Checkout
-46. :: 002 Credit Card Checkout
-47. :: 002 Credit Card Checkout
-48. :: 002 Credit Card Checkout
-49. :: 002 Credit Card Checkout
-50. :: 002 Credit Card Checkout
-51. :: 002 Credit Card Checkout
-52. :: 002 Credit Card Checkout
-53. :: 002 Credit Card Checkout
-54. :: 002 Credit Card Checkout
-55. :: 002 Credit Card Checkout
-56. :: 002 Credit Card Checkout
-57. :: 002 Credit Card Checkout
-58. :: 002 Credit Card Checkout
-59. :: 002 Credit Card Checkout
-60. :: 002 Credit Card Checkout
-61. :: 002 Credit Card Checkout
-62. :: 002 Credit Card Checkout
-63. :: 002 Credit Card Checkout
-64. :: 002 Credit Card Checkout
-65. :: 002 Credit Card Checkout
-66. :: 002 Credit Card Checkout
-67. :: 002 Credit Card Checkout
-68. :: 002 Credit Card Checkout
-69. :: 002 Credit Card Checkout
-70. :: 002 Credit Card Checkout
-71. :: 002 Credit Card Checkout
-72. :: 002 Credit Card Checkout
-73. :: 002 Credit Card Checkout
-74. :: 002 Credit Card Checkout
-75. :: 002 Credit Card Checkout
-76. :: 002 Credit Card Checkout
-77. :: 002 Credit Card Checkout
-78. :: 002 Credit Card Checkout
-79. :: 002 Credit Card Checkout
-80. :: 002 Credit Card Checkout
-81. :: 002 Credit Card Checkout
-82. :: 002 Credit Card Checkout
-83. :: 002 Credit Card Checkout
-84. :: 002 Credit Card Checkout
-85. :: 002 Credit Card Checkout
-86. :: 002 Credit Card Checkout
-87. :: 002 Credit Card Checkout
-88. :: 002 Credit Card Checkout
-89. :: 002 Credit Card Checkout
-90. :: 002 Credit Card Checkout
-91. :: 002 Credit Card Checkout
-92. :: 002 Credit Card Checkout
-93. :: 002 Credit Card Checkout
-94. :: 002 Credit Card Checkout
-95. :: 002 Credit Card Checkout
-96. :: 002 Credit Card Checkout
-97. :: 002 Credit Card Checkout
-98. :: 002 Credit Card Checkout
-99. :: 002 Credit Card Checkout
-100. :: 002 Credit Card Checkout
-101. :: 002 Credit Card Checkout
-102. :: 002 Credit Card Checkout
-103. :: 002 Credit Card Checkout
-104. :: 002 Credit Card Checkout
-105. :: 002 Credit Card Checkout
-106. :: 002 Credit Card Checkout
-107. :: 002 Credit Card Checkout
+Design a Countdown Timer. Is it for an app? An interface for an oven? A sport related countdown? A launch countdown for NASA?
 
+15. :: On/Off Switch
+
+Design an On/Off Switch. Consider what's being turned on/off and how it should be done. 
+
+15. :: Pop-Up / Overlay
