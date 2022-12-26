@@ -21,6 +21,7 @@ How this works:
 
 Follow along for updates and special announcements!
                                
+## Daily UI
                                
 1. Daily UI :: 001 Sign Up
 
