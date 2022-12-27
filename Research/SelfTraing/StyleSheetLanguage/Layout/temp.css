@@ -1,0 +1,22 @@
+.clipPath {
+    /* 屬性使用裁剪方式創建元素的可顯示區域 */
+    /* Shape https://bennettfeely.com/clippy/ 線上網站直接產生形狀 */
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    clip-path: polygon(85% 0, 0% 100%, 100% 100%);
+    background-image: url("./img/thomas-antonio-RN78WIJLDsDE-unsplash.jpg");
+    background-color: red;
+    /* background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+    /* background: linear-gradient(115deg, #7bf 50%, transparent 50%), url("https://picsum.photos/1200/600/?blur") right center/auto 100%; */
+}
+
+/*
+
+<!-- Semantic Elements https://www.w3schools.com/html/html5_semantic_elements.asp -->
+    <div style="background-color: red;">
+        <header class="clipPath"></header>
+    </div>
+
+*/

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- box-sizing:border-box; -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/1.0.8/reseter.min.css"
+        integrity="sha512-w7sMEM5yzmuVP9ic9zpCLk/+whwrrhkH5g83x0wi5DEPo1y+/JniMmCVfbtjw5JipFpcCb4gyF2xLES6tc+TxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="style.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="left">
+                <span class="button menuIcon material-symbols-outlined">menu</span>
+                <a><span class="important">Google</span> Trends</a>
+            </div>
+            <div class="right">
+                <!-- https://moderncss.dev/custom-select-styles-with-pure-css/ -->
+                <div>
+                    <div class="selectIcon"></div>
+                </div>
+                <select class="selectCustom">
+                    <option value="Taiwan" selected="selected">台灣</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Bouvet Island">Bouvet Island</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Territories">French Southern Territories</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-bissau">Guinea-bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                </select>
+                <span class="button menuIcon material-symbols-outlined smsFailed">sms_failed</span>
+                <span class="button menuIcon material-symbols-outlined">apps</span>
+                <img class="button acount" src="headshot.jpg">
+            </div>
+        </div>
+        <div class="search">
+            <p>探索世界搜尋趨勢</p>
+            <div>
+                <input placeholder="輸入搜尋字詞或主題" />
+                <span class="searchIcon material-symbols-outlined">search</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="sample">
+            <p>你也可以先看看下面的範例</p>
+            <div class="boxs">
+                <img src="map1.png" />
+                <img src="map2.png" />
+                <img src="map3.png" />
+            </div>
+            <div class="navigation">
+                <span class="disable material-symbols-outlined">arrow_back_ios</span>
+                <span>顯示第 1-3 個範例，共 6 個</span>
+                <span class="button material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+        </div>
+        <div class="deepAnalyze">
+            <div class="title">
+                <p>最新報導和深入分析</p>
+                <p>探索如何用 Google 資料來進行報導。</p>
+            </div>
+            <a>
+                <img src="deepAnalyze.png" />
+                <div>
+                    <div>
+                        <p>精選</p>
+                        <p>2022 年度搜尋排行榜</p>
+                        <p>透過 Google 搜尋趨勢資料的角度，探索今年的搜尋概況。</p>
+                    </div>
+                    <div>
+                        <p>深入閱讀</p>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="popular">
+            <div class="title">
+                <p>最近的熱門搜尋</p>
+                <p>隨時掌握最新的熱門搜尋</p>
+            </div>
+            <ul>
+                <li>
+                    <span>蔡英文</span><span>1萬+ 筆搜尋</span>
+                </li>
+                <li>
+                    <span>向風而行</span><span>2000+ 筆搜尋</span>
+                </li>
+                <li>
+                    <span>Epic</span><span>5萬+ 筆搜尋</span>
+                </li>
+                <li>
+                    <span>利物浦</span><span>2000+ 筆搜尋</span>
+                </li>
+                <li>
+                    <span>宋逸民</span><span>5萬+ 筆搜尋</span>
+                </li>
+                <li>
+                    <span>國民法官</span><span>5000+ 筆搜尋</span>
+                </li>
+                <li>
+                    <p>更多熱門搜尋字詞</p>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </li>
+            </ul>
+        </div>
+        <div class="leaderboard">
+            <div class="title">
+                <p>年度搜尋排行榜</p>
+                <p>查看各年份的熱門 Google 搜尋</p>
+            </div>
+            <div>
+                <div>
+                    <img src="leaderboard.png" />
+                    <ul>
+                        <li>
+                            <span>2022 年度搜尋排行榜</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </li>
+                        <li>
+                            <span>2021 年度搜尋排行榜</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </li>
+                        <li>
+                            <span>2020 年度搜尋排行榜</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </li>
+                        <li>
+                            <span>2019 年度搜尋排行榜</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </li>
+                        <li>
+                            <span>2018 年度搜尋排行榜</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation">
+                    <span class="disable material-symbols-outlined">arrow_back_ios</span>
+                    <span> 顯示第 1-5 個項目，共 22 個 </span>
+                    <span class="button material-symbols-outlined">arrow_forward_ios</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="newsPlan">
+        <div>
+            <div>
+                <div>
+                    <p>Google 新聞計劃</p>
+                    <p>我們之所以推出 Google 新聞計劃，目的是希望與新聞業合作，協助新聞在數位時代蓬勃發展。如果您有興趣瞭解如何使用 Google 的工具，歡迎前往我們的訓練中心瀏覽，當中有超過 40 堂的
+                        Google 產品課程，包括 Google 搜尋趨勢課程。</p>
+                </div>
+                <div>
+                    <p>
+                        <span>瞭解詳情</span>
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </p>
+                    <p>
+                        <span>參加 GOOGLE 搜尋趨勢課程</span>
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </p>
+                </div>
+            </div>
+            <img src="newsPlan.png" />
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <a><span class="important">Google</span> Trends</a>
+            </div>
+            <ul>
+                <li>隱私權</li>
+                <li>服務條款</li>
+                <li>說明中心</li>
+                <li>提供意見</li>
+                <li>關於 Google</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="cookies">
+        <p>This site uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic.
+        </p>
+        <button>Learn more</button>
+        <button>OK, Got it</button>
+    </div>
+</body>
+
+</html>
