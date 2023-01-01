@@ -1,0 +1,59 @@
+*{
+    color: white;
+    font-size: 2rem;
+}
+
+header {
+    background-color: red;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500000;
+}
+
+main {
+    display: flex;
+}
+
+nav {
+    background-color: blue;
+    padding-top: 8vh;
+
+    >ul {
+        width: 18vw;
+        overflow: auto;
+        height: 92vh;
+        position: sticky;
+        top: 8vh;
+    }
+
+}
+
+article {
+    display: flex;
+    padding-top: 8vh;
+    width: 100%;
+}
+
+section {
+    background-color: greenyellow;
+    flex-grow: 4;
+}
+
+aside {
+    background-color: rgb(255, 47, 210);
+    flex-grow: 1;
+    direction:rtl;
+    >ul{
+        overflow: auto;
+        height: 92vh;
+        position: sticky;
+        top: 8vh;
+    }
+}
+
+footer {
+    background-color: rgb(73, 73, 73);
+    height: 20vh;
+}
