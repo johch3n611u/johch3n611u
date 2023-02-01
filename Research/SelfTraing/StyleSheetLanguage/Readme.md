@@ -248,3 +248,43 @@ What are you creating a schedule for? Is it for a sports team? A band planning t
 ## 75. :: Pre-Order
 
 ## 76. :: Loading...
+
+## 77. :: Thank You
+
+## 78. :: Pending Invitation
+
+## 79. :: Itinerary
+
+## 80. :: Date Picker
+
+## 81. :: Status Update
+
+Create a status update for a social site, a flight planner, or something entirely unique.
+
+## 82. :: Form
+
+## 83. :: Button
+
+## 84. :: Badge
+
+## 85. :: Pagination
+
+## 86. :: Progress Bar
+
+## 87. :: Tooltip
+
+## 88. :: Avatar
+
+## 89. :: Terms of Service
+
+## 90. :: Create New
+
+## 91. :: Curated for You
+
+Think about a design with content that has been customized for an individual such as suggested music, movies, books, news, or a product selection.
+
+## 92. :: F.A.Q.
+
+## 93 Splash Screen
+
+
