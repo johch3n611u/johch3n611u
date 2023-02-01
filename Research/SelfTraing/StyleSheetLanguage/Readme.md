@@ -285,6 +285,6 @@ Think about a design with content that has been customized for an individual suc
 
 ## 92. :: F.A.Q.
 
-## 93 Splash Screen
+## 93. :: Splash Screen
 
-
+## 94. :: News
