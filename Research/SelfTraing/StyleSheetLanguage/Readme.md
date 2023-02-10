@@ -288,3 +288,19 @@ Think about a design with content that has been customized for an individual suc
 ## 93. :: Splash Screen
 
 ## 94. :: News
+
+## 95. :: Product Tour
+
+## 96. :: Currently In-Stock
+
+## 97. :: Giveaway
+
+## 98. :: Advertisement
+
+## 99. :: Categories
+
+## 100. :: Redesign Daily UI Landing Page
+
+Ok, yep I know you're thinking. And yes, it does seem a bit self-serving, but this has a few benefits. Firstly, we're all on this mission together. And the mission is to help make everyone be a better designer. 
+
+What would it take for a site's landing page to appeal specifically to designers? What would interest you? Oh, and another benefit is that if your design is super cool and others like it as well, then (with your permission) it'll be our inspiration for our new design. And in that case... you'll be proudly featured on our site. 
