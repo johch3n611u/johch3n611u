@@ -51,7 +51,8 @@ $xl-range: 1280px;
       @content;
     }
   } @else if $point == 'md-range' {
-    @media (min-width:#{lower-bound($md-range)}) and (max-width:#{upper-bound($md-range)}) { // 768 以上 1023 以下
+    @media (min-width:#{lower-bound($md-range)}) and (max-width:#{upper-bound($md-range)}) { 
+      // 768 以上 1023 以下
       @content;
     }
   } @else if $point == 'md-min' {
