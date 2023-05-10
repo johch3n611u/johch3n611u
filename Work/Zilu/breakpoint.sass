@@ -1,0 +1,71 @@
+```scss
+// Start of Breakpoint
+$xs-range: 575px;
+$sm-range: 767px;
+$md-range: (768px, 1023px);
+$lg-range: 1024px;
+$xl-range: 1280px;
+
+@mixin breakpoint($point, $value: 0) {
+  @if $point == 'xs-range' {
+    @media (max-width: #{$xs-range}) {
+      @content;
+    }
+  }
+  @if $point == 'sm-range' {
+    @media (max-width: #{$sm-range}) {
+      @content;
+    }
+  } @else if $point == 'md-range' {
+    @media (min-width:#{lower-bound($md-range)}) and (max-width:#{upper-bound($md-range)}) {
+      @content;
+    }
+  } @else if $point == 'md-min' {
+    @media (min-width:#{upper-bound($md-range)+1}) {
+      @content;
+    }
+  } @else if $point == 'md-max' {
+    @media (max-width:#{upper-bound($md-range)}) {
+      @content;
+    }
+  } @else if $point == 'xl-min' {
+    @media (min-width: #{$xl-range}) {
+      @content;
+    }
+  } @else if $point == 'xs-max' {
+    @if $value != 0 {
+      @media (max-width:#{lower-bound($xs-range)-1}) {
+        @content;
+      }
+    } @else {
+      @media (max-width:#{lower-bound($xs-range)}) {
+        @content;
+      }
+    }
+  } @else if $point == 'sm-max' {
+    @if $value != 0 {
+      @media (max-width:#{lower-bound($md-range)-1}) {
+        @content;
+      }
+    } @else {
+      @media (max-width:#{lower-bound($md-range)}) {
+        @content;
+      }
+    }
+  } @else if $point == 'lg-max' {
+    @if $value != 0 {
+      @media (max-width: #{($xl-range)-1}) {
+        @content;
+      }
+    } @else {
+      @media (max-width: #{($xl-range)}) {
+        @content;
+      }
+    }
+  } @else if $point == 'xl-max' {
+    @media (max-width: #{$xl-range}) {
+      @content;
+    }
+  }
+}
+```
