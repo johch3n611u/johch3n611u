@@ -51,25 +51,29 @@ $xl-range: 1280px;
       @content;
     }
   } @else if $point == 'md-range' {
-    @media (min-width:#{lower-bound($md-range)}) and (max-width:#{upper-bound($md-range)}) { 
-      // 768 以上 1023 以下
+    // 768 以上 1023 以下
+    @media (min-width:#{lower-bound($md-range)}) and (max-width:#{upper-bound($md-range)}) {
       @content;
     }
   } @else if $point == 'md-min' {
-    @media (min-width:#{upper-bound($md-range)+1}) { // 768 以上
+    // 768 以上
+    @media (min-width:#{upper-bound($md-range)+1}) { 
       @content;
     }
   } @else if $point == 'md-max' {
-    @media (max-width:#{upper-bound($md-range)}) { // 1023 以下
+    // 1023 以下
+    @media (max-width:#{upper-bound($md-range)}) {
       @content;
     }
   } @else if $point == 'xl-min' {
-    @media (min-width: #{$xl-range}) { // 1280 以上
+    // 1280 以上
+    @media (min-width: #{$xl-range}) { 
       @content;
     }
   } @else if $point == 'xs-max' {
     @if $value != 0 {
-      @media (max-width:#{lower-bound($xs-range)-1}) { // 575 以下
+      // 575 以下
+      @media (max-width:#{lower-bound($xs-range)-1}) {
         @content;
       }
     } @else {
@@ -79,7 +83,8 @@ $xl-range: 1280px;
     }
   } @else if $point == 'sm-max' {
     @if $value != 0 {
-      @media (max-width:#{lower-bound($md-range)-1}) { // 767 以下
+      // 767 以下
+      @media (max-width:#{lower-bound($md-range)-1}) { 
         @content;
       }
     } @else {
@@ -89,7 +94,8 @@ $xl-range: 1280px;
     }
   } @else if $point == 'lg-max' {
     @if $value != 0 {
-      @media (max-width: #{($xl-range)-1}) { // 1280 以下
+      // 1280 以下
+      @media (max-width: #{($xl-range)-1}) { 
         @content;
       }
     } @else {
@@ -98,7 +104,8 @@ $xl-range: 1280px;
       }
     }
   } @else if $point == 'xl-max' { 
-    @media (max-width: #{$xl-range}) { // 767 以下
+    // 767 以下
+    @media (max-width: #{$xl-range}) { 
       @content;
     }
   }
