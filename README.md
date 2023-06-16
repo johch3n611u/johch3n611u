@@ -60,29 +60,53 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 </p>
 
-F2E：
+<table><tr><td valign="top" width="25%">
 
-◉ Angular2 3+y     ◉ Vue2 1+y             ◉ PrimeNG     ◉ Material      ◉ SASS
+### F2E
 
-◉ TypeScript       ◉ JS Lib (jQuery、Chart、Three、D3) etc...
+◉ Angular2 ( 3+y )
+  
+◉ Vue2 ( 1+y )
+  
+◉ PrimeNG / MaterialUI / Ngx-admin
+  
+◉ SASS / TypeScript
+  
+◉ JS Lib ( jQuery、Chart、Three、D3 ) etc...
+  
+</td><td valign="top" width="25%">
 
-B2E：
+### B2E
 
-◉ Net Core 3+y     ◉ MVC WebAPI Webform   ◉ C# 4+y      ◉ MS SQL 3+y    ◉ AOP      ◉ IOC      
+◉ Net. Core ( 4+y ) / MVC / WebAPI          
 
-◉ Unit Test        ◉ Dapper               ◉ VB 1+y      ◉ Oracle 1+y etc...
+◉MS SQL ( 3+y ) 
 
-Tool：
+◉ AOP / IOC / Unit Test / Dapper / Quartz.NET / RabbitMQ             
+  
+◉ C# ( 4+y ) / VB ( 1+y )
+  
+◉ Oracle ( 1+y ) etc...  
+  
+</td><td valign="top" width="25%">
+  
+### Tool
 
-◉ Git              ◉ SourceTree           ◉ Quartz      ◉ Jenkins       ◉ IIS      ◉ Nginx
+◉ Git ( Github / Git Flow ) / SourceTree / Jenkins / IIS / Nginx
 
-◉ Redmine          ◉ Azure、Swagger       ◉ Postman     ◉ Ngx-admin etc...
+◉ Redmine / Jira / Asana / Trello / Slack
 
-Other：
+◉ Azure / Swagger / Postman etc...
+  
+</td><td valign="top" width="25%">
+  
+### Other
 
-◉ Electron.net     ◉ Firebase        ◉ DBeaver     ◉ Figma         ◉ Adobe (XD、PS、AI)
+◉ Electron.net / Firebase / DBeaver / Figma / 
 
-◉ AutoCad          ◉ Sketchup        ◉ Lumion etc...
+ ◉ Adobe (XD、PS、AI) / AutoCad / Sketchup / Lumion etc...
+  
+</td></tr></table>
 
 <details>
 
