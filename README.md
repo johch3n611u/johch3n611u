@@ -23,7 +23,7 @@ Explicit is better than implicit 🖖 歡迎互相交流
 * <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> 義守大學資訊管理系 1y ( 程式 )
 * <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> 輔仁大學景觀建築系 4y ( 規劃、設計、23D 繪圖 )
 
-<br>
+<br><br>
 
 <details> <summary>SKILL：</summary></details>
 
@@ -61,8 +61,6 @@ Explicit is better than implicit 🖖 歡迎互相交流
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/>
 
 </p>
-
-<br>
 
 <table><tr><td valign="top" width="25%">
 
