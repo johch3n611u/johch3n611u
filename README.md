@@ -1,8 +1,8 @@
 <a href="#">
- <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact&theme=highcontrast" width="50%">
+ <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact" width="50%">
 </a>
 <a href="#">
-   <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u&theme=highcontrast" width="50%" />
+   <img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=johch3n611u" width="50%" />
 </a>
 
 Explicit is better than implicit 🖖 歡迎互相交流
