@@ -1,3 +1,17 @@
+<!-- 良興 175    5.83
+新達 807   26.9
+32.7     2.725
+2015/5~2015/9,達觀規劃設計有限公司,實習生、
+2016/6~2016/9,杭州薌富規劃有限公司,實習生、
+2019/7~2020/2,良興購物網 Liang Shing EcLife,Jr. Web Developer、
+2020/6~2022/9, 新達科技 Shinda Tech. Software Developer、
+2022/11~Now,資旅軟體開發有限公司 GLSoft,Frontend Software Engineer
+1999/9~2005/6,台灣新北市新莊區榮富國小、
+2006/9~2008/6,台灣新北市新莊區中平國中、
+2008/9~2011/6,台灣新北市林口區林口高中、
+2012/9~2013/6,台灣高雄市義守大學(轉學)資訊管理學系、
+2013/9~2017/6,台灣新北市新莊區輔仁大學景觀設計系 -->
+
 <a href="#">
  <img align="right" src="https://github-readme-stats.vercel.app/api?username=johch3n611u&layout=compact" width="50%">
 </a>
