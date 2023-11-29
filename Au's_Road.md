@@ -19,7 +19,13 @@ B. 簡歷
 C. 財力證明(銀行單)
 D. 工作證明(需要有經理簽署、蓋章及提供聯絡電話)
 E. 學歷證明
+
+薪資單、銀行對帳單、推薦信?工作證明
 ```
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/1c8b117b-5f37-4ff9-af57-6569da795a24)
+
+
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a3643232-24e6-45ca-a8ec-4ef1452c6c70)
 
@@ -35,6 +41,7 @@ E. 學歷證明
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/93e6feb6-086e-4363-be42-94eb75cfdaa3)
 
+### reference letter
 
 ### 186 需求文件
 
@@ -52,6 +59,8 @@ E. 學歷證明
 * 186 DE 材料
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/86944e51-6208-4fff-b6ce-03a1b3ccc40f)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/b6a92875-b8c2-47d1-a6c9-c6cca9a4c210)
 
 
 ### 職業鑑定需求文件
@@ -139,6 +148,11 @@ IOS 台科大，不確定是不是 ios 工作機會相對少的原因
 ```
 
 ```
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/d02aab8b-e220-4c54-888d-ac488cc686ca)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/fef621cd-8ddd-4960-ae8f-5dbd87e65241)
+
 
 ## 代辦
 
