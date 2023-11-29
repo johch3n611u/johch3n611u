@@ -55,7 +55,6 @@ ACS/移民對 ICT 角色進行了不同的分類：
 1&2 通常捕獲前端/後端和全端開發人員，或 ios/android 程式設計師。3 遷移可能更困難。
 
 我認為你不需要 RPL，因為無論如何你的工作似乎更符合 1 和 2。我之前幫助過許多 TW 前端安裝在 1 以下。
-
 ```
 
 ACS RECOGNTION OF PRIOR LEARNING (RPL)
