@@ -21,12 +21,38 @@ D. 工作證明(需要有經理簽署、蓋章及提供聯絡電話)
 E. 學歷證明
 ```
 
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a3643232-24e6-45ca-a8ec-4ef1452c6c70)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/13bda149-f5ee-4618-9b32-ed9d2b542a5e)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/85c8099e-a7f5-4356-9383-756b3c28deb3)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/b00a11f6-7d6c-421c-9d75-ac0c38d5a79e)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/6b3e5727-4eac-4c9d-ab4b-30cfedd395b4)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a6aa40ab-405d-47fb-bba9-8479edd2b239)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/93e6feb6-086e-4363-be42-94eb75cfdaa3)
+
+
 ### 186 需求文件
 
 [澳洲移民局材料清單](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream#HowTo)
 
 ```
 ```
+
+* 186 DE 學歷認定
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/20bc053b-f9bb-4325-8e86-8965d9834aa4)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/6aaafe03-82b8-4084-a4f8-d0e4e58fac9c)
+
+* 186 DE 材料
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/86944e51-6208-4fff-b6ce-03a1b3ccc40f)
+
 
 ### 職業鑑定需求文件
 
@@ -114,6 +140,9 @@ IOS 台科大，不確定是不是 ios 工作機會相對少的原因
 
 ```
 
+## 代辦
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/6f3fb332-e41c-401e-8c01-8be29b130916)
 
 
 
