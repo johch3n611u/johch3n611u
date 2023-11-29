@@ -55,3 +55,44 @@ ACS/移民對 ICT 角色進行了不同的分類：
 我認為你不需要 RPL，因為無論如何你的工作似乎更符合 1 和 2。我之前幫助過許多 TW 前端安裝在 1 以下。
 
 ```
+
+ACS RECOGNTION OF PRIOR LEARNING (RPL)
+
+[RPL對於澳洲技術移民申請有什麼幫助](https://dragongatevisa.pixnet.net/blog/post/348848087-rpl%E5%B0%8D%E6%96%BC%E6%BE%B3%E6%B4%B2%E6%8A%80%E8%A1%93%E7%A7%BB%E6%B0%91%E7%94%B3%E8%AB%8B%E6%9C%89%E4%BB%80%E9%BA%BC%E5%B9%AB%E5%8A%A9)
+
+### 相關文章
+
+* [你登了澳洲了，然後呢？如何提高找到澳洲科技業正職工作的機會 – 旅澳十年的台灣工程師告訴你！](https://medium.com/@cloudarchitectec/tips-on-how-to-find-a-tech-job-in-australia-3535243e7cf7)
+
+收費文章但看起來很多乾貨
+
+* [如何在澳洲雪梨找到軟體工程師工作](https://medium.com/@yaotetsou/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%BE%B3%E6%B4%B2%E9%9B%AA%E6%A2%A8%E6%89%BE%E5%88%B0%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%B7%A5%E4%BD%9C-2776b5365e31)
+
+```
+工作簽證 (482 work visa) 要求
+最少 2 年相關工作經驗 (這裡會需要公司的 reference letter，請參考 ACS 來確認應該包含的資訊)
+IELTS 四個 5 或是相對應的考試如 PTE 之類的
+找到願意擔保 (sponsor) 你的雇主
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
