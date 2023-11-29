@@ -23,9 +23,23 @@ E. 學歷證明
 薪資單、銀行對帳單、推薦信?工作證明
 ```
 
+* [海外工作的大魔王-工作簽證 (文件準備篇)](https://medium.com/dan%E7%9A%84%E6%BE%B3%E5%BC%8F%E5%8F%B0%E5%A5%B4%E7%AD%86%E8%A8%98/%E6%B5%B7%E5%A4%96%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%A4%A7%E9%AD%94%E7%8E%8B-%E5%B7%A5%E4%BD%9C%E7%B0%BD%E8%AD%89-%E6%96%87%E4%BB%B6%E6%BA%96%E5%82%99%E7%AF%87-a9333c9ed04a)
+
+```
+482中期工作簽證地雷 九個月下簽
+
+
+
+```
+
+* discord 飛行者開發論壇乾貨
+
+```
+
+```
+
+<details>
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/1c8b117b-5f37-4ff9-af57-6569da795a24)
-
-
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a3643232-24e6-45ca-a8ec-4ef1452c6c70)
 
@@ -40,6 +54,7 @@ E. 學歷證明
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a6aa40ab-405d-47fb-bba9-8479edd2b239)
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/93e6feb6-086e-4363-be42-94eb75cfdaa3)
+</details>
 
 ### reference letter
 
@@ -152,6 +167,20 @@ IOS 台科大，不確定是不是 ios 工作機會相對少的原因
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/d02aab8b-e220-4c54-888d-ac488cc686ca)
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/fef621cd-8ddd-4960-ae8f-5dbd87e65241)
+
+[第12集 | 澳洲雇主担保改革细节公布！为啥都推雇主担保？](https://www.douyin.com/video/7297146534150343946)
+
+* [澳洲軟體工程師求職、生活分享](https://daveleetw.medium.com/2016%E5%B9%B410%E6%9C%88-%E6%BE%B3%E6%B4%B2%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E8%81%B7%E5%88%86%E4%BA%AB-4f1eb9628ac3)
+
+```
+蠻快速的落地指南懶人包
+
+找工作的時間盡量避免7月前和12月來找工作。6/30在這邊是所謂的End Of Financial Year，有些公司人事預算要到7/1後才能動用; 12月就是Christmas了，應該很多Recruiter應該都放假去了。
+
+不管前後端都要刷提刷提刷提
+```
+
+
 
 
 ## 代辦
