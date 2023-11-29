@@ -64,7 +64,14 @@ ACS RECOGNTION OF PRIOR LEARNING (RPL)
 
 * [你登了澳洲了，然後呢？如何提高找到澳洲科技業正職工作的機會 – 旅澳十年的台灣工程師告訴你！](https://medium.com/@cloudarchitectec/tips-on-how-to-find-a-tech-job-in-australia-3535243e7cf7)
 
-收費文章但看起來很多乾貨
+收費文章但看起來很多乾貨 ( 沒看完 )
+
+```
+當你抵達澳洲後，我建議你立刻做以下三件事：
+把履歷上的電話更改為澳洲電話號碼
+把履歷上的地址更改為澳洲地址
+如果你是打工度假簽證，我會建議你在履歷上放上一行「Full working rights in Australia」來增加自己通過第一關履歷審查的機會
+```
 
 * [如何在澳洲雪梨找到軟體工程師工作](https://medium.com/@yaotetsou/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%BE%B3%E6%B4%B2%E9%9B%AA%E6%A2%A8%E6%89%BE%E5%88%B0%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%B7%A5%E4%BD%9C-2776b5365e31)
 
