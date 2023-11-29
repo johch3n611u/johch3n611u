@@ -8,6 +8,8 @@
 
 ### 482 需求文件
 
+[澳洲移民局材料清單]([https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream#HowTo](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482)
+
 ```
 AMEC ( 澳洲留學 ) 提供
 
@@ -20,6 +22,8 @@ E. 學歷證明
 ```
 
 ### 186 需求文件
+
+[澳洲移民局材料清單](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream#HowTo)
 
 ```
 ```
@@ -35,4 +39,19 @@ AMEC ( 澳洲留學 ) 提供
 · 成績單
 · 工作證明(Work Reference)- 工作細項內容必須得陳述出來
 · 薪資證明(銀行流水、工資單、工作合約、稅務報表及勞保等)
+```
+
+```
+STC Lawyers <info@stc-lawyers.com>
+
+ACS/移民對 ICT 角色進行了不同的分類：
+
+1) 程式設計師/軟體開發人員
+2) 軟體工程師
+3) Web 開發人員
+
+1&2 通常捕獲前端/後端和全端開發人員，或 ios/android 程式設計師。3 遷移可能更困難。
+
+我認為你不需要 RPL，因為無論如何你的工作似乎更符合 1 和 2。我之前幫助過許多 TW 前端安裝在 1 以下。
+
 ```
