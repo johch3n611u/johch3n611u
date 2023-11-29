@@ -159,8 +159,13 @@ IOS 台科大，不確定是不是 ios 工作機會相對少的原因
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/6f3fb332-e41c-401e-8c01-8be29b130916)
 
 
+## Work Reference / Reference Letter Sample
 
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/18cf48be-ed60-4bab-b736-6e3ca358431a)
 
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/4996bf23-498c-4728-a103-9af0d99d7b93)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/bbecf458-d80b-46aa-8a79-59d6f95901b2)
 
 
 
