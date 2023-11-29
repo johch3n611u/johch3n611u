@@ -8,7 +8,7 @@
 
 ### 482 需求文件
 
-[澳洲移民局材料清單]([https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186/temporary-residence-transition-stream#HowTo](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482)
+[澳洲移民局材料清單](https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482)
 
 ```
 AMEC ( 澳洲留學 ) 提供
