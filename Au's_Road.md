@@ -30,6 +30,8 @@ E. 學歷證明
 
 ### 職業鑑定需求文件
 
+Skills Assessment Guidelines for Applicants-V8.0 May 2023 遷移技巧-申請⼈評估指南 ( 有年份差異 ) 純英文由 ACS 提供最為正確
+
 ```
 AMEC ( 澳洲留學 ) 提供
 
@@ -60,7 +62,7 @@ ACS RECOGNTION OF PRIOR LEARNING (RPL)
 
 [RPL對於澳洲技術移民申請有什麼幫助](https://dragongatevisa.pixnet.net/blog/post/348848087-rpl%E5%B0%8D%E6%96%BC%E6%BE%B3%E6%B4%B2%E6%8A%80%E8%A1%93%E7%A7%BB%E6%B0%91%E7%94%B3%E8%AB%8B%E6%9C%89%E4%BB%80%E9%BA%BC%E5%B9%AB%E5%8A%A9)
 
-### 相關文章
+### 相關文章 ( 重點節錄 )
 
 * [你登了澳洲了，然後呢？如何提高找到澳洲科技業正職工作的機會 – 旅澳十年的台灣工程師告訴你！](https://medium.com/@cloudarchitectec/tips-on-how-to-find-a-tech-job-in-australia-3535243e7cf7)
 
@@ -80,13 +82,38 @@ ACS RECOGNTION OF PRIOR LEARNING (RPL)
 最少 2 年相關工作經驗 (這裡會需要公司的 reference letter，請參考 ACS 來確認應該包含的資訊)
 IELTS 四個 5 或是相對應的考試如 PTE 之類的
 找到願意擔保 (sponsor) 你的雇主
+
+沒有工作簽前可以使用的簽證
+打工度假簽 (417 Working Holiday Visa)
+學生簽 (500 Student Visa)
+旅遊簽 (Travel Visa)
+這裡面最有優勢的就是打工度假簽，因為在澳洲找工作時，有沒有澳洲工作經驗是非常重要的，持有打工度假簽證的時候，你可以馬上替雇主工作，也讓雇主對你的能力有了解，也讓雇主願意幫你辦工作簽證的意願大增。除此之外，當你轉工作簽證的時候，中間會轉成過橋簽( Bridge Visa )，你在這時候還是可以持續為雇主工作，不會有六個月的工作限制。
+
+職缺數目
+前端 == 全端 >>>> 後端 = DevOps 純後端幾乎都是 Java 或是 C#，如果像是我背景是 PHP, Nodejs, Go 建議大家還是需要懂前端，不用到太厲害，機會會多很多。
+
+獵頭流程可以看文章內詳述
+
+不要在 12 月及 4 月來，7 月會是一個機會最多的時間，因為這時候是通常公司的預算都是在這個月決定的，所以會有大量的職缺出來，這時候會是最佳的時機
 ```
 
 * [打工度假 用打工度假簽證到澳洲找軟體工程師失敗的經驗](https://www.dcard.tw/f/oversea_job/p/241621266)
 
 IOS 台科大，不確定是不是 ios 工作機會相對少的原因
 
+* [從後端轉前端開發 讓獵人頭主動找上門／突顯技術力 在澳洲樂享工作生活平衡](https://www.englishcareer.com.tw/cover-story/findjob-austraila-it/)
 
+```
+輔仁大學電機系畢業後，鄒耀德先後在台灣工作了兩年，之後考慮到台灣科技相關工作多偏向硬體相關，軟體工程工作相對少，因此動念前往海外，第一站去的就是澳洲。為求找工作方便，他最開始拿的也是打工度假簽證，打算找到工作後再由雇主協助辦理更正式的工作簽證。
+
+不敢開口、說話太委婉都要避免
+```
+
+* [Meet.jobs 集齊專家一次講解 | 澳洲求職 x 生活 x 簽證](https://column.meet.jobs/work-life-visa-australia/)
+
+```
+
+```
 
 
 
