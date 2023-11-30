@@ -196,7 +196,12 @@ IOS 台科大，不確定是不是 ios 工作機會相對少的原因
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/bbecf458-d80b-46aa-8a79-59d6f95901b2)
 
+## 找工作
 
+```
+seek visa sponsorship
+
+```
 
 
 
