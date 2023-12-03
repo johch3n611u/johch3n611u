@@ -207,6 +207,20 @@ ACS最新职业评估指南中对纸质原始文件和电子原始文件的上�
 
 ### 相關文章 ( 重點節錄 )
 
+* [澳洲雪梨前端求職經驗 2019](https://medium.com/@papashong1111/%E6%BE%B3%E6%B4%B2%E9%9B%AA%E6%A2%A8%E5%89%8D%E7%AB%AF%E6%B1%82%E8%81%B7%E7%B6%93%E9%A9%97-b672ffd912c1)
+
+```
+在台灣的準備
+準備英文 CV
+LinkedIn 地區改為雪梨
+出發兩個月前開始投遞履歷
+
+求職管道
+Facebook、LinkedIn、公司官網、Seek、Indeed
+```
+
+* [台灣人如何在澳洲找前端工程師的工作（門檻篇）？](https://medium.com/@chienrongkhor/%E5%8F%B0%E7%81%A3%E4%BA%BA%E5%A6%82%E4%BD%95%E5%9C%A8%E6%BE%B3%E6%B4%B2%E6%89%BE%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E5%B7%A5%E4%BD%9C-%E9%96%80%E6%AA%BB%E7%AF%87-42fd67c6e1c7)
+
 * [Which-programming-language-has-the-most-jobs-in-Melbourne-or-Australia-ASP-NET-or-Java](https://www.quora.com/Which-programming-language-has-the-most-jobs-in-Melbourne-or-Australia-ASP-NET-or-Java)
 
 * [工作证明有套路？如何满足澳洲规定！](https://zhuanlan.zhihu.com/p/79967802)
