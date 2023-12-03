@@ -190,6 +190,8 @@ ACS最新职业评估指南中对纸质原始文件和电子原始文件的上�
 
 ### 相關文章 ( 重點節錄 )
 
+* [工作證明](https://zhuanlan.zhihu.com/p/79967802)
+
 * [你登了澳洲了，然後呢？如何提高找到澳洲科技業正職工作的機會 – 旅澳十年的台灣工程師告訴你！](https://medium.com/@cloudarchitectec/tips-on-how-to-find-a-tech-job-in-australia-3535243e7cf7)
 
 收費文章但看起來很多乾貨 ( 沒看完 )
