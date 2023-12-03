@@ -32,10 +32,27 @@ E. 學歷證明
 
 ```
 
-* discord 飛行者開發論壇乾貨
+* discord 飛行者開發論壇乾貨 [packge](https://flycoder.io/podcasts/8/australia-software-developer-salary)
 
 ```
+薪資 Package 長怎麼樣
+這邊就先不談也蠻受歡迎的 Contracting 制度。
+名詞解釋
 
+Base - 100K
+Super - 9.5% (台灣 6%)
+通常沒有包含
+Signing Bonus（簽字費）
+Equity 認股權：低於市場行情的薪水通常會有，但也有一些好公司有提供
+Package Salary - Base 100K + Super 9.5K = 109.5K
+大部分公司沒有年終獎金、當然更沒有華人習慣的三節獎金
+大部分公司沒有私人醫療保險，通常雇主擔保簽證就會要求你要自己保好私人保險，跟美國不一樣。
+小心受騙，要如何跟公司談薪水數字。
+
+你可能會開價 100K，公司賊一點就會用 Package 薪水給你，結果你就只拿不到 92K 的 Base Salary
+明確地講 100K plus super
+或 My expected base salary is 100K
+結論：薪資本身的結構很簡單。除了 Equity 基本上沒有像是年終獎金、激勵獎金之類的東西綁住你，所以除了年底，都是找工作的好時機
 ```
 
 <details>
