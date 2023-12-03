@@ -207,6 +207,8 @@ ACS最新职业评估指南中对纸质原始文件和电子原始文件的上�
 
 ### 相關文章 ( 重點節錄 )
 
+* [軟體工程師移民澳洲-申請永居（Permanent Residence; PR)筆記](https://daveleetw.medium.com/%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%A7%BB%E6%B0%91%E6%BE%B3%E6%B4%B2-%E7%94%B3%E8%AB%8B%E6%B0%B8%E5%B1%85-permanent-residence-pr-%E7%AD%86%E8%A8%98-9eb3559866ce)
+
 * [澳洲雪梨前端求職經驗 2019](https://medium.com/@papashong1111/%E6%BE%B3%E6%B4%B2%E9%9B%AA%E6%A2%A8%E5%89%8D%E7%AB%AF%E6%B1%82%E8%81%B7%E7%B6%93%E9%A9%97-b672ffd912c1)
 
 ```
@@ -315,11 +317,11 @@ seek visa sponsorship
 
 ```
 
+[工程師英國找工作紀錄 :: 抓住那個工程師](https://yschen25.blogspot.com/)
 
+[普通人的海外求職指南, 不必留學，也能讓國際工作主動找上你](https://play.google.com/books/reader?id=yBRtEAAAQBAJ&pg=GBS.PT22.w.6.3.19_19&hl=zh-TW)
 
-
-
-
+[【澳洲版新手解惑】前端入门要什么水平](https://www.1point3acres.com/bbs/thread-876447-1-1.html)
 
 
 
