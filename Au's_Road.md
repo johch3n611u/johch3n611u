@@ -22,6 +22,7 @@ Primary Applicant
 3. Overseas police checks ( from every country where resided more than 12 mths aft turning 16 years 海外良民證 警察機關申請英文版
 4. Health insurance (OVHC) will send options 私人健康保險 discord 裡面有推薦的
 5. Health Examination ( can be done aft lodgement 健康檢查 ( 打工度假健檢沒失效可以沿用?
+6. 請問爬文看 482 簽證建議都需要收集到 5 年的工作經驗保險，但實際移民局只需要 2 年，目前我只能蒐集到接近 4 年的工作簽證，這樣對於簽證會有什麼影響嗎？ AMEC澳洲留學網路電台 以工作經驗上沒有差異 但是你如果在境內，比較容易找到雇主，申請 482 滿足兩年即可提出申請
 
 Visa doc
 1. En lang test results ( IELTS, PTE ... valid for 3ys or exemption 讀寫各項滿五分
@@ -136,7 +137,8 @@ B公司出具相关证明
 ## 工作
 
 ```
-1. 澳洲的企業分布就是以中小型企業為主，大型企業偏少?
+1. CV 的名稱盡量不要用中文名的翻譯，很多人資看到是外國姓名的履歷會直接刷掉?
+1. 澳洲的企業分布就是以中小型企業為主，大型企業偏少? 盡量考證照
 1. 找工作的過程會非常的艱辛，這是很正常的。基本上，Recruiter對你在台灣的學經歷是非常陌生的。請不要灰心，持續保持正能量，負能量絕對幫不了你
 1. 工作不好找，建議訂個可容忍無收入的時間 3-4 個月、初期來的薪資通常不如預期
 2. 可以先準備好 Cover Letter 和 Elevator Pitch 的台詞 ( 初入澳洲職場很常需要自我簡短介紹 )
@@ -151,7 +153,7 @@ B公司出具相关证明
 3. 符合英文資格(雅思平均大於5分，每項不能低於5分)
 4. 直接接觸到公司求職(公司官網和各大技術Meetup)，錄取的機會可能會提高一些
 4. 如何讓獵頭/工作/職缺找到你？
-   * Facebook、LinkedIn、公司官網、Seek、Indeed、Jora、Adzuna、AngelList(Start-up較多) => 搜尋 seek visa sponsorship
+   * Facebook、LinkedIn、公司官網、Seek、Indeed、Jora、Adzuna、AngelList(Start-up較多)、meetup、career expo、networking => 搜尋 seek visa sponsorship
    1. The Headline => Looking for the xxx role in Sydney
    2. The Country/Region
    3. 獵人頭多填好 Profile
@@ -311,7 +313,9 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [[職場] 知己知彼，百戰百勝 — 英文面試中你該問雇主哪些問題](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC-%E7%99%BE%E6%88%B0%E7%99%BE%E5%8B%9D-%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6%E4%B8%AD%E4%BD%A0%E8%A9%B2%E5%95%8F%E9%9B%87%E4%B8%BB%E5%93%AA%E4%BA%9B%E5%95%8F%E9%A1%8C-31d0b0a00dd1)
 * [[職場] 知己知彼，百戰百勝 — 英文面試中你該問雇主哪些問題](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC-%E7%99%BE%E6%88%B0%E7%99%BE%E5%8B%9D-%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6%E4%B8%AD%E4%BD%A0%E8%A9%B2%E5%95%8F%E9%9B%87%E4%B8%BB%E5%93%AA%E4%BA%9B%E5%95%8F%E9%A1%8C-31d0b0a00dd1)
 
+## 政策簽證新知頻道
 
+[留澳之道](https://www.douyin.com/user/MS4wLjABAAAAANuQBcoKJofLjFhMCIq2tF_Oao5WN2o3dlfk-wQ2F8GObp4xq4zHS8Nt4kX_VBTD?relation=0&vid=7297146534150343946)
 
 
 
