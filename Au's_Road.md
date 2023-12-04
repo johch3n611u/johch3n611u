@@ -136,6 +136,9 @@ B公司出具相关证明
 ## 工作
 
 ```
+1. 找工作的過程會非常的艱辛，這是很正常的。基本上，Recruiter對你在台灣的學經歷是非常陌生的。請不要灰心，持續保持正能量，負能量絕對幫不了你
+1. 工作不好找，建議訂個可容忍無收入的時間 3-4 個月、初期來的薪資通常不如預期
+2. 可以先準備好 Cover Letter 和 Elevator Pitch 的台詞 ( 初入澳洲職場很常需要自我簡短介紹 )
 1. 不要在 12 月及 4 月來，7 月會是一個機會最多的時間，因為這時候是通常公司的預算都是在這個月決定的，所以會有大量的職缺出來，這時候會是最佳的時機，找工作的時間盡量避免7月前和12月來找工作。6/30在這邊是所謂的End Of Financial Year，有些公司人事預算要到7/1後才能動用; 12月就是Christmas了，應該很多Recruiter應該都放假去了。
 2. 不管前後端都要刷提刷提刷提
 1. 職缺數目：前端 == 全端 >>>> 後端 = DevOps 純後端幾乎都是 Java 或是 C#，如果像是我背景是 PHP, Nodejs, Go 建議大家還是需要懂前端，不用到太厲害，機會會多很多。
@@ -145,12 +148,18 @@ B公司出具相关证明
 1. 並非每個雇主都有擔保資格，因此在面試確認上的時候必須要問清楚雇主是否有擔保資格
 2. 職位title很重要，最好是符合技術短缺名單上的title
 3. 符合英文資格(雅思平均大於5分，每項不能低於5分)
+4. 直接接觸到公司求職(公司官網和各大技術Meetup)，錄取的機會可能會提高一些
 4. 如何讓獵頭找到你？
-   * Facebook、LinkedIn、公司官網、Seek、Indeed 搜尋 seek visa sponsorship
+   * Facebook、LinkedIn、公司官網、Seek、Indeed、Jora、Adzuna、AngelList(Start-up較多) => 搜尋 seek visa sponsorship
    1. The Headline => Looking for the xxx role in Sydney
    2. The Country/Region
    3. 獵人頭多填好 Profile
-5. 獵頭都會問你些什麼？ 不敢開口、說話太委婉都要避免
+5. Recruiter / 獵頭都會問你些什麼？ 不敢開口、說話太委婉都要避免
+   1. 怕怯場 => 只需改變身體姿勢就可以改變別人的看法，甚至可能改變我們自己的身體化學反應
+   https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are
+   1. Recruiter：收到你履歷了，想要多了解你一點，叫你自我介紹
+   把自己簽證狀況 ( 需要雇主擔保工作簽證也在這時說 )、期望薪資、工作類型 ( Permanent, Contract…etc. )還有之前準備好的 Elevator Pitch 來講
+   通常聽到你簽證情況很大機會他就會跟你說這工作沒提供簽證擔保或不確定需要查查看。”I will get back to you later” 這是我常聽到的一個句子，然後就無消無息了。 但是，有些 Recruiter 還是會再寄一些職缺給你看看，有興趣的話再回覆
    1. 你的狀態 (What’s your situation? What’s your status?)
    over 2 years Front-end deveolpment experiences, look for Front-end developer xxx...
    2. 你在哪？ (where are you based?)
@@ -165,8 +174,46 @@ B公司出具相关证明
    6. 把每個獵人頭都當雷包/推之前明確確定 JD, 快速的巨大打字聲音單純要你個資，細心講完至少進系統
    7. Would you like to drink some coffee? 代表是認真想經營你這個客戶，不會太雷的
    8. 請把工作的職缺跟公司和獵人頭的名字記下來避免其他誤會
-----
-## Package
+6. Twilio 雲端電信商買國外的電話號碼轉接到所在地的手機/市話直接與海外Recruiter對談，免費限制轉接電話最長通話時間是10分鐘，澳洲手機號碼會有 $6 的月費，初期會給專案一些免費的 credit 作試用，收費標準 => https://www.twilio.com/en-us/voice/pricing/au
+7. Twilio 推薦註冊連結，推薦人跟被推薦人都可以拿到$10的使用額度（在被推薦人有升級專案情況下） www.twilio.com/referral/PWF2PB
+8. 必須確定面試的細節。基本的時間地點除外，如果是收到 HR 電話通知的話，記得多跟 HR 聊聊來獲得相關資訊，可以問的問題如下：
+   1. 面試流程、一對一多、對方職稱、制定相關的面試策略、HR 言談之中提及面試官的名字，記得偷偷記下來，然後上 LinkedIn 搜尋一下面試官的職稱跟過往經歷
+   2. Glassdoor 研究公司評價跟面是問題 
+   2. 面試形式 技術面試(technical interviews) 是白板題或是會以什麼形式進行、行為題面試(behavioural questions)，又或是簡單的聊天認識彼此 ( team chats )
+   3. 可以直接問 HR 說有什麼準備的訣竅。一個好的 recruiter/HR 應該有辦法在這裡提點你
+   4. 研究公司簡介 看一下公司未來的發展方向跟願景。如果被問到相關問題的話，可以藉此展示你對該產業或是公司未來發展的興趣
+   5. 你身邊或是 LinkedIn 上剛好有認識在該公司就職的人，務必傳一封簡短的訊息打招呼，並且詢問對方願不願意跟你來個 quick chat，先簡單自我介紹，說一下你們是怎麼認識的，然後直接表明來意，訊息不用太長      
+9. 熟讀 JD
+   1. 尋找的人格特質 (行為問題可能就會從中出題)
+   2. 專業技術 (此時可以重新審視一下跟自己現有的技能符不符合? 如果不符合，有沒有相關的 transferrable skills 或是經驗可以補足? 或是可以展現一下自己願意學習新技術而且可以快速上手的態度)
+   3. 相關學歷或證照，而你剛好有的話，務必要在自我介紹的時候提到這點來加深面試官的印象
+10. 電話篩選 (phone screening)
+   1. phone screening / culture fit 跟 phone interview 是兩個不同的概念。Phone screening 通常是由人資主導，主要目的是核實你的個人基本資料、履歷內容，進一步詢問申請職位跟公司相關的問題
+   2. Phone interview 就是一個正式的面試關卡，只是透過電話進行(而非傳統的面對面面試)，通常面試官會是你的主管或是團隊裡的其他同事，不會是人資
+11. 面試流程 次序不一定一樣 底下樣本是大廠
+    1. 人資履歷篩選
+    2. 電話篩選 email 約 phone screening
+    3. hiring manager
+    4. senior team member / skip manager
+    5. 更多輪面試或其他測驗
+12. 問題
+    1. Can you please tell me a bit more about your current role?
+    2. What’s your current salary? Sorry, I’m not comfortable answering this
+    3. What’s your salary expectation for this role? Can you please tell me what the expected salary range is for this role?
+    4. what the expected level of this role ? mid / senior
+
+
+----------------------------------
+
+### 面試內容
+
+1. 線上測驗 ( Codility, HackerRank 和大大小小的測驗系統 ) 需練習 LeetCode
+2. Technical Phone Interview 發現有不會的問題，請記下來之後非常還有可能會出現
+3. 加強英文面試的能力 
+
+----------------------------------
+
+### Package
 
 # 名詞解釋
 1. Base - 100K
@@ -253,9 +300,12 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲軟體工程師求職、生活分享](https://daveleetw.medium.com/2016%E5%B9%B410%E6%9C%88-%E6%BE%B3%E6%B4%B2%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E8%81%B7%E5%88%86%E4%BA%AB-4f1eb9628ac3)
 * [第12集 | 澳洲雇主担保改革细节公布！为啥都推雇主担保？](https://www.douyin.com/video/7297146534150343946)
 * [[海外求職小技巧] 利用Twilio取得海外電話號碼，增加海外Recruiter對談機會](https://daveleetw.medium.com/%E6%B5%B7%E5%A4%96%E6%B1%82%E8%81%B7%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%88%A9%E7%94%A8twilio%E5%8F%96%E5%BE%97%E6%B5%B7%E5%A4%96%E9%9B%BB%E8%A9%B1%E8%99%9F%E7%A2%BC-%E5%A2%9E%E5%8A%A0%E6%B5%B7%E5%A4%96recruiter%E5%B0%8D%E8%AB%87%E6%A9%9F%E6%9C%83-a076c08f1a48)
-
-
-
+* [[海外求職小技巧] 利用Twilio取得海外電話號碼，增加海外Recruiter對談機會](https://daveleetw.medium.com/%E6%B5%B7%E5%A4%96%E6%B1%82%E8%81%B7%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%88%A9%E7%94%A8twilio%E5%8F%96%E5%BE%97%E6%B5%B7%E5%A4%96%E9%9B%BB%E8%A9%B1%E8%99%9F%E7%A2%BC-%E5%A2%9E%E5%8A%A0%E6%B5%B7%E5%A4%96recruiter%E5%B0%8D%E8%AB%87%E6%A9%9F%E6%9C%83-a076c08f1a48)
+* [[職場] 你登入澳洲了，然後呢？如何提高找到澳洲科技業正職工作的機會 – 旅澳十年的臺灣工程師告訴你！](https://medium.com/@cloudarchitectec/tips-on-how-to-find-a-tech-job-in-australia-3535243e7cf7)
+* [如何準備澳洲辦公室英文面試](https://medium.com/@cloudarchitectec/%E6%BE%B3%E6%B4%B2%E8%81%B7%E5%A0%B4-%E5%A6%82%E4%BD%95%E6%BA%96%E5%82%99%E8%81%B7%E5%A0%B4%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6-89d7397274fb)
+* [[職場] 澳洲求職過程 — 電話篩選 (phone screening) 經驗分享](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E6%BE%B3%E6%B4%B2%E6%B1%82%E8%81%B7%E9%81%8E%E7%A8%8B-%E9%9B%BB%E8%A9%B1%E7%AF%A9%E9%81%B8-phone-screening-%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB-c27df2896c98)
+* [[職場] 知己知彼，百戰百勝 — 英文面試中你該問雇主哪些問題](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC-%E7%99%BE%E6%88%B0%E7%99%BE%E5%8B%9D-%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6%E4%B8%AD%E4%BD%A0%E8%A9%B2%E5%95%8F%E9%9B%87%E4%B8%BB%E5%93%AA%E4%BA%9B%E5%95%8F%E9%A1%8C-31d0b0a00dd1)
+* [[職場] 知己知彼，百戰百勝 — 英文面試中你該問雇主哪些問題](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC-%E7%99%BE%E6%88%B0%E7%99%BE%E5%8B%9D-%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6%E4%B8%AD%E4%BD%A0%E8%A9%B2%E5%95%8F%E9%9B%87%E4%B8%BB%E5%93%AA%E4%BA%9B%E5%95%8F%E9%A1%8C-31d0b0a00dd1)
 
 
 
