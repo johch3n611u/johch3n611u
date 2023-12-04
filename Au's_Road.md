@@ -136,6 +136,7 @@ B公司出具相关证明
 ## 工作
 
 ```
+1. 澳洲的企業分布就是以中小型企業為主，大型企業偏少?
 1. 找工作的過程會非常的艱辛，這是很正常的。基本上，Recruiter對你在台灣的學經歷是非常陌生的。請不要灰心，持續保持正能量，負能量絕對幫不了你
 1. 工作不好找，建議訂個可容忍無收入的時間 3-4 個月、初期來的薪資通常不如預期
 2. 可以先準備好 Cover Letter 和 Elevator Pitch 的台詞 ( 初入澳洲職場很常需要自我簡短介紹 )
@@ -149,11 +150,14 @@ B公司出具相关证明
 2. 職位title很重要，最好是符合技術短缺名單上的title
 3. 符合英文資格(雅思平均大於5分，每項不能低於5分)
 4. 直接接觸到公司求職(公司官網和各大技術Meetup)，錄取的機會可能會提高一些
-4. 如何讓獵頭找到你？
+4. 如何讓獵頭/工作/職缺找到你？
    * Facebook、LinkedIn、公司官網、Seek、Indeed、Jora、Adzuna、AngelList(Start-up較多) => 搜尋 seek visa sponsorship
    1. The Headline => Looking for the xxx role in Sydney
    2. The Country/Region
    3. 獵人頭多填好 Profile
+   4. Networking tech meetups 擴展自己在當地城市的科技業生活圈，參加時記得鼓起勇氣多跟幾個人聊聊，可以表達自己正在找工作，詢問他們有沒有知道什麼工作機會「我剛來澳洲，想要找某某方面的工作，不知道你這邊有什麼相關資訊嗎？」。或是詢問他們目前工作的內容，例如「我對於在澳洲當前端工程師的工作內容很有興趣，可以請你跟我分享一下嗎？」重點是記得要跟交談過的人交換 Linkedin，這樣方便你更加了解對方的背景與工作內容，Linkedin 上多多發表文章，例如你最近學習了哪些課程，或是每參加完一個 tech meetup 都一定要寫參加心得
+   5. linkedin 送出一個申請都會寫 personal note，傳訊息問他們願不願意出來喝杯咖啡聊聊，你請客，向他們討教一些問題，或是約 virtual coffee
+   6. Linkedin 證照心得跟 meetup 參加感想 營造出一個這個人好像技術上很厲害、很積極參與社群活動、很喜歡學習新科技
 5. Recruiter / 獵頭都會問你些什麼？ 不敢開口、說話太委婉都要避免
    1. 怕怯場 => 只需改變身體姿勢就可以改變別人的看法，甚至可能改變我們自己的身體化學反應
    https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are
