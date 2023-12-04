@@ -7,9 +7,48 @@
 5. 抓緩衝時間準備，簽證、開車、面試
 6. 備選計畫 2024 07 => 英文、技術不夠時間準備，482 太亂
 
-## 482 中期工作簽證 Temporary Skill Shortage visa- Medium-term stream
+## 417
 
 ```
+滿31歲前送出申請
+同一個雇主下只能工作6個月
+應該是來澳洲試水溫最適合的方式了，可以讓雇主至少試工6個月。如果雇主願意贊助你簽證，但送申請的時間已快接近6個月，可以與幫你辦理的agent確認申請解除同一個雇主下只能工作6個月的限制。
+```
+
+## 482 TSS 中期工作簽證 Temporary Skill Shortage visa- Medium-term stream
+
+```
+482簽證的整體要求（各類別都需要滿足）
+● 獲得有擔保資格的雇主的職位提名 
+● 符合提名職業的技能和資格要求，完成相關職業評估 
+● 滿足英語語言要求 
+● 澳洲境內申請人需持有過橋簽證（Bridging A/B/C visa） 
+● 身體健康且無犯罪記錄 
+● 滿足其申請簽證類別的額外要求
+
+482簽證短期類別（Short-term stream）的額外要求：
+●遞交簽證申請前的過去5年至少滿足2年與提名職業相關的工作經驗
+● 滿足GTE標準 
+● 提名職位必須在短期技術職業列表（STSOL）上
+● 英語語言要求達到IELTS 5分且單項不得低於4.5分，或同等水平
+● 只能續簽一次，無法轉永居簽證。
+ 
+482簽證中期類別（Medium-term stream）的額外申請要求：
+●遞交簽證申請前的過去5年至少滿足2年與提名職業相關的工作經驗
+● 提名職位必須在中長期技術職業列表（MLTSSL）上或在偏遠地區額外職業列表（ROL）上 
+● 英語語言要求達到IELTS 4個單項皆不得低於5分，或同等水平 
+● 可無限制續簽，工作3年後可轉186/187永居簽證
+
+2023年11月25日起，澳洲政府計劃擴大TSS簽證（482類）至186勞動協定永居簽證，取消短期TSS簽證的申請數量限制，放寬提名職業的清單限制，將從TSS轉換至186簽證所需的工作經驗要求縮短至2年，以及對於高收入申請人和偏遠地區醫護人員，放寬年齡限制至45歲以上
+
+## 過橋簽證
+
+該申請人的實質性簽證即將到期，正在申請另一個澳洲臨時或永居簽證，正處於等待簽證申請結果的時期。澳洲過橋簽證可以保留申請人合法在澳洲居留的權利。澳洲過橋簽證隨著申請人已有簽證到期而自動生效，直至申請的簽證結果產生而自動失效，分為A、B、C、D、E，
+
+A 橋簽證A的持有人在離開澳洲後，不能再持該簽證入境，簽證條款跟申請人之前持有的實質性簽證條款是一樣的
+B 讓持有人在申請澳洲實質性簽證期間自由出入境澳洲。如果申請人在指定的旅行期間(三天或一年不等)返回澳洲，提交給移民局並交付簽證申請費，大約1~2周可以獲批
+
+----
 AMEC ( 澳洲留學 ) 提供
 申請人需要材料 A. 護照 B. 簡歷 C. 財力證明(銀行單) D. 工作證明(需要有經理簽署、蓋章及提供聯絡電話) E. 學歷證明
 工作證明 => 薪資單、銀行對帳單、(推薦信/工作證明)
@@ -22,7 +61,7 @@ Primary Applicant
 3. Overseas police checks ( from every country where resided more than 12 mths aft turning 16 years 海外良民證 警察機關申請英文版
 4. Health insurance (OVHC) will send options 私人健康保險 discord 裡面有推薦的
 5. Health Examination ( can be done aft lodgement 健康檢查 ( 打工度假健檢沒失效可以沿用?
-6. 請問爬文看 482 簽證建議都需要收集到 5 年的工作經驗保險，但實際移民局只需要 2 年，目前我只能蒐集到接近 4 年的工作簽證，這樣對於簽證會有什麼影響嗎？ AMEC澳洲留學網路電台 以工作經驗上沒有差異 但是你如果在境內，比較容易找到雇主，申請 482 滿足兩年即可提出申請
+6. 請問爬文看 482 簽證建議都需要收集到 5 年的工作經驗保險，但實際移民局只需要 2 年，目前我只能蒐集到接近 4 年的工作簽證，這樣對於簽證會有什麼影響嗎？ AMEC澳洲留學網路電台 以工作經驗上沒有差異 但是你如果在境內，比較容易找到雇主，申請 482 滿足兩年即可提出申請，tom律師說本科兩年非本科最好四年it寬鬆
 
 Visa doc
 1. En lang test results ( IELTS, PTE ... valid for 3ys or exemption 讀寫各項滿五分
@@ -49,6 +88,22 @@ Visa doc
 3. 良民證最好台北警局發的?
 4. 482較簡單只要找的到人主或同事人資/ 管證明你在哪上班好像較嚴，但 josephj 反而經驗相反
 5. 打工度假簽證似乎可以A快到期申請 482/186 太慢，先換 B 等到 A OK 再回 A
+---
+2019
+一個小型公司要擔保你的4年成本至少約為1萬澳幣左右
+個人簽證費：AUD2,645
+雇主申請擔保資格（Standard business sponsor）：AUD 420
+雇主提名你的費用：AUD 330
+雇主支付培訓澳洲基金徵費：依照公司年營業額，1千萬AUD以下：每年1,200 AUD，1千萬AUD以上：每年1,800 AUD。(送出申請時可選要擔保幾年，在送出申請時就要繳清全部款項，至於中途離開的退款機制請自行參考連結 Getting a refund部分）
+雇主請代辦處理費用：每家收費不同。若雇主沒有擔保資格的話，至少3,000 AUD以上，有擔保資格至少2,000 AUD 以上
+----
+雇主擔保類移民
+
+482.221 the applicant has worked in the nominated occupation or a related field for at least 2 years
+
+證明材料很關鍵 雇主鄭明信 雇用合同 工資單 交稅紀錄 第三方出具證明文件 (政府部門
+
+職位 年薪 每周工作時長 工作地點 主要職責 法定假期
 ```
 
 ## 186
@@ -62,6 +117,18 @@ Visa doc
 5. whv 直接 186 等於說要提前 acs skill assess & 186 doc / probation? 送出解鎖六個月限制還會有過橋簽證
 6. 退守策略 482 拚 186
 7. 186 DE 20200612 送 20200912 s56 request from80,1399 20201011 send s56 2020/10/15 visa grant
+
+186 DE 2019
+3年以上的相關工作經驗
+提名的職位在規範清單內，請參考
+通過ACS職業認證（補充在下面）
+Competent English 等效的英文檢定（雅思平均6分，各科6分以上）
+雇主有提名的職位至少2年
+
+若你的目標是要拿PR的話，而公司也願意贊助你，同樣以小公司計算花費成本與482並不會相差太多。但對公司來說，你拿到這個簽證後等於你的自由，通常會提出至少在公司服務幾年的合約，或是申請人負擔自己的費用
+
+現在186的平均申請時間目前為5–20個月
+我想站在雇主的角度是不太能接受的，除非你真的有什麼特別的長處可以說服雇主
 ```
 
 ## ACS
@@ -75,6 +142,9 @@ AMEC ( 澳洲留學 ) 提供
 · 工作證明(Work Reference)- 工作細項內容必須得陳述出來 ( 報稅單、勞保、薪資單
 · 薪資證明(銀行流水、工資單、工作合約、稅務報表及勞保等)
 
+捷姆斯的人生
+是不是資訊相關科系影響重大，若為相關科系則工作經驗至少2年，其他科系依照修課相關程度的比例要求2–10年的工作經驗
+工作年資的認定依照最後就讀學校畢業後才開始算
 ------------------------------
 2022/11/23 律師
 1. Mandatory skills assessment 指的是 ACS 認證嗎 ?
@@ -85,6 +155,7 @@ yes we can help with the 482 visas (but you need to find a sponsoring company fi
 I don't think you need RPL since your job seems more aligned with 1& 2 anyway. I've helped many TW front end previously fit under 1.
 4. acs 的工作 title 是相關工作經驗都可以認可嗎? 像是在台灣是做 backend 或 frontend 都可以算是 web developer? Software Developer 經驗較好於 Web Developer
 In summary, ACS/immigration categorise ICT roles differently:1) Programmer/software developer 2) Software Engineer 3) Web Developer, 1&2 usually captures Front/back end and full stack developers, or ios/android programmers. 3 can be harder to migrate.
+5. 資料都正常才不會被砍年資
 -----------------------------
 * ACS RECOGNTION OF PRIOR LEARNING (RPL) 申請的必備文件
 RPL就是透過認證申請人之前的工作經驗，然後授予學歷證書，也會有分數?似乎對於 eoi 有用而已
@@ -126,6 +197,11 @@ B公司出具相关证明
    4. 每周工作小时数（全职或兼职以及每周实际工作时间）
    5. 工作所在的国家
    6. 推荐人的联系方式，如电话号码和正式的电子邮箱（非个人电子邮箱）
+-----
+雇主擔保類移民
+
+186/187 指認可全職工作經驗 且必須達到提名職業所需要的技能水頻
+187.234 => requirement for applicants in the DE stream of Subclass 187 to have been employed in the occupation for at least three years on a full-time basis and at the level of skill required for the occupation
 ```
 
 ## Work Reference / Reference Letter Sample
@@ -137,6 +213,8 @@ B公司出具相关证明
 ## 工作
 
 ```
+1. 站在面試者的角度，可能要想想自己有什麼優勢可以說服業主幫你贊助1萬澳幣？（例如：技術能力？薪資比較低？雇主工作環境偏遠？自己出部分的簽證費用？表現優良等等）取決於當時你本身的情況、運氣、市場供需
+1. 若你是拿打工度假簽證來的人，除非對自己本身能力有信心，一開始可以先求有（試工或Contract）累積當地的工作經驗，力求表現，同時也觀察公司有沒有符合你的期望，再進入簽證談判
 1. CV 的名稱盡量不要用中文名的翻譯，很多人資看到是外國姓名的履歷會直接刷掉?
 1. 澳洲的企業分布就是以中小型企業為主，大型企業偏少? 盡量考證照
 1. 找工作的過程會非常的艱辛，這是很正常的。基本上，Recruiter對你在台灣的學經歷是非常陌生的。請不要灰心，持續保持正能量，負能量絕對幫不了你
@@ -207,7 +285,7 @@ B公司出具相关证明
     2. What’s your current salary? Sorry, I’m not comfortable answering this
     3. What’s your salary expectation for this role? Can you please tell me what the expected salary range is for this role?
     4. what the expected level of this role ? mid / senior
-
+13. [Australian companies providing work visa sponsorship](https://github.com/geshan/au-companies-providing-work-visa-sponsorship?fbclid=IwAR3J1nowqRZqd_-NG8BQVHMCT6Zj8hIq0uX0l4Xj2vHJu3Sa9D0ScxVxxKw)
 
 ----------------------------------
 
@@ -312,15 +390,46 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [[職場] 澳洲求職過程 — 電話篩選 (phone screening) 經驗分享](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E6%BE%B3%E6%B4%B2%E6%B1%82%E8%81%B7%E9%81%8E%E7%A8%8B-%E9%9B%BB%E8%A9%B1%E7%AF%A9%E9%81%B8-phone-screening-%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB-c27df2896c98)
 * [[職場] 知己知彼，百戰百勝 — 英文面試中你該問雇主哪些問題](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC-%E7%99%BE%E6%88%B0%E7%99%BE%E5%8B%9D-%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6%E4%B8%AD%E4%BD%A0%E8%A9%B2%E5%95%8F%E9%9B%87%E4%B8%BB%E5%93%AA%E4%BA%9B%E5%95%8F%E9%A1%8C-31d0b0a00dd1)
 * [[職場] 知己知彼，百戰百勝 — 英文面試中你該問雇主哪些問題](https://medium.com/@cloudarchitectec/%E8%81%B7%E5%A0%B4-%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC-%E7%99%BE%E6%88%B0%E7%99%BE%E5%8B%9D-%E8%8B%B1%E6%96%87%E9%9D%A2%E8%A9%A6%E4%B8%AD%E4%BD%A0%E8%A9%B2%E5%95%8F%E9%9B%87%E4%B8%BB%E5%93%AA%E4%BA%9B%E5%95%8F%E9%A1%8C-31d0b0a00dd1)
+* [認識澳洲 IT 技術移民必備：ACS 職業評估](https://flycoder.io/podcasts/19/acs-skill-assessments)
+* [NEX Work 是一個非營利線上求職內推平台，讓台灣人陪著台灣人在國際職涯路上打開一扇窗](https://work.nexf.org/)
+* [成為內推人！ 歹晚郎內推@澳洲](https://airtable.com/app9eEubTuWyxtKw4/shrdWhzGNnKctgqdf)
+* [澳洲雇主担保移民劳动力市场测试要求](https://www.sohu.com/a/249828627_100249837)
+* [482 TSS 雇主擔保簽證](https://www.a-oes.com/zh_TW/article2/id/29)
+* [澳洲過橋簽證](https://www.a-oes.com/zh_TW/article2/id/21)
+* [捷姆斯的人生 澳洲 軟體工程師 工作常見問題 — 簽證篇](https://medium.com/@james1239090/%E6%BE%B3%E6%B4%B2%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB-%E5%B7%A5%E4%BD%9C%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C-%E7%B0%BD%E8%AD%89-91e7cbd42bf9)
+* [捷姆斯的人生 澳洲IT技術移民分享 (186)](https://medium.com/@james1239090/%E6%BE%B3%E6%B4%B2it%E6%8A%80%E8%A1%93%E7%A7%BB%E6%B0%91%E5%88%86%E4%BA%AB-186-5c479e62717e)
+* [Australia Expat Forum for Expats Living in AU](https://www.expatforum.com/forums/australia-expat-forum-for-expats-living-in-au.6/?sorting=latest-activity)
+* [澳洲技术移民的工作经验怎么认定？工作经验](https://www.amsmigration.com.au/zh/%E6%BE%B3%E6%B4%B2%E6%8A%80%E6%9C%AF%E7%A7%BB%E6%B0%91%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%8E%E4%B9%88%E8%AE%A4%E5%AE%9A%EF%BC%9F%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/)
+* [土澳碼農 大陸博主 超級乾貨](https://kenberkeley.github.io/posts/my-it-job-hunting-experience-in-australia/preface/)
+* [澳洲匠人類似六角學院 有求職推薦服務收費](https://jiangren.com.au/)
 
-## 政策簽證新知頻道
+## 頻道紀錄
 
-[留澳之道](https://www.douyin.com/user/MS4wLjABAAAAANuQBcoKJofLjFhMCIq2tF_Oao5WN2o3dlfk-wQ2F8GObp4xq4zHS8Nt4kX_VBTD?relation=0&vid=7297146534150343946)
+* [留澳之道 第一手簽證資訊](https://www.douyin.com/user/MS4wLjABAAAAANuQBcoKJofLjFhMCIq2tF_Oao5WN2o3dlfk-wQ2F8GObp4xq4zHS8Nt4kX_VBTD?relation=0&vid=7297146534150343946)
+* [youtube 鹿茸/雅思/澳洲](https://www.youtube.com/watch?v=ePfP7hBa1WU&ab_channel=%E9%B9%BF%E8%8C%B8LUU)
+* [发现了一个99%能考上雅思的方法！！](https://www.douyin.com/video/7276420155649936701)
+* [Jessie Huang 求職教練 email 有十二周訓練課程，英文ok之後應該要找這種或澳洲大衛](https://www.facebook.com/1826404163/videos/739063028033069/)
+* [飛出國論壇，好像很多國人在這問澳洲簽證](https://bbs.fcgvisa.com/c/homeaffairs/74)
+* [履歷修改](https://rev-upyourresume.com.au/)
+* [遠距工作者在台灣 fb](https://www.facebook.com/groups/1190343134374259/?ref=share)
+* [澳洲職場人 內有內推連結](https://www.facebook.com/groups/workinginaus/posts/283850763602747/)
+* [澳洲程序媛郭襄 澳洲it面試乾貨](https://www.douyin.com/user/MS4wLjABAAAA5yOBDpv-Yu5Rsk0TCW6abBy5uHt8bj14FFLjn3TEbPXsfNp1fwY8O6hhyvxNBu-Y?vid=7264860987461815608)
+* [澳洲刘凯文 第一手簽證資訊](https://www.ixigua.com/home/78496542267)
 
+## 未整理文章
 
+* [[心得] 英文超弱底考取雅思6.5感動分享](https://www.ptt.cc/bbs/IELTS/M.1572086822.A.62E.html)
+* [五小時攻略微軟雲端證照 //Azure AZ-900 準備秘笈](https://medium.com/kevindailylife/%E4%BA%94%E5%B0%8F%E6%99%82%E6%94%BB%E7%95%A5-az-900-%E5%BE%AE%E8%BB%9F%E9%9B%B2%E7%AB%AF%E8%AD%89%E7%85%A7%E6%BA%96%E5%82%99%E4%B9%8B%E8%B7%AF-6a29d83db21e)
+* [14 天高分通過 AZ-204 證照準備心得 (Microsoft Azure Developing Solutions Study Guide)](https://sdwh.dev/posts/2022/04/AZ-204-Certificate-Study-Guide/)
+* [其實菲律賓語言學校效果也沒很好](https://www.dcard.tw/f/language/p/231613230)
+* [#請益 #菲律賓遊學 #雅思 英文程度不錯 進步幅度](https://www.dcard.tw/f/studyabroad/p/243265000)
+* [澳洲程序員大衛](https://www.youtube.com/@aus-david)
+* [三個禮拜"0基礎"考過2張AWS證照](https://www.dcard.tw/f/exam/p/240801516)
+* [適合您軟件開發職業的 8 項 .NET 認證 | Indeed.com](https://www.indeed.com/career-advice/career-development/net-developer-certfications)
+* [雅思準備-短期/全職工作/自修/6.5分](https://medium.com/@msff/%E9%9B%85%E6%80%9D%E6%BA%96%E5%82%99-%E7%9F%AD%E6%9C%9F-%E5%85%A8%E8%81%B7%E5%B7%A5%E4%BD%9C-%E8%87%AA%E4%BF%AE-6-5%E5%88%86-a82e0c24611e)
+* [我是如何一天背500个单词的](https://zhuanlan.zhihu.com/p/69598578)
 
-
-
+## 英文
 
 
 
