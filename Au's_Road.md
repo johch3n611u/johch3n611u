@@ -1,3 +1,203 @@
+謝謝您，目前已了解大致的狀況，
+接下來會開始準備需要的東西，感謝您的協助
+期待未來再可以再請您幫忙進行下一步，衷心感謝
+
+
+2022 11 23 
+https://www.hect.com.au/%E6%BE%B3%E6%B4%B2%E6%8A%80%E6%9C%AF%E7%A7%BB%E6%B0%91/%E6%8A%80%E6%9C%AF%E7%A7%BB%E6%B0%91%E6%89%93%E5%88%86%E8%A1%A8/
+https://experteducation.hk/%E6%BE%B3%E6%B4%B2%E6%8A%80%E8%A1%93%E7%A7%BB%E6%B0%91/190-visa/
+非常感謝您的答覆，我目前還沒有達到 IELTS 資格，所以近期無法申請簽證，
+也想藉著準備 IELTS 的這段時間收集所需要的材料，最後想詢問一下
+
+1. Mandatory skills assessment 指的是 ACS 認證嗎 ?
+2. 482 簽證不需要 mandatory skills assessment 也能請您代辦嗎 ?
+3. 以我目前的經歷，190 是否比 482 還難申請 ? 如果延遲到明年甚至後年 190 也能申請嗎 ?
+4. 如請您幫忙代辦 190 或 482，所需要提供給您的材料是那些 ?
+
+
+2022 11 23
+1. Yes Full skills assessment is the same as ACS skills assessment (for some visas its not 100% mandatory)
+2. yes we can help with the 482 visas (but you need to find a sponsoring company first)
+3. Did you check the gov link i sent you? theres a points and work experience guide.. you can try to do a points calculation but yes usually you can get more points once you start working in Australia
+4. 190 is skilled based (only need your info, like CV, qualifications, ID, IELTs etc)
+
+482 (i need both your info and company info)
+
+
+
+—---
+
+您好，我是育誠，先前有透過信件向您諮詢，
+想詢問一下
+
+1. 190 簽證相對於 482 簽證較好申請嗎 ? 因為目前比較多研究是 417 轉 482 中長期
+2. 482 ICT 相關職位需求 ACS 認證，而網路找到的資料非 ICT 澳洲相關學歷需求六年工作經驗與 RPL 這是必須的嗎 ? 可能可以 5 年經驗 + 相關證照折抵嗎 ?
+3. 請問找你們是諮詢算費用還是說代辦收費，具體收費方式想跟您詢問一下
+1. If you want AU PR, you should explore more options. 482-> 186 is good, but a lot of younger tw friends getting 190 recently due to government policy change
+2. 482 visa does NOT need mandatory skills assessment. 186 Direct entry need. 190 need skills assessment. 
+3. We charge 350 for a consultation, 880 to help with skills assessment
+but i've helped a lot of Front end engineer before, obtained not under Web Developer
+1.如果你想要AU PR，你應該探索更多的選擇。 482-> 186 不錯，不過最近因為政府政策變了很多年輕的tw朋友都190了
+2. 482簽證不需要強制技能評估。 186 直接進入需要。 190 需要技能評估。
+3. 諮詢350，技能評估880
+但我之前幫助過很多前端工程師，不是在 Web Developer 下獲得的
+
+您好，
+基於您回答的第三點，您可以協助做技能評估，
+那請問像是 482 簽證不需要強制技能評估，也是收集完材料，請您幫忙認證代辦嗎 ? 
+如果要請您幫忙代辦需要準備什麼材料呢
+目前
+
+非常感謝您的答覆，但我目前還沒有達到 IELTS 資格，所以近期無法申請簽證，
+也想藉著準備 IELTS 的這段時間收集所需要的材料，最後想詢問一下
+
+1. Mandatory skills assessment 指的是 ACS 認證嗎 ?
+2. 482 簽證不需要 mandatory skills assessment 也能請您代辦嗎 ?
+3. 以我目前的經歷，190 是否比 482 還難申請 ? 如果延遲到明年甚至後年 190 也能申請嗎 ?
+4. 如請您幫忙代辦 190 或 482，所需要提供給您的材料是那些 ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+—------------------------------------
+
+2022/11/22 以前
+
+1.     告知狀況
+2.     目前遇到的問題
+1.     已經有查一些資料狀況是怎樣 工作簽
+2.     工作經驗五年還是六年抵文憑，也可以抵兩年的工作經驗嗎
+3.     4- 非ICT相關的學歷或者學位：扣減6年，並需要RPL專案報告。
+4.  Recognition of Prior Learning 的材料如何準備
+3.     材料準備、認證材料
+4.     收費方式
+Hi ，您好，我是育誠，我從 Flycoder Podcast 獲取資訊而來諮詢
+      以下為我的簡述，如果需要補充再麻煩跟我講
+1. 非本科系學士，計畫在 3 年內，以打工度假簽至澳洲當地尋找能給予 482 簽證的雇主的工作
+2. 目前只有 981天 ( 2年6個多月 ) Web Application Developer 工作經驗，預計在31歲前(出生日期1993年9月16日，台灣打工度假簽澳洲需31歲以下)，能累計 1600 ( 4年3個月 )天以上，需要在澳洲當地找 Web Application Developer 相關工作經驗補足不滿 482 需求的工作經驗天數。
+
+網路上有查詢到一些如以下問題想詢問 
+    1. 網路上的資料好像有看到 482 工作經驗五年可以抵文憑，那還需要額外兩年的工作經驗嗎 ? 但看移民局明訂工作經驗需六年才可以抵文憑，是有一定嗎是否可以利用相關證照扣減 ? 
+    2. 非 ICT 相關的學歷或者學位：扣減6年工作經驗，需要 RPL 專案報告，這可以靠考取 CISCO、Microsoft 證照扣減嗎 ? Web Application Developer 技能所學於台灣國家職業訓練局有並具有相關證書，這會有什麼幫助嗎 ( https://its.taiwanjobs.gov.tw/Course/Detail?ID=148720 ) ?
+    3. Recognition of Prior Learning 或 482 相關的材料，如果我還有 3 年可能需要準備什麼 ?
+    4. 如果找你們代辦，那收費方式是怎麼計算 ?
+5. 補充- acs 的工作 title 是相關工作經驗都可以認可嗎? 像是在台灣是做 backend 或 frontend 都可以算是 web developer   ANZSCO 261212 嗎         
+感謝
+—---------------------------------------------------------------------------------------------------
+Hi Mr Liu,
+
+
+Thank you for reaching out. I can read Chinese (also from Taiwan) but I type English quicker.
+
+
+In summary, ACS/immigration categorise ICT roles differently:
+
+
+1) Programmer/software developer
+2) Software Engineer
+3) Web Developer
+
+
+1&2 usually captures Front/back end and full stack developers, or ios/android programmers. 3 can be harder to migrate.
+
+
+I don't think you need RPL since your job seems more aligned with 1& 2 anyway. I've helped many TW front end previously fit under 1.
+
+
+The gov link for NSW 190 occupation list should be very useful:
+
+
+https://www.nsw.gov.au/visas-and-migration/skilled-visas/nsw-skills-lists
+
+
+Feel free to reach out via whatsapp/line +61 423 417 300 if you want to discuss further.
+
+
+Tom Ying | Principal Lawyer | Director
+Legal Practitioner Number (LPN): 5511324
+STC Lawyers & Associates | Level 3, 249 Forest Rd, Hurstville, NSW 2220, Australia
+Phone: +61 2 8018 7668 | Mob: +61 423 417 300 | Wechat ID: tying2220
+Facebook: www.facebook.com/STCImmigrationLawyers | Instagram: @stclawyers 
+Website: www.stc-lawyers.com | Email: info@stc-lawyers.com | Wechat Account: stclawyers2220
+
+-------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2023 07
 
 1. 確定 482、186 需求文件
