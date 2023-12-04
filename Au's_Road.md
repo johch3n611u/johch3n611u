@@ -127,6 +127,12 @@ B公司出具相关证明
    6. 推荐人的联系方式，如电话号码和正式的电子邮箱（非个人电子邮箱）
 ```
 
+## Work Reference / Reference Letter Sample
+
+||||
+|-----|-----|-----|
+|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/18cf48be-ed60-4bab-b736-6e3ca358431a)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/4996bf23-498c-4728-a103-9af0d99d7b93)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/bbecf458-d80b-46aa-8a79-59d6f95901b2)|
+
 ## 工作
 
 ```
@@ -246,13 +252,8 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [【澳洲版新手解惑】前端入门要什么水平](https://www.1point3acres.com/bbs/thread-876447-1-1.html)
 * [澳洲軟體工程師求職、生活分享](https://daveleetw.medium.com/2016%E5%B9%B410%E6%9C%88-%E6%BE%B3%E6%B4%B2%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E8%81%B7%E5%88%86%E4%BA%AB-4f1eb9628ac3)
 * [第12集 | 澳洲雇主担保改革细节公布！为啥都推雇主担保？](https://www.douyin.com/video/7297146534150343946)
+* [[海外求職小技巧] 利用Twilio取得海外電話號碼，增加海外Recruiter對談機會](https://daveleetw.medium.com/%E6%B5%B7%E5%A4%96%E6%B1%82%E8%81%B7%E5%B0%8F%E6%8A%80%E5%B7%A7-%E5%88%A9%E7%94%A8twilio%E5%8F%96%E5%BE%97%E6%B5%B7%E5%A4%96%E9%9B%BB%E8%A9%B1%E8%99%9F%E7%A2%BC-%E5%A2%9E%E5%8A%A0%E6%B5%B7%E5%A4%96recruiter%E5%B0%8D%E8%AB%87%E6%A9%9F%E6%9C%83-a076c08f1a48)
 
-
-## Work Reference / Reference Letter Sample
-
-||||
-|-----|-----|-----|
-|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/18cf48be-ed60-4bab-b736-6e3ca358431a)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/4996bf23-498c-4728-a103-9af0d99d7b93)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/bbecf458-d80b-46aa-8a79-59d6f95901b2)|
 
 
 
