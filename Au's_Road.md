@@ -408,6 +408,20 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲匠人類似六角學院 有求職推薦服務收費](https://jiangren.com.au/)
 * [先練功在出國](https://www.ptt.cc/bbs/Soft_Job/M.1654178871.A.459.html)
 * [幸運點滿的澳洲瑪儂](https://ithelp.ithome.com.tw/users/20101089/ironman/2053)
+* [雅思閱讀解題袐技](https://www.leedsmayi.com/learning-resources/ielts-reading-skills)
+* [大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
+* [【IELTS】7分不是夢！IELTS past paper、準備心得、資源下載分享](https://hk.amazingtalker.com/blog/zh-hk/hk-eng/7544/)
+* [英文文法 ~ 用理解的就很簡單](https://www.camdemy.com/folder/3037)
+* [語言學校&代辦如何抉擇?](https://www.dcard.tw/f/studyabroad/p/232512013)
+* [kgtd 雅思整理](https://docs.google.com/spreadsheets/d/1KelsVdzmFwaW7zZtMzAgYX4YflhhBhC71O0nS995CDY/edit#gid=1134881314)
+* [【2024】雅思高分攻略：3天掌握高分秘诀！](https://search.bilibili.com/all?vt=98881984&keyword=%E9%9B%85%E6%80%9D&from_source=webtop_search&spm_id_from=333.1007&search_source=5)
+* [二战雅思8.0之后，才知道的5个雅思备考网站！帮你们打破信息差冲高分！](https://www.bilibili.com/video/BV1No4y187ZH/?spm_id_from=333.337.search-card.all.click)
+* [雅思|一个普通人的考雅之路，看一次哭一次，真的不要盲目备考](https://www.bilibili.com/video/BV1uc41177on/?spm_id_from=333.788.recommend_more_video.4)
+* [雅思 普通人 b 站](https://search.bilibili.com/all?vt=00750989&keyword=%E6%99%AE%E9%80%9A%E4%BA%BA%20%E9%9B%85%E6%80%9D&from_source=webtop_search&spm_id_from=333.788&search_source=5)
+* [四级刚过的普通人如何备考雅思？｜小白烤鸭看过来｜学姐晒网盘](https://www.bilibili.com/video/BV18341147f4/?spm_id_from=333.337.search-card.all.click)
+* [多益255，也能考雅思5分](https://www.dcard.tw/f/language/p/252906471?cid=5e4e48a5-463b-415f-b302-f20605faddb6)
+* [[心得] 大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
+* [上班族雅思準備從0開始，心得、讀書技巧＆重點筆記精華大公開](https://minahaha.com/ielts-note/)
 
 ## 頻道紀錄
 
