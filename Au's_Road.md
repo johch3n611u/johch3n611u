@@ -9,6 +9,7 @@
 
 * [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
 * [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
+* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
 
 ## 417
 
