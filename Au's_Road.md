@@ -7,6 +7,9 @@
 5. 抓緩衝時間準備，簽證、開車、面試
 6. 備選計畫 2024 07 => 英文、技術不夠時間準備，482 太亂
 
+* [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
+* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
+
 ## 417
 
 ```
@@ -402,6 +405,8 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲技术移民的工作经验怎么认定？工作经验](https://www.amsmigration.com.au/zh/%E6%BE%B3%E6%B4%B2%E6%8A%80%E6%9C%AF%E7%A7%BB%E6%B0%91%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E6%80%8E%E4%B9%88%E8%AE%A4%E5%AE%9A%EF%BC%9F%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/)
 * [土澳碼農 大陸博主 超級乾貨](https://kenberkeley.github.io/posts/my-it-job-hunting-experience-in-australia/preface/)
 * [澳洲匠人類似六角學院 有求職推薦服務收費](https://jiangren.com.au/)
+* [先練功在出國](https://www.ptt.cc/bbs/Soft_Job/M.1654178871.A.459.html)
+* [幸運點滿的澳洲瑪儂](https://ithelp.ithome.com.tw/users/20101089/ironman/2053)
 
 ## 頻道紀錄
 
@@ -428,6 +433,11 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [適合您軟件開發職業的 8 項 .NET 認證 | Indeed.com](https://www.indeed.com/career-advice/career-development/net-developer-certfications)
 * [雅思準備-短期/全職工作/自修/6.5分](https://medium.com/@msff/%E9%9B%85%E6%80%9D%E6%BA%96%E5%82%99-%E7%9F%AD%E6%9C%9F-%E5%85%A8%E8%81%B7%E5%B7%A5%E4%BD%9C-%E8%87%AA%E4%BF%AE-6-5%E5%88%86-a82e0c24611e)
 * [我是如何一天背500个单词的](https://zhuanlan.zhihu.com/p/69598578)
+* [英文不好雅思備考必看! 我如何從雅思4.0➡️7.0? 三個有效準備雅思的方法! 雅思補習+自學備考經驗分享](https://www.youtube.com/watch?v=7Jp5FXVOKrc&ab_channel=%E5%90%83%E9%A3%AFGeorge)
+* [雅思詞彙](https://www.youtube.com/watch?v=SrfrcStk3rg&list=PLhcW5Vlyw9CqwETLZMLmubZEnkkzqv8zI&ab_channel=%E5%A4%96%E8%AF%AD%E5%B8%AEWAIYUBANG)
+* [30岁脱产备考｜60天冲刺雅思7分｜技巧｜资料｜APP｜经验分享](https://www.youtube.com/watch?v=vSFEjicW7dY&ab_channel=%E9%99%88%E6%B0%B8%E4%BB%81)
+* [刘洪波雅思真经第一课（自学只需要看第一课）](https://www.bilibili.com/video/BV1c54y187SH/?from=search&seid=12108137497663523324&spm_id_from=333.337.0.0)
+* [雅思听力常见词汇（最好能够识别+听写80%以上）：](https://ieltsmaterial.com/1200-commonly-repeated-words-in-ielts-listening-test/)
 
 ## 英文
 
