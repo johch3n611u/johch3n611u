@@ -288,13 +288,6 @@ B公司出具相关证明
     4. what the expected level of this role ? mid / senior
 13. [Australian companies providing work visa sponsorship](https://github.com/geshan/au-companies-providing-work-visa-sponsorship?fbclid=IwAR3J1nowqRZqd_-NG8BQVHMCT6Zj8hIq0uX0l4Xj2vHJu3Sa9D0ScxVxxKw)
 14. seek 爬蟲 2019-2023 12 月：目前看狀況呈現一個大幅度跳水的狀況，react > angular , software engine > .net > front > back > full stack, java > c#, azure > aws
-```
-
-|f2e|b2e|all|
-|-----------|-----------|-----------|
-|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/341726e2-104f-490a-961b-6d7f6a159757)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/beef2041-e4d2-4b3b-a057-83105e05f700)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a62553b0-a21d-49f6-a99a-a6527cf0de21)|
-
-
 
 ----------------------------------
 
@@ -343,6 +336,10 @@ B公司出具相关证明
 薪水試算 Paycaculator。 https://paycalculator.com.au/
 
 ```
+
+|f2e|b2e|all|
+|-----------|-----------|-----------|
+|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/341726e2-104f-490a-961b-6d7f6a159757)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/beef2041-e4d2-4b3b-a057-83105e05f700)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a62553b0-a21d-49f6-a99a-a6527cf0de21)|
 
 ## 其他
 
