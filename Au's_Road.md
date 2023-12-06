@@ -287,6 +287,14 @@ B公司出具相关证明
     3. What’s your salary expectation for this role? Can you please tell me what the expected salary range is for this role?
     4. what the expected level of this role ? mid / senior
 13. [Australian companies providing work visa sponsorship](https://github.com/geshan/au-companies-providing-work-visa-sponsorship?fbclid=IwAR3J1nowqRZqd_-NG8BQVHMCT6Zj8hIq0uX0l4Xj2vHJu3Sa9D0ScxVxxKw)
+14. seek 爬蟲 2019-2023 12 月：目前看狀況呈現一個大幅度跳水的狀況，react > angular , software engine > .net > front > back > full stack, java > c#, azure > aws
+```
+
+|f2e|b2e|all|
+|-----------|-----------|-----------|
+|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/341726e2-104f-490a-961b-6d7f6a159757)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/beef2041-e4d2-4b3b-a057-83105e05f700)|![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/a62553b0-a21d-49f6-a99a-a6527cf0de21)|
+
+
 
 ----------------------------------
 
@@ -389,6 +397,8 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [30岁脱产备考｜60天冲刺雅思7分｜技巧｜资料｜APP｜经验分享](https://www.youtube.com/watch?v=vSFEjicW7dY&ab_channel=%E9%99%88%E6%B0%B8%E4%BB%81)
 * [刘洪波雅思真经第一课（自学只需要看第一课）](https://www.bilibili.com/video/BV1c54y187SH/?from=search&seid=12108137497663523324&spm_id_from=333.337.0.0)
 * [雅思听力常见词汇（最好能够识别+听写80%以上）：](https://ieltsmaterial.com/1200-commonly-repeated-words-in-ielts-listening-test/)
+* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
+* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
 
 ## 參考文章 ( 以下都已整理到上面 )
 
@@ -450,11 +460,11 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [多益255，也能考雅思5分](https://www.dcard.tw/f/language/p/252906471?cid=5e4e48a5-463b-415f-b302-f20605faddb6)
 * [[心得] 大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
 * [上班族雅思準備從0開始，心得、讀書技巧＆重點筆記精華大公開](https://minahaha.com/ielts-note/)
-* 
 * [第1集 | 直播回放：澳洲IT经理讲澳洲公司需要什么样的IT人才！](https://www.douyin.com/video/7268280538086051072)
+
+
 * [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
-* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
-* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
+
 
 
 
