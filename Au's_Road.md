@@ -362,7 +362,38 @@ Website: www.stc-lawyers.com | Email: info@stc-lawyers.com | Wechat Account: stc
 discord https://www.i-migration.com.au/ 比較看看收費
 ```
 
-## 參考文章
+## 頻道紀錄
+
+* [留澳之道 第一手簽證資訊](https://www.douyin.com/user/MS4wLjABAAAAANuQBcoKJofLjFhMCIq2tF_Oao5WN2o3dlfk-wQ2F8GObp4xq4zHS8Nt4kX_VBTD?relation=0&vid=7297146534150343946)
+* [youtube 鹿茸/雅思/澳洲](https://www.youtube.com/watch?v=ePfP7hBa1WU&ab_channel=%E9%B9%BF%E8%8C%B8LUU)
+* [发现了一个99%能考上雅思的方法！！](https://www.douyin.com/video/7276420155649936701)
+* [Jessie Huang 求職教練 email 有十二周訓練課程，英文ok之後應該要找這種或澳洲大衛](https://www.facebook.com/1826404163/videos/739063028033069/)
+* [飛出國論壇，好像很多國人在這問澳洲簽證](https://bbs.fcgvisa.com/c/homeaffairs/74)
+* [履歷修改](https://rev-upyourresume.com.au/)
+* [遠距工作者在台灣 fb](https://www.facebook.com/groups/1190343134374259/?ref=share)
+* [澳洲職場人 內有內推連結](https://www.facebook.com/groups/workinginaus/posts/283850763602747/)
+* [澳洲程序媛郭襄 澳洲it面試乾貨](https://www.douyin.com/user/MS4wLjABAAAA5yOBDpv-Yu5Rsk0TCW6abBy5uHt8bj14FFLjn3TEbPXsfNp1fwY8O6hhyvxNBu-Y?vid=7264860987461815608)
+* [澳洲刘凯文 第一手簽證資訊](https://www.ixigua.com/home/78496542267)
+
+## 未整理文章
+
+* [[心得] 英文超弱底考取雅思6.5感動分享](https://www.ptt.cc/bbs/IELTS/M.1572086822.A.62E.html)
+* [五小時攻略微軟雲端證照 //Azure AZ-900 準備秘笈](https://medium.com/kevindailylife/%E4%BA%94%E5%B0%8F%E6%99%82%E6%94%BB%E7%95%A5-az-900-%E5%BE%AE%E8%BB%9F%E9%9B%B2%E7%AB%AF%E8%AD%89%E7%85%A7%E6%BA%96%E5%82%99%E4%B9%8B%E8%B7%AF-6a29d83db21e)
+* [14 天高分通過 AZ-204 證照準備心得 (Microsoft Azure Developing Solutions Study Guide)](https://sdwh.dev/posts/2022/04/AZ-204-Certificate-Study-Guide/)
+* [其實菲律賓語言學校效果也沒很好](https://www.dcard.tw/f/language/p/231613230)
+* [#請益 #菲律賓遊學 #雅思 英文程度不錯 進步幅度](https://www.dcard.tw/f/studyabroad/p/243265000)
+* [澳洲程序員大衛](https://www.youtube.com/@aus-david)
+* [三個禮拜"0基礎"考過2張AWS證照](https://www.dcard.tw/f/exam/p/240801516)
+* [適合您軟件開發職業的 8 項 .NET 認證 | Indeed.com](https://www.indeed.com/career-advice/career-development/net-developer-certfications)
+* [雅思準備-短期/全職工作/自修/6.5分](https://medium.com/@msff/%E9%9B%85%E6%80%9D%E6%BA%96%E5%82%99-%E7%9F%AD%E6%9C%9F-%E5%85%A8%E8%81%B7%E5%B7%A5%E4%BD%9C-%E8%87%AA%E4%BF%AE-6-5%E5%88%86-a82e0c24611e)
+* [我是如何一天背500个单词的](https://zhuanlan.zhihu.com/p/69598578)
+* [英文不好雅思備考必看! 我如何從雅思4.0➡️7.0? 三個有效準備雅思的方法! 雅思補習+自學備考經驗分享](https://www.youtube.com/watch?v=7Jp5FXVOKrc&ab_channel=%E5%90%83%E9%A3%AFGeorge)
+* [雅思詞彙](https://www.youtube.com/watch?v=SrfrcStk3rg&list=PLhcW5Vlyw9CqwETLZMLmubZEnkkzqv8zI&ab_channel=%E5%A4%96%E8%AF%AD%E5%B8%AEWAIYUBANG)
+* [30岁脱产备考｜60天冲刺雅思7分｜技巧｜资料｜APP｜经验分享](https://www.youtube.com/watch?v=vSFEjicW7dY&ab_channel=%E9%99%88%E6%B0%B8%E4%BB%81)
+* [刘洪波雅思真经第一课（自学只需要看第一课）](https://www.bilibili.com/video/BV1c54y187SH/?from=search&seid=12108137497663523324&spm_id_from=333.337.0.0)
+* [雅思听力常见词汇（最好能够识别+听写80%以上）：](https://ieltsmaterial.com/1200-commonly-repeated-words-in-ielts-listening-test/)
+
+## 參考文章 ( 以下都已整理到上面 )
 
 * [澳洲技术移民打分表](https://hect.com.au/%e6%be%b3%e6%b4%b2%e6%8a%80%e6%9c%af%e7%a7%bb%e6%b0%91/%e6%8a%80%e6%9c%af%e7%a7%bb%e6%b0%91%e6%89%93%e5%88%86%e8%a1%a8/)
 * [190 州擔保技術移民簽證](https://experteducation.hk/%E6%BE%B3%E6%B4%B2%E6%8A%80%E8%A1%93%E7%A7%BB%E6%B0%91/190-visa/)
@@ -422,39 +453,7 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [多益255，也能考雅思5分](https://www.dcard.tw/f/language/p/252906471?cid=5e4e48a5-463b-415f-b302-f20605faddb6)
 * [[心得] 大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
 * [上班族雅思準備從0開始，心得、讀書技巧＆重點筆記精華大公開](https://minahaha.com/ielts-note/)
-
-## 頻道紀錄
-
-* [留澳之道 第一手簽證資訊](https://www.douyin.com/user/MS4wLjABAAAAANuQBcoKJofLjFhMCIq2tF_Oao5WN2o3dlfk-wQ2F8GObp4xq4zHS8Nt4kX_VBTD?relation=0&vid=7297146534150343946)
-* [youtube 鹿茸/雅思/澳洲](https://www.youtube.com/watch?v=ePfP7hBa1WU&ab_channel=%E9%B9%BF%E8%8C%B8LUU)
-* [发现了一个99%能考上雅思的方法！！](https://www.douyin.com/video/7276420155649936701)
-* [Jessie Huang 求職教練 email 有十二周訓練課程，英文ok之後應該要找這種或澳洲大衛](https://www.facebook.com/1826404163/videos/739063028033069/)
-* [飛出國論壇，好像很多國人在這問澳洲簽證](https://bbs.fcgvisa.com/c/homeaffairs/74)
-* [履歷修改](https://rev-upyourresume.com.au/)
-* [遠距工作者在台灣 fb](https://www.facebook.com/groups/1190343134374259/?ref=share)
-* [澳洲職場人 內有內推連結](https://www.facebook.com/groups/workinginaus/posts/283850763602747/)
-* [澳洲程序媛郭襄 澳洲it面試乾貨](https://www.douyin.com/user/MS4wLjABAAAA5yOBDpv-Yu5Rsk0TCW6abBy5uHt8bj14FFLjn3TEbPXsfNp1fwY8O6hhyvxNBu-Y?vid=7264860987461815608)
-* [澳洲刘凯文 第一手簽證資訊](https://www.ixigua.com/home/78496542267)
-
-## 未整理文章
-
-* [[心得] 英文超弱底考取雅思6.5感動分享](https://www.ptt.cc/bbs/IELTS/M.1572086822.A.62E.html)
-* [五小時攻略微軟雲端證照 //Azure AZ-900 準備秘笈](https://medium.com/kevindailylife/%E4%BA%94%E5%B0%8F%E6%99%82%E6%94%BB%E7%95%A5-az-900-%E5%BE%AE%E8%BB%9F%E9%9B%B2%E7%AB%AF%E8%AD%89%E7%85%A7%E6%BA%96%E5%82%99%E4%B9%8B%E8%B7%AF-6a29d83db21e)
-* [14 天高分通過 AZ-204 證照準備心得 (Microsoft Azure Developing Solutions Study Guide)](https://sdwh.dev/posts/2022/04/AZ-204-Certificate-Study-Guide/)
-* [其實菲律賓語言學校效果也沒很好](https://www.dcard.tw/f/language/p/231613230)
-* [#請益 #菲律賓遊學 #雅思 英文程度不錯 進步幅度](https://www.dcard.tw/f/studyabroad/p/243265000)
-* [澳洲程序員大衛](https://www.youtube.com/@aus-david)
-* [三個禮拜"0基礎"考過2張AWS證照](https://www.dcard.tw/f/exam/p/240801516)
-* [適合您軟件開發職業的 8 項 .NET 認證 | Indeed.com](https://www.indeed.com/career-advice/career-development/net-developer-certfications)
-* [雅思準備-短期/全職工作/自修/6.5分](https://medium.com/@msff/%E9%9B%85%E6%80%9D%E6%BA%96%E5%82%99-%E7%9F%AD%E6%9C%9F-%E5%85%A8%E8%81%B7%E5%B7%A5%E4%BD%9C-%E8%87%AA%E4%BF%AE-6-5%E5%88%86-a82e0c24611e)
-* [我是如何一天背500个单词的](https://zhuanlan.zhihu.com/p/69598578)
-* [英文不好雅思備考必看! 我如何從雅思4.0➡️7.0? 三個有效準備雅思的方法! 雅思補習+自學備考經驗分享](https://www.youtube.com/watch?v=7Jp5FXVOKrc&ab_channel=%E5%90%83%E9%A3%AFGeorge)
-* [雅思詞彙](https://www.youtube.com/watch?v=SrfrcStk3rg&list=PLhcW5Vlyw9CqwETLZMLmubZEnkkzqv8zI&ab_channel=%E5%A4%96%E8%AF%AD%E5%B8%AEWAIYUBANG)
-* [30岁脱产备考｜60天冲刺雅思7分｜技巧｜资料｜APP｜经验分享](https://www.youtube.com/watch?v=vSFEjicW7dY&ab_channel=%E9%99%88%E6%B0%B8%E4%BB%81)
-* [刘洪波雅思真经第一课（自学只需要看第一课）](https://www.bilibili.com/video/BV1c54y187SH/?from=search&seid=12108137497663523324&spm_id_from=333.337.0.0)
-* [雅思听力常见词汇（最好能够识别+听写80%以上）：](https://ieltsmaterial.com/1200-commonly-repeated-words-in-ielts-listening-test/)
-
-## 英文
+* [第1集 | 直播回放：澳洲IT经理讲澳洲公司需要什么样的IT人才！](https://www.douyin.com/video/7268280538086051072)
 
 
 
