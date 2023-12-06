@@ -461,23 +461,7 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [[心得] 大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
 * [上班族雅思準備從0開始，心得、讀書技巧＆重點筆記精華大公開](https://minahaha.com/ielts-note/)
 * [第1集 | 直播回放：澳洲IT经理讲澳洲公司需要什么样的IT人才！](https://www.douyin.com/video/7268280538086051072)
-
-
 * [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
