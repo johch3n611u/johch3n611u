@@ -7,10 +7,6 @@
 5. 抓緩衝時間準備，簽證、開車、面試
 6. 備選計畫 2024 07 => 英文、技術不夠時間準備，482 太亂
 
-* [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
-* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
-* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
-
 ## 417
 
 ```
@@ -217,6 +213,7 @@ B公司出具相关证明
 ## 工作
 
 ```
+1. 2023 10 月有澳洲本地公司负责招聘的经理說 ng 澳 > react 美國, 中/終端推薦微軟技術 .net, 中小企業 net 快速開發成本較低 ? 大企業 java, 他說他們很難招? 700 澳幣一天, 缺電子商務技術人才?
 1. 站在面試者的角度，可能要想想自己有什麼優勢可以說服業主幫你贊助1萬澳幣？（例如：技術能力？薪資比較低？雇主工作環境偏遠？自己出部分的簽證費用？表現優良等等）取決於當時你本身的情況、運氣、市場供需
 1. 若你是拿打工度假簽證來的人，除非對自己本身能力有信心，一開始可以先求有（試工或Contract）累積當地的工作經驗，力求表現，同時也觀察公司有沒有符合你的期望，再進入簽證談判
 1. CV 的名稱盡量不要用中文名的翻譯，很多人資看到是外國姓名的履歷會直接刷掉?
@@ -453,8 +450,11 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [多益255，也能考雅思5分](https://www.dcard.tw/f/language/p/252906471?cid=5e4e48a5-463b-415f-b302-f20605faddb6)
 * [[心得] 大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
 * [上班族雅思準備從0開始，心得、讀書技巧＆重點筆記精華大公開](https://minahaha.com/ielts-note/)
+* 
 * [第1集 | 直播回放：澳洲IT经理讲澳洲公司需要什么样的IT人才！](https://www.douyin.com/video/7268280538086051072)
-
+* [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
+* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
+* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
 
 
 
