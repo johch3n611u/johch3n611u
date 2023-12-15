@@ -309,7 +309,26 @@ ACS 扣掉的年數是讓你變成 Skilled employee 分為這個角色的前後�
 
 ## 工作
 
+### keyword [SEEK Employment Report]
+
+* [SEEK Employment Report - job ads record marginal fall in February](https://www.seek.com.au/about/news/seek-employment-report-job-ads-record-a-marginal-fall-in-february)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/72a1f2c4-69f6-459c-99ab-6047de5fbfde)
+
+![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/0184251f-7bc0-4b77-a905-48f53bf95a54)
+
 ```
+Jobs Australia: Why January is the best month to be on the job hunt
+2021 年數據 seek 數年的招聘廣告數據
+1 月增長了(21.8%)，2 月（增長14.2%）和10 月（增長13.2%）證明是企業和求職者的熱門時期
+3月 趨緩 4 月下降最多， 5,6月下降，財年 7,8,9,11月拉高，12月聖誕下降
+
+2022
+2-5上升,6-12下降
+2023
+1上升, 2-4下降 ( 黃金海岸 > 墨爾本 > 雪梨 > 西部
+
+--------------
 1. 2023 10 月有澳洲本地公司负责招聘的经理說 ng 澳 > react 美國, 中/終端推薦微軟技術 .net, 中小企業 net 快速開發成本較低 ? 大企業 java, 他說他們很難招? 700 澳幣一天, 缺電子商務技術人才?
 1. 站在面試者的角度，可能要想想自己有什麼優勢可以說服業主幫你贊助1萬澳幣？（例如：技術能力？薪資比較低？雇主工作環境偏遠？自己出部分的簽證費用？表現優良等等）取決於當時你本身的情況、運氣、市場供需
 1. 若你是拿打工度假簽證來的人，除非對自己本身能力有信心，一開始可以先求有（試工或Contract）累積當地的工作經驗，力求表現，同時也觀察公司有沒有符合你的期望，再進入簽證談判
@@ -559,6 +578,7 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲刘凯文 第一手簽證資訊](https://www.ixigua.com/home/78496542267)
 * [澳洲奔跑-澳加](https://www.douyin.com/user/MS4wLjABAAAAk0gK8QptK9I2VbD4nYdixqO1mk60a1tT6SAjjKMfm-k)
 * [澳洲程序員大衛](https://www.youtube.com/@aus-david)
+* [澳洲大衛](https://www.ixigua.com/home/1521358670931997?wid_try=1)
 
 ## 證照
 
@@ -646,6 +666,7 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [[心得] 英文超弱底考取雅思6.5感動分享](https://www.ptt.cc/bbs/IELTS/M.1572086822.A.62E.html)
 * [其實菲律賓語言學校效果也沒很好](https://www.dcard.tw/f/language/p/231613230)
 * [#請益 #菲律賓遊學 #雅思 英文程度不錯 進步幅度](https://www.dcard.tw/f/studyabroad/p/243265000)
+* [四级刚过的普通人如何备考雅思？｜小白烤鸭看过来｜学姐晒网盘](https://www.bilibili.com/video/BV18341147f4/?spm_id_from=333.337.search-card.all.click)
 
 
 ```
