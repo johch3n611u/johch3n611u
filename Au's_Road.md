@@ -233,6 +233,14 @@ B公司出具相关证明
 ACS 扣掉的年數是讓你變成 Skilled employee 分為這個角色的前後經驗，應用於 EOI ( 這感覺不用想，打分制太難卷
 
 Discord 經驗 => 非本科 3年
+2019/7月 WHV 
+2020/1/2 公司承諾幫忙辦 482
+2020/1/6 公司申請六月擔保資格才能下來，公開徵人四周後才可482, AGENT建議先 VISITOR VISA? ,
+2020/1/7 WHV快過期轉旅遊簽，簽證下來前可以有過橋簽 A 可以增加六個月工作時間 WHV6mth + bridging visa 6mth, bug health assessment 卡住？卡三個月公司動起來
+2020/10/8 遞交482申請, labor agreement stream, not medium-term stream
+2020/10/13 health assessment
+2020/10/15 補件
+2020/10/22 下簽　約兩周
 
 ```
 
