@@ -432,7 +432,6 @@ Criteria Corp is a leading provider of professionally developed pre-employment t
 你只要滑鼠點頁面外的地方就會停止測驗了...
 不過可以重新進入繼續 時間就是只有15分鐘而已，要寫50題
 
-
 timmylin — 2020/12/09 11:46
 Hello 各位刷題的大大們, 小弟明年會登入墨爾本, 本身是 java developer (Java/Angular 都寫), 想請教一下, 找澳洲後端的工作, 會需要刷題嗎,
 還是都是以做一個小專案和面試為主呢? 如果要考演算法, 要刷到甚麼程度呢~? 再麻煩各位回答了! 感激不盡!
@@ -448,6 +447,36 @@ don't get me wrong. 只有一間是這樣，其它都還是有考技術的啦
 
 James Huang — 2021/06/16 17:31
 蠻特別的…level不同，像我就是都有考技術的部分
+
+TonyYang — 2021/07/26 15:26
+今天下午我跟一家澳洲公司面試
+這次的面試型態很不一樣，他的第一階段面試是讓我跟公司的 sr 和 jr product manager 聊天，之前我遇到的案例都是跟公司的 recruiter 進行 
+這個階段，我主要描述我的 product engineering (非技術方面)，以下是對方的發問：
+1. 我在產品規劃中的角色是什麼
+例如說，我說我會評估接下來任務的可能工作時間，協助 pm 做時程規劃；運用 mvp 的方法，來推送新功能，再來決定是否進行相關開發
+2. 我是如何決定產品是否有開發的價值
+例如：用 ga 取得相關數據，依據用戶量評估開發的需要與否，然後諸如此類
+3. 作為工程師，我最享受什麼
+例如：當 technical problem solver，在過程中我可以獲得自我挑戰；以及跟同仁 co-work，當遇到陌生的問題其實可以尋求協助，有助於了解我在特定業務情境的問題；總之，享受作為個人和團體協作的過程
+4. 若我對於團隊的 task 不認同，或是有衝突時，怎麼解決？
+例如：我會去理解 task 他的 priority，以及安排必要性；相對地，我會提出我的顧慮，列舉我認為的優缺點和可能需要的時間；再讓相關同仁討論；無論結果如何，我相信我會得到充足的回饋在這個討論
+5. 我跟非技術背景的同仁會如何合作？
+例如：我頃向描繪 workflow 和 diagram 以圖形的方式進行討論，我相信這個作法可以比較好理解任務該怎麼進行；以及說，面對這個任務，我會表達我認為的解決目標和作法，讓同仁知道這個行動會導致什麼結果
+
+jui — 2021/08/03 10:00
+Work experience  形式建議改成
+# 104
+The largest Taiwanese employment platform
+
+## Senior Platform Software Engineer│ Oct 2020 – Present
+### Skills demonstrated 
+- FastAPI
+  [How have you demonstrated this skills? ]
+
+- Python
+  [How have you demonstrated this skills? ]
+- AWS
+etc.
 
 ----------------------------------
 
