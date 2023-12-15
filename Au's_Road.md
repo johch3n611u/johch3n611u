@@ -568,7 +568,6 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [五小時攻略微軟雲端證照 //Azure AZ-900 準備秘笈](https://medium.com/kevindailylife/%E4%BA%94%E5%B0%8F%E6%99%82%E6%94%BB%E7%95%A5-az-900-%E5%BE%AE%E8%BB%9F%E9%9B%B2%E7%AB%AF%E8%AD%89%E7%85%A7%E6%BA%96%E5%82%99%E4%B9%8B%E8%B7%AF-6a29d83db21e)
 * [14 天高分通過 AZ-204 證照準備心得 (Microsoft Azure Developing Solutions Study Guide)](https://sdwh.dev/posts/2022/04/AZ-204-Certificate-Study-Guide/)
 
-
 ## 參考文章 ( 以下都已整理到上面 )
 
 * [澳洲技术移民打分表](https://hect.com.au/%e6%be%b3%e6%b4%b2%e6%8a%80%e6%9c%af%e7%a7%bb%e6%b0%91/%e6%8a%80%e6%9c%af%e7%a7%bb%e6%b0%91%e6%89%93%e5%88%86%e8%a1%a8/)
@@ -650,6 +649,26 @@ discord https://www.i-migration.com.au/ 比較看看收費
 
 
 ```
+雅思考試報名流程 註冊neea 付報名費 選考位 填寫報名表 預定口說考試 官方備考課程 印准考證
+準備 身分證 准考證 手環 鉛筆橡皮差
+流程 寫名中文拼音全部大寫 聽力 閱讀 作文 不能上廁所
+
+http://www.chinaielts.org/#
+
+考試介紹 題型介紹 考試流程 評分標準 備考建議 模擬題*1
+
+做真題依照官網評分標準打分，制定弱項強項備考計畫
+第一個月 聽力發音對話內容、閱讀理解文章熟悉題型記住難字
+第二個月 真題從後寫前 限時模擬真考 考完解題
+
+備考資料
+劍橋雅思真題
+單字書 雅思詞彙真經 5-8月亞斯最新口語題庫
+聽力 王祿語料庫、何琼
+閱讀 劉洪波亞私閱讀真經系列
+寫作和口語入門 羊駝雅私app
+口語 楊帥口語 影子跟讀法
+寫作 顧家北手把手教你寫作 Simon 滿分範文
 
 ```
 
