@@ -558,30 +558,16 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲程序媛郭襄 澳洲it面試乾貨](https://www.douyin.com/user/MS4wLjABAAAA5yOBDpv-Yu5Rsk0TCW6abBy5uHt8bj14FFLjn3TEbPXsfNp1fwY8O6hhyvxNBu-Y?vid=7264860987461815608)
 * [澳洲刘凯文 第一手簽證資訊](https://www.ixigua.com/home/78496542267)
 * [澳洲奔跑-澳加](https://www.douyin.com/user/MS4wLjABAAAAk0gK8QptK9I2VbD4nYdixqO1mk60a1tT6SAjjKMfm-k)
+* [澳洲程序員大衛](https://www.youtube.com/@aus-david)
 
 ## 證照
 
 * [AZ-204 認證攻略Ｉ從Azure著手雲端開發解決方案](https://www.youtube.com/watch?v=r3Qo9iNBkn8&ab_channel=%E7%B7%AF%E8%82%B2TibaMe)
-
-## 未整理文章
-
-* [[心得] 英文超弱底考取雅思6.5感動分享](https://www.ptt.cc/bbs/IELTS/M.1572086822.A.62E.html)
-* [五小時攻略微軟雲端證照 //Azure AZ-900 準備秘笈](https://medium.com/kevindailylife/%E4%BA%94%E5%B0%8F%E6%99%82%E6%94%BB%E7%95%A5-az-900-%E5%BE%AE%E8%BB%9F%E9%9B%B2%E7%AB%AF%E8%AD%89%E7%85%A7%E6%BA%96%E5%82%99%E4%B9%8B%E8%B7%AF-6a29d83db21e)
-* [14 天高分通過 AZ-204 證照準備心得 (Microsoft Azure Developing Solutions Study Guide)](https://sdwh.dev/posts/2022/04/AZ-204-Certificate-Study-Guide/)
-* [其實菲律賓語言學校效果也沒很好](https://www.dcard.tw/f/language/p/231613230)
-* [#請益 #菲律賓遊學 #雅思 英文程度不錯 進步幅度](https://www.dcard.tw/f/studyabroad/p/243265000)
-* [澳洲程序員大衛](https://www.youtube.com/@aus-david)
 * [三個禮拜"0基礎"考過2張AWS證照](https://www.dcard.tw/f/exam/p/240801516)
 * [適合您軟件開發職業的 8 項 .NET 認證 | Indeed.com](https://www.indeed.com/career-advice/career-development/net-developer-certfications)
-* [雅思準備-短期/全職工作/自修/6.5分](https://medium.com/@msff/%E9%9B%85%E6%80%9D%E6%BA%96%E5%82%99-%E7%9F%AD%E6%9C%9F-%E5%85%A8%E8%81%B7%E5%B7%A5%E4%BD%9C-%E8%87%AA%E4%BF%AE-6-5%E5%88%86-a82e0c24611e)
-* [我是如何一天背500个单词的](https://zhuanlan.zhihu.com/p/69598578)
-* [英文不好雅思備考必看! 我如何從雅思4.0➡️7.0? 三個有效準備雅思的方法! 雅思補習+自學備考經驗分享](https://www.youtube.com/watch?v=7Jp5FXVOKrc&ab_channel=%E5%90%83%E9%A3%AFGeorge)
-* [雅思詞彙](https://www.youtube.com/watch?v=SrfrcStk3rg&list=PLhcW5Vlyw9CqwETLZMLmubZEnkkzqv8zI&ab_channel=%E5%A4%96%E8%AF%AD%E5%B8%AEWAIYUBANG)
-* [30岁脱产备考｜60天冲刺雅思7分｜技巧｜资料｜APP｜经验分享](https://www.youtube.com/watch?v=vSFEjicW7dY&ab_channel=%E9%99%88%E6%B0%B8%E4%BB%81)
-* [刘洪波雅思真经第一课（自学只需要看第一课）](https://www.bilibili.com/video/BV1c54y187SH/?from=search&seid=12108137497663523324&spm_id_from=333.337.0.0)
-* [雅思听力常见词汇（最好能够识别+听写80%以上）：](https://ieltsmaterial.com/1200-commonly-repeated-words-in-ielts-listening-test/)
-* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
-* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
+* [五小時攻略微軟雲端證照 //Azure AZ-900 準備秘笈](https://medium.com/kevindailylife/%E4%BA%94%E5%B0%8F%E6%99%82%E6%94%BB%E7%95%A5-az-900-%E5%BE%AE%E8%BB%9F%E9%9B%B2%E7%AB%AF%E8%AD%89%E7%85%A7%E6%BA%96%E5%82%99%E4%B9%8B%E8%B7%AF-6a29d83db21e)
+* [14 天高分通過 AZ-204 證照準備心得 (Microsoft Azure Developing Solutions Study Guide)](https://sdwh.dev/posts/2022/04/AZ-204-Certificate-Study-Guide/)
+
 
 ## 參考文章 ( 以下都已整理到上面 )
 
@@ -629,6 +615,12 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲匠人類似六角學院 有求職推薦服務收費](https://jiangren.com.au/)
 * [先練功在出國](https://www.ptt.cc/bbs/Soft_Job/M.1654178871.A.459.html)
 * [幸運點滿的澳洲瑪儂](https://ithelp.ithome.com.tw/users/20101089/ironman/2053)
+* [第1集 | 直播回放：澳洲IT经理讲澳洲公司需要什么样的IT人才！](https://www.douyin.com/video/7268280538086051072)
+* [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
+* [Jobs Australia: Why January is the best month to be on the job hunt](https://www.news.com.au/finance/work/careers/jobs-australia-why-january-is-the-best-month-to-be-on-the-job-hunt/news-story/e4433146c12984725a3bf25faa03af30)
+
+# 雅思 4 個 6 最低要求
+
 * [雅思閱讀解題袐技](https://www.leedsmayi.com/learning-resources/ielts-reading-skills)
 * [大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
 * [【IELTS】7分不是夢！IELTS past paper、準備心得、資源下載分享](https://hk.amazingtalker.com/blog/zh-hk/hk-eng/7544/)
@@ -643,8 +635,21 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [多益255，也能考雅思5分](https://www.dcard.tw/f/language/p/252906471?cid=5e4e48a5-463b-415f-b302-f20605faddb6)
 * [[心得] 大學指考英文2分-雅思4個7心路歷程](https://www.ptt.cc/bbs/IELTS/M.1486408654.A.E59.html)
 * [上班族雅思準備從0開始，心得、讀書技巧＆重點筆記精華大公開](https://minahaha.com/ielts-note/)
-* [第1集 | 直播回放：澳洲IT经理讲澳洲公司需要什么样的IT人才！](https://www.douyin.com/video/7268280538086051072)
-* [爬蟲一年 seek tech count](https://docs.google.com/spreadsheets/d/1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4/edit?usp=sharing)
+* [雅思準備-短期/全職工作/自修/6.5分](https://medium.com/@msff/%E9%9B%85%E6%80%9D%E6%BA%96%E5%82%99-%E7%9F%AD%E6%9C%9F-%E5%85%A8%E8%81%B7%E5%B7%A5%E4%BD%9C-%E8%87%AA%E4%BF%AE-6-5%E5%88%86-a82e0c24611e)
+* [我是如何一天背500个单词的](https://zhuanlan.zhihu.com/p/69598578)
+* [英文不好雅思備考必看! 我如何從雅思4.0➡️7.0? 三個有效準備雅思的方法! 雅思補習+自學備考經驗分享](https://www.youtube.com/watch?v=7Jp5FXVOKrc&ab_channel=%E5%90%83%E9%A3%AFGeorge)
+* [雅思詞彙](https://www.youtube.com/watch?v=SrfrcStk3rg&list=PLhcW5Vlyw9CqwETLZMLmubZEnkkzqv8zI&ab_channel=%E5%A4%96%E8%AF%AD%E5%B8%AEWAIYUBANG)
+* [30岁脱产备考｜60天冲刺雅思7分｜技巧｜资料｜APP｜经验分享](https://www.youtube.com/watch?v=vSFEjicW7dY&ab_channel=%E9%99%88%E6%B0%B8%E4%BB%81)
+* [刘洪波雅思真经第一课（自学只需要看第一课）](https://www.bilibili.com/video/BV1c54y187SH/?from=search&seid=12108137497663523324&spm_id_from=333.337.0.0)
+* [雅思听力常见词汇（最好能够识别+听写80%以上）：](https://ieltsmaterial.com/1200-commonly-repeated-words-in-ielts-listening-test/)
+* [珍奶闆娘雅思筆記](https://drive.google.com/drive/u/2/folders/1JNd8QDHYgVng65lm-XWh-H4o5kLBafdo)
+* [英文學習、雅思與留學](https://drive.google.com/file/d/1KbrE9__FZ_IDv9GSbiI9OSiJdr70PUlh/view)
+* [[心得] 英文超弱底考取雅思6.5感動分享](https://www.ptt.cc/bbs/IELTS/M.1572086822.A.62E.html)
+* [其實菲律賓語言學校效果也沒很好](https://www.dcard.tw/f/language/p/231613230)
+* [#請益 #菲律賓遊學 #雅思 英文程度不錯 進步幅度](https://www.dcard.tw/f/studyabroad/p/243265000)
 
 
+```
+
+```
 
