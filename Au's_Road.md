@@ -311,6 +311,7 @@ ACS 扣掉的年數是讓你變成 Skilled employee 分為這個角色的前後�
 
 ### keyword [SEEK Employment Report]
 
+* [SEEK Employment & Salary data](https://www.seek.com.au/about/news/seek-employment-data)
 * [SEEK Employment Report - job ads record marginal fall in February](https://www.seek.com.au/about/news/seek-employment-report-job-ads-record-a-marginal-fall-in-february)
 
 ![image](https://github.com/johch3n611u/johch3n611u/assets/46659635/72a1f2c4-69f6-459c-99ab-6047de5fbfde)
