@@ -219,6 +219,12 @@ B公司出具相关证明
 
 186/187 指認可全職工作經驗 且必須達到提名職業所需要的技能水頻
 187.234 => requirement for applicants in the DE stream of Subclass 187 to have been employed in the occupation for at least three years on a full-time basis and at the level of skill required for the occupation
+-----
+
+ACS 扣掉的年數是讓你變成 Skilled employee 分為這個角色的前後經驗，應用於 EOI ( 這感覺不用想，打分制太難卷
+
+Discord 經驗 => 非本科 3年
+
 ```
 
 ## Work Reference / Reference Letter Sample
@@ -305,7 +311,7 @@ B公司出具相关证明
     4. what the expected level of this role ? mid / senior
 13. [Australian companies providing work visa sponsorship](https://github.com/geshan/au-companies-providing-work-visa-sponsorship?fbclid=IwAR3J1nowqRZqd_-NG8BQVHMCT6Zj8hIq0uX0l4Xj2vHJu3Sa9D0ScxVxxKw)
 14. seek 爬蟲 2019-2023 12 月：目前看狀況呈現一個大幅度跳水的狀況，react > angular , software engine > .net > front > back > full stack, java > c#, azure > aws
-
+15. 工作上的英文 Yen 說比較麻煩？相較於單純英文
 ----------------------------------
 
 ### 面試內容
