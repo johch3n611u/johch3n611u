@@ -7,6 +7,8 @@
 5. 抓緩衝時間準備，簽證、開車、面試
 6. 備選計畫 2024 07 => 英文、技術不夠時間準備，482 太亂
 
+# 雅思 4 個 6 最低要求
+
 ## Skills in Demand Visa
 
 * [Skills in Demand Visa，【新】雇主擔保 - 保證拿PR！快來看一下！](https://www.youtube.com/watch?v=P2KO1c8qlxU&ab_channel=AMEC%E6%BE%B3%E6%B4%B2%E7%95%99%E5%AD%B8%E7%B6%B2%E8%B7%AF%E9%9B%BB%E5%8F%B0)
@@ -145,6 +147,8 @@ Competent English 等效的英文檢定（雅思平均6分，各科6分以上）
 ```
 
 ## ACS
+
+* [Migration Skills Assessments](https://www.acs.org.au/msa/information-for-applicants.html)
 
 ```
 AMEC ( 澳洲留學 ) 提供
@@ -389,6 +393,11 @@ discord https://www.i-migration.com.au/ 比較看看收費
 * [澳洲職場人 內有內推連結](https://www.facebook.com/groups/workinginaus/posts/283850763602747/)
 * [澳洲程序媛郭襄 澳洲it面試乾貨](https://www.douyin.com/user/MS4wLjABAAAA5yOBDpv-Yu5Rsk0TCW6abBy5uHt8bj14FFLjn3TEbPXsfNp1fwY8O6hhyvxNBu-Y?vid=7264860987461815608)
 * [澳洲刘凯文 第一手簽證資訊](https://www.ixigua.com/home/78496542267)
+* [澳洲奔跑-澳加](https://www.douyin.com/user/MS4wLjABAAAAk0gK8QptK9I2VbD4nYdixqO1mk60a1tT6SAjjKMfm-k)
+
+## 證照
+
+* [AZ-204 認證攻略Ｉ從Azure著手雲端開發解決方案](https://www.youtube.com/watch?v=r3Qo9iNBkn8&ab_channel=%E7%B7%AF%E8%82%B2TibaMe)
 
 ## 未整理文章
 
