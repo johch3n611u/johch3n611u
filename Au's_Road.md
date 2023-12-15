@@ -416,6 +416,39 @@ BruceShen — 2020/10/30 09:28
 2. Technical Phone Interview 發現有不會的問題，請記下來之後非常還有可能會出現
 3. 加強英文面試的能力 
 
+jui — 2020/10/09 10:50
+第二階段Canva現場寫程式 (screen share code on IDE, codeSandBox), 面試心得是 , 他會出一些常見的程式問題然後看你得解決方式.
+主要總結我覺得是在測試你對以下的了解 fetch, promise, async function, await, iteration ( array reducer, for loop, recursive function  ), Map, Set
+
+josephj — 2021/01/14 17:24
+還是他只是在問 Promise.allSettled ?
+
+James Huang — 2021/01/21 13:01
+我是投ReadyTech, 不過他們是用這個去測驗
+https://www.criteriacorp.com/
+Employee Testing, Pre-Employment Testing | Criteria Corp
+Criteria Corp is a leading provider of professionally developed pre-employment tests, including aptitude, personality, and skills tests.
+圖片
+你只要滑鼠點頁面外的地方就會停止測驗了...
+不過可以重新進入繼續 時間就是只有15分鐘而已，要寫50題
+
+
+timmylin — 2020/12/09 11:46
+Hello 各位刷題的大大們, 小弟明年會登入墨爾本, 本身是 java developer (Java/Angular 都寫), 想請教一下, 找澳洲後端的工作, 會需要刷題嗎,
+還是都是以做一個小專案和面試為主呢? 如果要考演算法, 要刷到甚麼程度呢~? 再麻煩各位回答了! 感激不盡!
+Liam Lai — 2020/12/09 17:07
+要進global 公司才需要刷題，一般公司我遇到都是給回家作業
+
+josephj — 2021/06/16 14:35
+這點在面試時就很明顯啦，澳洲 Culture Fit 通常比 Skill 更重要，比較 Aussie 的公司會覺得技術好調整、
+但個性是難以改變的。反正真的不行還有 Probation Period 可以砍人
+你能夠想像我面試了三關，然後完全沒考我技術問題嗎
+第一關他們自己介紹、第二關看他們的產品跟 Code、第三關 Behaviour test
+don't get me wrong. 只有一間是這樣，其它都還是有考技術的啦
+
+James Huang — 2021/06/16 17:31
+蠻特別的…level不同，像我就是都有考技術的部分
+
 ----------------------------------
 
 ### Package
