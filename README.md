@@ -30,8 +30,8 @@ With over three years of experience in software development, I am currently focu
 * Remote & Distributed Collaboration – Delivered 6 mid-to-large-scale projects within 14 months
 * MBTI: INTP – The Thinker – Logical problem solver
 * PDP: Owl – Analytical, precise, perfectionist, highly adaptable
-* <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> 義守大學資訊管理系 1y ( 程式 )
-* <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> 輔仁大學景觀建築系 4y ( 規劃、設計、23D 繪圖 )
+* <img src="https://ci.isu.edu.tw/prev/img/ISU_logo4.png" alt="isu" width="15" height="15" /> I-Shou University | 1 Year in Information Management (Programming Focus)
+* <img src="https://summercourse.fju.edu.tw/statics/img/logo.png" alt="fju" width="15" height="15" /> Fu Jen Catholic University | 4 Years in Landscape Architecture (Planning, Design, 2D/3D Drafting)
 
 <br><br>
 
