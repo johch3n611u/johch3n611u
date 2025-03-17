@@ -23,11 +23,13 @@ Explicit is better than implicit 🖖 歡迎互相交流
 
 <!-- 你好，我是劉育誠，<br> -->
 
-具有約三年多的程式開發經驗，<br>
-目前專注於前端開發與後端系統架構，<br>
-熱衷接觸掌握新知，具備溝通與協作開發能力；<br>
-持續精進程式的可用性、可維護性、可擴充性，<br>
-以結果為導向，以使用者為中心，享受解決問題的成就感。<br>
+With over three years of experience in software development, <br>
+I am currently focused on front-end development and back-end system architecture. <br>
+Passionate about staying up to date with the latest technologies, <br>
+I possess strong communication and collaborative development skills. <br>
+I am committed to continuously improving code usability, maintainability, <br>
+and scalability, adopting a results-driven, <br>
+user-centric approach while embracing the satisfaction of solving complex problems. 🚀<br>
 
 * 系統開發整合乙方 3+y ( 網站前後端開發、API串接 )
 * 電子商務甲方 1+y ( 品牌代營運網站開發、內部系統維運 )
