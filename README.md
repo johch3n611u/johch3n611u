@@ -41,7 +41,7 @@ With over three years of experience in software development, I am currently focu
    <img src="images/angular.svg" alt="angular" width="40" height="40" />
    <img src="images/microsoft_azure-icon.svg" alt="azure" width="40" height="40" />
    <img src="images/gnu_bash-icon.svg" alt="bash" width="40" height="40" />
-   
+   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="25" height="25"/>
    
 </p>
 
