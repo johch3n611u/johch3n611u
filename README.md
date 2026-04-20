@@ -42,8 +42,8 @@ With over three years of experience in software development, I am currently focu
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="25" height="25"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="25" height="25"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1051px-Adobe_Photoshop_CC_icon.svg.png" alt="photoshop" width="25" height="25"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/2101px-Adobe_Illustrator_CC_icon.svg.png" alt="illustrator" width="25" height="25"/>
+<!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1051px-Adobe_Photoshop_CC_icon.svg.png" alt="photoshop" width="25" height="25"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/2101px-Adobe_Illustrator_CC_icon.svg.png" alt="illustrator" width="25" height="25"/> -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/SketchUp-Logo.png" alt="sketchUp" width="25" height="25"/>
 <img src="https://seeklogo.com/images/L/lumion-3d-logo-948AF388BD-seeklogo.com.png" alt="lumion" width="25" height="25"/>
 <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="25" height="25"/>
