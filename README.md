@@ -38,9 +38,27 @@ With over three years of experience in software development, I am currently focu
 <details> <summary>SKILL：</summary></details>
 
 <p>
- <!-- 較長碰 -->
 
-<img align="center" src="images/" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/dotnet.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
 
 
 </p>
