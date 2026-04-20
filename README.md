@@ -39,29 +39,43 @@ With over three years of experience in software development, I am currently focu
 
 <p>
 
-<img align="center" src="Images/dotnet.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/azure.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/mssql.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/vscode.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/vstudio.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/oracle.png" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/java.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/dotnet.svg" alt="dotnet.svg" width="25" height="25"/>
+<img align="center" src="Images/angular.svg" alt="angular.svg" width="25" height="25"/>
+<img align="center" src="Images/azure.svg" alt="azure.svg" width="25" height="25"/>
+<img align="center" src="Images/mssql.svg" alt="mssql.svg" width="25" height="25"/>
+<img align="center" src="Images/csharp.svg" alt="csharp.svg" width="25" height="25"/>
+<img align="center" src="Images/typescript.svg" alt="typescript.svg" width="25" height="25"/>
+<img align="center" src="Images/vscode.svg" alt="vscode.svg" width="25" height="25"/>
+<img align="center" src="Images/vstudio.svg" alt="vstudio.svg" width="25" height="25"/>
+<img align="center" src="Images/jira.png" alt="jira.png" width="25" height="25"/>
+<img align="center" src="Images/sourcetree.png" alt="sourcetree.png" width="25" height="25"/>
+<img align="center" src="Images/postman.png" alt="postman.png" width="25" height="25"/>
+<img align="center" src="Images/rabbitmq.png" alt="rabbitmq.png" width="25" height="25"/>
+<img align="center" src="Images/redis.svg" alt="redis.svg" width="25" height="25"/>
+<img align="center" src="Images/docker.svg" alt="docker.svg" width="25" height="25"/>
+<img align="center" src="Images/jenkins.svg" alt="jenkins.svg" width="25" height="25"/>
+<img align="center" src="Images/nginx.svg" alt="nginx.svg" width="25" height="25"/>
+<img align="center" src="Images/git.svg" alt="git.svg" width="25" height="25"/>
+<img align="center" src="Images/nodejs.svg" alt="git.svg" width="25" height="25"/>
 
+<img align="center" src="Images/oracle.png" alt="oracle.png" width="25" height="25"/>
+<img align="center" src="Images/java.svg" alt="java.svg" width="25" height="25"/>
+<img align="center" src="Images/aws.png" alt="aws.png" width="25" height="25"/>
+<img align="center" src="Images/vue.png" alt="vue.png" width="25" height="25"/>
+<img align="center" src="Images/javascript.svg" alt="vue.png" width="25" height="25"/>
+<img align="center" src="Images/dbeaver.png" alt="dbeaver.png" width="25" height="25"/>
+<img align="center" src="Images/postgresql.jpg" alt="postgresql.jpg" width="25" height="25"/>
+<img align="center" src="Images/mongodb.jpg" alt="mongodb.jpg" width="25" height="25"/>
+<img align="center" src="Images/mysql.svg" alt="mysql.svg" width="25" height="25"/>
+<img align="center" src="Images/chartjs.svg" alt="chartjs.svg" width="25" height="25"/>
+<img align="center" src="Images/d3js.svg" alt="d3js.svg" width="25" height="25"/>
+<img align="center" src="Images/hexo.svg" alt="hexo.svg" width="25" height="25"/>
+<img align="center" src="Images/firebase.png" alt="firebase.png" width="25" height="25"/>
+
+<img align="center" src="Images/photoshop.png" alt="photoshop.png" width="25" height="25"/>
+<img align="center" src="Images/Illustrator.png" alt="Illustrator.png" width="25" height="25"/>
+<img align="center" src="Images/sketchup.png" alt="sketchup.png" width="25" height="25"/>
+<img align="center" src="Images/lumion.png" alt="lumion.png" width="25" height="25"/>
 
 </p>
 
