@@ -37,6 +37,8 @@ With over three years of experience in software development, I am currently focu
 
 <details> <summary>SKILL：</summary></details>
 
+<br><br>
+
 <p>
  <!-- 較長碰 -->
 <a href="" target="_blank">
@@ -86,6 +88,8 @@ With over three years of experience in software development, I am currently focu
 <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/> -->
 
 </p>
+
+<br><br>
 
 <table><tr><td valign="top" width="25%">
 
