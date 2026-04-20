@@ -45,7 +45,7 @@ With over three years of experience in software development, I am currently focu
 <img align="center" src="Images/mssql.svg" alt="mssql.svg" width="25" height="25"/>
 <img align="center" src="Images/csharp.svg" alt="csharp.svg" width="25" height="25"/>
 <img align="center" src="Images/typescript.svg" alt="typescript.svg" width="25" height="25"/>
-<img align="center" src="Images/vscode.svg" alt="vscode.svg" width="25" height="25"/>
+<img align="center" src="Images/vscode.jpg" alt="vscode.jpg" width="25" height="25"/>
 <img align="center" src="Images/vstudio.svg" alt="vstudio.svg" width="25" height="25"/>
 <img align="center" src="Images/jira.png" alt="jira.png" width="25" height="25"/>
 <img align="center" src="Images/sourcetree.png" alt="sourcetree.png" width="25" height="25"/>
