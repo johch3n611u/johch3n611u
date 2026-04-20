@@ -41,10 +41,12 @@ With over three years of experience in software development, I am currently focu
 
 <img align="center" src="Images/dotnet.svg" alt="csharp" width="25" height="25"/>
 <img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
-<img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/azure.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/mssql.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/vscode.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/vstudio.svg" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/oracle.png" alt="csharp" width="25" height="25"/>
+<img align="center" src="Images/java.svg" alt="csharp" width="25" height="25"/>
 <img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
 <img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
 <img align="center" src="Images/angular.svg" alt="csharp" width="25" height="25"/>
@@ -62,6 +64,8 @@ With over three years of experience in software development, I am currently focu
 
 
 </p>
+
+<br>
 
 <table><tr><td valign="top" width="25%">
 
