@@ -39,7 +39,19 @@ With over three years of experience in software development, I am currently focu
 
 <p>
  <!-- 較長碰 -->
-<a href="" target="_blank"></a>
+<a href="" target="_blank">
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" alt="d3js" width="25" height="25"/>
+</a>
+<a href="" target="_blank">
+ <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="25" height="25"/>
+</a>
+<a href="" target="_blank">
+ <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/>
+</a>
+
+
+
+
 
 
  
@@ -69,9 +81,9 @@ With over three years of experience in software development, I am currently focu
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="25" height="25"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" alt="ionic" width="25" height="25"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="25" height="25"/> -->
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" alt="d3js" width="25" height="25"/>
+<!-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" alt="d3js" width="25" height="25"/>
 <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="25" height="25"/>
-<img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/>
+<img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="25" height="25"/> -->
 
 </p>
 
