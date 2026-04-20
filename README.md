@@ -39,7 +39,7 @@ With over three years of experience in software development, I am currently focu
 
 <br><br>
 
-<p>
+<p align="center">
  <!-- 較長碰 -->
 
 <img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="25" height="25"/>
