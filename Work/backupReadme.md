@@ -163,7 +163,7 @@ With over three years of experience in software development, I am currently focu
 >   * 遠端、分流協作 14 個月完成 6 個中大型專案
 
 <details>
-<summary>[2020/06 - 2022/04] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">半導體公司</a> 入口平台與各流程管理平台 e.g. 帳號、軟體、設備管理</summary>
+<summary>[2020/06 - 2022/04] <a href="https://www.mxic.com.tw/zh-tw/Pages/default.aspx">旺宏電子公司</a> 入口平台與各流程管理平台 e.g. 帳號、軟體、設備管理</summary>
 
 <!-- 多型、泛型、介面、繼承、反射、映射 -->
 
@@ -177,7 +177,7 @@ With over three years of experience in software development, I am currently focu
 </details>
 
 <details>
-<summary>[2021/10 - 2022/10] <a href="https://www.jean.com.tw/tw/default">不動產公司</a> 前後端分離前台 & CMS/CRM 後台</summary>
+<summary>[2021/10 - 2022/10] <a href="https://www.jean.com.tw/tw/default">新美齊不動產公司</a> 前後端分離前台 & CMS/CRM 後台</summary>
 
 * 【EIP 官網 & 後台 CMS】 ( 維護 Webform ) `2021/10 - 2021/11`
   * 在沒有良好的版控舊程式碼下，維護 Webform、jQuery、私有元件庫，並轉為 Git 版控
@@ -192,7 +192,7 @@ With over three years of experience in software development, I am currently focu
 </details>
 
 <details>
-<summary>[2021/04 - 2022/09] <a href="https://www.pxmart.com.tw/#/index">連鎖超市</a> Web View APP & CMS 後台</summary>
+<summary>[2021/04 - 2022/09] <a href="https://www.pxmart.com.tw/#/index">全聯連鎖超市</a> Web View APP & CMS 後台</summary>
 
 * 【PxPay Web View & APP 管理後台】 ( 開發/維護 AG Ngx-admin + .NET CORE API ) `2021/04 - 2022/09`
   * 協同網頁設計將 WebView 整合至 APP
@@ -203,7 +203,7 @@ With over three years of experience in software development, I am currently focu
 </details>
 
 <details>
-<summary>[2021/05 - 2021/10] <a href="https://www.raw.com.tw/">餐飲集團 </a> 前後端分離前台 & CMS 後台</summary>
+<summary>[2021/05 - 2021/10] <a href="https://www.raw.com.tw/">赫士盟餐飲集團 </a> 前後端分離前台 & CMS 後台</summary>
 
 * 維護 【Webform 前台官網 / 後台 CMS】 `2021/05 - 2021/10`
   * RAW 第一版 Webform 系統功能維護
@@ -213,7 +213,7 @@ With over three years of experience in software development, I am currently focu
 </details>
 
 <details>
-<summary>[2022/03 - 2022/10] <a href="https://www.yuantabank.com.tw/bank/">銀行</a> Web View APP & CMS 後台</summary>
+<summary>[2022/03 - 2022/10] <a href="https://www.yuantabank.com.tw/bank/">元大銀行</a> Web View APP & CMS 後台</summary>
 
 * 【串接投信平台整合原生 APP / WebView】 `2021/06 - 2021/12`
   * 製作 APP 內新手村模組，整合 WebView 與 APP
@@ -223,7 +223,7 @@ With over three years of experience in software development, I am currently focu
 </details>
 
 <details>
-<summary>[2022/04 - 2022/10] <a href="https://www.hnamc.com.tw/">金控</a> CMS/CRM 前後端分離 AG + Net Core API</summary>
+<summary>[2022/04 - 2022/10] <a href="https://www.hnamc.com.tw/">華南金資產</a> CMS/CRM 前後端分離 AG + Net Core API</summary>
 
 * 【房屋官網】 ( 開發/維護 AG + .NET CORE API ) `2022/04 - 2022/10`
   * 重構現有平台建立 BPM + CMS 系統 ( 功能類似新美齊仲介 )
@@ -335,7 +335,7 @@ With over three years of experience in software development, I am currently focu
 #### 工作項目 [需求單開發與維護]
 
 * MPA SSR 前台 需求單
-  <details><summary><a href="https://tw-store.msi.com/">科技業 電商代操</a> 動態 Menu 首頁</summary>
+  <details><summary><a href="https://tw-store.msi.com/">MSI 電商代操</a> 動態 Menu 首頁</summary>
 
    * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : MPA / SSR /jQ / AJAX / ASP.NET
@@ -346,7 +346,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/5.png)
 
   </details>
-  <details><summary><a href="https://myepson.epson.com.tw/">科技業 電商代操</a> MPA 前台動態 Megamenu / 後台 banner 上稿 CMS</summary>
+  <details><summary><a href="https://myepson.epson.com.tw/">EPSON 電商代操</a> MPA 前台動態 Megamenu / 後台 banner 上稿 CMS</summary>
 
    * 需求: 動態 Menu 改版。
      * 使用技術 : MPA /jQ /AJaX / EasyUI / ASP.NET
@@ -358,7 +358,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/6.gif)
 
   </details>
-  <details><summary><a href="https://www.aimedia.com.tw/">居家製造商 電商代操</a>春聯廣告頁</summary>
+  <details><summary><a href="https://www.aimedia.com.tw/">Aimedia 製造商代操商城</a>春聯廣告頁</summary>
 
    * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : jQ DOM / jQ library EasyUI / MPA / AJaX / ASP.NET ...
@@ -369,7 +369,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/7.png)
 
   </details>
-  <details><summary><a href="https://www.sastty.com.tw/">美妝品牌 電商代操</a> 商品包裝問券頁面、登入送購物金功能</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 商品包裝問券頁面、登入送購物金功能</summary>
 
    * 需求: 根據行銷企劃部需求提供應用。
      * 使用技術 : ASP.NET Page / CSS / Javascript / JQ / TSQL
@@ -384,7 +384,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/4.gif)
 
   </details>
-  <details><summary><a href="https://www.sastty.com.tw/">美妝品牌 電商代操</a> 抽獎活動登入頁面</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 抽獎活動登入頁面</summary>
 
    * 需求: 基本資料填寫，驗證後存庫。
      * 使用技術 : jQ / Js / Webforms
@@ -403,7 +403,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/9.gif)
 
   </details>
-  <details><summary><a href="https://www.lab101.asia/">生技公司 電商代操</a> 文章頁面</summary>
+  <details><summary><a href="https://www.lab101.asia/">Lab101 美妝代操商城</a> 文章頁面</summary>
 
    * 需求: 新增行銷露出頁面。
      * 使用技術 : Primary CSS / EasyUI.js / ASP.NET / Youtube API
@@ -415,7 +415,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/8.gif)
 
   </details>
-  <details><summary><a href="https://www.lab101.asia/">生技公司 美妝代操商城</a> 產品頁頁面</summary>
+  <details><summary><a href="https://www.lab101.asia/">Lab101 美妝代操商城</a> 產品頁頁面</summary>
 
    * 需求: 訊息不明顯，購物車功能常駐頁面。
      * 使用技術 : JQ / Primary CSS
@@ -427,7 +427,7 @@ With over three years of experience in software development, I am currently focu
   ![](https://github.com/johch3n611u/johch3n611u/blob/main/Work/Lansin/Images/8.gif)
 
   </details>
-  <details><summary><a href="https://www.lab101.asia/">生技公司 美妝代操商城</a> 金流購物車付款頁面</summary>
+  <details><summary><a href="https://www.lab101.asia/">Lab101 美妝代操商城</a> 金流購物車付款頁面</summary>
 
    * 需求: 選擇宅配時顯示地址表單，選擇超商付款時顯示超商 API 串接內容。並將資料傳回資料庫。
      * 使用技術 : JQ / webforms
@@ -445,7 +445,7 @@ With over three years of experience in software development, I am currently focu
   </details>
 
 * ERP CMS EasyUI.js AJAX 後台 需求單
-  <details><summary><a href="https://www.sastty.com.tw/">美妝品牌 電商代操</a> 後台抽獎功能清單轉存功能</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 後台抽獎功能清單轉存功能</summary>
 
   * 需求: 後台顯示前台抽獎頁面登入之內容，並有按鈕可以將清單轉出 Excel 。
      * 使用技術 : EasyUI.js
@@ -457,7 +457,7 @@ With over three years of experience in software development, I am currently focu
        * `EasyUI 匯出清單 Excel`
 
   </details>
-  <details><summary><a href="https://www.sastty.com.tw/">美妝品牌 電商代操</a> 後台 banner 上稿系統</summary>
+  <details><summary><a href="https://www.sastty.com.tw/">Sastty 美妝電商代操</a> 後台 banner 上稿系統</summary>
 
   * 需求: 後台顯示前台抽獎頁面登入之內容，並有按鈕可以將清單轉出 Excel 。
      * 使用技術 : MPA /jQ /AJaX / EasyUI.js / ASP.NET
@@ -482,7 +482,7 @@ With over three years of experience in software development, I am currently focu
   </details>
 
 * Winform 需求單
-  <details><summary><a href="https://ec.elifemall.com.tw/">連鎖3C家電通路商 電商代操</a> FTP API 串接 排程載入資料庫</summary>
+  <details><summary><a href="https://ec.elifemall.com.tw/">全國電子電商代操</a> FTP API 串接 排程載入資料庫</summary>
 
   * 需求: 串接 API 載入 FTP 檔案，轉存資料庫，並設定自動排程。
      * 使用技術 : Winform
@@ -499,12 +499,19 @@ With over three years of experience in software development, I am currently focu
 
 <br>
 
-### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 杭州薌富規劃有限公司 </a> , Assistant Urban Planner , 景觀設計業 1~30 人 , Jun 2015 ~ Sep 2016
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 杭州薌富規劃有限公司 </a> , Internship , 景觀設計業 1~30 人 , Jun 2016 ~ Sep 2016
 
-1. 負責設計、監工、業務與總務工作。
-2. 赴杭州蓮花鎮施工現場進行分析、規劃、設計與監工。
-3. 支援義烏辦公室協助室內設計、規劃與施工。
-4. 赴山東東營市協助專案業務洽談。
+1. 負責設計、總務、監工、業務工作
+2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工，
+3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工，
+4. 在職期間至支援山東東營市協助業務洽談案件。
+
+### ✦ <a href="http://www.shinda.com.tw" target="_blank"> 達觀規劃設計有限公司 </a> , Internship , 景觀設計業 1~30 人 , May 2015 ~ Sep 2015
+
+1. 負責設計、總務工作
+2. 前往杭州蓮花鎮施工現場進行，分析、規劃、設計、監工，
+3. 在職期間至杭州義烏辦公室協助室內設計、規劃、施工，
+4. 在職期間至支援山東東營市協助業務洽談案件。
 
 <br><br><br>
 
