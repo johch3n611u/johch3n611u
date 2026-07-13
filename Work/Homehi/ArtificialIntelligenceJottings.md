@@ -1,0 +1,3 @@
+1. MCP (Model Context Protocol), an open standard released by Anthropic, defines unified rules for secure two-way communication between AI applications, LLM agents, external data sources and development tools.
+2. Multimodal AI refers to technologies that process and understand multiple real-world forms of input, including text, images, audio, video and sensor data all at once.
+3. RAG (Retrieval-Augmented Generation) is a method that lets LLMs reduce hallucinations: it indexes your specific private data, retrieves relevant content first, then feeds that real data to the LLM to generate factual answers.
