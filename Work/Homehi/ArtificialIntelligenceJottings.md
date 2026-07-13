@@ -1,8 +1,262 @@
-1. MCP (Model Context Protocol) an open standard released by Anthropic, defines unified rules for secure two-way communication between AI applications, LLM agents, external data sources and development tools.
-2. Multimodal AI refers to technologies that process and understand multiple real-world forms of input, including text, images, audio, video and sensor data all at once.
-3. RAG (Retrieval-Augmented Generation) is a method that lets LLMs reduce hallucinations: it indexes your specific private data, retrieves relevant content first, then feeds that real data to the LLM to generate factual answers.
-4. LLM (Large Language Model) Agent + LLM => The LLM acts as both the brain for reasoning and the executor to carry out tasks.
-5. Pre-training: Base Geraltion Model + Big Data + Word Chain Game.
-6. SFT (Supervised Fine-Tuning) Feed human-written standard question-answer samples into the base LLM for repeated training to make it respond the way humans expect.
+# AI 全領域專有名詞時間軸（一句話白話版）
+從 1950 年到 2026 年 7 月，按出現時間排序
 
-ask ai ...
+### 時間軸濃縮版
+> 1956 AI → 1959 ML → 2012 深度學習 → 2017 Transformer → 2018 BERT/GPT-1/預訓練 → 2020 GPT-3/RAG → 2022 ChatGPT/CoT/RLHF → 2023 GPT-4/Claude/多模態/Agent → 2024 MCP/多智能體/DPO → 2025～2026 推理模型 + Agent 原生時代
+
+---
+
+## 一、基礎概念時代（1950～2016）
+
+1. **AI（Artificial Intelligence / 人工智慧）— 1956 年正式命名**
+   就是讓電腦模仿人類會思考、會判斷的技術，所有下面東西的總稱。
+
+2. **圖靈測試（Turing Test）— 1950 年提出**
+   判斷電腦算不算有智慧的考試：人跟機器聊天，如果分不出對方是人還是電腦，就算通過。
+
+3. **ML（Machine Learning / 機器學習）— 1959 年提出**
+   不寫死規則，丟一大堆資料給電腦自己學規律，學會後就能預測新東西。
+
+4. **Neural Network（神經網路）— 1980 年代概念成型**
+   模擬人腦神經元連接方式的數學模型，一層一層傳遞資訊來學習。
+
+5. **Deep Learning（深度學習）— 2012 年 AlexNet 帶動爆紅**
+   很多層神經網路疊起來的技術，資料越多越聰明，現在所有 AI 的底層核心。
+
+6. **Attention Mechanism（注意力機制）— 2014 年提出**
+   讓 AI 看文章時自動聚焦重點字詞，像人讀書會畫重點一樣，不用每個字平均用力。
+
+---
+
+## 二、核心架構與基礎組件（2017～2018）
+
+7. **Transformer — 2017 年 Google 論文提出**
+   專門處理文字的 AI 骨架，靠注意力機制看懂前後文，現在所有大語言模型的基礎。
+
+8. **Token（令牌）— 伴隨 Transformer 普及**
+   AI 眼中的最小文字碎片，不是一個字也不是一個詞，是它認識的積木塊，中文 1 字約 1～2 個 Token。
+
+9. **Tokenizer（分詞器）— 伴隨 Transformer 普及**
+   把人類的文字拆成 AI 認識的 Token 碎片的工具，也能把碎片拼回文字。
+
+10. **Embedding（嵌入向量）— 2018 年後普及**
+    把文字變成一串數字座標，意思相近的詞數字也靠得近，讓 AI 能數學運算語義。
+
+11. **Context Window（上下文窗口）— 伴隨 LLM 普及**
+    AI 一次能看進去的最大 Token 總量，就是它的短期記憶容量，超過就會忘記前面的內容。
+
+12. **BERT — 2018 年 Google 發布**
+    雙向理解的預訓練模型，擅長讀懂文章意思，早期用於搜尋、分類、情感分析。
+
+13. **GPT-1 — 2018 年 OpenAI 發布**
+    第一個 GPT 系列模型，確立了「預訓練 + 生成式」的路線，只有 1.17 億參數。
+
+14. **Pre-training（預訓練）— 2018 年成為標準範式**
+    把網路上幾乎所有文字丟進去瘋狂訓練幾個月，煉出一個什麼都懂一點的通用毛坯模型。
+
+15. **Foundation Model（基礎模型）— 2018 年後概念形成**
+    預訓練完成的通用大模型毛坯，後續可以微調成各種專用模型，像一塊可以雕刻的原木。
+
+---
+
+## 三、LLM 萌芽與微調技術（2019～2020）
+
+16. **LLM（Large Language Model / 大型語言模型）— 2019 年開始流行**
+    參數量超級大的預訓練語言模型，能聊天、寫東西、推理，本質就是猜下一個字是什麼。
+
+17. **GPT-2 — 2019 年 OpenAI 發布**
+    GPT 第二代，15 億參數，當年因為「太危險不敢完整開源」造成話題，開始有湧現能力。
+
+18. **Fine-tuning（微調）— 2019 年成為標準流程**
+    拿特定領域的資料再訓練一次已經預訓練好的基礎模型，讓通才變成專才。
+
+19. **SFT（Supervised Fine-Tuning / 監督微調）— 2019 年後普及**
+    拿人寫好的標準問答範本教模型，讓它回答的格式和風格符合人類預期。
+
+20. **GPT-3 — 2020 年 5 月 OpenAI 發布**
+    1750 億參數，大模型時代真正開啟，首次展現少樣本學習能力，開啟 API 商用模式。
+
+21. **Few-shot Learning（少樣本學習）— 2020 年 GPT-3 帶動**
+    不用重新訓練，只要在 Prompt 裡給幾個範例，AI 當場就學會新任務怎麼做。
+
+22. **Zero-shot Learning（零樣本學習）— 2020 年普及**
+    連範例都不用給，直接下指令 AI 就能做，靠預訓練時累積的通用知識硬做。
+
+23. **RAG（Retrieval-Augmented Generation / 檢索增強生成）— 2020 年 Meta 提出**
+    AI 回答前先去你的資料庫撈真實資料再回答，避免它憑空亂編假內容。
+
+24. **Codex — 2021 年 8 月 OpenAI 發布**
+    GPT 家族專門寫程式的版本，用 GitHub 程式碼訓練，GitHub Copilot 的底層就是它。
+
+25. **LoRA（Low-Rank Adaptation）— 2021 年提出**
+    省錢版微調技術，不用改動整個大模型，只加一小層參數就能訓練，效果接近全量微調。
+
+---
+
+## 四、Prompt 工程與對齊技術（2022 年）
+
+26. **Prompt（提示詞）— 2022 年 ChatGPT 帶動大眾化**
+    你輸入給 AI 的指令、問題、背景資料總稱，講得越清楚 AI 答得越準。
+
+27. **Prompt Engineering（提示詞工程）— 2022 年成為專業技能**
+    研究怎麼講話才能讓 AI 聽懂並給出好答案的學問，算是跟 AI 溝通的說話藝術。
+
+28. **System Prompt（系統提示詞）— 2022 年普及**
+    偷偷塞給 AI 的人設說明書，規定它的身份、規則、輸出格式，使用者通常看不到。
+
+29. **CoT（Chain of Thought / 思維鏈）— 2022 年 Google 提出**
+    叫 AI 一步一步慢慢想、把推理過程講起來，不要直接跳答案，答題準確度會大幅提升。
+
+30. **RLHF（Reinforcement Learning from Human Feedback）— 2022 年 ChatGPT 帶動**
+    讓人類幫 AI 的回答打分好壞，再用強化學習訓練它趨向人類喜歡的回答方式。
+
+31. **Reward Model（獎勵模型）— RLHF 的配套產物**
+    專門用來評分 AI 回答好壞的模型，代替人類做大量評分，是 RLHF 三階段的中間產物。
+
+32. **PPO（Proximal Policy Optimization）— RLHF 常用算法**
+    強化學習的一種訓練算法，用來讓模型慢慢往獎勵高的方向調整，不會改太猛走偏。
+
+33. **Hallucination（幻覺）— 2022 年成為大眾熱詞**
+    AI 講得頭頭是道但內容全是編出來的假貨，講得越自信越容易騙到人。
+
+34. **ChatGPT — 2022 年 11 月 OpenAI 發布**
+    基於 GPT-3.5 的對話機器人，兩個月破億用戶，正式把 AI 帶進大眾視野。
+
+35. **GPT-3.5 — 2022 年 11 月隨 ChatGPT 推出**
+    GPT-3 的升級版，加入 RLHF 對齊，對話體驗大幅提升，是第一個平民化大模型。
+
+36. **Emergent Abilities（湧現能力）— 2022 年研究熱點**
+    模型大到一定程度突然解鎖的新能力，像臨界點一樣，小模型做不到的事大模型突然就會了。
+
+---
+
+## 五、百花齊放：模型、多模態、Agent 爆發（2023 年）
+
+37. **GPT-4 — 2023 年 3 月 OpenAI 發布**
+    當時最強的閉源大模型，推理能力跳躍式進步，支援多模態看圖，參數量傳聞萬億級。
+
+38. **Claude — 2023 年 3 月 Anthropic 推出**
+    Anthropic 公司的對手模型，主打安全、長上下文、程式能力強，是 GPT 最大競爭對手。
+
+39. **LLaMA / Llama — 2023 年 2 月 Meta 開源**
+    Meta 開源的大模型系列，證明小模型也能很強，直接引爆開源大模型生態。
+
+40. **Multimodal（多模態）— 2023 年 GPT-4V 後大眾化**
+    同一個 AI 同時能讀文字、看圖片、聽聲音、看影片，不像舊版只能吃文字。
+
+41. **DPO（Direct Preference Optimization / 直接偏好優化）— 2023 年提出**
+    RLHF 的簡化版，不用訓練獎勵模型也不用強化學習，直接用人類偏好數據微調，省很多事。
+
+42. **LLM Agent（語言模型智慧體）— 2023 年 AutoGPT 帶火**
+    把 LLM 當腦袋，讓它自己規劃步驟、自己查資料、自己動手做完一整件事，不用你一步一步下指令。
+
+43. **AutoGPT — 2023 年 3 月爆紅**
+    第一個爆紅的 Agent 專案，讓 GPT 自己分解任務、自己執行，當時震驚整個業界。
+
+44. **Workflow（工作流）— 2023 年隨 Agent 興起**
+    把 AI 要做的事拆成固定步驟按順序跑，像流水線一樣確保每次都照流程執行。
+
+45. **Tool Use / Function Calling（工具呼叫）— 2023 年成為標配**
+    AI 不只用嘴巴回答，還能主動呼叫外部工具，比如計算機、搜尋、讀資料庫、發訊息。
+
+46. **Vector Database（向量資料庫）— 2023 年 RAG 爆紅帶動**
+    專門存 Embedding 數字向量的資料庫，能快速搜出語義最接近的內容，是 RAG 的必備零件。
+
+47. **Grounding（接地 / 事實根基）— 2023 年 RAG 相關熱詞**
+    讓 AI 的回答有真實資料來源支撐，不是空中閣樓亂編，減少幻覺的核心概念。
+
+---
+
+## 六、多智能體與生態標準（2024 年）
+
+48. **MAS（Multi-Agent System / 多智能體系統）— 2024 年成為研究熱點**
+    好幾個 AI Agent 組成團隊，分工合作一起做複雜任務，像公司不同部門各司其職。
+
+49. **Agent Team（智能體團隊）— 2024 年框架普及**
+    有固定角色分工的多智能體組合，比如一個負責寫、一個負責審、一個負責查資料。
+
+50. **Subagent（子智能體）— 2024 年架構成熟**
+    大 Agent 手下的小幫手，老大把麻煩任務拆開派給不同子 Agent 並行處理，做完再彙整。
+
+51. **Orchestrator（編排者 / 主控 Agent）— 多智能體架構核心**
+    多 Agent 系統裡的總指揮，負責分配任務、接收結果、協調其他子 Agent 工作。
+
+52. **MoA（Mixture-of-Agents / 混合智能體）— 2024 年 Berkeley 提出**
+    同一個問題丟給好幾個 Agent 同時回答，再由一個總管把所有答案融合成最終版本。
+
+53. **Skills（技能模組）— 2023～2024 年 Agent 框架普及**
+    預先寫好的專用工具包，AI 需要時直接呼叫就能用（例如算數學、查天氣、讀檔案），不用每次重新學。
+
+54. **MCP（Model Context Protocol / 模型上下文協定）— 2024 年 11 月 Anthropic 發布**
+    Anthropic 做的一套通用接頭標準，讓任何 AI 都能輕鬆安全地連上各種軟體、資料庫和工具。
+
+55. **GRPO（Group Relative Policy Optimization）— 2024 年普及**
+    新一代強化學習算法，不用獎勵模型，一群答案互相比較好壞來訓練，省成本效果又好。
+
+56. **QLoRA — 2023 年提出 2024 年普及**
+    LoRA 的升級省錢版，把模型量化成 4bit 再微調，一般消費級顯卡也能微調大模型。
+
+57. **Prompt Injection（提示詞注入）— 2024 年成為安全熱詞**
+    一種攻擊手法，在輸入內容裡藏惡意指令，騙 AI 忘記原本規則去做壞事。
+
+---
+
+## 七、推理模型與 Agent 生態成熟（2025～2026 年）
+
+58. **o1 / Reasoning Model（推理模型）— 2024 年 9 月 OpenAI 推出 o1**
+    專門用來做深度思考的模型，回答前會內部推演很久，數學、編碼、複雜推理能力爆強。
+
+59. **o3-mini — 2025 年 1 月 OpenAI 推出**
+    o 系列的平價小版本，可調整推理強度，主打程式、數學、工具使用的性價比。
+
+60. **Claude Opus / Sonnet / Haiku — Anthropic 產品線**
+    Claude 的三個定位：Opus 最強最貴、Sonnet 均衡主力、Haiku 最快最便宜，三種尺寸按需選。
+
+61. **GPT-5 系列 — 2025～2026 年陸續推出**
+    OpenAI 最新一代旗艦模型，推理、多模態、Agent 工具使用能力全面升級。
+
+62. **Claude 4 / 5 系列 — 2025～2026 年推出**
+    Anthropic 最新旗艦，主打超長上下文（1M Token 以上）、超強程式能力和 Agent 原生設計。
+
+63. **Long Context（長上下文）— 2025 年成為標配競技場**
+    模型上下文窗口從幾萬擴張到幾十萬甚至一百萬 Token，能一次讀完整本書或整個專案程式碼。
+
+64. **Agentic AI（智能體優先 AI）— 2025～2026 年主流方向**
+    新一代模型從設計上就原生支援自動規劃、工具使用、多步執行，不是只會聊天的機器人。
+
+65. **Memory（記憶機制）— 2025 年 Agent 標配功能**
+    讓 AI 能記住之前對話過的內容、學過的東西，下次開啟還認得你，不用每次重新介紹自己。
+
+66. **Planning（任務規劃）— Agent 核心能力之一**
+    AI 接到複雜任務後，先自己拆解成一步步計畫，再按計畫逐步執行，不會想到哪做到哪。
+
+67. **Reflection（自我反思）— 2025 年高階 Agent 技術**
+    AI 做完一件事後自己檢查成果，發現問題就修正重來，像人寫完東西會回頭檢查一樣。
+
+---
+
+## 八、常見現象與通用概念（不分先後）
+
+68. **Alignment（對齊）— 貫穿全程的核心議題**
+    讓 AI 的價值觀、行為方式跟人類期望保持一致，不要講髒話、不要亂來、不要幫壞人。
+
+69. **Scaling Law（縮放定律）— 2020 年 OpenAI 提出**
+    模型參數越多、訓練資料越多、計算量越大，能力就會可預測地變強，早期大模型瘋狂堆參數的理論基礎。
+
+70. **Parameters（參數）— 模型大小單位**
+    模型腦袋裡的連接權重數量，類似神經突觸，通常越多越聰明但也越耗電越貴。
+
+71. **Inference（推理）— 日常使用階段**
+    模型訓練好之後，你輸入問題它輸出答案的這個執行過程，就是推理，比訓練便宜很多。
+
+72. **Temperature（溫度參數）— 生成控制參數**
+    調整 AI 回答隨機性的轉鈕，數值越高越有創意越亂，越低越保守越固定。
+
+73. **Perplexity（困惑度 / PPL）— 模型好壞指標**
+    衡量模型猜下一個字準不準的數值，越低代表模型對文本的預測越準、理解越好。
+
+74. **Closed-source（閉源）vs Open-source（開源）— 模型路線之爭**
+    閉源就是廠商不給模型檔案只能用 API（如 GPT、Claude），開源就是模型檔案放出來大家可以自己改自己跑（如 Llama）。
+
+75. **AIGC（AI Generated Content / AI 生成內容）— 2023 年流行詞**
+    用 AI 生出來的所有東西總稱，包含文字、圖片、影片、音樂、程式碼等。
