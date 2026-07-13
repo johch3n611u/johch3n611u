@@ -1,3 +1,25 @@
+* 如果不知道如何調用 skill 可以透過 agent teams 調用嗎，
+
+設一個「技能管理員 Agent」, 根據你的問題自動去 skills/ 資料夾找最適合的，然後叫其他 Agent 執行,
+
+=> 多層 Agent 分工架構, 總管 => 研究, 文書, 分析, 審查
+
+* 如果沒有適合的 skill 可以透過自己整合出自己的嗎 ?
+
+把幾個現有 skill 串起來變成你專屬的 SOP
+
+我的專屬工作流：
+Step 1 → 先用 problem-framing-canvas 定義問題
+Step 2 → 再用 stakeholder-identification 盤利害關係人
+Step 3 → 接著用 opportunity-solution-tree 發想方案
+Step 4 → 最後用 prd-development 寫成正式 PRD
+
+以後我說「跑新功能流程」就照這個順序執行，
+每一步做完先給我看，我確認了再往下走。
+主題：【你的功能名稱】
+
+---
+
 ### 時間軸濃縮版
 > 1956 AI → 1959 ML → 2012 深度學習 → 2017 Transformer → 2018 BERT/GPT-1/預訓練 → 2020 GPT-3/RAG → 2022 ChatGPT/CoT/RLHF → 2023 GPT-4/Claude/多模態/Agent → 2024 MCP/多智能體/DPO → 2025～2026 推理模型 + Agent 原生時代
 
