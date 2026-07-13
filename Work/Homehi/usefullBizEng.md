@@ -17,4 +17,8 @@ design the architecture for like AWS Lambda function?
 
 I mean,
 
-do you have any development and deployed experience with on‑premise?"
+do you have any development and deployed experience with on‑premise?
+
+troubleshooting issues
+
+Okay, I see. that's all questions from my side, Please continue to host this interview. Thank you.
