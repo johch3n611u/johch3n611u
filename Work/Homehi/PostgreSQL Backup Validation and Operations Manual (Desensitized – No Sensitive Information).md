@@ -237,7 +237,62 @@ free -h
 常見健康狀態：實體記憶體充足、Swap 完全未使用、可用記憶體剩餘量大，無記憶體瓶頸。
 優化建議：業務量增長後調大 shared_buffers、work_mem 提升查詢快取效率。
 
+## 7. Docker 容器化 PG 擴充操作
+## 7.1 備份檔傳入容器
 
+```bash
+docker cp /tmp/xxx.dump [容器名]:/tmp/
+```
+
+## 7.2 容器內驗證備份清單
+
+```bash
+docker exec -u postgres [容器名] pg_restore -l /tmp/xxx.dump
+```
+
+## 7.3 容器內隔離還原測試
+
+```bash
+# 建立測試庫
+docker exec -u postgres [容器名] createdb test_planr_bak
+# 還原備份
+docker exec -u postgres [容器名] pg_restore -d test_planr_bak /tmp/xxx.dump
+# 登入驗證
+docker exec -u postgres -it [容器名] psql -d test_planr_bak
+```
+
+## 7.4 推薦隔離驗證方式（不動生產容器）
+
+開啟臨時同版本 PG 容器，掛載備份目錄單獨測試，用完自動銷毀：
+
+```bash
+docker run --rm --name pg-temp-test -v /data01/backup/postgresql:/backup -e POSTGRES_PASSWORD=test postgres:18
+```
+
+## 7.5 容器重啟指令
+
+```bash
+docker restart [容器名]
+```
+
+## 8. 常見報錯與標準解決方案
+
+|報錯資訊|根本原因|標準解法|
+|postgres is not in the sudoers file|當前使用者已是 postgres，不需要 sudo	移除 sudo -u postgres，直接執行指令|
+|ERROR: schema "planr_schema" already exists|測試庫已還原過，物件重複|方案 1：dropdb 重建；方案 2：加 --clean --if-exists|
+|pg_stat_user_tables 所有 n_live_tup = 0|PG 重啟後統計資訊未刷新，非真無數據|執行 analyze; 刷新統計後重新匯出行數|
+|pg_restore: command not found|當前伺服器未安裝 PostgreSQL 客戶端|將備份檔傳送至有 PG 工具的 DB 主機驗證|
+|FATAL: role "root" does not exist|PG 不允許 root 登入|切換 postgres 使用者執行 psql|
+|pg_restore 執行後無任何輸出|預設靜默模式，無錯誤即執行成功|進庫查表確認還原結果|
+
+## 9. 通用維運注意事項
+
+1. PostgreSQL 完整重啟會強制中斷所有業務連線，必須協調業務低峰執行；僅修改配置優先使用 reload。
+2. 備份驗證統一使用獨立測試庫，全程隔離正式數據，零風險。
+3. 備份僅代表快照數據，正式庫後續新增 / 刪除數據會造成行數差異，屬正常現象。
+4. 自訂編譯 / 解壓安裝的 PostgreSQL 無 systemd 管理，系統重啟後需手動拉起資料庫。
+5. 大備份檔傳輸優先使用 SFTP 圖形工具，支援斷點續傳，避免 scp 中斷後重下。
+6.. 驗證完畢務必清理測試庫與臨時 dump/sql/txt 檔，釋放伺服器儲存空間。
 
 
 
