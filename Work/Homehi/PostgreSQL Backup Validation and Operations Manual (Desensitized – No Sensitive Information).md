@@ -35,7 +35,7 @@
 
 ## 2. 基礎傳輸操作（MobaXterm + PowerShell）
 
----powershell
+--- powershell
 ### 密碼認證
 scp -r root@<備份機IP>:/data01/backup/postgresql <本機本地路徑>
 
@@ -47,7 +47,7 @@ scp -r -P 2222 root@<備份機IP>:/data01/backup/postgresql <本機本地路徑>
 
 ## 2.2 備份機傳輸 dump 至 DB 主機 /tmp
 
----bash
+--- bash
 scp root@<備份機IP>:/data01/backup/postgresql/[DB主機標識]/planr/*.dump /tmp/
 ---
 
