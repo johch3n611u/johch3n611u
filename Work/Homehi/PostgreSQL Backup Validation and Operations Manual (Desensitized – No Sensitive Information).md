@@ -278,6 +278,7 @@ docker restart [容器名]
 ## 8. 常見報錯與標準解決方案
 
 |報錯資訊|根本原因|標準解法|
+|-----|-----|-----|
 |postgres is not in the sudoers file|當前使用者已是 postgres，不需要 sudo	移除 sudo -u postgres，直接執行指令|
 |ERROR: schema "planr_schema" already exists|測試庫已還原過，物件重複|方案 1：dropdb 重建；方案 2：加 --clean --if-exists|
 |pg_stat_user_tables 所有 n_live_tup = 0|PG 重啟後統計資訊未刷新，非真無數據|執行 analyze; 刷新統計後重新匯出行數|
