@@ -1,5 +1,235 @@
 # PostgreSQL 備份驗證與維運操作手冊（已脫敏無敏感資訊）
 
+## PostgreSQL 資料庫備份腳本（Shell Script） .sh 執行檔
+
+Linux 伺服器或一般工作站的習慣維運文件專區
+
+/data01/backup/docs/ 或 /opt/scripts/docs/
+
+~/documents/projects/xtrack/ 或 ~/Desktop/
+
+如果你們有 Git，通常放在專案儲存庫的 /docs/ 子目錄下。
+
+<REMOTE_DB_HOST> 和 <SSH_USER> 換成真實的 IP 與帳號
+
+ssh -i ~/.ssh/id_rsa root@<REMOTE_DB_HOST> "echo OK" 確認不用輸入密碼就能連線。若失敗，排程也會卡住。
+
+```code
+#!/bin/bash
+# =============================================================================
+# pg_backup_78.sh - PostgreSQL Backup Script for XTrack Platform
+#
+#   Source : <REMOTE_DB_HOST>  (PostgreSQL 18.1)   # 解释：源数据库服务器地址（已脱敏）
+#   Target : <LOCAL_BACKUP_HOST>  (this host - DevOps Hub)   # 解释：备份目标主机（注释，不参与执行）
+#
+# Workflow:
+#   Phase 0 - Pre-flight checks (local/remote disk, SSH, DB connectivity)   # 解释：预检阶段
+#   Phase 1 - pg_dump on <REMOTE_DB_HOST> via SSH, SCP back to <LOCAL_BACKUP_HOST>   # 解释：备份阶段
+#   Phase 2 - Cleanup old backups (retention)   # 解释：清理旧备份
+#   Phase 3 - Push summary metrics to Pushgateway   # 解释：推送监控指标
+#
+# Author : Kai
+# =============================================================================
+
+# Note: NOT using `set -e` so a single DB failure doesn't abort the whole run.   # 解释：不使用 -e，避免单库失败导致整个脚本退出
+set -uo pipefail   # 解释：启用 -u（未定义变量报错）和 pipefail（管道中任一失败则整体失败），但不启用 -e
+
+# -------------------------------------------------------------------
+# Configuration
+# -------------------------------------------------------------------
+REMOTE_HOST="<REMOTE_DB_HOST>"   # 解释：远程数据库服务器地址（已脱敏）
+SSH_USER="<SSH_USER>"   # 解释：SSH 登录用户名（已脱敏）
+SSH_KEY="${HOME}/.ssh/id_rsa"   # 解释：SSH 私钥文件路径
+
+LOCAL_BACKUP_DIR="/data01/backup/postgresql/78"   # 解释：本地备份存放目录
+LOCAL_LOG_DIR="/data01/backup/logs"   # 解释：本地日志存放目录
+REMOTE_TMP_DIR="/tmp/pg_backup"   # 解释：远程临时目录，用于暂存 dump 文件
+
+RETENTION_DAYS=14   # 解释：备份文件保留天数
+DISK_THRESHOLD_GB=5   # 解释：磁盘可用空间告警阈值（GB）
+
+PUSHGATEWAY_URL="http://localhost:9091"   # 解释：Prometheus Pushgateway 地址
+JOB_NAME="pg_backup_78"   # 解释：Pushgateway 作业名称
+INSTANCE="<REMOTE_DB_HOST>"   # 解释：指标中的实例标签（源主机）
+
+# Databases to back up. pg_dump runs as the 'postgres' superuser via peer auth,
+# so no password file is needed. Add new DBs to this list.   # 解释：数据库列表，备份时使用 postgres 系统用户通过 peer 认证，无需密码文件
+DATABASES=(
+    "planr"   # 解释：示例数据库 planr
+    "postgres"   # 解释：示例数据库 postgres（系统库）
+)
+
+# -------------------------------------------------------------------
+# Initialization
+# -------------------------------------------------------------------
+TIMESTAMP="$(date +%Y%m%d_%H%M%S)"   # 解释：生成时间戳，格式如 20260721_120000
+LOG_FILE="${LOCAL_LOG_DIR}/backup_pg78_${TIMESTAMP}.log"   # 解释：本次运行的日志文件路径
+START_TIME=$(date +%s)   # 解释：记录脚本开始时间（秒数）
+
+mkdir -p "${LOCAL_BACKUP_DIR}" "${LOCAL_LOG_DIR}"   # 解释：创建本地备份和日志目录（若不存在）
+exec > >(tee -a "${LOG_FILE}") 2>&1   # 解释：将所有标准输出和错误同时输出到终端并追加到日志文件
+
+log()  { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }   # 解释：定义日志函数，输出带时间戳的信息
+fail() { log "ERROR: $*"; }   # 解释：定义错误函数，输出 ERROR 前缀
+
+SSH_OPTS="-i ${SSH_KEY} -o ConnectTimeout=10 -o BatchMode=yes -o StrictHostKeyChecking=accept-new"   # 解释：SSH 连接选项（密钥、超时、批处理、主机密钥检查）
+SSH="ssh ${SSH_OPTS} ${SSH_USER}@${REMOTE_HOST}"   # 解释：构建完整的 SSH 命令
+SCP_OPTS="${SSH_OPTS}"   # 解释：SCP 复用相同的 SSH 选项
+
+SUCCESS_COUNT=0   # 解释：成功备份的数据库计数器
+FAIL_COUNT=0   # 解释：失败备份的数据库计数器
+TOTAL_COUNT=${#DATABASES[@]}   # 解释：需要备份的数据库总数
+
+push_metrics() {
+    # $1 = grouping path suffix (e.g. "" or "/database/planr")   # 解释：函数参数为指标分组路径后缀
+    # stdin = metrics text   # 解释：通过标准输入传递指标文本
+    local path_suffix="$1"   # 解释：将参数赋值给局部变量
+    curl -s --max-time 10 --data-binary @- \
+        "${PUSHGATEWAY_URL}/metrics/job/${JOB_NAME}/instance/${INSTANCE}${path_suffix}" \
+        > /dev/null || log "WARN: pushgateway push failed"   # 解释：使用 curl 推送指标，超时10秒，失败则记录警告
+}
+
+log "=========================================="   # 解释：输出分隔线
+log "PostgreSQL backup started"   # 解释：输出开始信息
+log "  Source     : ${REMOTE_HOST}"   # 解释：显示源主机
+log "  Databases  : ${TOTAL_COUNT} (${DATABASES[*]})"   # 解释：显示数据库总数及列表
+log "  Retention  : ${RETENTION_DAYS} days"   # 解释：显示保留天数
+log "=========================================="
+
+# -------------------------------------------------------------------
+# Phase 0 - Pre-flight Checks
+# -------------------------------------------------------------------
+log ""   # 解释：输出空行
+log "[Phase 0] Pre-flight checks"   # 解释：标识进入预检阶段
+
+# Local disk space
+LOCAL_FREE_GB=$(df -BG "${LOCAL_BACKUP_DIR}" | awk 'NR==2 {gsub("G",""); print $4}')   # 解释：获取本地备份目录所在分区的可用空间（GB），去掉单位
+if [ "${LOCAL_FREE_GB}" -lt "${DISK_THRESHOLD_GB}" ]; then   # 解释：判断可用空间是否低于阈值
+    fail "Local disk below threshold (${LOCAL_FREE_GB}GB < ${DISK_THRESHOLD_GB}GB)"   # 解释：若低于则记录错误
+    exit 1   # 解释：退出脚本，返回1
+fi
+log "  Local disk OK         : ${LOCAL_FREE_GB}GB free"   # 解释：本地磁盘检查通过
+
+# SSH connectivity
+if ! ${SSH} "echo OK" > /dev/null 2>&1; then   # 解释：尝试通过 SSH 执行 echo OK，丢弃输出
+    fail "SSH to ${REMOTE_HOST} failed (check key & network)"   # 解释：若失败则记录错误
+    exit 1   # 解释：退出
+fi
+log "  SSH connectivity OK"   # 解释：SSH 连通性检查通过
+
+# Remote disk space (in /tmp where dumps land before SCP)
+REMOTE_FREE_GB=$(${SSH} "df -BG /tmp | awk 'NR==2 {gsub(\"G\",\"\"); print \$4}'")   # 解释：在远程主机上检查 /tmp 分区可用空间
+if [ "${REMOTE_FREE_GB}" -lt "${DISK_THRESHOLD_GB}" ]; then   # 解释：判断远程空间是否足够
+    fail "Remote /tmp below threshold (${REMOTE_FREE_GB}GB)"   # 解释：不足则报错
+    exit 1
+fi
+log "  Remote disk OK        : ${REMOTE_FREE_GB}GB free in /tmp"   # 解释：远程磁盘检查通过
+
+# PostgreSQL connectivity (as postgres OS user, peer auth)
+if ! ${SSH} "su - postgres -c 'psql -tAc \"SELECT 1\"'" > /dev/null 2>&1; then   # 解释：通过 SSH 以 postgres 用户执行 psql 测试查询
+    fail "PostgreSQL connectivity test failed on ${REMOTE_HOST}"   # 解释：连接失败则报错
+    exit 1
+fi
+log "  PostgreSQL OK"   # 解释：PostgreSQL 连接检查通过
+
+# Ensure remote tmp dir exists & owned by postgres
+${SSH} "mkdir -p ${REMOTE_TMP_DIR} && chown postgres:postgres ${REMOTE_TMP_DIR} && chmod 700 ${REMOTE_TMP_DIR}"   # 解释：在远程创建临时目录，设置所有者为 postgres，权限700
+
+# -------------------------------------------------------------------
+# Phase 1 - Database Dump
+# -------------------------------------------------------------------
+log ""   # 解释：空行
+log "[Phase 1] Database dump"   # 解释：进入备份阶段
+
+for DB in "${DATABASES[@]}"; do   # 解释：遍历所有数据库
+    DUMP_FILE="${DB}_${TIMESTAMP}.dump"   # 解释：生成 dump 文件名，包含数据库名和时间戳
+    REMOTE_PATH="${REMOTE_TMP_DIR}/${DUMP_FILE}"   # 解释：远程完整路径
+    LOCAL_DB_DIR="${LOCAL_BACKUP_DIR}/${DB}"   # 解释：本地数据库子目录
+    LOCAL_PATH="${LOCAL_DB_DIR}/${DUMP_FILE}"   # 解释：本地完整路径
+
+    mkdir -p "${LOCAL_DB_DIR}"   # 解释：创建本地数据库子目录
+
+    log "  -> ${DB}"   # 解释：输出当前处理的数据库名
+    DUMP_START=$(date +%s)   # 解释：记录该数据库备份开始时间
+    DB_STATUS=0   # 解释：初始化该数据库备份状态（0=失败，1=成功）
+    FILE_SIZE=0   # 解释：初始化文件大小
+
+    # pg_dump on <REMOTE_DB_HOST>
+    #   -Fc      custom format (compressed, supports parallel restore, selective)   # 解释：自定义格式（压缩）
+    #   -Z 6     compression level 6 (default; tune if CPU-bound)   # 解释：压缩级别6
+    #   --no-owner --no-privileges  recommended for cross-environment restore   # 解释：不保存所有者与权限信息，便于跨环境恢复
+    if ${SSH} "su - postgres -c 'pg_dump -Fc -Z 6 --no-owner --no-privileges -d ${DB} -f ${REMOTE_PATH}'"; then   # 解释：在远程以 postgres 用户执行 pg_dump，将输出保存到远程临时文件
+
+        # Transfer back to <LOCAL_BACKUP_HOST>
+        if scp ${SCP_OPTS} "${SSH_USER}@${REMOTE_HOST}:${REMOTE_PATH}" "${LOCAL_PATH}"; then   # 解释：使用 scp 将远程 dump 文件拷贝到本地
+            FILE_SIZE=$(stat -c %s "${LOCAL_PATH}")   # 解释：获取本地文件大小（字节）
+            FILE_SIZE_HUMAN=$(numfmt --to=iec --suffix=B "${FILE_SIZE}")   # 解释：将字节数转换为人类可读格式（如 1.2GB）
+            DURATION=$(( $(date +%s) - DUMP_START ))   # 解释：计算该数据库备份耗时（秒）
+            log "     SUCCESS  size=${FILE_SIZE_HUMAN}  duration=${DURATION}s"   # 解释：输出成功信息
+            SUCCESS_COUNT=$(( SUCCESS_COUNT + 1 ))   # 解释：成功计数器加1
+            DB_STATUS=1   # 解释：标记该数据库备份成功
+        else
+            fail "     SCP failed for ${DB}"   # 解释：若 SCP 失败则记录错误
+            FAIL_COUNT=$(( FAIL_COUNT + 1 ))   # 解释：失败计数器加1
+            DURATION=$(( $(date +%s) - DUMP_START ))   # 解释：计算耗时
+        fi
+
+        # Always remove the remote temp file
+        ${SSH} "rm -f ${REMOTE_PATH}" || true   # 解释：删除远程临时文件（无论是否成功，|| true 忽略错误）
+    else
+        fail "     pg_dump failed for ${DB}"   # 解释：若 pg_dump 本身失败则记录错误
+        FAIL_COUNT=$(( FAIL_COUNT + 1 ))   # 解释：失败计数器加1
+        DURATION=$(( $(date +%s) - DUMP_START ))   # 解释：计算耗时
+        ${SSH} "rm -f ${REMOTE_PATH}" || true   # 解释：同样尝试删除远程临时文件
+    fi
+
+    # Per-database metrics
+    push_metrics "/database/${DB}" <<EOF   # 解释：调用 push_metrics 函数，分组路径为 /database/数据库名，并通过 here-doc 传递指标
+pg_backup_status{database="${DB}"} ${DB_STATUS}   # 解释：指标：备份状态（1成功，0失败）
+pg_backup_duration_seconds{database="${DB}"} ${DURATION}   # 解释：指标：备份耗时（秒）
+pg_backup_file_size_bytes{database="${DB}"} ${FILE_SIZE}   # 解释：指标：文件大小（字节）
+pg_backup_timestamp_seconds{database="${DB}"} $(date +%s)   # 解释：指标：本次备份的时间戳
+EOF   # 解释：here-doc 结束
+done   # 解释：数据库循环结束
+
+# -------------------------------------------------------------------
+# Phase 2 - Cleanup (Retention)
+# -------------------------------------------------------------------
+log ""   # 解释：空行
+log "[Phase 2] Cleanup files older than ${RETENTION_DAYS} days"   # 解释：进入清理阶段
+
+DELETED_DUMPS=$(find "${LOCAL_BACKUP_DIR}" -type f -name "*.dump" -mtime +${RETENTION_DAYS} -print -delete | wc -l)   # 解释：在本地备份目录查找超过保留天数的 .dump 文件，打印并删除，统计删除数量
+DELETED_LOGS=$(find "${LOCAL_LOG_DIR}"   -type f -name "backup_pg78_*.log" -mtime +${RETENTION_DAYS} -print -delete | wc -l)   # 解释：在日志目录查找超过保留天数的日志文件，打印并删除，统计数量
+log "  Deleted ${DELETED_DUMPS} old dumps, ${DELETED_LOGS} old logs"   # 解释：输出清理结果
+
+# -------------------------------------------------------------------
+# Phase 3 - Summary Metrics Push
+# -------------------------------------------------------------------
+log ""   # 解释：空行
+log "[Phase 3] Push summary metrics"   # 解释：进入汇总指标推送阶段
+
+TOTAL_DURATION=$(( $(date +%s) - START_TIME ))   # 解释：计算脚本总运行时长（秒）
+
+push_metrics "" <<EOF   # 解释：调用 push_metrics，无路径后缀，推送全局汇总指标
+pg_backup_total ${TOTAL_COUNT}   # 解释：指标：总数据库数
+pg_backup_success_total ${SUCCESS_COUNT}   # 解释：指标：成功数
+pg_backup_fail_total ${FAIL_COUNT}   # 解释：指标：失败数
+pg_backup_run_duration_seconds ${TOTAL_DURATION}   # 解释：指标：本次总运行时长
+pg_backup_last_run_timestamp_seconds $(date +%s)   # 解释：指标：本次运行结束时间戳
+EOF   # 解释：here-doc 结束
+
+log ""   # 解释：空行
+log "=========================================="   # 解释：分隔线
+log "Summary"   # 解释：输出汇总
+log "  Total    : ${TOTAL_COUNT}"   # 解释：显示总数
+log "  Success  : ${SUCCESS_COUNT}"   # 解释：显示成功数
+log "  Failed   : ${FAIL_COUNT}"   # 解释：显示失败数
+log "  Duration : ${TOTAL_DURATION}s"   # 解释：显示总耗时
+log "=========================================="   # 解释：分隔线
+
+[ "${FAIL_COUNT}" -gt 0 ] && exit 1 || exit 0   # 解释：若有任何数据库备份失败，则脚本返回 1，否则返回 0（供外部监控）
+```
+
 ## 目錄
 
 1. 環境架構總覽
