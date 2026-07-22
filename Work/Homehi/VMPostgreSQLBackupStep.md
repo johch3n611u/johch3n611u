@@ -1,4 +1,4 @@
-# PostgreSQL 備份驗證與維運操作手冊（已脫敏無敏感資訊）
+# PostgreSQL 備份驗證與維運操作手冊（已脫敏無敏感資訊）PostgreSQL Backup Validation and Operations Manual (Desensitized – No Sensitive Information).md
 
 ## PostgreSQL 資料庫備份腳本（Shell Script） .sh 執行檔
 
