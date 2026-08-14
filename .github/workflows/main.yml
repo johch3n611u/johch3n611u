@@ -1,0 +1,63 @@
+# https://github.com/lowlighter/metrics
+name: Metrics
+on:
+  # 每天凌晨更新
+  schedule: [{cron: "0 0 * * *"}]
+  # 网页手动运行
+  workflow_dispatch:
+  # 推送 main/master 时触发
+  push: {branches: ["master", "main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: Images/github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      - name: Half-year calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+
+      - name: Full history calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.calendar.full.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
+
+      - name: Recently starred
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.stars.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 3
+
+      - name: Self introduction card
+        uses: lowlighter/metrics@latest
+        with:
+          filename: Images/metrics.plugin.introduction.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          # user: github   # 注释掉，默认使用自己账号
+          base: header
+          plugin_introduction: yes
