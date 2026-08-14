@@ -1,11 +1,7 @@
-# https://github.com/lowlighter/metrics
 name: Metrics
 on:
-  # 每天凌晨更新
   schedule: [{cron: "0 0 * * *"}]
-  # 网页手动运行
   workflow_dispatch:
-  # 推送 main/master 时触发
   push: {branches: ["master", "main"]}
 
 jobs:
@@ -14,6 +10,12 @@ jobs:
     permissions:
       contents: write
     steps:
+      # 手动拉取代码，关闭子模块，解决卡住 Fetching submodules
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+
       - uses: lowlighter/metrics@latest
         with:
           filename: Images/github-metrics.svg
@@ -58,6 +60,5 @@ jobs:
         with:
           filename: Images/metrics.plugin.introduction.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          # user: github   # 注释掉，默认使用自己账号
           base: header
           plugin_introduction: yes
