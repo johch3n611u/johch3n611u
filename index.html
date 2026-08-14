@@ -1,1 +1,1764 @@
-test
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Chat - 纯前端 AI 客户端</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11/lib/languages/python.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+    .message-content pre { background: #0d1117; padding: 12px; border-radius: 8px; overflow-x: auto; margin: 8px 0; }
+    .message-content code { font-family: 'Consolas', monospace; font-size: 0.9em; }
+    .message-content p { margin-bottom: 0.5em; }
+    .typing-cursor::after { content: '▋'; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    .tab-active { border-bottom: 2px solid #6366f1; color: #fff; }
+    .todo-item:hover .todo-actions { opacity: 1; }
+    .todo-actions { opacity: 0; transition: opacity 0.2s; }
+  </style>
+</head>
+<body class="dark bg-gray-900 text-gray-100 h-screen flex overflow-hidden">
+
+  <!-- 侧边栏 -->
+  <aside class="w-64 bg-gray-800 border-r border-gray-700 flex flex-col h-full">
+    <!-- Tab 切换 -->
+    <div class="flex border-b border-gray-700">
+      <button onclick="switchTab('chat')" id="tabChat" class="flex-1 py-3 text-sm font-medium tab-active">
+        <i data-lucide="message-square" class="w-4 h-4 inline mr-1"></i>聊天
+      </button>
+      <button onclick="switchTab('todo')" id="tabTodo" class="flex-1 py-3 text-sm font-medium text-gray-400 hover:text-white">
+        <i data-lucide="check-square" class="w-4 h-4 inline mr-1"></i>待办
+      </button>
+    </div>
+
+    <!-- 聊天面板 -->
+    <div id="chatPanel" class="flex-1 flex flex-col overflow-hidden">
+      <!-- 配置切换区 (类 cc-switch) -->
+      <div class="p-3 border-b border-gray-700">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs text-gray-400 font-medium">配置档案</span>
+          <button onclick="openProfileModal()" class="text-gray-400 hover:text-white">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+          </button>
+        </div>
+        <select id="profileSelector" onchange="switchProfile(this.value)" 
+          class="w-full bg-gray-700 border border-gray-600 rounded px-2 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </select>
+      </div>
+
+      <!-- 对话列表 -->
+      <div class="flex-1 overflow-y-auto scrollbar-thin p-2">
+        <button onclick="newConversation()" 
+          class="w-full mb-2 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm flex items-center gap-2 transition">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i>
+          新建对话
+        </button>
+        <div id="conversationList" class="space-y-1"></div>
+      </div>
+    </div>
+
+    <!-- 待办面板 -->
+    <div id="todoPanel" class="hidden flex-1 flex flex-col overflow-hidden">
+      <div class="p-3 border-b border-gray-700 flex items-center justify-between">
+        <span class="text-xs text-gray-400 font-medium">待办分组</span>
+        <button onclick="addTodoGroup()" class="text-gray-400 hover:text-white">
+          <i data-lucide="folder-plus" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="todoGroupList" class="flex-1 overflow-y-auto scrollbar-thin p-2 space-y-2"></div>
+    </div>
+
+    <!-- 底部设置 -->
+    <div class="p-3 border-t border-gray-700 flex gap-2">
+      <button onclick="openSettings()" class="flex-1 px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-700 rounded flex items-center justify-center gap-1">
+        <i data-lucide="settings" class="w-4 h-4"></i>设置
+      </button>
+    </div>
+  </aside>
+
+  <!-- 主区域 -->
+  <main class="flex-1 flex flex-col h-full">
+    <!-- 聊天主界面 -->
+    <div id="chatMain" class="flex-1 flex flex-col overflow-hidden">
+      <!-- 顶部栏 -->
+      <header class="h-14 border-b border-gray-700 flex items-center px-4 justify-between bg-gray-800/50">
+        <div class="flex items-center gap-2">
+          <span id="currentModelLabel" class="text-sm text-gray-400">未选择配置</span>
+          <span id="tokenLabel" class="text-xs text-gray-500 hidden"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="balanceLabel" onclick="updateBalance()" title="点击刷新余额"
+            class="text-xs text-gray-400 hover:text-white px-1.5 py-1 rounded hover:bg-gray-700">Remaining: --</button>
+          <button onclick="toggleSystemPrompt()" class="text-gray-400 hover:text-white p-1.5" title="系统提示词">
+            <i data-lucide="sliders" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- 系统提示词编辑区 (持久化) -->
+      <div id="systemPromptBar" class="hidden border-b border-gray-700 bg-gray-800/30 px-4 py-2">
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-gray-500 shrink-0">System:</span>
+          <input type="text" id="systemPromptInput" placeholder="输入系统提示词，修改后自动保存到当前对话"
+            class="flex-1 bg-transparent text-sm focus:outline-none text-gray-300"
+            onblur="saveCurrentSystemPrompt()">
+        </div>
+        <p class="text-xs text-gray-500 mt-1">💡 提示：在配置档案中设置默认 Prompt，新建对话自动继承，无需每次重复输入</p>
+      </div>
+
+      <!-- 消息区域 -->
+      <div id="messagesContainer" class="flex-1 overflow-y-auto scrollbar-thin p-4 space-y-4">
+        <div class="text-center text-gray-500 mt-20">
+          <i data-lucide="sparkles" class="w-12 h-12 mx-auto mb-3 text-gray-600"></i>
+          <p>选择配置档案后开始对话</p>
+          <p class="text-sm mt-1">所有数据保存在本地浏览器</p>
+        </div>
+      </div>
+
+      <!-- 输入区 -->
+      <div class="border-t border-gray-700 p-4 bg-gray-800/30">
+        <div class="flex gap-2 items-end">
+          <textarea id="messageInput" rows="1" placeholder="输入消息... (Shift+Enter 换行)"
+            class="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-primary max-h-32"
+            onkeydown="handleKeyDown(event)" oninput="autoResize(this)"></textarea>
+          <button onclick="sendMessage()" id="sendBtn"
+            class="px-4 py-2 bg-primary hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg text-sm font-medium transition">
+            发送
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 待办主界面 -->
+    <div id="todoMain" class="hidden flex-1 flex flex-col overflow-hidden">
+      <header class="h-14 border-b border-gray-700 flex items-center px-4 justify-between bg-gray-800/50">
+        <span id="currentGroupName" class="font-medium">选择分组查看待办</span>
+        <button onclick="addTodoItem()" class="text-primary hover:text-primary/80 text-sm flex items-center gap-1">
+          <i data-lucide="plus" class="w-4 h-4"></i>添加任务
+        </button>
+      </header>
+      <div id="todoItemsList" class="flex-1 overflow-y-auto scrollbar-thin p-4 space-y-2"></div>
+    </div>
+  </main>
+
+  <!-- 配置档案弹窗 -->
+  <div id="profileModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div class="bg-gray-800 rounded-xl w-full max-w-md mx-4 border border-gray-700 shadow-2xl">
+      <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+        <h3 class="font-semibold">管理配置档案</h3>
+        <button onclick="closeProfileModal()" class="text-gray-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-4 space-y-3 max-h-[70vh] overflow-y-auto">
+        <div class="space-y-2">
+          <label class="text-sm text-gray-400">快速预设模板</label>
+          <select id="presetSelector" onchange="applyPreset()" 
+            class="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm">
+            <option value="">-- 选择预设 --</option>
+            <option value="openai">OpenAI (官方)</option>
+            <option value="deepseek">DeepSeek</option>
+            <option value="zhipu">智谱 AI</option>
+            <option value="translator">📚 翻译助手 (推荐)</option>
+            <option value="local">本地代理 / Air Gap</option>
+            <option value="custom">自定义</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm text-gray-400">档案名称</label>
+          <input type="text" id="profileName" placeholder="例如：工作号-GPT4"
+            class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </div>
+        <div>
+          <label class="text-sm text-gray-400">API Key / Token</label>
+          <input type="password" id="profileApiKey" placeholder="sk-..."
+            class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </div>
+        <div>
+          <label class="text-sm text-gray-400">Base URL</label>
+          <input type="text" id="profileBaseUrl" placeholder="https://api.openai.com/v1" onchange="loadModelsForProfile()"
+            class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </div>
+        <div>
+          <label class="text-sm text-gray-400">模型名称</label>
+          <select id="profileModelSelect" onchange="onProfileModelChange()"
+            class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"></select>
+          <input type="text" id="profileModelCustom" placeholder="输入自定义模型名"
+            class="hidden w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </div>
+        <div>
+          <label class="text-sm text-gray-400">默认系统提示词 (新建对话自动生效)</label>
+          <textarea id="profileSystemPrompt" rows="3" placeholder="你是一个专业的翻译助手，将所有输入翻译成中文..."
+            class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary resize-none"></textarea>
+          <p class="text-xs text-gray-500 mt-1">✅ 配置一次，新建对话自动继承，无需每次重复输入</p>
+        </div>
+        <div class="border-t border-gray-700 pt-3">
+          <button onclick="toggleAdvanced()" class="text-sm text-gray-400 hover:text-white flex items-center gap-1">
+            <i data-lucide="chevron-down" class="w-4 h-4" id="advancedChevron"></i>高级设置（余额与价格）
+          </button>
+          <div id="advancedSettingsSection" class="hidden mt-2 space-y-2">
+            <div>
+              <label class="text-sm text-gray-400">余额查询 URL</label>
+              <input type="text" id="profileBalanceUrl" placeholder="如 https://api.deepseek.com/user/balance"
+                class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            <div>
+              <label class="text-sm text-gray-400">余额字段路径</label>
+              <input type="text" id="profileBalancePath" placeholder="如 balance_infos[0].total_balance"
+                class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            <div>
+              <label class="text-sm text-gray-400">货币符号</label>
+              <input type="text" id="profileBalanceCurrency" placeholder="CNY / USD"
+                class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            <div>
+              <label class="text-sm text-gray-400">输入价格覆盖（每百万 tokens）</label>
+              <input type="text" id="profilePriceIn" placeholder="如 2，留空使用内置价格表"
+                class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            <div>
+              <label class="text-sm text-gray-400">输出价格覆盖（每百万 tokens）</label>
+              <input type="text" id="profilePriceOut" placeholder="如 8，留空使用内置价格表"
+                class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            <p class="text-xs text-gray-500">留空则使用所选预设的默认值；自定义供应商可自行填写。</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border-t border-gray-700 flex justify-between">
+        <button onclick="deleteCurrentProfile()" class="text-red-400 hover:text-red-300 text-sm">删除</button>
+        <div class="flex gap-2">
+          <button onclick="closeProfileModal()" class="px-4 py-2 text-sm text-gray-400 hover:text-white">取消</button>
+          <button onclick="saveProfile()" class="px-4 py-2 bg-primary hover:bg-primary/80 rounded text-sm font-medium">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 设置弹窗 -->
+  <div id="settingsModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div class="bg-gray-800 rounded-xl w-full max-w-md mx-4 border border-gray-700 shadow-2xl">
+      <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+        <h3 class="font-semibold">设置与数据管理</h3>
+        <button onclick="closeSettings()" class="text-gray-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-4 space-y-4">
+        <div class="p-3 bg-gray-700/50 rounded-lg">
+          <h4 class="font-medium text-sm mb-2">数据导出</h4>
+          <p class="text-xs text-gray-400 mb-2">将所有本地数据（配置、对话、待办）导出为 JSON 文件备份</p>
+          <button onclick="exportAllData()" class="w-full py-2 bg-green-600 hover:bg-green-500 rounded text-sm font-medium">
+            <i data-lucide="download" class="w-4 h-4 inline mr-1"></i>导出全部数据为 JSON
+          </button>
+        </div>
+        <div class="p-3 bg-gray-700/50 rounded-lg">
+          <h4 class="font-medium text-sm mb-2">数据导入</h4>
+          <p class="text-xs text-gray-400 mb-2">从 JSON 文件恢复数据，将覆盖当前所有数据</p>
+          <input type="file" id="importFile" accept=".json" class="hidden" onchange="importAllData(event)">
+          <button onclick="document.getElementById('importFile').click()" class="w-full py-2 bg-yellow-600 hover:bg-yellow-500 rounded text-sm font-medium">
+            <i data-lucide="upload" class="w-4 h-4 inline mr-1"></i>从 JSON 文件导入数据
+          </button>
+        </div>
+        <div class="p-3 bg-red-900/20 border border-red-800/50 rounded-lg">
+          <h4 class="font-medium text-sm mb-2 text-red-400">危险操作</h4>
+          <button onclick="clearAllData()" class="w-full py-2 bg-red-600/20 hover:bg-red-600/40 text-red-400 rounded text-sm">
+            清空所有本地数据
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 首次引导弹窗 -->
+  <div id="welcomeModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div class="bg-gray-800 rounded-xl w-full max-w-lg mx-4 border border-gray-700 shadow-2xl p-6">
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="rocket" class="w-8 h-8 text-primary"></i>
+        </div>
+        <h2 class="text-xl font-bold">欢迎使用 Local Chat</h2>
+        <p class="text-gray-400 text-sm mt-1">纯前端 · 本地存储 · 支持本地代理 Air Gap</p>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="text-sm text-gray-400 block mb-1">选择 AI 供应商</label>
+          <select id="welcomeProvider" onchange="updateWelcomeFields()"
+            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2.5 text-sm">
+            <option value="openai">OpenAI 兼容格式</option>
+            <option value="deepseek">DeepSeek</option>
+            <option value="zhipu">智谱 AI</option>
+            <option value="translator">📚 翻译助手 (推荐)</option>
+            <option value="local">本地代理 / Air Gap</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm text-gray-400 block mb-1">API Token / Key</label>
+          <input type="password" id="welcomeToken" placeholder="请输入你的 API Key"
+            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </div>
+        <div>
+          <label class="text-sm text-gray-400 block mb-1">接口地址 (Base URL)</label>
+          <input type="text" id="welcomeBaseUrl" value="https://api.openai.com/v1"
+            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+        </div>
+        <div>
+          <label class="text-sm text-gray-400 block mb-1">预设系统提示词 (配置一次永久生效)</label>
+          <textarea id="welcomePrompt" rows="2" placeholder="例如：你是专业翻译，将所有英文翻译成地道中文..."
+            class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-primary resize-none"></textarea>
+        </div>
+      </div>
+      <button onclick="completeOnboarding()" 
+        class="w-full mt-6 py-2.5 bg-primary hover:bg-primary/80 rounded-lg font-medium transition">
+        开始使用
+      </button>
+      <p class="text-xs text-gray-500 text-center mt-3">
+        所有信息仅保存在当前浏览器 localStorage，不会上传至任何服务器
+      </p>
+    </div>
+  </div>
+
+  <!-- 全局容器：上下文菜单 / Toast -->
+  <div id="contextMenuOverlay" class="hidden fixed inset-0 z-[59]" onclick="hideContextMenu()"></div>
+  <div id="contextMenu" class="hidden fixed z-[60] min-w-40 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl py-1"></div>
+  <div id="toastContainer" class="fixed top-4 left-1/2 -translate-x-1/2 z-[70] space-y-2 pointer-events-none"></div>
+
+  <!-- 通用对话框（alert / confirm / prompt 统一风格，与配置档案弹窗一致） -->
+  <div id="appDialog" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-[80]" onclick="closeAppDialog()">
+    <div class="bg-gray-800 rounded-xl w-full max-w-sm mx-4 border border-gray-700 shadow-2xl" onclick="event.stopPropagation()">
+      <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+        <h3 class="font-semibold" id="appDialogTitle">提示</h3>
+        <button onclick="closeAppDialog()" class="text-gray-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-4">
+        <p id="appDialogMessage" class="text-sm text-gray-300 whitespace-pre-wrap"></p>
+        <input type="text" id="appDialogInput" placeholder=""
+          class="hidden w-full mt-3 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+          onkeydown="if(event.key==='Enter')submitAppDialog()">
+      </div>
+      <div class="p-4 border-t border-gray-700 flex justify-end gap-2">
+        <button id="appDialogCancelBtn" onclick="closeAppDialog()" class="px-4 py-2 text-sm text-gray-400 hover:text-white">取消</button>
+        <button id="appDialogOkBtn" onclick="submitAppDialog()" class="px-4 py-2 bg-primary hover:bg-primary/80 rounded text-sm font-medium text-white">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ========== 存储层 ==========
+    const STORAGE_KEYS = {
+      PROFILES: 'lc_profiles',
+      ACTIVE_PROFILE: 'lc_active_profile',
+      CONVERSATIONS: 'lc_conversations',
+      ACTIVE_CONV: 'lc_active_conv',
+      TODO_GROUPS: 'lc_todo_groups',
+      TODO_ITEMS: 'lc_todo_items',
+      ACTIVE_TODO_GROUP: 'lc_active_todo_group',
+      SETTINGS: 'lc_settings'
+    };
+
+    const PRESETS = {
+      openai: {
+        name: 'OpenAI 默认',
+        baseUrl: 'https://api.openai.com/v1',
+        model: 'gpt-4o-mini',
+        systemPrompt: '你是一个有帮助的 AI 助手，请用简洁清晰的语言回答用户的问题。',
+        balanceUrl: 'https://api.openai.com/dashboard/billing/credit_grants',
+        balancePath: 'total_available',
+        balanceCurrency: 'USD'
+      },
+      deepseek: {
+        name: 'DeepSeek',
+        baseUrl: 'https://api.deepseek.com/v1',
+        model: 'deepseek-chat',
+        systemPrompt: '你是一个专业的 AI 助手，请准确回答用户的问题。',
+        balanceUrl: 'https://api.deepseek.com/user/balance',
+        balancePath: 'balance_infos[0].total_balance',
+        balanceCurrency: 'CNY'
+      },
+      zhipu: {
+        name: '智谱 AI',
+        baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
+        model: 'glm-4-flash',
+        systemPrompt: '你是一个智能助手，请帮助用户解决问题。',
+        balanceUrl: 'https://open.bigmodel.cn/api/paas/v4/balance',
+        balancePath: 'data.total_usable',
+        balanceCurrency: 'CNY'
+      },
+      translator: {
+        name: '📚 翻译助手',
+        baseUrl: 'https://api.openai.com/v1',
+        model: 'gpt-4o-mini',
+        systemPrompt: '你是一位专业的翻译专家。请将用户输入的所有内容准确翻译成中文（如果输入是中文则翻译成英文）。要求：\n1. 保持原文语气和风格\n2. 专业术语准确\n3. 译文自然流畅，符合目标语言表达习惯\n4. 只输出翻译结果，不要添加额外解释',
+        balanceUrl: 'https://api.openai.com/dashboard/billing/credit_grants',
+        balancePath: 'total_available',
+        balanceCurrency: 'USD'
+      },
+      local: {
+        name: '本地代理',
+        baseUrl: 'http://localhost:8080/v1',
+        model: 'gpt-4o',
+        systemPrompt: '你是一个有帮助的 AI 助手。',
+        balanceCurrency: 'USD'
+      },
+      custom: { name: '自定义', baseUrl: '', model: '', systemPrompt: '' }
+    };
+
+    // 每个预设的可选模型清单（离线兜底；优先使用 /models 实时拉取）
+    const MODEL_LISTS = {
+      openai: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'o4-mini', 'o3'],
+      deepseek: ['deepseek-chat', 'deepseek-reasoner'],
+      zhipu: ['glm-4-flash', 'glm-4-air', 'glm-4-plus', 'glm-4-long', 'glm-4v-flash', 'glm-4.5-flash', 'glm-4.5-air', 'glm-4.6'],
+      translator: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1-mini'],
+      local: ['gpt-4o', 'gpt-4o-mini', 'gpt-3.5-turbo'],
+      custom: []
+    };
+
+    // ========== 模型价格表（每百万 tokens，单位与各预设 balanceCurrency 一致：CNY/USD） ==========
+    // 内置默认值，可直接在此处修改，或按配置档案在“高级设置”中覆盖。价格会变动，以实际账单为准。
+    const PRICING = {
+      // DeepSeek (CNY；2026 年多次调价含缓存/闲时优惠，取标准价，置信度低)
+      'deepseek-chat':     { in: 2,   out: 8 },
+      'deepseek-reasoner': { in: 4,   out: 16 },
+      // 智谱 (CNY；置信度中)
+      'glm-4-flash':   { in: 0, out: 0 },   // 免费
+      'glm-4.5-flash': { in: 0, out: 0 },   // 免费
+      'glm-4-air':     { in: 1, out: 1 },
+      'glm-4-long':    { in: 1, out: 1 },
+      'glm-4-plus':    { in: 50, out: 50 },
+      // OpenAI (USD；置信度高)
+      'gpt-4o-mini':   { in: 0.15, out: 0.60 },
+      'gpt-4o':        { in: 2.50, out: 10 },
+      'gpt-4.1':       { in: 2,    out: 8 },
+      'gpt-4.1-mini':  { in: 0.40, out: 1.60 },
+      'gpt-4.1-nano':  { in: 0.10, out: 0.40 },
+      'o4-mini':       { in: 1.10, out: 4.40 },
+      'o3':            { in: 2,    out: 8 },
+      'gpt-3.5-turbo': { in: 0.50, out: 1.50 } // 供 local 预设
+    };
+
+    // ========== 全局状态 ==========
+    let profiles = [];
+    let activeProfileId = null;
+    let conversations = [];
+    let activeConvId = null;
+    let todoGroups = [];
+    let todoItems = [];
+    let activeTodoGroupId = null;
+    let isStreaming = false;
+    let currentTab = 'chat';
+    let balanceFetching = false;
+    let modelCache = new Map();
+    let modelDraft = '';
+
+    // ========== 初始化 ==========
+    function init() {
+      lucide.createIcons();
+      
+      // 加载所有数据
+      profiles = storeGet(STORAGE_KEYS.PROFILES, []);
+      activeProfileId = storeGet(STORAGE_KEYS.ACTIVE_PROFILE, null);
+      conversations = storeGet(STORAGE_KEYS.CONVERSATIONS, []);
+      activeConvId = storeGet(STORAGE_KEYS.ACTIVE_CONV, null);
+      todoGroups = storeGet(STORAGE_KEYS.TODO_GROUPS, []);
+      todoItems = storeGet(STORAGE_KEYS.TODO_ITEMS, []);
+      activeTodoGroupId = storeGet(STORAGE_KEYS.ACTIVE_TODO_GROUP, null);
+
+      // 初始化默认待办分组
+      if (todoGroups.length === 0) {
+        const defaultGroup = { id: genId(), name: '默认分组', collapsed: false, createdAt: Date.now() };
+        todoGroups.push(defaultGroup);
+        activeTodoGroupId = defaultGroup.id;
+        storeSet(STORAGE_KEYS.TODO_GROUPS, todoGroups);
+        storeSet(STORAGE_KEYS.ACTIVE_TODO_GROUP, activeTodoGroupId);
+      }
+
+      if (profiles.length === 0) {
+        document.getElementById('welcomeModal').classList.remove('hidden');
+      } else {
+        renderProfileSelector();
+        renderConversationList();
+        renderTodoGroups();
+        renderTodoItems();
+        if (activeConvId) loadConversation(activeConvId);
+      }
+
+      updateBalance();
+      setInterval(updateBalance, 120000);
+    }
+
+    function storeGet(key, def) {
+      try {
+        const v = localStorage.getItem(key);
+        return v ? JSON.parse(v) : def;
+      } catch { return def; }
+    }
+
+    function storeSet(key, val) {
+      localStorage.setItem(key, JSON.stringify(val));
+    }
+
+    // ========== Tab 切换 ==========
+    function switchTab(tab) {
+      currentTab = tab;
+      document.getElementById('tabChat').className = tab === 'chat' 
+        ? 'flex-1 py-3 text-sm font-medium tab-active' 
+        : 'flex-1 py-3 text-sm font-medium text-gray-400 hover:text-white';
+      document.getElementById('tabTodo').className = tab === 'todo' 
+        ? 'flex-1 py-3 text-sm font-medium tab-active' 
+        : 'flex-1 py-3 text-sm font-medium text-gray-400 hover:text-white';
+      
+      document.getElementById('chatPanel').classList.toggle('hidden', tab !== 'chat');
+      document.getElementById('todoPanel').classList.toggle('hidden', tab !== 'todo');
+      document.getElementById('chatMain').classList.toggle('hidden', tab !== 'chat');
+      document.getElementById('todoMain').classList.toggle('hidden', tab !== 'todo');
+      
+      lucide.createIcons();
+    }
+
+    // ========== 首次引导 ==========
+    function updateWelcomeFields() {
+      const p = document.getElementById('welcomeProvider').value;
+      const preset = PRESETS[p];
+      if (preset) {
+        document.getElementById('welcomeBaseUrl').value = preset.baseUrl;
+        document.getElementById('welcomePrompt').value = preset.systemPrompt || '';
+      }
+    }
+
+    function completeOnboarding() {
+      const token = document.getElementById('welcomeToken').value.trim();
+      const baseUrl = document.getElementById('welcomeBaseUrl').value.trim();
+      const prompt = document.getElementById('welcomePrompt').value.trim();
+      const provider = document.getElementById('welcomeProvider').value;
+
+      if (!token) { showAlert('请输入 API Token'); return; }
+      if (!baseUrl) { showAlert('请输入接口地址'); return; }
+
+      const profile = {
+        id: genId(),
+        name: PRESETS[provider]?.name || '默认配置',
+        provider: provider,
+        apiKey: token,
+        baseUrl: baseUrl,
+        model: PRESETS[provider]?.model || 'gpt-4o-mini',
+        systemPrompt: prompt || '你是一个有帮助的 AI 助手。',
+        temperature: 0.7
+      };
+
+      profiles = [profile];
+      activeProfileId = profile.id;
+      storeSet(STORAGE_KEYS.PROFILES, profiles);
+      storeSet(STORAGE_KEYS.ACTIVE_PROFILE, activeProfileId);
+
+      document.getElementById('welcomeModal').classList.add('hidden');
+      renderProfileSelector();
+      newConversation();
+      updateBalance();
+    }
+
+    // ========== 配置档案管理 (类 cc-switch) ==========
+    function renderProfileSelector() {
+      const sel = document.getElementById('profileSelector');
+      sel.innerHTML = '';
+      profiles.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = p.name;
+        if (p.id === activeProfileId) opt.selected = true;
+        sel.appendChild(opt);
+      });
+      updateModelLabel();
+    }
+
+    function switchProfile(id) {
+      activeProfileId = id;
+      storeSet(STORAGE_KEYS.ACTIVE_PROFILE, id);
+      updateModelLabel();
+      updateBalance();
+    }
+
+    function getActiveProfile() {
+      return profiles.find(p => p.id === activeProfileId);
+    }
+
+    function updateModelLabel() {
+      const p = getActiveProfile();
+      document.getElementById('currentModelLabel').textContent = p 
+        ? `${p.name} · ${p.model}` 
+        : '未选择配置';
+    }
+
+    function openProfileModal() {
+      const p = getActiveProfile();
+      const preset = p ? PRESETS[p.provider] : null;
+      document.getElementById('presetSelector').value = '';
+      if (p) {
+        document.getElementById('profileName').value = p.name;
+        document.getElementById('profileApiKey').value = p.apiKey;
+        document.getElementById('profileBaseUrl').value = p.baseUrl;
+        document.getElementById('profileSystemPrompt').value = p.systemPrompt || '';
+      }
+      document.getElementById('profileBalanceUrl').value = p?.balanceUrl || preset?.balanceUrl || '';
+      document.getElementById('profileBalancePath').value = p?.balancePath || preset?.balancePath || '';
+      document.getElementById('profileBalanceCurrency').value = p?.balanceCurrency || preset?.balanceCurrency || '';
+      modelDraft = p?.model || '';
+      document.getElementById('profilePriceIn').value = p?.priceIn ?? '';
+      document.getElementById('profilePriceOut').value = p?.priceOut ?? '';
+      document.getElementById('profileModal').classList.remove('hidden');
+      populateModelSelect();
+      loadModelsForProfile();
+    }
+
+    function closeProfileModal() {
+      document.getElementById('profileModal').classList.add('hidden');
+    }
+
+    function applyPreset() {
+      const key = document.getElementById('presetSelector').value;
+      const preset = PRESETS[key];
+      if (preset) {
+        document.getElementById('profileName').value = preset.name;
+        document.getElementById('profileBaseUrl').value = preset.baseUrl;
+        document.getElementById('profileSystemPrompt').value = preset.systemPrompt || '';
+        document.getElementById('profileBalanceUrl').value = preset.balanceUrl || '';
+        document.getElementById('profileBalancePath').value = preset.balancePath || '';
+        document.getElementById('profileBalanceCurrency').value = preset.balanceCurrency || '';
+        document.getElementById('profilePriceIn').value = '';
+        document.getElementById('profilePriceOut').value = '';
+        populateModelSelect(key, preset.model);
+        loadModelsForProfile();
+      }
+    }
+
+    function saveProfile() {
+      const name = document.getElementById('profileName').value.trim();
+      const apiKey = document.getElementById('profileApiKey').value.trim();
+      const baseUrl = document.getElementById('profileBaseUrl').value.trim();
+      const model = getProfileModelValue();
+      const systemPrompt = document.getElementById('profileSystemPrompt').value.trim();
+      const balanceUrl = document.getElementById('profileBalanceUrl').value.trim();
+      const balancePath = document.getElementById('profileBalancePath').value.trim();
+      const balanceCurrency = document.getElementById('profileBalanceCurrency').value.trim();
+      const priceIn = document.getElementById('profilePriceIn').value.trim();
+      const priceOut = document.getElementById('profilePriceOut').value.trim();
+
+      if (!name || !apiKey || !baseUrl || !model) {
+        showAlert('请填写完整信息');
+        return;
+      }
+
+      let p = getActiveProfile();
+      if (p) {
+        Object.assign(p, { name, apiKey, baseUrl, model, systemPrompt, balanceUrl, balancePath, balanceCurrency, priceIn, priceOut });
+      } else {
+        p = {
+          id: genId(),
+          provider: document.getElementById('presetSelector').value || 'custom',
+          name, apiKey, baseUrl, model, systemPrompt,
+          balanceUrl, balancePath, balanceCurrency, priceIn, priceOut,
+          temperature: 0.7
+        };
+        profiles.push(p);
+        activeProfileId = p.id;
+      }
+
+      storeSet(STORAGE_KEYS.PROFILES, profiles);
+      storeSet(STORAGE_KEYS.ACTIVE_PROFILE, activeProfileId);
+      renderProfileSelector();
+      closeProfileModal();
+      updateBalance();
+    }
+
+    function deleteCurrentProfile() {
+      showConfirm('确定删除当前配置档案？', () => {
+        profiles = profiles.filter(p => p.id !== activeProfileId);
+        activeProfileId = profiles[0]?.id || null;
+        storeSet(STORAGE_KEYS.PROFILES, profiles);
+        storeSet(STORAGE_KEYS.ACTIVE_PROFILE, activeProfileId);
+        renderProfileSelector();
+        closeProfileModal();
+        updateBalance();
+      });
+    }
+
+    // ========== 对话管理 ==========
+    function newConversation() {
+      const profile = getActiveProfile();
+      if (!profile) { showAlert('请先创建配置档案'); return; }
+
+      const conv = {
+        id: genId(),
+        title: '新对话',
+        nickname: '',
+        profileId: activeProfileId,
+        systemPrompt: profile.systemPrompt || '', // 继承配置档案的默认 Prompt
+        messages: [],
+        createdAt: Date.now(),
+        updatedAt: Date.now()
+      };
+      conversations.unshift(conv);
+      activeConvId = conv.id;
+      saveConversations();
+      renderConversationList();
+      renderMessages();
+      updateSystemPromptInput();
+      updateTokenLabelFromConv();
+      document.getElementById('messageInput').focus();
+    }
+
+    function loadConversation(id) {
+      activeConvId = id;
+      storeSet(STORAGE_KEYS.ACTIVE_CONV, id);
+      renderConversationList();
+      renderMessages();
+      updateSystemPromptInput();
+      updateTokenLabelFromConv();
+    }
+
+    function getActiveConv() {
+      return conversations.find(c => c.id === activeConvId);
+    }
+
+    function saveConversations() {
+      storeSet(STORAGE_KEYS.CONVERSATIONS, conversations);
+    }
+
+    function renderConversationList() {
+      const list = document.getElementById('conversationList');
+      list.innerHTML = '';
+      conversations.forEach(c => {
+        const item = document.createElement('div');
+        item.className = `px-3 py-2 rounded-lg text-sm cursor-pointer truncate flex items-center gap-2 ${
+          c.id === activeConvId ? 'bg-primary/20 text-primary' : 'text-gray-300 hover:bg-gray-700'
+        }`;
+        item.innerHTML = `<i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i><span class="truncate">${escapeHtml(c.nickname || c.title || '新对话')}</span>
+          <button onclick="showConvMenu('${c.id}', event)" class="ml-auto shrink-0 text-gray-500 hover:text-white p-0.5" title="对话操作">
+            <i data-lucide="more-horizontal" class="w-4 h-4"></i>
+          </button>`;
+        item.onclick = () => loadConversation(c.id);
+        list.appendChild(item);
+      });
+      lucide.createIcons();
+    }
+
+    function updateSystemPromptInput() {
+      const conv = getActiveConv();
+      if (conv) {
+        document.getElementById('systemPromptInput').value = conv.systemPrompt || '';
+      }
+    }
+
+    function saveCurrentSystemPrompt() {
+      const conv = getActiveConv();
+      if (conv) {
+        conv.systemPrompt = document.getElementById('systemPromptInput').value.trim();
+        saveConversations();
+      }
+    }
+
+    function toggleSystemPrompt() {
+      const bar = document.getElementById('systemPromptBar');
+      bar.classList.toggle('hidden');
+    }
+
+    // ========== 聊天核心 (修复 Prompt 生效逻辑) ==========
+    function renderMessages() {
+      const container = document.getElementById('messagesContainer');
+      const conv = getActiveConv();
+
+      if (!conv || conv.messages.length === 0) {
+        container.innerHTML = `
+          <div class="text-center text-gray-500 mt-20">
+            <i data-lucide="sparkles" class="w-12 h-12 mx-auto mb-3 text-gray-600"></i>
+            <p>开始新对话</p>
+            <p class="text-sm mt-1">系统提示词已自动加载，无需重复输入</p>
+          </div>`;
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = '';
+      conv.messages.forEach(msg => {
+        container.appendChild(createMessageEl(msg));
+      });
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function createMessageEl(msg) {
+      const isUser = msg.role === 'user';
+      const wrap = document.createElement('div');
+      wrap.className = `flex group gap-2 ${isUser ? 'justify-end' : 'justify-start'}`;
+
+      const bubble = document.createElement('div');
+      bubble.className = `max-w-3xl rounded-2xl px-4 py-3 ${
+        isUser ? 'bg-primary text-white rounded-br-md' : 'bg-gray-700 text-gray-100 rounded-bl-md'
+      }`;
+
+      if (isUser) {
+        bubble.textContent = msg.content;
+      } else {
+        bubble.className += ' message-content';
+        bubble.innerHTML = marked.parse(msg.content);
+        highlightBlocks(bubble);
+        updateMessageFooter(bubble, msg, getConvProfile());
+      }
+
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'shrink-0 self-end mb-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 text-gray-500 hover:text-white';
+      copyBtn.title = '复制';
+      copyBtn.innerHTML = '<i data-lucide="copy" class="w-3.5 h-3.5"></i>';
+      copyBtn.addEventListener('click', () => copyText(msg.content, copyBtn));
+
+      wrap.appendChild(bubble);
+      wrap.appendChild(copyBtn);
+      lucide.createIcons();
+      return wrap;
+    }
+
+    async function sendMessage() {
+      if (isStreaming) return;
+      const input = document.getElementById('messageInput');
+      const content = input.value.trim();
+      if (!content) return;
+
+      const profile = getActiveProfile();
+      if (!profile) { showAlert('请先配置 API'); return; }
+
+      let conv = getActiveConv();
+      if (!conv) { newConversation(); conv = getActiveConv(); }
+
+      // 添加用户消息
+      conv.messages.push({ role: 'user', content });
+      if (conv.messages.length === 1) {
+        conv.title = content.slice(0, 20) + (content.length > 20 ? '...' : '');
+      }
+      conv.updatedAt = Date.now();
+      saveConversations();
+      renderConversationList();
+      renderMessages();
+      input.value = '';
+      autoResize(input);
+
+      // 添加空助手消息
+      const assistantMsg = { role: 'assistant', content: '', model: profile.model };
+      conv.messages.push(assistantMsg);
+
+      const container = document.getElementById('messagesContainer');
+      const msgEl = createMessageEl({ role: 'assistant', content: '' });
+      const contentEl = msgEl.querySelector('.message-content');
+      contentEl.classList.add('typing-cursor');
+      container.appendChild(msgEl);
+      container.scrollTop = container.scrollHeight;
+
+      isStreaming = true;
+      document.getElementById('sendBtn').disabled = true;
+      let exactUsage = null;
+      setTokenLabel('…');
+
+      try {
+        // 构建消息：优先使用对话独立的 System Prompt，确保在最前面
+        const messages = [];
+        const sysPrompt = conv.systemPrompt || profile.systemPrompt;
+        if (sysPrompt) {
+          messages.push({ role: 'system', content: sysPrompt });
+        }
+        
+        // 添加历史消息（排除 system，避免重复）
+        conv.messages.slice(0, -1).forEach(m => {
+          if (m.role !== 'system') messages.push(m);
+        });
+
+        const response = await fetch(`${profile.baseUrl}/chat/completions`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${profile.apiKey}`
+          },
+          body: JSON.stringify({
+            model: profile.model,
+            messages: messages,
+            stream: true,
+            temperature: profile.temperature || 0.7,
+            stream_options: { include_usage: true }
+          })
+        });
+
+        if (!response.ok) {
+          const errText = await response.text();
+          throw new Error(`请求失败 (${response.status}): ${errText}`);
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop();
+
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed || !trimmed.startsWith('data: ')) continue;
+            const data = trimmed.slice(6);
+            if (data === '[DONE]') continue;
+
+            try {
+              const json = JSON.parse(data);
+              if (json.usage) exactUsage = json.usage;
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                assistantMsg.content += delta;
+                contentEl.innerHTML = marked.parse(assistantMsg.content);
+                highlightBlocks(contentEl);
+                container.scrollTop = container.scrollHeight;
+                setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
+              }
+            } catch (e) { /* 忽略解析错误 */ }
+          }
+        }
+
+        if (exactUsage) {
+          conv.tokenUsage = {
+            prompt: exactUsage.prompt_tokens || 0,
+            completion: exactUsage.completion_tokens || 0,
+            total: exactUsage.total_tokens || 0
+          };
+          assistantMsg.usage = exactUsage;
+          setTokenLabel(buildTokenCostText(conv));
+        } else {
+          setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
+        }
+        updateMessageFooter(contentEl, assistantMsg, getConvProfile());
+
+        contentEl.classList.remove('typing-cursor');
+        saveConversations();
+
+      } catch (err) {
+        contentEl.classList.remove('typing-cursor');
+        contentEl.innerHTML = `<span class="text-red-400">错误: ${err.message}</span>`;
+        conv.messages.pop();
+        saveConversations();
+        setTokenLabel('');
+      }
+
+      isStreaming = false;
+      document.getElementById('sendBtn').disabled = false;
+      updateBalance();
+    }
+
+    // ========== 待办清单模块 ==========
+    function renderTodoGroups() {
+      const list = document.getElementById('todoGroupList');
+      list.innerHTML = '';
+      
+      todoGroups.forEach(group => {
+        const itemCount = todoItems.filter(i => i.groupId === group.id).length;
+        const div = document.createElement('div');
+        div.className = 'bg-gray-700/50 rounded-lg overflow-hidden';
+        
+        const header = document.createElement('div');
+        header.className = 'group flex items-center justify-between px-3 py-2 cursor-pointer hover:bg-gray-700';
+        header.innerHTML = `
+          <div class="flex items-center gap-2 flex-1 min-w-0">
+            <i data-lucide="${group.collapsed ? 'chevron-right' : 'chevron-down'}" class="w-4 h-4 text-gray-400 shrink-0"></i>
+            <i data-lucide="folder" class="w-4 h-4 text-primary shrink-0"></i>
+            <span class="text-sm truncate">${group.name}</span>
+            <span class="text-xs text-gray-500 shrink-0">(${itemCount})</span>
+          </div>
+          <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button onclick="event.stopPropagation();renameTodoGroup('${group.id}')" class="p-1 text-gray-400 hover:text-white" title="重命名">
+              <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+            </button>
+            <button onclick="event.stopPropagation();deleteTodoGroup('${group.id}')" class="p-1 text-gray-400 hover:text-red-400" title="删除分组">
+              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        `;
+        header.onclick = () => toggleGroupCollapse(group.id);
+        
+        const content = document.createElement('div');
+        content.className = group.collapsed ? 'hidden' : 'pb-2 px-2 space-y-1';
+        
+        // 分组内任务预览
+        todoItems.filter(i => i.groupId === group.id).slice(0, 3).forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.className = `text-xs px-2 py-1 rounded truncate cursor-pointer hover:bg-gray-600 ${
+            item.completed ? 'text-gray-500 line-through' : 'text-gray-300'
+          }`;
+          itemDiv.textContent = item.content;
+          itemDiv.onclick = (e) => {
+            e.stopPropagation();
+            selectTodoGroup(group.id);
+          };
+          content.appendChild(itemDiv);
+        });
+
+        if (itemCount > 3) {
+          const more = document.createElement('div');
+          more.className = 'text-xs text-gray-500 px-2 py-1';
+          more.textContent = `还有 ${itemCount - 3} 项...`;
+          content.appendChild(more);
+        }
+
+        div.appendChild(header);
+        div.appendChild(content);
+        list.appendChild(div);
+      });
+      
+      lucide.createIcons();
+    }
+
+    function toggleGroupCollapse(groupId) {
+      const group = todoGroups.find(g => g.id === groupId);
+      if (group) {
+        group.collapsed = !group.collapsed;
+        storeSet(STORAGE_KEYS.TODO_GROUPS, todoGroups);
+        renderTodoGroups();
+      }
+    }
+
+    function selectTodoGroup(groupId) {
+      activeTodoGroupId = groupId;
+      storeSet(STORAGE_KEYS.ACTIVE_TODO_GROUP, groupId);
+      renderTodoGroups();
+      renderTodoItems();
+    }
+
+    function addTodoGroup() {
+      showPrompt('请输入分组名称：', '', name => {
+        if (!name?.trim()) return;
+
+        const group = {
+          id: genId(),
+          name: name.trim(),
+          collapsed: false,
+          createdAt: Date.now()
+        };
+        todoGroups.push(group);
+        activeTodoGroupId = group.id;
+        storeSet(STORAGE_KEYS.TODO_GROUPS, todoGroups);
+        storeSet(STORAGE_KEYS.ACTIVE_TODO_GROUP, activeTodoGroupId);
+        renderTodoGroups();
+        renderTodoItems();
+      });
+    }
+
+    function renderTodoItems() {
+      const list = document.getElementById('todoItemsList');
+      const group = todoGroups.find(g => g.id === activeTodoGroupId);
+      
+      document.getElementById('currentGroupName').textContent = group ? group.name : '选择分组查看待办';
+      
+      if (!group) {
+        list.innerHTML = '<div class="text-center text-gray-500 mt-20">请先选择一个分组</div>';
+        return;
+      }
+
+      const items = todoItems.filter(i => i.groupId === group.id).sort((a, b) => {
+        if (a.completed !== b.completed) return a.completed ? 1 : -1;
+        return b.createdAt - a.createdAt;
+      });
+
+      if (items.length === 0) {
+        list.innerHTML = '<div class="text-center text-gray-500 mt-20">暂无任务，点击右上角添加</div>';
+        return;
+      }
+
+      list.innerHTML = '';
+      items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = `todo-item flex items-start gap-3 p-3 bg-gray-700/50 rounded-lg group ${
+          item.completed ? 'opacity-60' : ''
+        }`;
+        
+        div.innerHTML = `
+          <input type="checkbox" ${item.completed ? 'checked' : ''} 
+            class="mt-1 w-4 h-4 accent-primary cursor-pointer"
+            onchange="toggleTodoComplete('${item.id}')">
+          <div class="flex-1 min-w-0">
+            <div class="${item.completed ? 'line-through text-gray-500' : 'text-gray-200'} break-words">
+              ${escapeHtml(item.content)}
+            </div>
+          </div>
+          <div class="todo-actions flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button onclick="showTodoMoveMenu('${item.id}', event)" class="p-1 text-gray-400 hover:text-white" title="移动分组">
+              <i data-lucide="folder-input" class="w-4 h-4"></i>
+            </button>
+            <button onclick="copyTodoContent('${item.id}', this)" class="p-1 text-gray-400 hover:text-white" title="复制内容">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+            <button onclick="editTodoItem('${item.id}')" class="p-1 text-gray-400 hover:text-white" title="编辑">
+              <i data-lucide="edit" class="w-4 h-4"></i>
+            </button>
+            <button onclick="deleteTodoItem('${item.id}')" class="p-1 text-gray-400 hover:text-red-400" title="删除">
+              <i data-lucide="trash-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+        list.appendChild(div);
+      });
+      
+      lucide.createIcons();
+    }
+
+    function addTodoItem() {
+      if (!activeTodoGroupId) {
+        showAlert('请先选择一个分组');
+        return;
+      }
+      showPrompt('请输入待办内容：', '', content => {
+        if (!content?.trim()) return;
+
+        todoItems.push({
+          id: genId(),
+          groupId: activeTodoGroupId,
+          content: content.trim(),
+          completed: false,
+          createdAt: Date.now()
+        });
+
+        storeSet(STORAGE_KEYS.TODO_ITEMS, todoItems);
+        renderTodoGroups();
+        renderTodoItems();
+      });
+    }
+
+    function toggleTodoComplete(itemId) {
+      const item = todoItems.find(i => i.id === itemId);
+      if (item) {
+        item.completed = !item.completed;
+        storeSet(STORAGE_KEYS.TODO_ITEMS, todoItems);
+        renderTodoGroups();
+        renderTodoItems();
+      }
+    }
+
+    function editTodoItem(itemId) {
+      const item = todoItems.find(i => i.id === itemId);
+      if (!item) return;
+      
+      showPrompt('编辑待办内容：', item.content, newContent => {
+        if (newContent === null) return;
+
+        item.content = newContent.trim();
+        storeSet(STORAGE_KEYS.TODO_ITEMS, todoItems);
+        renderTodoGroups();
+        renderTodoItems();
+      });
+    }
+
+    function deleteTodoItem(itemId) {
+      showConfirm('确定删除这条待办？', () => {
+        todoItems = todoItems.filter(i => i.id !== itemId);
+        storeSet(STORAGE_KEYS.TODO_ITEMS, todoItems);
+        renderTodoGroups();
+        renderTodoItems();
+      });
+    }
+
+    function copyTodoContent(itemId, btn) {
+      const item = todoItems.find(i => i.id === itemId);
+      if (!item) return;
+      copyText(item.content, btn);
+    }
+
+    // ========== 数据导入导出 ==========
+    function exportAllData() {
+      const allData = {};
+      Object.values(STORAGE_KEYS).forEach(key => {
+        allData[key] = storeGet(key, null);
+      });
+      
+      const blob = new Blob([JSON.stringify(allData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `local-chat-backup-${new Date().toISOString().slice(0,10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function importAllData(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      showConfirm('导入将覆盖当前所有数据，确定继续吗？', () => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          try {
+            const data = JSON.parse(e.target.result);
+
+            // 写入所有数据
+            Object.keys(data).forEach(key => {
+              if (data[key] !== null) {
+                localStorage.setItem(key, JSON.stringify(data[key]));
+              }
+            });
+
+            showAlert('导入成功！页面将刷新以加载新数据。');
+            setTimeout(() => location.reload(), 800);
+          } catch (err) {
+            showAlert('导入失败：文件格式不正确');
+          }
+        };
+        reader.readAsText(file);
+        event.target.value = '';
+      });
+    }
+
+    function clearAllData() {
+      showConfirm('确定要清空所有本地数据吗？此操作不可恢复！', () => {
+        showConfirm('再次确认：所有配置、对话、待办都将被永久删除！', () => {
+          Object.values(STORAGE_KEYS).forEach(key => localStorage.removeItem(key));
+          location.reload();
+        });
+      });
+    }
+
+    // ========== 设置弹窗 ==========
+    function openSettings() {
+      document.getElementById('settingsModal').classList.remove('hidden');
+    }
+
+    function closeSettings() {
+      document.getElementById('settingsModal').classList.add('hidden');
+    }
+
+    // ========== 工具函数 ==========
+    function genId() {
+      return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function handleKeyDown(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    }
+
+    function autoResize(el) {
+      el.style.height = 'auto';
+      el.style.height = Math.min(el.scrollHeight, 128) + 'px';
+    }
+
+    // ========== 全局 UI：Toast / 下拉菜单 / 复制 ==========
+    function showToast(msg, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = `flex items-center gap-2 px-4 py-2 rounded-lg shadow-xl text-sm text-white transition-opacity duration-300 ${
+        type === 'error' ? 'bg-red-500' : 'bg-green-600'
+      }`;
+      toast.innerHTML = `<i data-lucide="${type === 'error' ? 'alert-circle' : 'check-circle'}" class="w-4 h-4 shrink-0"></i><span></span>`;
+      toast.querySelector('span').textContent = msg;
+      container.appendChild(toast);
+      lucide.createIcons();
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+      }, 1800);
+    }
+
+    async function copyText(text, btnEl) {
+      let ok = false;
+      try {
+        if (window.isSecureContext && navigator.clipboard) {
+          await navigator.clipboard.writeText(text);
+          ok = true;
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          ok = document.execCommand('copy');
+          ta.remove();
+        }
+      } catch (e) {
+        ok = false;
+      }
+      if (btnEl) {
+        const original = btnEl.innerHTML;
+        btnEl.innerHTML = `<i data-lucide="${ok ? 'check' : 'alert-circle'}" class="w-4 h-4 ${ok ? 'text-green-400' : 'text-red-400'}"></i>`;
+        lucide.createIcons();
+        setTimeout(() => {
+          btnEl.innerHTML = original;
+          lucide.createIcons();
+        }, 1000);
+      }
+      showToast(ok ? '已复制到剪贴板' : '复制失败', ok ? 'success' : 'error');
+    }
+
+    function showContextMenu(e, items) {
+      e.stopPropagation();
+      e.preventDefault();
+      const overlay = document.getElementById('contextMenuOverlay');
+      const menu = document.getElementById('contextMenu');
+      menu.innerHTML = '';
+      items.forEach(it => {
+        if (it.divider) {
+          const hr = document.createElement('hr');
+          hr.className = 'my-1 border-gray-700';
+          menu.appendChild(hr);
+          return;
+        }
+        const btn = document.createElement('button');
+        btn.className = `w-full px-3 py-1.5 text-sm text-left flex items-center gap-2 ${
+          it.danger ? 'text-red-400 hover:bg-red-500/10' : 'text-gray-300 hover:bg-gray-700'
+        } ${it.disabled ? 'opacity-40 pointer-events-none' : ''}`;
+        btn.innerHTML = `<i data-lucide="${it.checked ? 'check' : it.icon || 'circle'}" class="w-4 h-4 shrink-0"></i><span class="truncate"></span>`;
+        btn.querySelector('span').textContent = it.label;
+        btn.onclick = () => {
+          hideContextMenu();
+          it.onClick && it.onClick();
+        };
+        menu.appendChild(btn);
+      });
+      overlay.classList.remove('hidden');
+      menu.classList.remove('hidden');
+      lucide.createIcons();
+      const rect = menu.getBoundingClientRect();
+      const x = Math.min(e.clientX, window.innerWidth - rect.width - 8);
+      const y = Math.min(e.clientY, window.innerHeight - rect.height - 8);
+      menu.style.left = Math.max(8, x) + 'px';
+      menu.style.top = Math.max(8, y) + 'px';
+      document.addEventListener('keydown', hideContextMenuOnEsc);
+      document.addEventListener('scroll', hideContextMenu, true);
+    }
+
+    function hideContextMenu() {
+      document.getElementById('contextMenuOverlay').classList.add('hidden');
+      document.getElementById('contextMenu').classList.add('hidden');
+      document.removeEventListener('keydown', hideContextMenuOnEsc);
+      document.removeEventListener('scroll', hideContextMenu, true);
+    }
+
+    function hideContextMenuOnEsc(e) {
+      if (e.key === 'Escape') hideContextMenu();
+    }
+
+    // ========== 通用对话框（alert / confirm / prompt 统一风格） ==========
+    let appDialogOnOk = null;
+
+    function openAppDialog(opts) {
+      const title = opts.title || '提示';
+      document.getElementById('appDialogTitle').textContent = title;
+      document.getElementById('appDialogMessage').textContent = opts.message || '';
+      const input = document.getElementById('appDialogInput');
+      if (opts.input) {
+        input.classList.remove('hidden');
+        input.value = opts.defaultValue !== undefined ? opts.defaultValue : '';
+        input.placeholder = opts.placeholder || '';
+      } else {
+        input.classList.add('hidden');
+        input.value = '';
+      }
+      document.getElementById('appDialogOkBtn').textContent = opts.okText || '确定';
+      const cancelBtn = document.getElementById('appDialogCancelBtn');
+      cancelBtn.textContent = opts.cancelText || '取消';
+      cancelBtn.classList.toggle('hidden', opts.showCancel === false);
+      appDialogOnOk = typeof opts.onOk === 'function' ? opts.onOk : null;
+      document.getElementById('appDialog').classList.remove('hidden');
+      if (opts.input) setTimeout(() => input.focus(), 50);
+    }
+
+    function closeAppDialog() {
+      document.getElementById('appDialog').classList.add('hidden');
+      appDialogOnOk = null;
+    }
+
+    function submitAppDialog() {
+      const onOk = appDialogOnOk;
+      const value = document.getElementById('appDialogInput').value;
+      closeAppDialog();
+      if (onOk) onOk(value);
+    }
+
+    function showAlert(message, title = '提示') {
+      openAppDialog({ title, message, showCancel: false });
+    }
+
+    function showConfirm(message, onOk, title = '确认') {
+      openAppDialog({ title, message, onOk: () => onOk() });
+    }
+
+    function showPrompt(label, defaultValue, onOk) {
+      openAppDialog({ title: label, message: '', input: true, defaultValue, placeholder: label, onOk });
+    }
+
+    function highlightBlocks(container) {
+      if (!container || typeof hljs === 'undefined') return;
+      container.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+    }
+
+    // ========== 工具：路径取值 / 余额格式化 / token 估算 ==========
+    function getByPath(obj, path) {
+      if (!obj || !path) return undefined;
+      return String(path).split('.').reduce((acc, key) => {
+        const m = key.match(/^(.+?)\[(\d+)\]$/);
+        if (m) return acc?.[m[1]]?.[parseInt(m[2], 10)];
+        return acc?.[key];
+      }, obj);
+    }
+
+    function fmtBalance(v) {
+      if (v === null || v === undefined || v === '') return null;
+      const n = Number(v);
+      if (!Number.isFinite(n)) return null;
+      return String(n.toFixed(2)).replace(/\.?0+$/, '');
+    }
+
+    function estimateTokens(text) {
+      if (!text) return 0;
+      const cjk = (text.match(/[一-鿿぀-ヿ가-힯]/g) || []).length;
+      return cjk + Math.round((text.length - cjk) / 4);
+    }
+
+    function setTokenLabel(text) {
+      const el = document.getElementById('tokenLabel');
+      if (!el) return;
+      el.textContent = text || '';
+      el.classList.toggle('hidden', !text);
+    }
+
+    function updateTokenLabelFromConv() {
+      setTokenLabel(buildTokenCostText(getActiveConv()));
+    }
+
+    // ========== 费用计算 ==========
+    function priceField(v) {
+      if (v === null || v === undefined || v === '') return null;
+      const n = Number(v);
+      return (Number.isFinite(n) && n >= 0) ? n : null;
+    }
+
+    function getModelPrice(profile, model) {
+      const fb = PRICING[model];
+      const pIn  = profile ? priceField(profile.priceIn)  : null;
+      const pOut = profile ? priceField(profile.priceOut) : null;
+      const inV  = pIn  !== null ? pIn  : (fb ? fb.in  : null);
+      const outV = pOut !== null ? pOut : (fb ? fb.out : null);
+      if (inV === null && outV === null) return null;
+      return { in: inV, out: outV };
+    }
+
+    function computeCost(usage, price) {
+      if (!usage || !price) return null;
+      const prompt = Number(usage.prompt_tokens) || 0;
+      const completion = Number(usage.completion_tokens) || 0;
+      let c = 0;
+      if (price.in  != null) c += prompt     / 1e6 * price.in;
+      if (price.out != null) c += completion / 1e6 * price.out;
+      return Number.isFinite(c) ? c : null;
+    }
+
+    function formatCost(cost) {
+      if (cost === null || cost === undefined || !Number.isFinite(cost)) return null;
+      if (cost === 0) return '0';
+      return String(Number(cost.toPrecision(4)));
+    }
+
+    function costCurrency(profile) {
+      return profile?.balanceCurrency || PRESETS[profile?.provider]?.balanceCurrency || 'CNY';
+    }
+
+    function getConvProfile() {
+      const conv = getActiveConv();
+      return conv ? (profiles.find(p => p.id === conv.profileId) || null) : null;
+    }
+
+    function buildTokenCostText(conv) {
+      if (!conv) return '';
+      const cp = profiles.find(p => p.id === conv.profileId) || null;
+      let totalTokens = 0, cost = 0, priced = false;
+      (conv.messages || []).forEach(m => {
+        if (m.role === 'assistant' && m.usage) {
+          totalTokens += m.usage.total_tokens || 0;
+          const price = getModelPrice(cp, m.model || cp?.model);
+          if (price) {
+            const c = computeCost(m.usage, price);
+            if (c !== null) { cost += c; priced = true; }
+          }
+        }
+      });
+      if (totalTokens === 0) return '';
+      if (priced) return 'Tokens: ' + totalTokens + ' · ' + formatCost(cost) + ' ' + costCurrency(cp);
+      return 'Tokens: ' + totalTokens;
+    }
+
+    function updateMessageFooter(contentEl, msg, profile) {
+      if (!contentEl) return;
+      contentEl.querySelectorAll('.msg-usage-footer').forEach(el => el.remove());
+      if (!msg || msg.role !== 'assistant' || !msg.usage || !msg.usage.total_tokens) return;
+      const price = getModelPrice(profile, msg.model);
+      let text = msg.usage.total_tokens + ' tokens';
+      if (price) {
+        const costText = formatCost(computeCost(msg.usage, price));
+        if (costText !== null) text += ' · ' + costText + ' ' + costCurrency(profile);
+      }
+      const footer = document.createElement('div');
+      footer.className = 'msg-usage-footer text-xs text-gray-500 mt-1 text-right';
+      footer.textContent = text;
+      contentEl.appendChild(footer);
+    }
+
+    // ========== 待办：分组重命名/删除 / 任务移动 ==========
+    function getDefaultGroupId() {
+      let def = todoGroups[0];
+      todoGroups.forEach(g => {
+        if (g.createdAt < def.createdAt) def = g;
+      });
+      return def ? def.id : null;
+    }
+
+    function renameTodoGroup(groupId) {
+      const group = todoGroups.find(g => g.id === groupId);
+      if (!group) return;
+      showPrompt('重命名分组：', group.name, name => {
+        if (!name || !name.trim()) return;
+        group.name = name.trim();
+        storeSet(STORAGE_KEYS.TODO_GROUPS, todoGroups);
+        renderTodoGroups();
+        renderTodoItems();
+      });
+    }
+
+    function deleteTodoGroup(groupId) {
+      if (todoGroups.length <= 1) {
+        showAlert('至少保留一个分组');
+        return;
+      }
+      const group = todoGroups.find(g => g.id === groupId);
+      if (!group) return;
+      showConfirm(`确定删除分组「${group.name}」？其中的任务将移动到默认分组。`, () => {
+        todoGroups = todoGroups.filter(g => g.id !== groupId);
+        const defaultId = getDefaultGroupId();
+        todoItems.forEach(i => {
+          if (i.groupId === groupId) i.groupId = defaultId;
+        });
+        if (activeTodoGroupId === groupId) activeTodoGroupId = defaultId;
+        storeSet(STORAGE_KEYS.TODO_GROUPS, todoGroups);
+        storeSet(STORAGE_KEYS.TODO_ITEMS, todoItems);
+        storeSet(STORAGE_KEYS.ACTIVE_TODO_GROUP, activeTodoGroupId);
+        renderTodoGroups();
+        renderTodoItems();
+        showToast('分组已删除，任务已移动到默认分组');
+      });
+    }
+
+    function showTodoMoveMenu(itemId, e) {
+      const item = todoItems.find(i => i.id === itemId);
+      if (!item) return;
+      showContextMenu(e, todoGroups.map(g => ({
+        label: g.name,
+        icon: 'folder',
+        checked: g.id === item.groupId,
+        disabled: g.id === item.groupId,
+        onClick: () => moveTodoItemToGroup(itemId, g.id)
+      })));
+    }
+
+    function moveTodoItemToGroup(itemId, groupId) {
+      const item = todoItems.find(i => i.id === itemId);
+      if (!item || item.groupId === groupId) return;
+      item.groupId = groupId;
+      storeSet(STORAGE_KEYS.TODO_ITEMS, todoItems);
+      renderTodoGroups();
+      renderTodoItems();
+      showToast('已移动到分组');
+    }
+
+    // ========== 对话：删除 / 昵称 / Prompt 编辑 ==========
+    function deleteConversation(id) {
+      const conv = conversations.find(c => c.id === id);
+      if (!conv) return;
+      showConfirm(`确定删除对话「${conv.nickname || conv.title || '新对话'}」？`, () => {
+        conversations = conversations.filter(c => c.id !== id);
+        if (activeConvId === id) {
+          activeConvId = conversations[0]?.id || null;
+          storeSet(STORAGE_KEYS.ACTIVE_CONV, activeConvId);
+        }
+        saveConversations();
+        renderConversationList();
+        renderMessages();
+        updateSystemPromptInput();
+        updateTokenLabelFromConv();
+        showToast('对话已删除');
+      });
+    }
+
+    function showConvMenu(id, e) {
+      showContextMenu(e, [
+        { label: '设置昵称', icon: 'tag', onClick: () => setConversationNickname(id) },
+        { label: '编辑 Prompt', icon: 'sliders', onClick: openSystemPromptEditor },
+        { divider: true },
+        { label: '删除对话', icon: 'trash-2', danger: true, onClick: () => deleteConversation(id) }
+      ]);
+    }
+
+    function setConversationNickname(id) {
+      const conv = conversations.find(c => c.id === id);
+      if (!conv) return;
+      showPrompt('设置对话昵称：', conv.nickname || '', nick => {
+        conv.nickname = (nick || '').trim();
+        saveConversations();
+        renderConversationList();
+      });
+    }
+
+    function openSystemPromptEditor() {
+      document.getElementById('systemPromptBar').classList.remove('hidden');
+      document.getElementById('systemPromptInput').focus();
+    }
+
+    // ========== 余额显示 ==========
+    function getProfileBalanceConfig(p) {
+      const pr = PRESETS[p?.provider] || {};
+      return {
+        balanceUrl: p?.balanceUrl || pr.balanceUrl || '',
+        balancePath: p?.balancePath || pr.balancePath || '',
+        balanceCurrency: p?.balanceCurrency || pr.balanceCurrency || ''
+      };
+    }
+
+    async function updateBalance() {
+      const label = document.getElementById('balanceLabel');
+      if (!label) return;
+      const p = getActiveProfile();
+      if (!p || balanceFetching) { label.textContent = 'Remaining: --'; return; }
+      const cfg = getProfileBalanceConfig(p);
+      if (!cfg.balanceUrl) { label.textContent = 'Remaining: --'; return; }
+      balanceFetching = true;
+      try {
+        const res = await fetch(cfg.balanceUrl, {
+          headers: { 'Authorization': 'Bearer ' + p.apiKey }
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await res.json();
+        const f = fmtBalance(getByPath(json, cfg.balancePath));
+        if (f === null) throw new Error('bad balance value');
+        label.textContent = 'Remaining: ' + f + ' ' + cfg.balanceCurrency;
+      } catch (err) {
+        label.textContent = 'Remaining: --';
+      } finally {
+        balanceFetching = false;
+      }
+    }
+
+    function toggleAdvanced() {
+      const section = document.getElementById('advancedSettingsSection');
+      const chevron = document.getElementById('advancedChevron');
+      const hidden = section.classList.toggle('hidden');
+      chevron.classList.toggle('rotate-180', !hidden);
+    }
+
+    // ========== 模型选择 ==========
+    function getProfileModelValue() {
+      const sel = document.getElementById('profileModelSelect');
+      const custom = document.getElementById('profileModelCustom');
+      return sel.value === '__custom__' ? custom.value.trim() : sel.value;
+    }
+
+    function onProfileModelChange() {
+      const sel = document.getElementById('profileModelSelect');
+      const custom = document.getElementById('profileModelCustom');
+      const isCustom = sel.value === '__custom__';
+      custom.classList.toggle('hidden', !isCustom);
+      if (isCustom) custom.focus();
+      modelDraft = isCustom ? custom.value : sel.value;
+    }
+
+    function populateModelSelect(providerHint, currentOverride) {
+      const sel = document.getElementById('profileModelSelect');
+      const custom = document.getElementById('profileModelCustom');
+      const provider = providerHint || document.getElementById('presetSelector').value || getActiveProfile()?.provider || '';
+      const baseUrl = (document.getElementById('profileBaseUrl').value || '').trim();
+      const current = currentOverride !== undefined ? currentOverride : modelDraft;
+      const wasCustom = sel.value === '__custom__';
+      let list = (modelCache.get(baseUrl) || MODEL_LISTS[provider] || []).slice();
+      if (current && !list.includes(current)) list.unshift(current);
+      sel.innerHTML = '';
+      list.forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m;
+        opt.textContent = m;
+        sel.appendChild(opt);
+      });
+      const customOpt = document.createElement('option');
+      customOpt.value = '__custom__';
+      customOpt.textContent = '自定义…';
+      sel.appendChild(customOpt);
+      if (current && list.includes(current)) {
+        sel.value = current;
+      } else if (current) {
+        sel.value = '__custom__';
+        custom.value = current;
+      } else if (wasCustom) {
+        sel.value = '__custom__';
+      } else if (list.length > 0) {
+        sel.value = list[0];
+      } else {
+        sel.value = '__custom__';
+      }
+      onProfileModelChange();
+    }
+
+    async function loadModelsForProfile() {
+      const baseUrl = (document.getElementById('profileBaseUrl').value || '').trim();
+      const apiKey = (document.getElementById('profileApiKey').value || '').trim();
+      if (!baseUrl || !apiKey || modelCache.has(baseUrl)) {
+        populateModelSelect();
+        return;
+      }
+      try {
+        const res = await fetch(baseUrl.replace(/\/+$/, '') + '/models', {
+          headers: { 'Authorization': 'Bearer ' + apiKey }
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const json = await res.json();
+        const ids = (json.data || []).map(m => m.id).filter(Boolean);
+        if (ids.length > 0) modelCache.set(baseUrl, ids);
+      } catch (e) { /* 静默降级到静态模型清单 */ }
+      populateModelSelect();
+    }
+
+    // 启动
+    init();
+  </script>
+</body>
+</html>
