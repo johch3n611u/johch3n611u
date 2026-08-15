@@ -33,14 +33,23 @@
     .typing-cursor::after { content: '▋'; animation: blink 1s infinite; }
     @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
     .tab-active { border-bottom: 2px solid #6366f1; color: #fff; }
-    .todo-item:hover .todo-actions { opacity: 1; }
+    @media (hover: hover) {
+      .todo-item:hover .todo-actions { opacity: 1; }
+    }
     .todo-actions { opacity: 0; transition: opacity 0.2s; }
+    /* RWD: 触屏设备（无悬停能力）操作按钮始终可见 */
+    @media (hover: none) {
+      .todo-actions,
+      .group .opacity-0 { opacity: 1; }
+    }
+    /* RWD: 移动端浏览器工具栏收起时 h-screen(100vh) 会溢出，改用 dvh */
+    body.h-screen { height: 100vh; height: 100dvh; }
   </style>
 </head>
 <body class="dark bg-gray-900 text-gray-100 h-screen flex overflow-hidden">
 
   <!-- 侧边栏 -->
-  <aside class="w-64 bg-gray-800 border-r border-gray-700 flex flex-col h-full">
+  <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-72 -translate-x-full transition-transform duration-200 shadow-2xl bg-gray-800 border-r border-gray-700 flex flex-col h-full lg:static lg:z-auto lg:w-64 lg:translate-x-0 lg:shadow-none">
     <!-- Tab 切换 -->
     <div class="flex border-b border-gray-700">
       <button onclick="switchTab('chat')" id="tabChat" class="flex-1 py-3 text-sm font-medium tab-active">
@@ -96,20 +105,26 @@
     </div>
   </aside>
 
+  <!-- RWD: 侧边栏抽屉背景遮罩（仅移动端） -->
+  <div id="sidebarBackdrop" class="hidden lg:hidden fixed inset-0 bg-black/50 z-30" onclick="closeSidebar()"></div>
+
   <!-- 主区域 -->
   <main class="flex-1 flex flex-col h-full">
     <!-- 聊天主界面 -->
     <div id="chatMain" class="flex-1 flex flex-col overflow-hidden">
       <!-- 顶部栏 -->
-      <header class="h-14 border-b border-gray-700 flex items-center px-4 justify-between bg-gray-800/50">
-        <div class="flex items-center gap-2">
-          <span id="currentModelLabel" class="text-sm text-gray-400">未选择配置</span>
+      <header class="min-h-14 border-b border-gray-700 flex items-center flex-wrap gap-x-2 gap-y-1 px-3 sm:px-4 py-2 justify-between bg-gray-800/50">
+        <div class="flex items-center gap-2 min-w-0 flex-1">
+          <button onclick="toggleSidebar()" class="lg:hidden p-2 shrink-0 text-gray-400 hover:text-white" title="菜单" aria-label="打开菜单">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <span id="currentModelLabel" class="text-sm text-gray-400 truncate">未选择配置</span>
           <span id="tokenLabel" class="text-xs text-gray-500 hidden"></span>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 shrink-0">
           <button id="balanceLabel" onclick="updateBalance()" title="点击刷新余额"
-            class="text-xs text-gray-400 hover:text-white px-1.5 py-1 rounded hover:bg-gray-700">Remaining: --</button>
-          <button onclick="toggleSystemPrompt()" class="text-gray-400 hover:text-white p-1.5" title="系统提示词">
+            class="text-xs text-gray-400 hover:text-white px-1.5 py-1 rounded hover:bg-gray-700 whitespace-nowrap">Remaining: --</button>
+          <button onclick="toggleSystemPrompt()" class="text-gray-400 hover:text-white p-2 sm:p-1.5" title="系统提示词">
             <i data-lucide="sliders" class="w-4 h-4"></i>
           </button>
         </div>
@@ -136,7 +151,7 @@
       </div>
 
       <!-- 输入区 -->
-      <div class="border-t border-gray-700 p-4 bg-gray-800/30">
+      <div class="border-t border-gray-700 px-3 sm:px-4 pt-3 sm:pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] bg-gray-800/30">
         <div class="flex gap-2 items-end">
           <textarea id="messageInput" rows="1" placeholder="输入消息... (Shift+Enter 换行)"
             class="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-primary max-h-32"
@@ -151,9 +166,14 @@
 
     <!-- 待办主界面 -->
     <div id="todoMain" class="hidden flex-1 flex flex-col overflow-hidden">
-      <header class="h-14 border-b border-gray-700 flex items-center px-4 justify-between bg-gray-800/50">
-        <span id="currentGroupName" class="font-medium">选择分组查看待办</span>
-        <button onclick="addTodoItem()" class="text-primary hover:text-primary/80 text-sm flex items-center gap-1">
+      <header class="min-h-14 border-b border-gray-700 flex items-center flex-wrap gap-x-2 gap-y-1 px-3 sm:px-4 py-2 justify-between bg-gray-800/50">
+        <div class="flex items-center gap-2 min-w-0 flex-1">
+          <button onclick="toggleSidebar()" class="lg:hidden p-2 shrink-0 text-gray-400 hover:text-white" title="菜单" aria-label="打开菜单">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+          <span id="currentGroupName" class="font-medium truncate">选择分组查看待办</span>
+        </div>
+        <button onclick="addTodoItem()" class="text-primary hover:text-primary/80 text-sm flex items-center gap-1 shrink-0">
           <i data-lucide="plus" class="w-4 h-4"></i>添加任务
         </button>
       </header>
@@ -163,14 +183,14 @@
 
   <!-- 配置档案弹窗 -->
   <div id="profileModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-    <div class="bg-gray-800 rounded-xl w-full max-w-md mx-4 border border-gray-700 shadow-2xl">
+    <div class="bg-gray-800 rounded-xl w-full max-w-md mx-4 border border-gray-700 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden">
       <div class="p-4 border-b border-gray-700 flex justify-between items-center">
         <h3 class="font-semibold">管理配置档案</h3>
         <button onclick="closeProfileModal()" class="text-gray-400 hover:text-white">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="p-4 space-y-3 max-h-[70vh] overflow-y-auto">
+      <div class="p-4 space-y-3 flex-1 overflow-y-auto">
         <div class="space-y-2">
           <label class="text-sm text-gray-400">快速预设模板</label>
           <select id="presetSelector" onchange="applyPreset()" 
@@ -258,14 +278,14 @@
 
   <!-- 设置弹窗 -->
   <div id="settingsModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-    <div class="bg-gray-800 rounded-xl w-full max-w-md mx-4 border border-gray-700 shadow-2xl">
+    <div class="bg-gray-800 rounded-xl w-full max-w-md mx-4 border border-gray-700 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden">
       <div class="p-4 border-b border-gray-700 flex justify-between items-center">
         <h3 class="font-semibold">设置与数据管理</h3>
         <button onclick="closeSettings()" class="text-gray-400 hover:text-white">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="p-4 space-y-4">
+      <div class="p-4 space-y-4 flex-1 overflow-y-auto">
         <div class="p-3 bg-gray-700/50 rounded-lg">
           <h4 class="font-medium text-sm mb-2">数据导出</h4>
           <p class="text-xs text-gray-400 mb-2">将所有本地数据（配置、对话、待办）导出为 JSON 文件备份</p>
@@ -293,7 +313,7 @@
 
   <!-- 首次引导弹窗 -->
   <div id="welcomeModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-    <div class="bg-gray-800 rounded-xl w-full max-w-lg mx-4 border border-gray-700 shadow-2xl p-6">
+    <div class="bg-gray-800 rounded-xl w-full max-w-lg mx-4 border border-gray-700 shadow-2xl p-6 flex flex-col max-h-[90vh] overflow-hidden">
       <div class="text-center mb-6">
         <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <i data-lucide="rocket" class="w-8 h-8 text-primary"></i>
@@ -301,7 +321,7 @@
         <h2 class="text-xl font-bold">欢迎使用 Local Chat</h2>
         <p class="text-gray-400 text-sm mt-1">纯前端 · 本地存储 · 支持本地代理 Air Gap</p>
       </div>
-      <div class="space-y-4">
+      <div class="space-y-4 flex-1 overflow-y-auto">
         <div>
           <label class="text-sm text-gray-400 block mb-1">选择 AI 供应商</label>
           <select id="welcomeProvider" onchange="updateWelcomeFields()"
@@ -329,8 +349,8 @@
             class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-primary resize-none"></textarea>
         </div>
       </div>
-      <button onclick="completeOnboarding()" 
-        class="w-full mt-6 py-2.5 bg-primary hover:bg-primary/80 rounded-lg font-medium transition">
+      <button onclick="completeOnboarding()"
+        class="w-full mt-6 py-2.5 bg-primary hover:bg-primary/80 rounded-lg font-medium transition shrink-0">
         开始使用
       </button>
       <p class="text-xs text-gray-500 text-center mt-3">
@@ -346,7 +366,7 @@
 
   <!-- 通用对话框（alert / confirm / prompt 统一风格，与配置档案弹窗一致） -->
   <div id="appDialog" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-[80]" onclick="closeAppDialog()">
-    <div class="bg-gray-800 rounded-xl w-full max-w-sm mx-4 border border-gray-700 shadow-2xl" onclick="event.stopPropagation()">
+    <div class="bg-gray-800 rounded-xl w-full max-w-sm mx-4 border border-gray-700 shadow-2xl max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
       <div class="p-4 border-b border-gray-700 flex justify-between items-center">
         <h3 class="font-semibold" id="appDialogTitle">提示</h3>
         <button onclick="closeAppDialog()" class="text-gray-400 hover:text-white">
@@ -476,7 +496,8 @@
     // ========== 初始化 ==========
     function init() {
       lucide.createIcons();
-      
+      document.addEventListener('keydown', closeSidebarOnEsc);
+
       // 加载所有数据
       profiles = storeGet(STORAGE_KEYS.PROFILES, []);
       activeProfileId = storeGet(STORAGE_KEYS.ACTIVE_PROFILE, null);
@@ -520,8 +541,27 @@
       localStorage.setItem(key, JSON.stringify(val));
     }
 
+    // ========== RWD 侧边栏抽屉 ==========
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('translate-x-0');
+      document.getElementById('sidebarBackdrop').classList.remove('hidden');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('translate-x-0');
+      document.getElementById('sidebarBackdrop').classList.add('hidden');
+    }
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar.classList.contains('translate-x-0')) closeSidebar();
+      else openSidebar();
+    }
+    function closeSidebarOnEsc(e) {
+      if (e.key === 'Escape') closeSidebar();
+    }
+
     // ========== Tab 切换 ==========
     function switchTab(tab) {
+      closeSidebar();
       currentTab = tab;
       document.getElementById('tabChat').className = tab === 'chat' 
         ? 'flex-1 py-3 text-sm font-medium tab-active' 
@@ -612,6 +652,7 @@
     }
 
     function openProfileModal() {
+      closeSidebar();
       const p = getActiveProfile();
       const preset = p ? PRESETS[p.provider] : null;
       document.getElementById('presetSelector').value = '';
@@ -706,6 +747,7 @@
 
     // ========== 对话管理 ==========
     function newConversation() {
+      closeSidebar();
       const profile = getActiveProfile();
       if (!profile) { showAlert('请先创建配置档案'); return; }
 
@@ -730,6 +772,7 @@
     }
 
     function loadConversation(id) {
+      closeSidebar();
       activeConvId = id;
       storeSet(STORAGE_KEYS.ACTIVE_CONV, id);
       renderConversationList();
@@ -813,7 +856,7 @@
       wrap.className = `flex group gap-2 ${isUser ? 'justify-end' : 'justify-start'}`;
 
       const bubble = document.createElement('div');
-      bubble.className = `max-w-3xl rounded-2xl px-4 py-3 ${
+      bubble.className = `max-w-3xl rounded-2xl px-3 py-2.5 sm:px-4 sm:py-3 ${
         isUser ? 'bg-primary text-white rounded-br-md' : 'bg-gray-700 text-gray-100 rounded-bl-md'
       }`;
 
@@ -827,7 +870,7 @@
       }
 
       const copyBtn = document.createElement('button');
-      copyBtn.className = 'shrink-0 self-end mb-1 opacity-0 group-hover:opacity-100 transition-opacity p-1 text-gray-500 hover:text-white';
+      copyBtn.className = 'shrink-0 self-end mb-1 opacity-0 group-hover:opacity-100 transition-opacity p-1.5 text-gray-500 hover:text-white';
       copyBtn.title = '复制';
       copyBtn.innerHTML = '<i data-lucide="copy" class="w-3.5 h-3.5"></i>';
       copyBtn.addEventListener('click', () => copyText(msg.content, copyBtn));
@@ -1045,6 +1088,7 @@
     }
 
     function selectTodoGroup(groupId) {
+      closeSidebar();
       activeTodoGroupId = groupId;
       storeSet(STORAGE_KEYS.ACTIVE_TODO_GROUP, groupId);
       renderTodoGroups();
@@ -1052,6 +1096,7 @@
     }
 
     function addTodoGroup() {
+      closeSidebar();
       showPrompt('请输入分组名称：', '', name => {
         if (!name?.trim()) return;
 
@@ -1246,6 +1291,7 @@
 
     // ========== 设置弹窗 ==========
     function openSettings() {
+      closeSidebar();
       document.getElementById('settingsModal').classList.remove('hidden');
     }
 
