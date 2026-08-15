@@ -1,27 +1,31 @@
 name: Metrics
+
 on:
-  schedule: [{cron: "0 0 * * *"}]
-  workflow_dispatch:
-  push: {branches: ["master", "main"]}
+  schedule:
+    - cron: "0 0 * * *"     # 每天 UTC 0 點執行
+  workflow_dispatch:          # 允許手動執行
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write        # 允許 push
+
     steps:
-      # 手动拉取代码，关闭子模块，解决卡住 Fetching submodules
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: false
+          submodules: false   # 解決 Fetching submodules 卡住的問題
 
-      - uses: lowlighter/metrics@latest
+      # 以下各步驟產生不同的 SVG
+      - name: Main metrics
+        uses: lowlighter/metrics@latest
         with:
           filename: Images/github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
 
-      - uses: lowlighter/metrics@latest
+      - name: Full-year isometric calendar
+        uses: lowlighter/metrics@latest
         with:
           filename: Images/metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -62,3 +66,13 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header
           plugin_introduction: yes
+
+      # 重點：將產生的 SVG 提交並推送回倉庫
+      - name: Commit and push SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Images/*.svg
+          git diff --staged --quiet || git commit -m "Update metrics"
+          git remote set-url origin https://x-access-token:${{ secrets.METRICS_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin HEAD:${GITHUB_REF_NAME}
