@@ -1,3 +1,280 @@
+
+# AI Coding 2026 年 8 月新聞整理
+
+> 承接〈ArtificialIntelligenceJottings〉（AI 程式編輯 / AI 全領域專有名詞時間軸）的 2026-08 最新動向
+> 整理日期：2026-08-17 ｜ 語言：繁體中文 ｜ 風格：延續原筆記「編號 + 一句話白話解釋」
+
+---
+
+## 摘要（30 秒版）
+
+2026 年 8 月，AI Coding 有三件大事同時發生，方向一致——**「Agent 外殼（Harness）」與「插件生態」成了新的兵家必爭之地**：
+
+1. **8/6** — AWS、Cursor、GitHub、微軟、OpenAI、Vercel 等六巨頭共同發布開放插件標準 **Agent Plugins 1.0.0**，要統一「AI 智能體的包裝盒」；發明這套玩法的 **Anthropic 反而缺席**。
+2. **8/13** — **DeepSeek 發布 Harness v0.1**（MIT 開源），主張「一切皆插件」，把模型、工具、UI、沙箱全部模組化，24 小時內在 GitHub 狂攬 7 萬星，被形容為「用《我的世界》的方式幹掉 Claude Code」。
+3. **8 月持續** — **騰訊 WorkBuddy** 以 2097 萬次 PC 月訪問量登頂國內辦公智能體，廣告鋪滿北上廣深地鐵；同時 Claude Code / Codex 仍是海外主力。
+
+**一句話總結：** 2026 下半年，AI 編程的競爭已經從「哪個模型強」升級到「誰的 Agent 外殼＋插件生態能留住開發者」。
+
+---
+
+## 一、2026-08 事件時間軸（重點清單）
+
+| 日期 | 事件 | 意義 |
+|---|---|---|
+| 8/6 | **Agent Plugins 1.0.0** 開放規範公開 | 六大廠商統一智能體插件「包裝盒」，Anthropic 缺席 |
+| 8/6 | 谷歌（Google）發布當天追加為核心維護者 | 開放標準的陣營又 +1 |
+| 8/8 起 | 騰訊 WorkBuddy 廣告「包圍北上廣深」 | 騰訊近年少見的飽和式產品投放 |
+| 8/13 凌晨 | **DeepSeek V4 Pro** 正式推出（強化 Agent 能力） | DeepSeek 模型層更新 |
+| 8/13 | DeepSeek **API 調價**、採用**峰谷分時定價** | 為 Harness 落地做價格配套 |
+| 8/13 晚 | **DeepSeek Harness v0.1（DSH）** 開發者預覽版 + MIT 開源 | 首款 Agent 產品，24h 內 7 萬星 |
+| 8/14 | 澎湃、36氪、快科技等大量報導 | 「Harness」一詞開始出圈 |
+| 8 月上旬 | 傳 OpenAI Codex 月燒 200 美元、Trae 永久免費、WorkBuddy 日活登頂 | 桌面智能體選型被熱議 |
+
+### 承接 7 月的動向（一起看）
+- **7/6** — 騰訊混元 **Hy3** 大模型發布，WorkBuddy 首發接入並限時免費，兩天後算力排隊率一度超過 50%。
+- **7 月** — **MCP 規格「無狀態化」大改版**，瞄準企業級規模部署。
+- **7 月** — 首份 **AI Programmer Index** 出爐：Cursor + Claude Opus 4.7 險勝 Codex 奪冠。
+- **7 月** — Claude Code 佔公開 GitHub 提交約 4%，年化營收傳達 25 億美元。
+
+---
+
+## 二、新專有名詞補充（承接原筆記，編號延續 AI 全領域時間軸 76 起）
+
+> 原筆記已涵蓋到「推理模型 + Agent 原生時代（2025～2026）」。以下補上 2026-08 出現 / 爆紅的新名詞，維持「一句話白話解釋」。
+
+76. **Harness（繮繩 / Agent 外殼）— 2026 年成為熱詞**
+    原義是馬具、繮繩；在 Agent 語境裡指「模型之外那一整套工程外殼」——讓模型能讀檔案、調工具、管上下文、失敗重試、連續工作幾個小時的系統。官方公式：**Model + Harness = Agent**。
+
+77. **DSH（DeepSeek Harness）— 2026 年 8 月 13 日發布**
+    DeepSeek 首款 Agent 產品，開發者預覽版 v0.1，MIT 開源；一行命令 `npx @deepseek-ai/dsh web` 就能在本地瀏覽器拉起一個網頁版 Coding Agent。
+
+78. **一切皆插件（Everything is a Plug-in）— 2026 年 DeepSeek Harness 主張**
+    模型、工具、技能、會話、沙箱、儲存、迴圈、調度、UI……所有 Agent 能力都是可替換的插件；甚至「模型本身」和「你看到的網頁界面」也只是預設掛載的插件。
+
+79. **Cordis — 2026 年因 DSH 被熟知**
+    從 Koishi（QQ 機器人框架）抽出來的微內核，負責插件載入/卸載與依賴管理，特色是「可逆副作用」——卸載插件時自動回收副作用，做到熱插拔。已在 Koishi 運作四年、有 4000+ 社群插件驗證。
+
+80. **Trajectory（軌跡）— DSH 的隱藏亮點**
+    Agent 看到的系統提示、推理過程、工具呼叫結果、子 Agent 調度、每次上下文注入，全部記進一份「只增不改」的會話日誌，可復盤、分叉、回放——等於每個 Agent 都有黑盒子。
+
+81. **Agent Plugins（Agent 插件開放規範）— 2026 年 8 月 6 日公開**
+    六巨頭定的一套「智能體插件包裝盒」標準：一個插件就是一個資料夾，根目錄 `plugin.json` 清單 + `skills/` 技能 + `mcp.json` MCP 設定，一份包走天下。
+
+82. **Vibe Working（感覺辦公）— WorkBuddy 帶紅的詞**
+    Vibe Coding（感覺編程）的辦公版延伸：用口語描述「你想要什麼感覺」，AI 自動把文件、簡報、程式、郵件做完。
+
+83. **AI Programmer Index — 2026 年 7 月首發**
+    首個衡量 AI 程式員能力的指數，以實際程式任務排名各家 Coding Agent（首屆：Cursor + Opus 4.7 險勝 Codex）。
+
+84. **MCP 無狀態化（Stateless MCP）— 2026 年 7 月規格改版**
+    MCP 從「每次都要記住上一輪狀態」改成無狀態設計，大幅簡化規模化部署，瞄準企業級場景。
+
+---
+
+## 三、DeepSeek Harness 專章：用《我的世界》的方式幹掉 Claude Code？
+
+### 3.1 它是什麼？
+
+2026 年 8 月 13 日晚間，DeepSeek 宣布 API 調價幾個小時後，甩出首款 Agent 產品 **DeepSeek Harness v0.1 開發者預覽版**，MIT 協議、程式碼全開。
+
+官方給出的公式很乾脆：**Model + Harness = Agent**。模型負責思考推理，Harness 負責實際執行。官方團隊把模型比作「Agent 的靈魂」，Harness 則「給予 Agent 理解環境、使用工具，並在真實場景中持續工作的能力」。
+
+安裝只要一行命令，跑在你自己的機器上、界面開在瀏覽器裡：
+
+```bash
+npx @deepseek-ai/dsh web
+```
+
+### 3.2 最大賣點：「一切皆插件」
+
+DSH 的核心理念是「一切皆插件」——**模型、工具、技能、會話、沙箱、儲存、迴圈、調度、UI，所有 Agent 能力均由插件組合而成，可自由替換、靈活重組**。
+
+整套框架基於 **Cordis 插件元框架**打造（出自 Koishi 社群，作者 Shigma）。開發者不需修改專案原始碼，就能透過新增 / 替換插件實現任意模組的自訂與擴充。
+
+**四種預設模式**（本質是四份插件配置清單）：
+
+| 模式 | 內容 | 用途 |
+|---|---|---|
+| **標準模式** | 檔案編輯、Shell、搜尋、技能、規劃、子 Agent、工作流全套 | 通用開發 |
+| **PTC 程序化工具調用** | 模型直接寫 TypeScript 程式，把多次工具呼叫合併成一次執行 | 減少來回往返、省 Token |
+| **極簡模式** | 只留一個持久 bash + 一個檔案編輯器 | 給模型做基準測試（看裸實力） |
+| **創造模式** | 可查看執行時狀態、記憶體內調試 Cordis 插件 | 自訂全新模式 |
+
+### 3.3 生態爆炸：288 個插件倉庫、24 小時不到
+
+發布不到 24 小時，GitHub 上的 `dsh-plugin` 話題已收錄 **288 個插件倉庫**（社群目錄站 `awesome-dsh-plugins` 每日追蹤相容性）。因為內測期已鋪墊一個多月，生態是一夜之間浮出來的。
+
+社群插件充滿「玩心」：
+- **dsh-plan-execute** — 雙模型路由：規劃用推理模型、執行切換到便宜模型，省錢。
+- **dsh-vision** — 給純文字 DeepSeek 模型「裝眼睛」，橋接任意 OpenAI 相容視覺模型。
+- **dsh-qq2006 / dsh-ui-whale / whale-girl** — 換 2006 年 QQ 皮膚、像素鯨魚、鯨魚娘桌寵。
+- **dsh-ads / dsh-anti-ads** — 加廣告的插件 vs 擋廣告的插件，生態自帶攻防。
+- **dsh-gomoku** — 跟 AI 下五子棋。
+- 沙箱也有三種可選（sandbox-micro / sandbox-mxc / sandbox-nono），「Agent 在什麼籠子裡跑程式」也是設定項。
+- 還有遠端渠道插件（QQ、微信、飛書、企業微信、Telegram），讓 DSH 變成能被 @ 的機器人。
+
+關鍵洞察：**在 DSH 裡，「用哪個模型」和「模型有什麼能力」都被降級成皮膚級的設定**——跟換主題是同一個操作。這跟 Claude Code 截然不同：後者的模型、能力、上下文壓縮全是 Anthropic 單方面決定的。
+
+### 3.4 戰略意圖：不是「又一個 Claude Code」，是「讓繮繩免費」
+
+36氪的結論很尖銳：**Claude Code 是一個意見極其強烈的產品**——工具集、權限模型、上下文壓縮、子 Agent 調度全是 Anthropic 訂死的，訂閱費買的就是「模型與外殼互相咬合」這套，拆不開、抄不走。Harness 在 Anthropic 手裡是產品、是收入、是壁壘。
+
+而 DSH 從第一天就選了「**把這個品類本身開源掉**」的路：不跟你比誰的繮繩編得好，直接宣布**繮繩這個東西不該收錢**。配合 8/13 同一天的 API 峰谷調價，DeepSeek 的算盤是：**只要 Harness 被拉平成公共品，競爭就被壓回「模型本身的能力與價格」**——而那正是 DeepSeek 的主場。
+
+### 3.5 外界評價與短板
+
+- **Armin Ronacher**（Flask 創始人）：「一些很酷的想法，讓我重新思考產品裡 Harness 重構的方式。」
+- 有人用完全相同的任務（Three.js 滑沙遊戲）在 DSH、Reasonix、Codex 中跑，**DeepSeek V4 Flash + DSH 的組合表現最好**。
+- **短板**：任務耗時較長、Token 消耗大；使用體驗複雜（Skills 加載機制、CLI 方式都有學習成本），「技術架構走得比產品體驗快」。
+- **相容性警告**：官方 README 用全大寫標註 `THERE WILL BE COMPATIBILITY-BREAKING CHANGES`（一定會有破壞相容的變更）；社群還存在「DSH 可行攻擊鏈 demo」倉庫——人人可掛插件、插件能碰 Shell 和檔案系統的架構，攻擊面不言而喻。
+
+> 來源：[36氪 矽星人深度體驗](https://www.36kr.com/p/3938774780263814) ｜ [澎湃新聞：Harness 是什麼？有什麼特別？](https://m.thepaper.cn/detail/33783308) ｜ [快科技（DoNews 轉載）](https://www.donews.com/news/detail/1/6670751.html)
+
+---
+
+## 四、騰訊 WorkBuddy 專章：辦公智能體的「小龍蝦」
+
+### 4.1 它是什麼？
+
+WorkBuddy 是騰訊旗下的**桌面 / 辦公 AI 智能體**，2026 年在國內爆紅。媒體形容它是一隻「小龍蝦」——因為 2026 年初 OpenClaw 在國內快速走紅後，騰訊內部接連冒出 QClaw、WorkBuddy、Marvis 等多款「龍蝦」產品，被外界稱為「百蝦大戰」；直到 7 月騰訊把 QClaw 相關團隊調整到 WorkBuddy 部門，「百蝦大戰」正式收口，資源向 WorkBuddy 集中。
+
+### 4.2 為何爆火？（四大原因）
+
+1. **背靠騰訊生態**：已接入騰訊文件，並與 ima、騰訊會議、企業微信、騰訊樂享等知識/協作產品聯動；大量「開箱即用」本土 Skill（QQ 郵箱、公眾號助手、小紅書助手、飛書、谷歌全家桶）。
+2. **低價 + 免費策略**：會員、積分、模型調用結合的收費方式，註冊送積分、邀請獎勵、模型限免。相比成本高的 Codex、帳號風控嚴格的 Claude Code，門檻極低。
+3. **多模型可選**：同時接入**混元、DeepSeek、GLM、Kimi**，用戶依任務與成本選模型（Hy3 首發時，主動選 Hy3 的比例超過 60%）。
+4. **對話式互動**：把使用門檻降到最低。
+
+### 4.3 數字與定位
+
+- 易觀報告：**2026 Q2 國內辦公智能體平台 PC 端月訪問量 2097 萬次，排名第一**，超過第二名 TRAE 與第三名 QoderWork 的總和。
+- 月活 2000 萬級、日活百萬級，是國內用戶規模最大的辦公智能體應用。
+- 技術源自騰訊雲 2023 年啟動的 AI 程式工具 **CodeBuddy**；2026 年 1 月 Claude Cowork 發布後，負責人基於既有智能體平台提出構想，一個週末做出初代。
+- 騰訊內部有「繼 QQ、微信後第三個戰略級產品」的說法，馬化騰親自參與產品會議。
+- 企業端是下一階段重點：生態團隊正在大量接觸企業、推進採購與聯合開發，下半年主打政企、製造業、網際網路可複製方案。
+
+### 4.4 與 Claude Code / Cursor 的定位差異
+
+| | **WorkBuddy** | **Claude Code / Codex** | **Cursor** |
+|---|---|---|---|
+| 主力場景 | 辦公、文件、知識、日常任務 | 終端機 / 軟體工程 | AI 原生 IDE |
+| 目標用戶 | 辦公室上班族、非程式人 | 開發者 | 開發者 |
+| 特色 | 本土化 Skill、多模型、免費用戶多 | 工程能力強、外殼與模型咬合 | 專案理解、補全體驗 |
+| 收費 | 低價/免費 + 積分 | 訂閱制 | 訂閱制 |
+
+> 來源：[新浪財經/界面新聞：騰訊大力把 WorkBuddy 送上牌桌](https://finance.sina.com.cn/roll/2026-08-08/doc-inimqtzr4218954.shtml)
+
+---
+
+## 五、AI 插件體系 / 插件標準專章
+
+### 5.1 Agent Plugins 1.0.0（8/6 開放規範）
+
+8 月 6 日，一份名為 **Agent Plugins 1.0.0** 的開放規範正式公開，目的是給 AI 智能體的插件定一個**統一的「包裝盒」**——「一次打包，就能在所有相容的智能體客戶端裡通用」。
+
+**共建者**：AWS、Anysphere（Cursor 母公司）、GitHub、微軟、OpenAI、Vercel 六家，**谷歌在發布當天追加為核心維護者**。**唯獨少了開創者 Anthropic。**
+
+**規範內容（一個插件 = 一個資料夾）：**
+
+```
+my-plugin/
+├── plugin.json          ← 必填：$schema 與 name，其餘靠固定位置
+├── skills/              ← Agent Skills（可重用的指令與資源）
+│   └── summarize/
+│       ├── SKILL.md
+│       ├── scripts/
+│       └── references/
+├── mcp.json             ← MCP 伺服器設定（stdio / Streamable HTTP / 舊版 HTTP+SSE）
+└── com.example.client/  ← 各家「私貨」放反向網域名稱目錄（別人掃到就略過）
+```
+
+**關鍵設計哲學：**
+- **只統一包裝盒，不管運行**：安裝、分發、權限、沙箱、認證、信任驗證、UX 全留給各家客戶端自己處理。
+- **只管兩類可攜組件**：skills/ 與 mcp.json；hooks、斜杠命令、custom agents 還是各家地盤。
+- **規範仍標註「工作草案」**，離成熟標準還有距離。
+- 一句話：**Agent Skills 管指令，MCP 管連工具，Agent Plugins 管把這兩個裝進同一個包裝盒。**
+
+### 5.2 為什麼說「撞臉 Claude」？
+
+這套格式跟 **Claude Code 一直用的插件系統**幾乎一樣：`plugin.json` + `skills/` + `mcp.json` + `commands` + `agents`，Anthropic 是最早跑通「插件 = 技能 + MCP + 清單」打包思路的公司，甚至開放了兩個官方插件市場。
+
+這次的開放標準，基本照著 Anthropic 家格式長，Anthropic 卻沒上桌。微軟 VS Code 預設插件市場裡有 `anthropics/claude-code`，一邊支援新格式、一邊繼續認 `.claude-plugin/plugin.json`；OpenAI 的 Codex 甚至保留 Claude 原來的變數名，只為相容既有 Claude 插件。
+
+**為什麼缺席很關鍵**：底層標準一旦談攏，競爭就會上移到「插件生態誰更大、誰讓開發者第一個想到自己」。Anthropic 向來更願意自己蓋自己的樓，這次它選擇繼續經營從格式到市場、再到分發的完整閉環。
+
+### 5.3 MCP 的演進（承接原筆記 54 條）
+
+- **MCP（2024/11 Anthropic 發布）**：讓任何 AI 都能連上各種軟體、資料庫與工具的通用接頭標準。
+- **2026 年 7 月無狀態化改版**：MCP 走向無狀態設計，瞄準企業級規模部署——這是它從「開發者玩具」走向「企業基礎設施」的關鍵一步。
+- **MCP vs 插件**：MCP 是「工具連線協定」，插件是「能力打包單位」，兩者互補；Agent Plugins 規範正是把 MCP Server 收進包裝盒的一部分。
+
+> 來源：[智源社區/新智元：六巨頭定 AI 插件新標準](https://hub.baai.ac.cn/view/56983) ｜ [Agent Plugins 官方網站](https://agent-plugins.org/) ｜ [Ars Technica：MCP 無狀態化](https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/)
+
+---
+
+## 六、其他 2026-08 值得關注的動向
+
+### 6.1 Ponytail（最懶高級工程師規則集）
+GitHub 上爆紅（74k+ 星）的純文字規則集：讓 AI Agent「像房間裡最懶的高級開發者」——先查標準庫、再查專案現有程式碼、再查依賴，最後才寫新程式；實測平均可減少約 54% 的程式碼。作者 repo 已在你的 Process 資料夾內（ponytail-main）。[GitHub](https://github.com/DietrichGebert/ponytail) ｜ [基準修正報導（InfoQ）](https://www.infoq.com/news/2026/08/ponytail-agent-skill-benchmark/)
+
+### 6.2 模型層
+- **DeepSeek V4 Pro**（8/13）：增強 Agent 能力；V4 全系列正式版上線。
+- **GPT-5.4 / Claude Sonnet 4.6 / Gemini 3.1 Pro**：3 月後的模型大戰持續，模型「月月出新」成常態，選模型比選工具更關鍵。
+
+### 6.3 評測與指數
+- **AI Programmer Index（7 月首發）**：Cursor + Opus 4.7 險勝 Codex；評測標準化（如 AI Programmer Index、SWE-bench）越來越受企業重視。
+- **AI Programmer Index 報導**：[The BlockBeats](https://en.theblockbeats.news/flash/345472)
+
+---
+
+## 七、對「個人開發者」與「團隊各角色」的啟示
+
+| 角色 | 2026-08 的關鍵啟示 |
+|---|---|
+| **個人開發者** | ① 可用 `npx @deepseek-ai/dsh web` 體驗 DSH「一切皆插件」；② 用 Ponytail 規則集對抗「AI 愛寫大量程式」；③ Agent Plugins 規範出來後，寫插件可以「打一份包、到處用」 |
+| **Tech Lead / 架構師** | Agent 外殼成為新技術棧取捨：選 Claude Code（體驗成熟、閉環）還是 DSH（開源、可拆、生態自由）？建議先跑原型再定案 |
+| **Dev / 工程師** | 開始學習「Harness 思維」：模型只是插件之一；Context 管理、工具鏈、可追溯（Trajectory）才是 Agent 工程的核心 |
+| **DevOps / SRE** | ① Agent 的沙箱、權限、攻擊面（DSH 的插件能碰 Shell）是新的安全焦點；② MCP 無狀態化讓企業部署更可行 |
+| **團隊 / 企業決策** | ① 插件標準化（Agent Plugins / MCP）降低多工具並存成本；② WorkBuddy 代表「辦公入口」之爭，企業可評估其本土化 Skill 與企業端方案；③ 別綁死單一外殼——DeepSeek 正在把 Harness 拉平為公共品 |
+
+---
+
+## 八、關鍵詞與延伸閱讀
+
+**關鍵詞**：Harness、DSH、一切皆插件、Cordis、Trajectory、Agent Plugins、MCP 無狀態化、Vibe Working、AI Programmer Index、Ponytail、WorkBuddy、百蝦大戰
+
+**核心來源**
+- [36氪 矽星人：玩了一夜 DeepSeek Harness](https://www.36kr.com/p/3938774780263814)
+- [澎湃新聞：DeepSeek 智能體框架開放測試](https://m.thepaper.cn/detail/33783308)
+- [新浪財經/界面：騰訊大力把 WorkBuddy 送上牌桌](https://finance.sina.com.cn/roll/2026-08-08/doc-inimqtzr4218954.shtml)
+- [智源/新智元：六巨頭定 AI 插件新標準](https://hub.baai.ac.cn/view/56983)
+- [Agent Plugins 官方規範](https://agent-plugins.org/)
+- [Ars Technica：MCP 無狀態化](https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/)
+- [Ponytail（GitHub）](https://github.com/DietrichGebert/ponytail)
+- [AI Programmer Index（The BlockBeats）](https://en.theblockbeats.news/flash/345472)
+
+**承接原筆記**：本文為〈ArtificialIntelligenceJottings.md〉的 2026-08 補充篇；原筆記兩份時間軸的編號（程式編輯 1–36、全領域 1–75）不變，本文新增名詞自 76 起延續。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------
+
 * 如果不知道如何調用 skill 可以透過 agent teams 調用嗎，
 
 設一個「技能管理員 Agent」, 根據你的問題自動去 skills/ 資料夾找最適合的，然後叫其他 Agent 執行,
