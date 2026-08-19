@@ -199,6 +199,7 @@
             <option value="openai">OpenAI (官方)</option>
             <option value="deepseek">DeepSeek</option>
             <option value="zhipu">智谱 AI</option>
+            <option value="opencode">OpenCode Go</option>
             <option value="translator">📚 翻译助手 (推荐)</option>
             <option value="local">本地代理 / Air Gap</option>
             <option value="custom">自定义</option>
@@ -329,6 +330,7 @@
             <option value="openai">OpenAI 兼容格式</option>
             <option value="deepseek">DeepSeek</option>
             <option value="zhipu">智谱 AI</option>
+            <option value="opencode">OpenCode Go</option>
             <option value="translator">📚 翻译助手 (推荐)</option>
             <option value="local">本地代理 / Air Gap</option>
           </select>
@@ -427,6 +429,13 @@
         balancePath: 'data.total_usable',
         balanceCurrency: 'CNY'
       },
+      opencode: {
+        name: 'OpenCode Go',
+        baseUrl: 'http://localhost:13337/v1',
+        model: 'MiMo-V2.5',
+        systemPrompt: 'You are a helpful AI coding assistant. Help me write, debug, and improve code.',
+        balanceCurrency: 'USD'
+      },
       translator: {
         name: '📚 翻译助手',
         baseUrl: 'https://api.openai.com/v1',
@@ -451,6 +460,7 @@
       openai: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'o4-mini', 'o3'],
       deepseek: ['deepseek-chat', 'deepseek-reasoner'],
       zhipu: ['glm-4-flash', 'glm-4-air', 'glm-4-plus', 'glm-4-long', 'glm-4v-flash', 'glm-4.5-flash', 'glm-4.5-air', 'glm-4.6'],
+      opencode: ['Grok 4.5', 'GLM-5.3', 'GLM-5.2', 'GLM-5.1', 'GPT 5.6 Luna', 'Kimi K3', 'Kimi K2.7 Code', 'Kimi K2.6', 'MiMo-V2.5', 'MiMo-V2.5-Pro', 'MiniMax M3', 'MiniMax M2.7', 'Muse Spark 1.2 Contributor', 'Qwen3.8 Max', 'Qwen3.7 Max', 'Qwen3.7 Plus', 'Qwen3.6 Plus', 'DeepSeek V4 Pro', 'DeepSeek V4 Flash', 'Hy3'],
       translator: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1-mini'],
       local: ['gpt-4o', 'gpt-4o-mini', 'gpt-3.5-turbo'],
       custom: []
@@ -476,7 +486,12 @@
       'gpt-4.1-nano':  { in: 0.10, out: 0.40 },
       'o4-mini':       { in: 1.10, out: 4.40 },
       'o3':            { in: 2,    out: 8 },
-      'gpt-3.5-turbo': { in: 0.50, out: 1.50 } // 供 local 预设
+      'gpt-3.5-turbo': { in: 0.50, out: 1.50 }, // 供 local 预设
+      // OpenCode 路由常用模型 (USD)
+      'claude-sonnet-4-20250514': { in: 3,    out: 15 },
+      'claude-haiku-4-20250414':  { in: 0.80, out: 4 },
+      'gemini-2.5-flash':         { in: 0.15, out: 0.60 },
+      'gemini-2.5-pro':           { in: 1.25, out: 10 },
     };
 
     // ========== 全局状态 ==========
