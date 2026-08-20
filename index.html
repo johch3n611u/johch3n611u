@@ -431,8 +431,9 @@
       },
       opencode: {
         name: 'OpenCode Go',
-        baseUrl: 'http://localhost:13337/v1',
-        model: 'MiMo-V2.5',
+        baseUrl: 'https://opencode.ai/zen/go/v1',
+        model: 'mimo-v2.5',
+        apiFormat: 'anthropic',
         systemPrompt: 'You are a helpful AI coding assistant. Help me write, debug, and improve code.',
         balanceCurrency: 'USD'
       },
@@ -460,7 +461,7 @@
       openai: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'o4-mini', 'o3'],
       deepseek: ['deepseek-chat', 'deepseek-reasoner'],
       zhipu: ['glm-4-flash', 'glm-4-air', 'glm-4-plus', 'glm-4-long', 'glm-4v-flash', 'glm-4.5-flash', 'glm-4.5-air', 'glm-4.6'],
-      opencode: ['Grok 4.5', 'GLM-5.3', 'GLM-5.2', 'GLM-5.1', 'GPT 5.6 Luna', 'Kimi K3', 'Kimi K2.7 Code', 'Kimi K2.6', 'MiMo-V2.5', 'MiMo-V2.5-Pro', 'MiniMax M3', 'MiniMax M2.7', 'Muse Spark 1.2 Contributor', 'Qwen3.8 Max', 'Qwen3.7 Max', 'Qwen3.7 Plus', 'Qwen3.6 Plus', 'DeepSeek V4 Pro', 'DeepSeek V4 Flash', 'Hy3'],
+      opencode: ['mimo-v2.5', 'mimo-v2.5-pro', 'deepseek-v4-flash', 'deepseek-v4-pro', 'glm-5.3', 'glm-5.2', 'glm-5.1', 'gpt-5.6-luna', 'kimi-k3', 'kimi-k2.7-code', 'kimi-k2.6', 'minimax-m3', 'minimax-m2.7', 'muse-spark-1.2-contributor', 'qwen3.8-max', 'qwen3.7-max', 'qwen3.7-plus', 'qwen3.6-plus', 'grok-4.5', 'hy3'],
       translator: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1-mini'],
       local: ['gpt-4o', 'gpt-4o-mini', 'gpt-3.5-turbo'],
       custom: []
@@ -619,6 +620,7 @@
         apiKey: token,
         baseUrl: baseUrl,
         model: PRESETS[provider]?.model || 'gpt-4o-mini',
+        apiFormat: PRESETS[provider]?.apiFormat || '',
         systemPrompt: prompt || '你是一个有帮助的 AI 助手。',
         temperature: 0.7
       };
@@ -727,14 +729,17 @@
       }
 
       let p = getActiveProfile();
+      const presetKey = document.getElementById('presetSelector').value;
+      const apiFormat = PRESETS[presetKey]?.apiFormat || p?.apiFormat || '';
       if (p) {
-        Object.assign(p, { name, apiKey, baseUrl, model, systemPrompt, balanceUrl, balancePath, balanceCurrency, priceIn, priceOut });
+        Object.assign(p, { name, apiKey, baseUrl, model, systemPrompt, balanceUrl, balancePath, balanceCurrency, priceIn, priceOut, apiFormat });
       } else {
         p = {
           id: genId(),
-          provider: document.getElementById('presetSelector').value || 'custom',
+          provider: presetKey || 'custom',
           name, apiKey, baseUrl, model, systemPrompt,
           balanceUrl, balancePath, balanceCurrency, priceIn, priceOut,
+          apiFormat,
           temperature: 0.7
         };
         profiles.push(p);
@@ -937,32 +942,56 @@
       setTokenLabel('…');
 
       try {
+        const isAnthropic = profile.apiFormat === 'anthropic';
         // 构建消息：优先使用对话独立的 System Prompt，确保在最前面
         const messages = [];
         const sysPrompt = conv.systemPrompt || profile.systemPrompt;
-        if (sysPrompt) {
+        if (sysPrompt && !isAnthropic) {
           messages.push({ role: 'system', content: sysPrompt });
         }
-        
+
         // 添加历史消息（排除 system，避免重复）
         conv.messages.slice(0, -1).forEach(m => {
           if (m.role !== 'system') messages.push(m);
         });
 
-        const response = await fetch(`${profile.baseUrl}/chat/completions`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${profile.apiKey}`
-          },
-          body: JSON.stringify({
+        let response;
+        if (isAnthropic) {
+          // ========== Anthropic Messages API 格式 ==========
+          const body = {
             model: profile.model,
             messages: messages,
-            stream: true,
-            temperature: profile.temperature || 0.7,
-            stream_options: { include_usage: true }
-          })
-        });
+            max_tokens: 4096,
+            stream: true
+          };
+          if (sysPrompt) body.system = sysPrompt;
+
+          response = await fetch(`${profile.baseUrl}/messages?beta=true`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': profile.apiKey,
+              'anthropic-version': '2023-06-01'
+            },
+            body: JSON.stringify(body)
+          });
+        } else {
+          // ========== OpenAI Chat Completions 格式 ==========
+          response = await fetch(`${profile.baseUrl}/chat/completions`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${profile.apiKey}`
+            },
+            body: JSON.stringify({
+              model: profile.model,
+              messages: messages,
+              stream: true,
+              temperature: profile.temperature || 0.7,
+              stream_options: { include_usage: true }
+            })
+          });
+        }
 
         if (!response.ok) {
           const errText = await response.text();
@@ -973,32 +1002,76 @@
         const decoder = new TextDecoder();
         let buffer = '';
 
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
+        if (isAnthropic) {
+          // ========== 解析 Anthropic SSE 流 ==========
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
 
-          buffer += decoder.decode(value, { stream: true });
-          const lines = buffer.split('\n');
-          buffer = lines.pop();
+            buffer += decoder.decode(value, { stream: true });
+            const blocks = buffer.split('\n\n');
+            buffer = blocks.pop();
 
-          for (const line of lines) {
-            const trimmed = line.trim();
-            if (!trimmed || !trimmed.startsWith('data: ')) continue;
-            const data = trimmed.slice(6);
-            if (data === '[DONE]') continue;
+            for (const block of blocks) {
+              const lines = block.split('\n');
+              let eventType = '';
+              let data = '';
 
-            try {
-              const json = JSON.parse(data);
-              if (json.usage) exactUsage = json.usage;
-              const delta = json.choices?.[0]?.delta?.content;
-              if (delta) {
-                assistantMsg.content += delta;
-                contentEl.innerHTML = marked.parse(assistantMsg.content);
-                highlightBlocks(contentEl);
-                container.scrollTop = container.scrollHeight;
-                setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
+              for (const line of lines) {
+                if (line.startsWith('event: ')) eventType = line.slice(7).trim();
+                else if (line.startsWith('data: ')) data = line.slice(6);
               }
-            } catch (e) { /* 忽略解析错误 */ }
+
+              if (!data) continue;
+
+              try {
+                const json = JSON.parse(data);
+
+                if (eventType === 'content_block_delta' && json.delta?.text) {
+                  assistantMsg.content += json.delta.text;
+                  contentEl.innerHTML = marked.parse(assistantMsg.content);
+                  highlightBlocks(contentEl);
+                  container.scrollTop = container.scrollHeight;
+                  setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
+                } else if (eventType === 'message_delta' && json.usage) {
+                  exactUsage = {
+                    prompt_tokens: json.usage.input_tokens || 0,
+                    completion_tokens: json.usage.output_tokens || 0,
+                    total_tokens: (json.usage.input_tokens || 0) + (json.usage.output_tokens || 0)
+                  };
+                }
+              } catch (e) { /* 忽略解析错误 */ }
+            }
+          }
+        } else {
+          // ========== 解析 OpenAI SSE 流 ==========
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split('\n');
+            buffer = lines.pop();
+
+            for (const line of lines) {
+              const trimmed = line.trim();
+              if (!trimmed || !trimmed.startsWith('data: ')) continue;
+              const data = trimmed.slice(6);
+              if (data === '[DONE]') continue;
+
+              try {
+                const json = JSON.parse(data);
+                if (json.usage) exactUsage = json.usage;
+                const delta = json.choices?.[0]?.delta?.content;
+                if (delta) {
+                  assistantMsg.content += delta;
+                  contentEl.innerHTML = marked.parse(assistantMsg.content);
+                  highlightBlocks(contentEl);
+                  container.scrollTop = container.scrollHeight;
+                  setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
+                }
+              } catch (e) { /* 忽略解析错误 */ }
+            }
           }
         }
 
@@ -1807,9 +1880,11 @@
         return;
       }
       try {
-        const res = await fetch(baseUrl.replace(/\/+$/, '') + '/models', {
-          headers: { 'Authorization': 'Bearer ' + apiKey }
-        });
+        const isAnthropic = PRESETS[document.getElementById('presetSelector').value]?.apiFormat === 'anthropic';
+        const headers = isAnthropic
+          ? { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' }
+          : { 'Authorization': 'Bearer ' + apiKey };
+        const res = await fetch(baseUrl.replace(/\/+$/, '') + '/models', { headers });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const json = await res.json();
         const ids = (json.data || []).map(m => m.id).filter(Boolean);
