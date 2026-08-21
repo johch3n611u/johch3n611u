@@ -198,8 +198,13 @@
             <option value="">-- 选择预设 --</option>
             <option value="openai">OpenAI (官方)</option>
             <option value="deepseek">DeepSeek</option>
-            <option value="zhipu">智谱 AI</option>
+            <option value="siliconflow">SiliconFlow (聚合)</option>
             <option value="opencode">OpenCode Go</option>
+            <option value="moonshot">Kimi / Moonshot</option>
+            <option value="dashscope">Qwen / DashScope</option>
+            <option value="zhipu">智谱 AI (GLM)</option>
+            <option value="minimax">MiniMax</option>
+            <option value="xai">xAI (Grok)</option>
             <option value="translator">📚 翻译助手 (推荐)</option>
             <option value="local">本地代理 / Air Gap</option>
             <option value="custom">自定义</option>
@@ -262,6 +267,12 @@
               <label class="text-sm text-gray-400">输出价格覆盖（每百万 tokens）</label>
               <input type="text" id="profilePriceOut" placeholder="如 8，留空使用内置价格表"
                 class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            <div>
+              <label class="text-sm text-gray-400">CORS Proxy URL（解决跨域限制）</label>
+              <input type="text" id="profileCorsProxy" placeholder="如 http://127.0.0.1:15724/proxy，留空不使用"
+                class="w-full mt-1 bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary">
+              <p class="text-xs text-gray-500 mt-1">用于 OpenCode Go 等不支持 CORS 的 API。需要先启动 relay.js</p>
             </div>
             <p class="text-xs text-gray-500">留空则使用所选预设的默认值；自定义供应商可自行填写。</p>
           </div>
@@ -329,8 +340,13 @@
             class="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2.5 text-sm">
             <option value="openai">OpenAI 兼容格式</option>
             <option value="deepseek">DeepSeek</option>
-            <option value="zhipu">智谱 AI</option>
+            <option value="siliconflow">SiliconFlow (聚合)</option>
             <option value="opencode">OpenCode Go</option>
+            <option value="moonshot">Kimi / Moonshot</option>
+            <option value="dashscope">Qwen / DashScope</option>
+            <option value="zhipu">智谱 AI (GLM)</option>
+            <option value="minimax">MiniMax</option>
+            <option value="xai">xAI (Grok)</option>
             <option value="translator">📚 翻译助手 (推荐)</option>
             <option value="local">本地代理 / Air Gap</option>
           </select>
@@ -420,8 +436,36 @@
         balancePath: 'balance_infos[0].total_balance',
         balanceCurrency: 'CNY'
       },
+      siliconflow: {
+        name: 'SiliconFlow 聚合',
+        baseUrl: 'https://api.siliconflow.cn/v1',
+        model: 'Qwen/Qwen3-8B',
+        systemPrompt: '你是一个专业的 AI 助手，请准确回答用户的问题。',
+        balanceCurrency: 'CNY'
+      },
+      opencode: {
+        name: 'OpenCode Go',
+        baseUrl: 'https://opencode.ai/zen/go/v1',
+        model: 'mimo-v2.5',
+        systemPrompt: 'You are a helpful AI coding assistant. Help me write, debug, and improve code.',
+        balanceCurrency: 'USD'
+      },
+      moonshot: {
+        name: 'Kimi / Moonshot',
+        baseUrl: 'https://api.moonshot.cn/v1',
+        model: 'moonshot-v1-8k',
+        systemPrompt: '你是一个专业的 AI 助手，请准确回答用户的问题。',
+        balanceCurrency: 'CNY'
+      },
+      dashscope: {
+        name: 'Qwen / DashScope',
+        baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+        model: 'qwen-plus',
+        systemPrompt: '你是一个专业的 AI 助手，请准确回答用户的问题。',
+        balanceCurrency: 'CNY'
+      },
       zhipu: {
-        name: '智谱 AI',
+        name: '智谱 AI (GLM)',
         baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
         model: 'glm-4-flash',
         systemPrompt: '你是一个智能助手，请帮助用户解决问题。',
@@ -429,12 +473,18 @@
         balancePath: 'data.total_usable',
         balanceCurrency: 'CNY'
       },
-      opencode: {
-        name: 'OpenCode Go',
-        baseUrl: 'https://opencode.ai/zen/go/v1',
-        model: 'mimo-v2.5',
-        apiFormat: 'anthropic',
-        systemPrompt: 'You are a helpful AI coding assistant. Help me write, debug, and improve code.',
+      minimax: {
+        name: 'MiniMax',
+        baseUrl: 'https://api.minimax.chat/v1',
+        model: 'MiniMax-Text-01',
+        systemPrompt: '你是一个专业的 AI 助手，请准确回答用户的问题。',
+        balanceCurrency: 'CNY'
+      },
+      xai: {
+        name: 'xAI (Grok)',
+        baseUrl: 'https://api.x.ai/v1',
+        model: 'grok-2',
+        systemPrompt: 'You are a helpful AI assistant.',
         balanceCurrency: 'USD'
       },
       translator: {
@@ -460,8 +510,13 @@
     const MODEL_LISTS = {
       openai: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'o4-mini', 'o3'],
       deepseek: ['deepseek-chat', 'deepseek-reasoner'],
-      zhipu: ['glm-4-flash', 'glm-4-air', 'glm-4-plus', 'glm-4-long', 'glm-4v-flash', 'glm-4.5-flash', 'glm-4.5-air', 'glm-4.6'],
+      siliconflow: ['Qwen/Qwen3-8B', 'Qwen/Qwen2.5-72B-Instruct', 'deepseek-ai/DeepSeek-V3', 'deepseek-ai/DeepSeek-R1', 'Pro/XiaomiMiMo-V2-7B-RL', 'THUDM/glm-4-9b-chat', 'meta-llama/Meta-Llama-3.1-8B-Instruct'],
       opencode: ['mimo-v2.5', 'mimo-v2.5-pro', 'deepseek-v4-flash', 'deepseek-v4-pro', 'glm-5.3', 'glm-5.2', 'glm-5.1', 'gpt-5.6-luna', 'kimi-k3', 'kimi-k2.7-code', 'kimi-k2.6', 'minimax-m3', 'minimax-m2.7', 'muse-spark-1.2-contributor', 'qwen3.8-max', 'qwen3.7-max', 'qwen3.7-plus', 'qwen3.6-plus', 'grok-4.5', 'hy3'],
+      moonshot: ['moonshot-v1-8k', 'moonshot-v1-32k', 'moonshot-v1-128k'],
+      dashscope: ['qwen-plus', 'qwen-turbo', 'qwen-max', 'qwen-long', 'qwen-vl-plus'],
+      zhipu: ['glm-4-flash', 'glm-4-air', 'glm-4-plus', 'glm-4-long', 'glm-4v-flash', 'glm-4.5-flash', 'glm-4.5-air', 'glm-4.6'],
+      minimax: ['MiniMax-Text-01', 'abab6.5s-chat', 'abab5.5-chat'],
+      xai: ['grok-2', 'grok-2-mini', 'grok-3-mini-beta'],
       translator: ['gpt-4o-mini', 'gpt-4o', 'gpt-4.1-mini'],
       local: ['gpt-4o', 'gpt-4o-mini', 'gpt-3.5-turbo'],
       custom: []
@@ -620,7 +675,6 @@
         apiKey: token,
         baseUrl: baseUrl,
         model: PRESETS[provider]?.model || 'gpt-4o-mini',
-        apiFormat: PRESETS[provider]?.apiFormat || '',
         systemPrompt: prompt || '你是一个有帮助的 AI 助手。',
         temperature: 0.7
       };
@@ -685,6 +739,7 @@
       modelDraft = p?.model || '';
       document.getElementById('profilePriceIn').value = p?.priceIn ?? '';
       document.getElementById('profilePriceOut').value = p?.priceOut ?? '';
+      document.getElementById('profileCorsProxy').value = p?.corsProxy ?? '';
       document.getElementById('profileModal').classList.remove('hidden');
       populateModelSelect();
       loadModelsForProfile();
@@ -722,6 +777,7 @@
       const balanceCurrency = document.getElementById('profileBalanceCurrency').value.trim();
       const priceIn = document.getElementById('profilePriceIn').value.trim();
       const priceOut = document.getElementById('profilePriceOut').value.trim();
+      const corsProxy = document.getElementById('profileCorsProxy').value.trim();
 
       if (!name || !apiKey || !baseUrl || !model) {
         showAlert('请填写完整信息');
@@ -729,17 +785,14 @@
       }
 
       let p = getActiveProfile();
-      const presetKey = document.getElementById('presetSelector').value;
-      const apiFormat = PRESETS[presetKey]?.apiFormat || p?.apiFormat || '';
       if (p) {
-        Object.assign(p, { name, apiKey, baseUrl, model, systemPrompt, balanceUrl, balancePath, balanceCurrency, priceIn, priceOut, apiFormat });
+        Object.assign(p, { name, apiKey, baseUrl, model, systemPrompt, balanceUrl, balancePath, balanceCurrency, priceIn, priceOut, corsProxy });
       } else {
         p = {
           id: genId(),
-          provider: presetKey || 'custom',
+          provider: document.getElementById('presetSelector').value || 'custom',
           name, apiKey, baseUrl, model, systemPrompt,
-          balanceUrl, balancePath, balanceCurrency, priceIn, priceOut,
-          apiFormat,
+          balanceUrl, balancePath, balanceCurrency, priceIn, priceOut, corsProxy,
           temperature: 0.7
         };
         profiles.push(p);
@@ -942,11 +995,10 @@
       setTokenLabel('…');
 
       try {
-        const isAnthropic = profile.apiFormat === 'anthropic';
         // 构建消息：优先使用对话独立的 System Prompt，确保在最前面
         const messages = [];
         const sysPrompt = conv.systemPrompt || profile.systemPrompt;
-        if (sysPrompt && !isAnthropic) {
+        if (sysPrompt) {
           messages.push({ role: 'system', content: sysPrompt });
         }
 
@@ -955,41 +1007,39 @@
           if (m.role !== 'system') messages.push(m);
         });
 
-        let response;
-        if (isAnthropic) {
-          // ========== Anthropic Messages API 格式 ==========
-          const body = {
-            model: profile.model,
-            messages: messages,
-            max_tokens: 4096,
-            stream: true
-          };
-          if (sysPrompt) body.system = sysPrompt;
+        const targetUrl = `${profile.baseUrl}/chat/completions`;
+        const requestBody = {
+          model: profile.model,
+          messages: messages,
+          stream: true,
+          temperature: profile.temperature || 0.7,
+          stream_options: { include_usage: true }
+        };
 
-          response = await fetch(`${profile.baseUrl}/messages?beta=true`, {
+        let response;
+        if (profile.corsProxy) {
+          // ========== 通过 CORS Proxy 转发 ==========
+          response = await fetch(profile.corsProxy, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-api-key': profile.apiKey,
-              'anthropic-version': '2023-06-01'
-            },
-            body: JSON.stringify(body)
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              url: targetUrl,
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${profile.apiKey}`
+              },
+              body: requestBody
+            })
           });
         } else {
-          // ========== OpenAI Chat Completions 格式 ==========
-          response = await fetch(`${profile.baseUrl}/chat/completions`, {
+          // ========== 直接请求 ==========
+          response = await fetch(targetUrl, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
               'Authorization': `Bearer ${profile.apiKey}`
             },
-            body: JSON.stringify({
-              model: profile.model,
-              messages: messages,
-              stream: true,
-              temperature: profile.temperature || 0.7,
-              stream_options: { include_usage: true }
-            })
+            body: JSON.stringify(requestBody)
           });
         }
 
@@ -1002,76 +1052,32 @@
         const decoder = new TextDecoder();
         let buffer = '';
 
-        if (isAnthropic) {
-          // ========== 解析 Anthropic SSE 流 ==========
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
 
-            buffer += decoder.decode(value, { stream: true });
-            const blocks = buffer.split('\n\n');
-            buffer = blocks.pop();
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop();
 
-            for (const block of blocks) {
-              const lines = block.split('\n');
-              let eventType = '';
-              let data = '';
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed || !trimmed.startsWith('data: ')) continue;
+            const data = trimmed.slice(6);
+            if (data === '[DONE]') continue;
 
-              for (const line of lines) {
-                if (line.startsWith('event: ')) eventType = line.slice(7).trim();
-                else if (line.startsWith('data: ')) data = line.slice(6);
+            try {
+              const json = JSON.parse(data);
+              if (json.usage) exactUsage = json.usage;
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) {
+                assistantMsg.content += delta;
+                contentEl.innerHTML = marked.parse(assistantMsg.content);
+                highlightBlocks(contentEl);
+                container.scrollTop = container.scrollHeight;
+                setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
               }
-
-              if (!data) continue;
-
-              try {
-                const json = JSON.parse(data);
-
-                if (eventType === 'content_block_delta' && json.delta?.text) {
-                  assistantMsg.content += json.delta.text;
-                  contentEl.innerHTML = marked.parse(assistantMsg.content);
-                  highlightBlocks(contentEl);
-                  container.scrollTop = container.scrollHeight;
-                  setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
-                } else if (eventType === 'message_delta' && json.usage) {
-                  exactUsage = {
-                    prompt_tokens: json.usage.input_tokens || 0,
-                    completion_tokens: json.usage.output_tokens || 0,
-                    total_tokens: (json.usage.input_tokens || 0) + (json.usage.output_tokens || 0)
-                  };
-                }
-              } catch (e) { /* 忽略解析错误 */ }
-            }
-          }
-        } else {
-          // ========== 解析 OpenAI SSE 流 ==========
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-
-            buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split('\n');
-            buffer = lines.pop();
-
-            for (const line of lines) {
-              const trimmed = line.trim();
-              if (!trimmed || !trimmed.startsWith('data: ')) continue;
-              const data = trimmed.slice(6);
-              if (data === '[DONE]') continue;
-
-              try {
-                const json = JSON.parse(data);
-                if (json.usage) exactUsage = json.usage;
-                const delta = json.choices?.[0]?.delta?.content;
-                if (delta) {
-                  assistantMsg.content += delta;
-                  contentEl.innerHTML = marked.parse(assistantMsg.content);
-                  highlightBlocks(contentEl);
-                  container.scrollTop = container.scrollHeight;
-                  setTokenLabel('≈ ' + estimateTokens(assistantMsg.content) + ' tok');
-                }
-              } catch (e) { /* 忽略解析错误 */ }
-            }
+            } catch (e) { /* 忽略解析错误 */ }
           }
         }
 
@@ -1799,9 +1805,21 @@
       if (!cfg.balanceUrl) { label.textContent = 'Remaining: --'; return; }
       balanceFetching = true;
       try {
-        const res = await fetch(cfg.balanceUrl, {
-          headers: { 'Authorization': 'Bearer ' + p.apiKey }
-        });
+        let res;
+        if (p.corsProxy) {
+          res = await fetch(p.corsProxy, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              url: cfg.balanceUrl,
+              headers: { 'Authorization': 'Bearer ' + p.apiKey }
+            })
+          });
+        } else {
+          res = await fetch(cfg.balanceUrl, {
+            headers: { 'Authorization': 'Bearer ' + p.apiKey }
+          });
+        }
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const json = await res.json();
         const f = fmtBalance(getByPath(json, cfg.balancePath));
@@ -1875,16 +1893,28 @@
     async function loadModelsForProfile() {
       const baseUrl = (document.getElementById('profileBaseUrl').value || '').trim();
       const apiKey = (document.getElementById('profileApiKey').value || '').trim();
+      const corsProxy = (document.getElementById('profileCorsProxy').value || '').trim();
       if (!baseUrl || !apiKey || modelCache.has(baseUrl)) {
         populateModelSelect();
         return;
       }
       try {
-        const isAnthropic = PRESETS[document.getElementById('presetSelector').value]?.apiFormat === 'anthropic';
-        const headers = isAnthropic
-          ? { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' }
-          : { 'Authorization': 'Bearer ' + apiKey };
-        const res = await fetch(baseUrl.replace(/\/+$/, '') + '/models', { headers });
+        let res;
+        const modelsUrl = baseUrl.replace(/\/+$/, '') + '/models';
+        if (corsProxy) {
+          res = await fetch(corsProxy, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              url: modelsUrl,
+              headers: { 'Authorization': 'Bearer ' + apiKey }
+            })
+          });
+        } else {
+          res = await fetch(modelsUrl, {
+            headers: { 'Authorization': 'Bearer ' + apiKey }
+          });
+        }
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const json = await res.json();
         const ids = (json.data || []).map(m => m.id).filter(Boolean);
