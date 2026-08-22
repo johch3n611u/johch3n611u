@@ -574,6 +574,12 @@
       activeProfileId = storeGet(STORAGE_KEYS.ACTIVE_PROFILE, null);
       conversations = storeGet(STORAGE_KEYS.CONVERSATIONS, []);
       activeConvId = storeGet(STORAGE_KEYS.ACTIVE_CONV, null);
+
+      // 迁移：确保旧 profile 有 systemPrompt 字段
+      profiles.forEach(p => {
+        if (p.systemPrompt === undefined) p.systemPrompt = '';
+        if (p.apiFormat === undefined) p.apiFormat = '';
+      });
       todoGroups = storeGet(STORAGE_KEYS.TODO_GROUPS, []);
       todoItems = storeGet(STORAGE_KEYS.TODO_ITEMS, []);
       activeTodoGroupId = storeGet(STORAGE_KEYS.ACTIVE_TODO_GROUP, null);
